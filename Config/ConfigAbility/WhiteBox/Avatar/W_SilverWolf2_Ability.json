@@ -1,0 +1,1297 @@
+﻿{
+  "AbilityList": [
+    {
+      "Name": "W_SilverWolf2_Skill01_Phase01",
+      "TargetInfo": {
+        "TargetType": "SkillTargetEntityList"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.LookAt",
+          "PerformerType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "TargetType": "AbilityTargetEntity",
+          "Duration": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.TriggerAbility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AbilityName": "W_SilverWolf2_Skill01_Phase02",
+          "IsSkillPerform": true
+        },
+        {
+          "$type": "RPG.GameCore.TriggerAbility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AbilityName": "Avatar_Pela_00_Skill01_Camera",
+          "IsSkillPerform": true
+        },
+        {
+          "$type": "RPG.GameCore.TriggerAnimState",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnimStateName": "Skill01",
+          "NormalizedTimeEnd": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 1.0
+            }
+          },
+          "NormalizedTimeWait": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 0.9
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.TriggerAnimState",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnimLogicState": "Idle",
+          "AnimStateName": "StandBy"
+        },
+        {
+          "$type": "RPG.GameCore.LookAt",
+          "PerformerType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "TargetType": "TeamFormation",
+          "Duration": 0.1
+        }
+      ]
+    },
+    {
+      "Name": "W_SilverWolf2_Skill01_Phase02",
+      "TargetInfo": {
+        "TargetType": "SkillTargetEntityList"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.WaitAnimState",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnimStateName": "Skill01",
+          "NormalizedTimeEnd": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 0.34
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.FireProjectile",
+          "Projectile": {
+            "FlySpeed": 20.0,
+            "AttachPoint": "GunA",
+            "TargetAttachPoint": "SelectRoot",
+            "IgnoreTargetHitbox": true,
+            "FlyEffect": "Effects/Eff_Prefab/Eff_Avatar/Eff_Pela/Eff_Pela_00_Skill01_Fire01.prefab",
+            "HitEffect": "Effects/Eff_Prefab/Eff_Avatar/Eff_Pela/Eff_Pela_00_Skill01_Hit01.prefab",
+            "WriteProgressToEffectAnimator": true
+          },
+          "OnProjectileHit": [
+            {
+              "$type": "RPG.GameCore.DamageByAttackProperty",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "AbilityTargetEntity"
+              },
+              "AttackProperty": {
+                "DamageType": "Quantum",
+                "DamagePercentage": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 2253650637
+                      }
+                    ]
+                  }
+                },
+                "StanceValue": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 3318508074
+                      }
+                    ]
+                  }
+                },
+                "HitSplitRatio": {
+                  "FixedValue": {
+                    "IsDynamic": false,
+                    "FixedValue": 0.5
+                  }
+                },
+                "SPHitRatio": {
+                  "FixedValue": {
+                    "IsDynamic": false,
+                    "FixedValue": 1.0
+                  }
+                },
+                "HitAnimation": "Hit"
+              }
+            },
+            {
+              "$type": "RPG.GameCore.VCameraConfigChange",
+              "CameraConfig": {
+                "ShakeConfig": {
+                  "Amplitude": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.05
+                  },
+                  "Freq": 5.0,
+                  "ShakeTime": 0.2
+                }
+              }
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitAnimState",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnimStateName": "Skill01",
+          "NormalizedTimeEnd": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 0.42
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.FireProjectile",
+          "Projectile": {
+            "FlySpeed": 20.0,
+            "AttachPoint": "GunC",
+            "TargetAttachPoint": "SelectRoot",
+            "IgnoreTargetHitbox": true,
+            "FlyEffect": "Effects/Eff_Prefab/Eff_Avatar/Eff_Pela/Eff_Pela_00_Skill01_Fire01.prefab",
+            "HitEffect": "Effects/Eff_Prefab/Eff_Avatar/Eff_Pela/Eff_Pela_00_Skill01_Hit01.prefab",
+            "WriteProgressToEffectAnimator": true
+          },
+          "OnProjectileHit": [
+            {
+              "$type": "RPG.GameCore.DamageByAttackProperty",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "AbilityTargetEntity"
+              },
+              "AttackProperty": {
+                "DamageType": "Quantum",
+                "DamagePercentage": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 2253650637
+                      }
+                    ]
+                  }
+                },
+                "StanceValue": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 3318508074
+                      }
+                    ]
+                  }
+                },
+                "HitSplitRatio": {
+                  "FixedValue": {
+                    "IsDynamic": false,
+                    "FixedValue": 0.25
+                  }
+                },
+                "SPHitRatio": {
+                  "FixedValue": {
+                    "IsDynamic": false,
+                    "FixedValue": 1.0
+                  }
+                },
+                "HitAnimation": "Hit"
+              },
+              "CanTriggerLastKill": true
+            },
+            {
+              "$type": "RPG.GameCore.DamageByAttackProperty",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "AbilityTargetEntity"
+              },
+              "AttackProperty": {
+                "DamageType": "Quantum",
+                "DamagePercentage": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 2253650637
+                      }
+                    ]
+                  }
+                },
+                "StanceValue": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 3318508074
+                      }
+                    ]
+                  }
+                },
+                "HitSplitRatio": {
+                  "FixedValue": {
+                    "IsDynamic": false,
+                    "FixedValue": 0.25
+                  }
+                },
+                "SPHitRatio": {
+                  "FixedValue": {
+                    "IsDynamic": false,
+                    "FixedValue": 1.0
+                  }
+                },
+                "HitAnimation": "Hit"
+              },
+              "CanTriggerLastKill": true
+            },
+            {
+              "$type": "RPG.GameCore.VCameraConfigChange",
+              "CameraConfig": {
+                "ShakeConfig": {
+                  "Amplitude": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.05
+                  },
+                  "Freq": 5.0,
+                  "ShakeTime": 0.2
+                }
+              }
+            }
+          ],
+          "WaitProjectileFinish": true
+        },
+        {
+          "$type": "RPG.GameCore.RandomConfig",
+          "OddsList": [
+            {
+              "Value": 0.3333
+            },
+            {
+              "Value": 0.3333
+            },
+            {
+              "Value": 0.3334
+            }
+          ],
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.AddModifier",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "AbilityTargetEntity"
+              },
+              "ModifierName": "MWAvatar_SilverWolf2_Bug1",
+              "Chance": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 2100485446
+                    }
+                  ]
+                }
+              },
+              "LifeTime": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 2952319713
+                    }
+                  ]
+                }
+              },
+              "DynamicValues": {
+                "MDF_PropertyValue": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 4013415823
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "$type": "RPG.GameCore.AddModifier",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "AbilityTargetEntity"
+              },
+              "ModifierName": "MWAvatar_SilverWolf2_Bug2",
+              "Chance": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 2100485446
+                    }
+                  ]
+                }
+              },
+              "LifeTime": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 2952319713
+                    }
+                  ]
+                }
+              },
+              "DynamicValues": {
+                "MDF_PropertyValue": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 94059258
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            {
+              "$type": "RPG.GameCore.AddModifier",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "AbilityTargetEntity"
+              },
+              "ModifierName": "MWAvatar_SilverWolf2_Bug3",
+              "Chance": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 2100485446
+                    }
+                  ]
+                }
+              },
+              "LifeTime": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 2952319713
+                    }
+                  ]
+                }
+              },
+              "DynamicValues": {
+                "MDF_PropertyValue": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 4134111941
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.DamagePerformFinish"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.1
+        },
+        {
+          "$type": "RPG.GameCore.SkillPerformFinish"
+        }
+      ]
+    },
+    {
+      "Name": "W_SilverWolf2_Skill02_Phase01",
+      "TargetInfo": {
+        "TargetType": "SkillTargetEntityList"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.LookAt",
+          "PerformerType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "TargetType": "AbilityTargetEntity",
+          "Duration": 5.0
+        },
+        {
+          "$type": "RPG.GameCore.TriggerAbility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AbilityName": "W_SilverWolf2_Skill02_Phase02",
+          "IsSkillPerform": true
+        },
+        {
+          "$type": "RPG.GameCore.TriggerAbility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AbilityName": "Avatar_Pela_00_Skill02_Camera",
+          "IsSkillPerform": true
+        },
+        {
+          "$type": "RPG.GameCore.TriggerAnimState",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnimStateName": "Skill02",
+          "NormalizedTimeEnd": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 1.0
+            }
+          },
+          "NormalizedTimeWait": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 0.35
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.GlobalMainIntensityEffect",
+          "TargetIntensity": 0.3,
+          "FadeDuration": 0.2,
+          "TartgetFogDensity": 0.7,
+          "FogFar": 600.0
+        },
+        {
+          "$type": "RPG.GameCore.WaitAnimState",
+          "AnimStateName": "Skill02",
+          "NormalizedTimeEnd": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 0.46
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.GlobalMainIntensityEffect",
+          "TargetIntensity": 1.0,
+          "FadeDuration": 0.2
+        },
+        {
+          "$type": "RPG.GameCore.WaitAnimState",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnimStateName": "Skill02",
+          "NormalizedTimeEnd": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 0.69
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.SkillPerformFinish"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerAnimState",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnimLogicState": "Idle",
+          "AnimStateName": "StandBy"
+        },
+        {
+          "$type": "RPG.GameCore.LookAt",
+          "PerformerType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "TargetType": "TeamFormation"
+        }
+      ]
+    },
+    {
+      "Name": "W_SilverWolf2_Skill02_Phase02",
+      "TargetInfo": {
+        "TargetType": "SkillTargetEntityList"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.TriggerEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "AbilityTargetEntity"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Pela/Eff_Pela_00_Skill02_Hit01.prefab",
+          "AttachPoint": "Origin"
+        },
+        {
+          "$type": "RPG.GameCore.WaitAnimState",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnimStateName": "Skill02",
+          "NormalizedTimeEnd": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 0.4
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.DamageByAttackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "AbilityTargetEntity"
+          },
+          "AttackProperty": {
+            "DamageType": "Quantum",
+            "DamagePercentage": {
+              "Value": {
+                "IsDynamic": true,
+                "PostfixExpr": [
+                  {
+                    "Type": "DynamicNumber",
+                    "Int": 3694166767
+                  }
+                ]
+              }
+            },
+            "StanceValue": {
+              "Value": {
+                "IsDynamic": true,
+                "PostfixExpr": [
+                  {
+                    "Type": "DynamicNumber",
+                    "Int": 3318508074
+                  }
+                ]
+              }
+            },
+            "SPHitRatio": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 1.0
+              }
+            },
+            "HitAnimation": "Hit",
+            "HitEffect": "Effects/Eff_Prefab/Eff_Avatar/Eff_Pela/Eff_Pela_00_Skill02_Hit02.prefab",
+            "HitTimeSlowIntensity": "Middle",
+            "HitPosHeight": 0.8,
+            "HitAngleHorizontal": 35.0,
+            "HitAngleVertical": -60.0
+          },
+          "CanTriggerLastKill": true
+        },
+        {
+          "$type": "RPG.GameCore.SetDynamicValueByStatusCount",
+          "DynamicKey": "_DebuffCount",
+          "ReadTargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "AbilityTargetEntity"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "AbilityTargetEntity"
+          },
+          "ModifierName": "MWAvatar_SilverWolf2_WeakType",
+          "Chance": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 484560572
+                },
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 3574070616
+                },
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 3202015391
+                },
+                {
+                  "Type": "Mul"
+                },
+                {
+                  "Type": "Add"
+                }
+              ]
+            }
+          },
+          "LifeTime": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 2038814615
+                }
+              ]
+            }
+          },
+          "DynamicValues": {
+            "MDF_PropertyValue": {
+              "Value": {
+                "IsDynamic": true,
+                "PostfixExpr": [
+                  {
+                    "Type": "DynamicNumber",
+                    "Int": 3869097866
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.DamagePerformFinish"
+        },
+        {
+          "$type": "RPG.GameCore.VCameraConfigChange",
+          "CameraConfig": {
+            "ShakeConfig": {
+              "Amplitude": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.2
+              },
+              "Freq": 10.0,
+              "ShakeTime": 0.2
+            }
+          }
+        }
+      ],
+      "DynamicValues": {
+        "Floats": {
+          "-1601007696": {}
+        }
+      },
+      "Modifiers": {
+        "MWAvatar_SilverWolf2_WeakType": {
+          "Stacking": "Replace",
+          "DynamicValues": {
+            "Floats": {
+              "2128130574": {}
+            }
+          },
+          "OnStack": [
+            {
+              "$type": "RPG.GameCore.AddWeakByTeamAttackType",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "ResistanceDeltaValue": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "FixedNumber"
+                    },
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 4256261148
+                    },
+                    {
+                      "Type": "Sub"
+                    }
+                  ]
+                }
+              },
+              "AddWeakCountMax": {
+                "FixedValue": {
+                  "IsDynamic": false,
+                  "FixedValue": 2.0
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Name": "W_SilverWolf2_Skill03_Phase01",
+      "TargetInfo": {
+        "TargetType": "SkillTargetEntityList"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.AlignTargetToTeamCenter",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.GlobalMainIntensityEffect",
+          "TargetIntensity": 0.35,
+          "FadeDuration": 0.55,
+          "TartgetFogDensity": 0.7,
+          "FogFar": 600.0
+        },
+        {
+          "$type": "RPG.GameCore.LookAt",
+          "PerformerType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "TargetType": "AbilityTargetEntity"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerAbility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AbilityName": "Avatar_Pela_00_Skill03_Camera",
+          "IsSkillPerform": true
+        },
+        {
+          "$type": "RPG.GameCore.TriggerAbility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AbilityName": "W_SilverWolf2_Skill03_Phase02",
+          "IsSkillPerform": true
+        },
+        {
+          "$type": "RPG.GameCore.ShowBattleUI"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerAnimState",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnimStateName": "Skill03"
+        },
+        {
+          "$type": "RPG.GameCore.WaitAnimState",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnimStateName": "Skill03",
+          "NormalizedTimeEnd": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 0.45
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.MoveStageOnTargetForward",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "StageRootOffset": 22.0
+        },
+        {
+          "$type": "RPG.GameCore.TeamLookAt",
+          "TeamType": "TeamDark",
+          "TargetType": "Caster",
+          "AngleOffset": -3.0
+        },
+        {
+          "$type": "RPG.GameCore.WaitAnimState",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnimStateName": "Skill03",
+          "NormalizedTimeEnd": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 0.99
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.GlobalMainIntensityEffect",
+          "TargetIntensity": 1.0,
+          "FadeDuration": 1.0
+        },
+        {
+          "$type": "RPG.GameCore.MoveStageOnTargetForward",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "DarkTeamCenter"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.ShowBattleUI",
+          "IsShow": true
+        },
+        {
+          "$type": "RPG.GameCore.MoveToTargetPosition",
+          "PerformerType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "TeamFormation"
+          },
+          "IgnoreRadius": true,
+          "OffsetTargetDistance": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 0.0
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.TriggerAnimState",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnimLogicState": "Idle",
+          "AnimStateName": "StandBy"
+        },
+        {
+          "$type": "RPG.GameCore.LookAt",
+          "PerformerType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "TargetType": "TeamFormation"
+        },
+        {
+          "$type": "RPG.GameCore.SkillPerformFinish"
+        }
+      ]
+    },
+    {
+      "Name": "W_SilverWolf2_Skill03_Phase02",
+      "TargetInfo": {
+        "TargetType": "SkillTargetEntityList"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.WaitAnimState",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnimStateName": "Skill03",
+          "NormalizedTimeEnd": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 0.9
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.DamageByAttackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "AbilityTargetEntity"
+          },
+          "AttackProperty": {
+            "DamageType": "Quantum",
+            "DamagePercentage": {
+              "Value": {
+                "IsDynamic": true,
+                "PostfixExpr": [
+                  {
+                    "Type": "DynamicNumber",
+                    "Int": 112578105
+                  }
+                ]
+              }
+            },
+            "StanceValue": {
+              "Value": {
+                "IsDynamic": true,
+                "PostfixExpr": [
+                  {
+                    "Type": "DynamicNumber",
+                    "Int": 3318508074
+                  }
+                ]
+              }
+            },
+            "SPHitRatio": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 1.0
+              }
+            },
+            "HitAnimation": "Hit",
+            "HitPosHeight": 0.8
+          },
+          "CanTriggerLastKill": true
+        },
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "AbilityTargetEntity"
+          },
+          "ModifierName": "MWAvatar_SilverWolf2_CommandTermination",
+          "LifeTime": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 477566130
+                }
+              ]
+            }
+          },
+          "DynamicValues": {
+            "MDF_DamagePercentage": {
+              "Value": {
+                "IsDynamic": true,
+                "PostfixExpr": [
+                  {
+                    "Type": "DynamicNumber",
+                    "Int": 999456347
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.DamagePerformFinish"
+        }
+      ]
+    },
+    {
+      "Name": "W_SilverWolf2_PassiveSkill01",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ModifierName": "MW_SilverWolf2_Passive"
+        }
+      ],
+      "Modifiers": {
+        "MW_SilverWolf2_Passive": {
+          "DynamicValues": {
+            "Floats": {
+              "-1601007696": {}
+            }
+          },
+          "OnBeforeHitAll": [
+            {
+              "$type": "RPG.GameCore.SetDynamicValueByStatusCount",
+              "DynamicKey": "_DebuffCount",
+              "ReadTargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "DamageDefenderEntity"
+              }
+            },
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByCompareDynamicValue",
+                "TargetType": {
+                  "$type": "RPG.GameCore.TargetAlias",
+                  "Alias": "Caster"
+                },
+                "DynamicKey": "_DebuffCount",
+                "CompareType": "GreaterEqual",
+                "CompareValue": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 1913890693
+                      }
+                    ]
+                  }
+                }
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.SetDynamicValue",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "Caster"
+                  },
+                  "DynamicKey": "_DebuffCount",
+                  "Value": {
+                    "Value": {
+                      "IsDynamic": true,
+                      "PostfixExpr": [
+                        {
+                          "Type": "DynamicNumber",
+                          "Int": 1913890693
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.ModifyDamageData",
+              "Attacker_AllDamageTypeAddedRatio": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 703032922
+                    },
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 3202015391
+                    },
+                    {
+                      "Type": "Mul"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "GlobalModifiers": {
+    "MWAvatar_SilverWolf2_Bug1": {
+      "Stacking": "ReplaceByCaster",
+      "DynamicValues": {
+        "Floats": {
+          "2128130574": {}
+        }
+      },
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.StackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "Property": "AttackAddedRatio",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "FixedNumber"
+                },
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 4256261148
+                },
+                {
+                  "Type": "Sub"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "MWAvatar_SilverWolf2_Bug2": {
+      "Stacking": "ReplaceByCaster",
+      "DynamicValues": {
+        "Floats": {
+          "2128130574": {}
+        }
+      },
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.StackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "Property": "DefenceAddedRatio",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "FixedNumber"
+                },
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 4256261148
+                },
+                {
+                  "Type": "Sub"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "MWAvatar_SilverWolf2_Bug3": {
+      "Stacking": "ReplaceByCaster",
+      "DynamicValues": {
+        "Floats": {
+          "2128130574": {}
+        }
+      },
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.StackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "Property": "CriticalChance",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "FixedNumber"
+                },
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 4256261148
+                },
+                {
+                  "Type": "Sub"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "MWAvatar_SilverWolf2_CommandTermination": {
+      "Stacking": "Replace",
+      "DynamicValues": {
+        "Floats": {
+          "1486739431": {
+            "Value": 1.0
+          }
+        }
+      },
+      "OnStack": [],
+      "OnAnySkillExecution": [
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByTargetListIntersects",
+            "FirstTargetType": {
+              "$type": "RPG.GameCore.TargetAlias",
+              "Alias": "ParamEntity"
+            },
+            "SecondTargetType": {
+              "$type": "RPG.GameCore.TargetAlias",
+              "Alias": "ModifierOwnerEntity"
+            }
+          },
+          "SuccessTaskList": [
+            {
+              "$type": "RPG.GameCore.InterruptSkillExecution"
+            },
+            {
+              "$type": "RPG.GameCore.DamageByAttackProperty",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "AttackProperty": {
+                "DamageType": "Quantum",
+                "DamagePercentage": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 2973478862
+                      }
+                    ]
+                  }
+                },
+                "AttackType": "Pursued"
+              },
+              "CanTriggerLastKill": true
+            },
+            {
+              "$type": "RPG.GameCore.RemoveSelfModifier"
+            }
+          ]
+        }
+      ],
+      "UseSnapshotEntity": true
+    }
+  }
+}

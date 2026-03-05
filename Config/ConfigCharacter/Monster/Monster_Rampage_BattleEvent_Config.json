@@ -1,0 +1,46 @@
+﻿{
+  "CharacterHUDOffset": {
+    "x": 0.0,
+    "y": 2.6,
+    "z": 0.0
+  },
+  "HitBoxWidth": 0.39,
+  "HitBoxHeight": 1.95,
+  "Location": {
+    "Width": 1.0
+  },
+  "SaveModelWhenDead": true,
+  "AnimEventConfigList": [],
+  "SoundBankList": [
+    "BK_SFX_Monster_Common"
+  ],
+  "SkillList": [
+    {
+      "Name": "Skill01",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "AllTeamMember"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Monster_Rampage_BattleEvent_Skill01_Phase01"
+    }
+  ],
+  "AbilityList": [
+    "Monster_Rampage_BattleEvent_Skill01_Phase01"
+  ],
+  "SkillAbilityList": [
+    {
+      "Skill": "Skill01",
+      "AbilityList": [
+        "Monster_Rampage_BattleEvent_Skill01_Phase01",
+        "Monster_Rampage_BattleEvent_Skill01_Phase02"
+      ]
+    }
+  ],
+  "DynamicValues": {
+    "Floats": {
+      "-1146374604": {}
+    }
+  },
+  "WeaponType": "WP_Magic"
+}

@@ -1,0 +1,1099 @@
+﻿{
+  "AbilityList": [
+    {
+      "Name": "Avatar_FireShield_Skill01_Phase01",
+      "TargetInfo": {
+        "TargetType": "SkillTargetEntityList"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.TriggerAbility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AbilityName": "Avatar_FireShield_Skill01_Phase02",
+          "IsSkillPerform": true
+        },
+        {
+          "$type": "RPG.GameCore.LookAt",
+          "PerformerType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "TargetType": "AbilityTargetEntity"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerAbility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AbilityName": "W_FireShield_Skill01_Camera",
+          "IsSkillPerform": true
+        },
+        {
+          "$type": "RPG.GameCore.TriggerAnimState",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnimStateName": "Skill01",
+          "NormalizedTimeEnd": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 1.0
+            }
+          },
+          "NormalizedTimeWait": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 0.9
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.TriggerAnimState",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnimLogicState": "Idle",
+          "AnimStateName": "StandBy"
+        }
+      ]
+    },
+    {
+      "Name": "Avatar_FireShield_Skill01_Phase02",
+      "TargetInfo": {
+        "TargetType": "SkillTargetEntityList"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.WaitAnimState",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnimStateName": "Skill01",
+          "NormalizedTimeEnd": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 0.21
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.TriggerEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "AbilityTargetEntity"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Eileen/Eff_Avatar_Eileen_00_Skill01_Fire.prefab"
+        },
+        {
+          "$type": "RPG.GameCore.WaitAnimState",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnimStateName": "Skill01",
+          "NormalizedTimeEnd": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 0.56
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.3
+        },
+        {
+          "$type": "RPG.GameCore.DamageByAttackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "AbilityTargetEntity"
+          },
+          "AttackProperty": {
+            "DamageType": "Fire",
+            "DamagePercentage": {
+              "Value": {
+                "IsDynamic": true,
+                "PostfixExpr": [
+                  {
+                    "Type": "DynamicNumber",
+                    "Int": 2253650637
+                  }
+                ]
+              }
+            },
+            "StanceValue": {
+              "Value": {
+                "IsDynamic": true,
+                "PostfixExpr": [
+                  {
+                    "Type": "DynamicNumber",
+                    "Int": 3318508074
+                  }
+                ]
+              }
+            },
+            "SPHitRatio": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 1.0
+              }
+            },
+            "FrameHalt": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 0.1
+              }
+            },
+            "HitAnimation": "Hit",
+            "HitEffect": "Effects/Eff_Prefab/Eff_Avatar/Eff_Eileen/Eff_Avatar_Eileen_00_Skill01_Hit.prefab"
+          },
+          "CanTriggerLastKill": true
+        },
+        {
+          "$type": "RPG.GameCore.DamagePerformFinish"
+        },
+        {
+          "$type": "RPG.GameCore.SkillPerformFinish"
+        }
+      ]
+    },
+    {
+      "Name": "Avatar_FireShield_Skill02_Phase01",
+      "TargetInfo": {
+        "TargetType": "SkillTargetEntityList"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.TriggerAbility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AbilityName": "Avatar_FireShield_Skill02_Phase02",
+          "IsSkillPerform": true
+        },
+        {
+          "$type": "RPG.GameCore.LookAt",
+          "PerformerType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "TargetType": "AbilityTargetEntity"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerAbility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AbilityName": "W_FireShield_Skill02_Camera",
+          "IsSkillPerform": true
+        },
+        {
+          "$type": "RPG.GameCore.TriggerAnimState",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnimStateName": "Skill02"
+        },
+        {
+          "$type": "RPG.GameCore.WaitAnimState",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnimStateName": "Skill02",
+          "NormalizedTimeEnd": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 0.341
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.WaitAnimState",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnimStateName": "Skill02",
+          "NormalizedTimeEnd": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 0.8
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.TriggerTurnPage"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerAnimState",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnimLogicState": "Idle",
+          "AnimStateName": "StandBy",
+          "NormalizedTransitionDuration": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 0.2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Avatar_FireShield_Skill02_Phase02",
+      "TargetInfo": {
+        "TargetType": "SkillTargetEntityList"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.WaitAnimState",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnimStateName": "Skill02",
+          "NormalizedTimeEnd": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 0.178
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.TriggerEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "AbilityTargetEntity"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Eileen/Eff_Avatar_Eileen_00_Skill02_Fire.prefab"
+        },
+        {
+          "$type": "RPG.GameCore.WaitAnimState",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnimStateName": "Skill02",
+          "NormalizedTimeEnd": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 0.572
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "AbilityTargetEntity"
+          },
+          "ModifierName": "FireShield_Modifier",
+          "LifeTime": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 2045659553
+                }
+              ]
+            }
+          },
+          "DynamicValues": {
+            "MDF_ShieldConvertRatio": {
+              "Value": {
+                "IsDynamic": true,
+                "PostfixExpr": [
+                  {
+                    "Type": "DynamicNumber",
+                    "Int": 439850193
+                  }
+                ]
+              }
+            },
+            "MDF_HPSacrificeRatio": {
+              "Value": {
+                "IsDynamic": true,
+                "PostfixExpr": [
+                  {
+                    "Type": "DynamicNumber",
+                    "Int": 207161441
+                  }
+                ]
+              }
+            },
+            "MDF_ShieldRatio": {
+              "Value": {
+                "IsDynamic": true,
+                "PostfixExpr": [
+                  {
+                    "Type": "DynamicNumber",
+                    "Int": 743526501
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.LoseHPByRatio",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "AbilityTargetEntity"
+          },
+          "RatioType": "CurrentHP",
+          "Ratio": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 207161441
+                }
+              ]
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.ModifySPNew",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AddRatio": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 1.0
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.DamagePerformFinish"
+        },
+        {
+          "$type": "RPG.GameCore.SkillPerformFinish"
+        }
+      ],
+      "Modifiers": {
+        "FireShield_Modifier": {
+          "Stacking": "Replace",
+          "DynamicValues": {
+            "Floats": {
+              "-866033058": {
+                "Value": 1.0
+              },
+              "590269553": {
+                "Value": 1.0
+              },
+              "1614820885": {},
+              "-840146512": {},
+              "-1268026324": {}
+            }
+          },
+          "BehaviorFlagList": [
+            "Shield"
+          ],
+          "OnDestroy": [
+            {
+              "$type": "RPG.GameCore.RemoveShield",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              }
+            }
+          ],
+          "OnStack": [
+            {
+              "$type": "RPG.GameCore.SetDynamicValueByProperty",
+              "DynamicKey": "CasterDefence",
+              "ReadTargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "Caster"
+              },
+              "Value": "Defence"
+            },
+            {
+              "$type": "RPG.GameCore.SetDynamicValueByProperty",
+              "DynamicKey": "TargetHP",
+              "ReadTargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "AbilityTargetEntity"
+              },
+              "Value": "CurrentHP"
+            },
+            {
+              "$type": "RPG.GameCore.InitShield",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "ShieldValue": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 3229641770
+                    },
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 1180539106
+                    },
+                    {
+                      "Type": "Mul"
+                    },
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 1680293023
+                    },
+                    {
+                      "Type": "Mul"
+                    },
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 1732066115
+                    },
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 2536052647
+                    },
+                    {
+                      "Type": "Mul"
+                    },
+                    {
+                      "Type": "Add"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Name": "Avatar_FireShield_Skill03_Phase01",
+      "TargetInfo": {
+        "TargetType": "AllEnemy"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.LookAt",
+          "PerformerType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "TargetType": "AbilityTargetEntity"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerAbility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AbilityName": "Avatar_FireShield_Skill03_Phase02",
+          "IsSkillPerform": true
+        },
+        {
+          "$type": "RPG.GameCore.TriggerAbility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AbilityName": "W_FireShield_Skill03_Camera",
+          "IsSkillPerform": true
+        },
+        {
+          "$type": "RPG.GameCore.TriggerAnimState",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnimStateName": "Skill02"
+        },
+        {
+          "$type": "RPG.GameCore.WaitAnimState",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnimStateName": "Skill02",
+          "NormalizedTimeEnd": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 0.8
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.TriggerAnimState",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnimLogicState": "Idle",
+          "AnimStateName": "StandBy",
+          "NormalizedTransitionDuration": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 0.2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Avatar_FireShield_Skill03_Phase02",
+      "TargetInfo": {
+        "TargetType": "AllEnemy"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.WaitAnimState",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnimStateName": "Skill02",
+          "NormalizedTimeEnd": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 0.178
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.TriggerEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "AllEnemy"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Eileen/Eff_Avatar_Eileen_00_Skill02_Fire.prefab"
+        },
+        {
+          "$type": "RPG.GameCore.WaitAnimState",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnimStateName": "Skill02",
+          "NormalizedTimeEnd": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 0.572
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.DamageByAttackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "AllEnemy"
+          },
+          "AttackProperty": {
+            "DamageType": "Fire",
+            "DamagePercentage": {
+              "Value": {
+                "IsDynamic": true,
+                "PostfixExpr": [
+                  {
+                    "Type": "DynamicNumber",
+                    "Int": 112578105
+                  }
+                ]
+              }
+            },
+            "StanceValue": {
+              "Value": {
+                "IsDynamic": true,
+                "PostfixExpr": [
+                  {
+                    "Type": "DynamicNumber",
+                    "Int": 2364128308
+                  }
+                ]
+              }
+            },
+            "SPHitRatio": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 1.0
+              }
+            },
+            "FrameHalt": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 0.1
+              }
+            },
+            "HitAnimation": "Hit",
+            "HitEffect": "Effects/Eff_Prefab/Eff_Avatar/Eff_Eileen/Eff_Avatar_Eileen_00_Skill01_Hit.prefab"
+          },
+          "CanTriggerLastKill": true
+        },
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "AllEnemy"
+          },
+          "ModifierName": "MCommon_CTRL_Taunt",
+          "Chance": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 1788190157
+                }
+              ]
+            }
+          },
+          "LifeTime": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 477566130
+                }
+              ]
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.DamagePerformFinish"
+        },
+        {
+          "$type": "RPG.GameCore.SkillPerformFinish"
+        }
+      ]
+    },
+    {
+      "Name": "Avatar_FireShield_SkillLink_Phase_Start",
+      "TargetInfo": {
+        "TargetType": "StanceBreakTargetEntity",
+        "MaxTargetCount": 5
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.LookAt",
+          "PerformerType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "TargetType": "AbilityTargetEntity"
+        }
+      ]
+    },
+    {
+      "Name": "Avatar_FireShield_SkillLink_Phase_Process",
+      "TargetInfo": {
+        "TargetType": "StanceBreakTargetEntity",
+        "MaxTargetCount": 5
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.TriggerAbility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AbilityName": "Avatar_FireShield_SkillLink_Event",
+          "IsSkillPerform": true
+        },
+        {
+          "$type": "RPG.GameCore.TriggerAbility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AbilityName": "W_FireShield_Skill_LinkAttack_Camera",
+          "IsSkillPerform": true
+        },
+        {
+          "$type": "RPG.GameCore.TriggerAnimState",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnimStateName": "Skill_QTE",
+          "NormalizedTimeEnd": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 1.0
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.TriggerEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "StanceBreakTargetEntity"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Eileen/Eff_Avatar_Eileen_00_Skill02_Qte03.prefab"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 1.5
+        }
+      ]
+    },
+    {
+      "Name": "Avatar_FireShield_SkillLink_Phase_End",
+      "TargetInfo": {
+        "TargetType": "StanceBreakTargetEntity",
+        "MaxTargetCount": 5
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.TriggerAnimState",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnimLogicState": "Idle",
+          "AnimStateName": "StandBy"
+        }
+      ]
+    },
+    {
+      "Name": "Avatar_FireShield_SkillLink_Event",
+      "TargetInfo": {
+        "TargetType": "StanceBreakTargetEntity"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.WaitAnimState",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnimStateName": "Skill_QTE",
+          "NormalizedTimeEnd": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 0.99
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.2
+        },
+        {
+          "$type": "RPG.GameCore.DamageByAttackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "StanceBreakTargetEntity"
+          },
+          "AttackProperty": {
+            "DamageType": "Fire",
+            "DamagePercentage": {
+              "Value": {
+                "IsDynamic": true,
+                "PostfixExpr": [
+                  {
+                    "Type": "DynamicNumber",
+                    "Int": 2614035492
+                  }
+                ]
+              }
+            },
+            "SPHitRatio": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 1.0
+              }
+            },
+            "FrameHalt": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 0.06
+              }
+            },
+            "HitAnimation": "Hit",
+            "HitEffect": "Effects/Eff_Prefab/Eff_Avatar/Eff_Eileen/Eff_Avatar_Eileen_00_Skill02_Qte02.prefab"
+          },
+          "CanTriggerLastKill": true
+        },
+        {
+          "$type": "RPG.GameCore.DamagePerformFinish"
+        }
+      ]
+    },
+    {
+      "Name": "Avatar_FireShield_PassiveSkill",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ModifierName": "MCommon_Property_Config",
+          "LifeTime": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": -1.0
+            }
+          },
+          "DynamicValues": {
+            "MDF_AttackAddedRatio": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 1.2
+              }
+            },
+            "MDF_DefenceAddedRatio": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 1.4
+              }
+            },
+            "MDF_HPAddedRatio": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 0.75
+              }
+            },
+            "MDF_SpeedValue": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 15.0
+              }
+            },
+            "MDF_CriticalChance": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 0.4
+              }
+            },
+            "MDF_CriticalDamage": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 0.3
+              }
+            },
+            "MDF_AllDamageTypeAddedRatio": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 0.2
+              }
+            },
+            "MDF_StanceBreakAddedRatio": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 0.3
+              }
+            },
+            "MDF_FireResistance": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 0.1
+              }
+            },
+            "MDF_StatusProbability": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 0.15
+              }
+            },
+            "MDF_StatusResistance": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 0.075
+              }
+            },
+            "MDF_FireAddedRatio": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 0.4
+              }
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ModifierName": "FireShield_PassiveSkill_Modifier1",
+          "LifeTime": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": -1.0
+            }
+          }
+        }
+      ],
+      "Modifiers": {
+        "FireShield_PassiveSkill_Modifier1": {
+          "OnDestroy": [
+            {
+              "$type": "RPG.GameCore.RemoveModifier",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "AllTeamMember"
+              },
+              "ModifierName": "FireShield_PassiveSkill_Modifier2",
+              "OnlyRemoveCasterAdded": true
+            }
+          ],
+          "OnCharacterCreate": [
+            {
+              "$type": "RPG.GameCore.AddModifier",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "AllTeamMember"
+              },
+              "ModifierName": "FireShield_PassiveSkill_Modifier2",
+              "DynamicValues": {
+                "MDF_HPThreshold": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 1101225210
+                      }
+                    ]
+                  }
+                },
+                "MDF_AttackAddedRatio": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 4202306076
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "FireShield_PassiveSkill_Modifier2": {
+          "DynamicValues": {
+            "Floats": {
+              "-1826473127": {},
+              "1119769819": {}
+            }
+          },
+          "OnHPChange": [
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByCompareHPRatio",
+                "TargetType": {
+                  "$type": "RPG.GameCore.TargetAlias",
+                  "Alias": "ModifierOwnerEntity"
+                },
+                "CompareType": "Less",
+                "CompareValue": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 2239539638
+                      }
+                    ]
+                  }
+                }
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.AddModifier",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "ModifierOwnerEntity"
+                  },
+                  "ModifierName": "MWAvatar_FireShield_00_Passive_AttackRatioUp",
+                  "DynamicValues": {
+                    "MDF_AttackRatio": {
+                      "Value": {
+                        "IsDynamic": true,
+                        "PostfixExpr": [
+                          {
+                            "Type": "DynamicNumber",
+                            "Int": 3652946253
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              ],
+              "FailedTaskList": [
+                {
+                  "$type": "RPG.GameCore.RemoveModifier",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "ModifierOwnerEntity"
+                  },
+                  "ModifierName": "MWAvatar_FireShield_00_Passive_AttackRatioUp"
+                }
+              ]
+            }
+          ]
+        },
+        "MWAvatar_FireShield_00_Passive_AttackRatioUp": {
+          "DynamicValues": {
+            "Floats": {
+              "1716190009": {}
+            }
+          },
+          "OnStack": [
+            {
+              "$type": "RPG.GameCore.StackProperty",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "Property": "AttackAddedRatio",
+              "PropertyValue": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 3432380018
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

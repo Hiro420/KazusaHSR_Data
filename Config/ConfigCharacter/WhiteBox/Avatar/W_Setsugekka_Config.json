@@ -1,0 +1,345 @@
+﻿{
+  "SomatoType": "MiddleAvatar",
+  "HitBoxWidth": 0.3,
+  "HitBoxHeight": 1.5,
+  "Location": {
+    "Width": 0.8
+  },
+  "SaveModelWhenDead": true,
+  "AnimEventConfigList": [],
+  "SoundBankList": [],
+  "SkillList": [
+    {
+      "Name": "Skill01",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "EnemySelect"
+      },
+      "UseReadyTransitAnim": true,
+      "ReadyAnimState": "Skill01_Ready",
+      "CameraConfig": {
+        "NormalConfig": {
+          "CameraState": "SelectDarkTeamEntity",
+          "AnchorTargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AimTargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "SkillTargetEntityList"
+          },
+          "ResetToDefault": true
+        },
+        "BlendConfig": {
+          "BlendType": "Custom",
+          "CustomCurveName": "BlendCut01",
+          "BlendTime": 1.0
+        }
+      },
+      "FormationType": "LightTeamSelectTarget",
+      "EntryAbility": "Avatar_Setsugekka_Skill01_Phase01",
+      "ComplexSkillAI": {
+        "Groups": [
+          {
+            "GroupName": "BasePp_Common_SingleAttack"
+          }
+        ]
+      },
+      "ComplexSkillAIOverride": {
+        "Groups": [
+          {
+            "GroupName": "BasePp_Common_SingleAttack"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Skill02",
+      "SkillType": "Skill",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "UseReadyTransitAnim": true,
+      "ReadyAnimState": "Skill02_Ready_Loop",
+      "CameraConfig": {
+        "NormalConfig": {
+          "CameraState": "SelectDarkTeamEntity",
+          "AnchorTargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnchorOffset": {
+            "x": -0.3,
+            "y": 0.35,
+            "z": -0.15
+          },
+          "AimTargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "SkillTargetEntityList"
+          },
+          "AimOffset": {
+            "x": -1.4,
+            "y": 0.95,
+            "z": 0.0
+          },
+          "FollowRadius": 2.5,
+          "AnchorToAimAngle": 28.0,
+          "ResetToDefault": true
+        },
+        "BlendConfig": {
+          "BlendType": "Custom",
+          "CustomCurveName": "BlendCut01",
+          "BlendTime": 1.0
+        }
+      },
+      "FormationType": "LightTeamSelectTarget",
+      "EntryAbility": "Avatar_Setsugekka_Skill02_Phase01",
+      "ComplexSkillAI": {
+        "Groups": [
+          {
+            "GroupName": "BaseWeight",
+            "Weight": {
+              "Value": 0.7
+            }
+          },
+          {
+            "GroupName": "AddNP_Common_BPSkill",
+            "Weight": {
+              "Value": 0.2
+            }
+          }
+        ]
+      },
+      "ComplexSkillAIOverride": {
+        "Groups": [
+          {
+            "GroupName": "BaseWeight",
+            "Weight": {
+              "Value": 0.7
+            }
+          },
+          {
+            "GroupName": "AddNP_Common_BPSkill",
+            "Weight": {
+              "Value": 0.2
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Skill03",
+      "SkillType": "Ultra",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "EnemySelect"
+      },
+      "UseReadyTransitAnim": true,
+      "ReadyAnimState": "Skill03_Ready",
+      "CameraConfig": {
+        "NormalConfig": {
+          "CameraState": "SelectDarkTeamEntity",
+          "AnchorTargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnchorOffset": {
+            "x": -0.23,
+            "y": -0.08,
+            "z": -0.59
+          },
+          "AimTargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "SkillTargetEntityList"
+          },
+          "AimOffset": {
+            "x": 0.1,
+            "y": 0.95,
+            "z": 0.0
+          },
+          "FollowRadius": 2.09,
+          "AnchorToAimAngle": 20.0,
+          "ResetToDefault": true
+        },
+        "BlendConfig": {
+          "BlendType": "Custom",
+          "CustomCurveName": "BlendCut01",
+          "BlendTime": 1.0
+        }
+      },
+      "FormationType": "LightTeamNormal",
+      "EntryAbility": "Avatar_Setsugekka_Skill03_Phase01",
+      "ComplexSkillAI": {
+        "SkillBasicPower": {
+          "Value": 70.0
+        },
+        "Groups": [
+          {
+            "GroupName": "Ultra_Common_ImmediateRelease"
+          }
+        ]
+      },
+      "ComplexSkillAIOverride": {
+        "SkillBasicPower": {
+          "Value": 70.0
+        },
+        "Groups": [
+          {
+            "GroupName": "Ultra_Common_ImmediateRelease"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "SkillP01",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Avatar_Setsugekka_PassiveSkill01"
+    },
+    {
+      "Name": "PassiveSkill02",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Avatar_Common_PassiveSkill_SPAdd_On_Killing"
+    }
+  ],
+  "AbilityList": [
+    "Avatar_Common_PassiveSkill_SPAdd_On_Killing",
+    "Element_Fever",
+    "Element_Fever_DamageAbility"
+  ],
+  "SkillAbilityList": [
+    {
+      "Skill": "Skill01",
+      "AbilityList": [
+        "W_Setsugekka_Skill01_Camera",
+        "Avatar_Setsugekka_Skill01_Phase01",
+        "Avatar_Setsugekka_Skill01_Phase02"
+      ]
+    },
+    {
+      "Skill": "Skill02",
+      "AbilityList": [
+        "W_Setsugekka_Skill02_Camera",
+        "Avatar_Setsugekka_Skill02_Phase01",
+        "Avatar_Setsugekka_Skill02_Phase02"
+      ]
+    },
+    {
+      "Skill": "Skill03",
+      "AbilityList": [
+        "W_Setsugekka_Skill03_Camera",
+        "Avatar_Setsugekka_Skill03_Phase01",
+        "Avatar_Setsugekka_Skill03_Phase02"
+      ]
+    },
+    {
+      "Skill": "SkillP01",
+      "AbilityList": [
+        "Avatar_Setsugekka_PassiveSkill01"
+      ]
+    }
+  ],
+  "DynamicValues": {
+    "Floats": {
+      "-1126825319": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill01",
+          "Index": 0
+        }
+      },
+      "404518611": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill02",
+          "Index": 0
+        }
+      },
+      "959327196": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill02",
+          "Index": 1
+        }
+      },
+      "-1019407308": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill02",
+          "Index": 2
+        }
+      },
+      "892543981": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill02",
+          "Index": 3
+        }
+      },
+      "1340341268": {},
+      "2132996958": {},
+      "2621308": {},
+      "-1383074321": {},
+      "-56289053": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill03",
+          "Index": 0
+        }
+      },
+      "144388717": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill03",
+          "Index": 1
+        }
+      },
+      "1636217217": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill03",
+          "Index": 2
+        }
+      },
+      "-648181786": {},
+      "1461411296": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "SkillP01",
+          "Index": 0
+        }
+      },
+      "-968124907": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "SkillP01",
+          "Index": 1
+        }
+      }
+    }
+  },
+  "SkillReadyTransits": [
+    {
+      "From": 1,
+      "To": 2,
+      "AnimStateName": "Skill01toSkill02",
+      "TransitionInTime": 0.05,
+      "ReverseOutroTime": 0.06
+    },
+    {
+      "From": 2,
+      "To": 1,
+      "AnimStateName": "Skill02toSkill01",
+      "TransitionInTime": 0.05,
+      "ReverseOutroTime": 0.06
+    }
+  ]
+}

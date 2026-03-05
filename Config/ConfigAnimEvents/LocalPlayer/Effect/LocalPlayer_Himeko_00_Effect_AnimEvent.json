@@ -1,0 +1,63 @@
+﻿{
+  "AnimatorStateEvents": [
+    {
+      "AnimatorStateName": "Attack_1",
+      "NormalizedTime": 0.042,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.TriggerEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Himeko/Eff_Avatar_Himeko_MazeAttack_Trail01.prefab"
+        }
+      ],
+      "TriggerOnce": true
+    },
+    {
+      "AnimatorStateName": "MazeSkill",
+      "NormalizedTime": 0.09,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.TriggerEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Himeko/Eff_Avatar_Himeko_MazeSkill_01.prefab"
+        }
+      ],
+      "TriggerOnce": true
+    }
+  ],
+  "AnimatorStateGroupEvents": [
+    {
+      "States": [
+        {
+          "Name": "Rush"
+        }
+      ],
+      "OnEnter": [
+        {
+          "$type": "RPG.GameCore.TriggerEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Common/Eff_Common_SpeedLine_01.prefab"
+        }
+      ],
+      "OnExit": [
+        {
+          "$type": "RPG.GameCore.RemoveEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Common/Eff_Common_SpeedLine_01.prefab"
+        }
+      ]
+    }
+  ]
+}

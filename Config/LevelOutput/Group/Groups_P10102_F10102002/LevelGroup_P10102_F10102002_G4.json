@@ -1,0 +1,36 @@
+﻿{
+  "GroupGUID": "6748a7b0-d959-449a-b5ee-c082834422b1",
+  "GroupName": "Books",
+  "AreaAnchorName": "LevelArea_P10102_F10102002_G4",
+  "AnchorList": [],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": -3.268,
+      "PosY": 0.975,
+      "PosZ": -2.826,
+      "Name": "Prop1",
+      "Comment": "《鼹鼠集》节选（其一）",
+      "PropID": 603,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/Town/Town_Chapter01_Books.json",
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "EventID": 10102502,
+      "ChestID": 10102502,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": []
+}

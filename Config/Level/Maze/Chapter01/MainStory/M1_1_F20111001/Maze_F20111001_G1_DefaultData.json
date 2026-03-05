@@ -1,0 +1,29 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.LoadSoundBank",
+          "SoundBankName": [
+            "BK_SFX_Avatar_Bro_Common",
+            "BK_VO_Main_Story_Chapter_1",
+            "BK_SFX_Inlevel_Common"
+          ]
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.LevelAudioState",
+          "GroupName": "StateGroup_Adventure_Noncombat",
+          "StateName": {
+            "Value": "State_Maze_Normal"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+﻿{
+  "AbilityList": [
+    {
+      "Name": "StageSpecialAbility_MonsterTagBoss",
+      "OnAdd": [
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ModifierName": "StageSpecialAbility_MonsterTagBoss"
+        }
+      ],
+      "Modifiers": {
+        "StageSpecialAbility_MonsterTagBoss": {
+          "OnCharacterCreate": [
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByCheckCustomValueBool",
+                "TargetType": {
+                  "$type": "RPG.GameCore.TargetAlias",
+                  "Alias": "ParamEntity"
+                },
+                "Key": {
+                  "EKFBPMCLPMD": -1315392744
+                }
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.TriggerCustomString",
+                  "CustomString": {
+                    "Value": "Stage_CheckWin_MonsterTagBoss"
+                  }
+                },
+                {
+                  "$type": "RPG.GameCore.RemoveSelfModifier"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Name": "StageAbility_Special_01",
+      "OnAdd": [
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ModifierName": "StageAbility_Special_01_Modifier"
+        }
+      ],
+      "Modifiers": {
+        "StageAbility_Special_01_Modifier": {
+          "OnCharacterCreate": [
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByTargetTeam",
+                "TargetType": {
+                  "$type": "RPG.GameCore.TargetAlias",
+                  "Alias": "ParamEntity"
+                },
+                "Team": "TeamLight"
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.AddModifier",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "ParamEntity"
+                  },
+                  "ModifierName": "Special01_Buff"
+                }
+              ]
+            }
+          ]
+        },
+        "Special01_Buff": {
+          "OnStack": [
+            {
+              "$type": "RPG.GameCore.StackProperty",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "Property": "CriticalChance",
+              "PropertyValue": {
+                "FixedValue": {
+                  "IsDynamic": false,
+                  "FixedValue": -1.0
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Name": "StageSpecialAbility_M20123_Boss2",
+      "OnAdd": [
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ModifierName": "MLevel_20123_Boss70PercentHP"
+        }
+      ],
+      "Modifiers": {
+        "MLevel_20123_Boss70PercentHP": {
+          "OnEnterBattle": [
+            {
+              "$type": "RPG.GameCore.LoseHPByRatio",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "AllDarkTeam"
+              },
+              "RatioType": "MaxHP",
+              "Ratio": {
+                "FixedValue": {
+                  "IsDynamic": false,
+                  "FixedValue": 0.3
+                }
+              },
+              "DisplayData": {
+                "UIMessageHeight": 100.0
+              }
+            },
+            {
+              "$type": "RPG.GameCore.HealHP",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "AllLightTeam"
+              },
+              "FormulaType": "HealByTargetMaxHP",
+              "HealPercentage": {
+                "FixedValue": {
+                  "IsDynamic": false,
+                  "FixedValue": 1.0
+                }
+              },
+              "DisplayData": {
+                "UIMessageHeight": 100.0
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

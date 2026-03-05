@@ -1,0 +1,36 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "TargetTypes": [],
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.ActiveVirtualCamera",
+              "AreaName": "1010101_Temp",
+              "AnchorName": "Camera_Entrance",
+              "BlendConfig": {
+                "BlendType": "EaseInOut",
+                "BlendTime": 1.0
+              }
+            }
+          ],
+          "OnTriggerExit": [
+            {
+              "$type": "RPG.GameCore.ActiveVirtualCamera",
+              "AreaName": "1010101_Temp",
+              "AnchorName": "Camera_Entrance",
+              "IsActive": false,
+              "BlendConfig": {
+                "BlendType": "EaseInOut",
+                "BlendTime": 1.0
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

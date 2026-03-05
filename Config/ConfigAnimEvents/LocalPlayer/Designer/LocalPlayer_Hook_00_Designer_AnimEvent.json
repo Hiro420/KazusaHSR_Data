@@ -1,0 +1,274 @@
+﻿{
+  "AnimatorStateEvents": [
+    {
+      "AnimatorStateName": "Attack_1",
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.SetAttachmentVisibility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AttachPoints": [
+            {
+              "Name": "Weapon",
+              "TriggerEffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Hook/Eff_Avatar_Hook_00_Common_WeaponEnd.prefab"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "AnimatorStateName": "Attack_1",
+      "NormalizedTime": 0.015,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.SetAttachmentVisibility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AttachPoints": [
+            {
+              "Name": "Weapon",
+              "TriggerEffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Hook/Eff_Avatar_Hook_00_Common_WeaponStart.prefab"
+            }
+          ],
+          "Visibility": true,
+          "VisibilityApplyDelay": 1
+        }
+      ]
+    },
+    {
+      "AnimatorStateName": "Attack_1",
+      "NormalizedTime": 0.5,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.SetAttachmentVisibility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AttachPoints": [
+            {
+              "Name": "Weapon",
+              "TriggerEffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Hook/Eff_Avatar_Hook_00_Common_WeaponEnd.prefab"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "AnimatorStateName": "MazeSkill",
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.SetAttachmentVisibility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AttachPoints": [
+            {
+              "Name": "Weapon",
+              "TriggerEffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Hook/Eff_Avatar_Hook_00_Common_WeaponEnd.prefab"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "AnimatorStateName": "MazeSkill",
+      "NormalizedTime": 0.065,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.SetAttachmentVisibility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AttachPoints": [
+            {
+              "Name": "Weapon",
+              "TriggerEffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Hook/Eff_Avatar_Hook_00_Common_WeaponStart.prefab"
+            }
+          ],
+          "Visibility": true,
+          "VisibilityApplyDelay": 1
+        }
+      ]
+    },
+    {
+      "AnimatorStateName": "MazeSkill",
+      "NormalizedTime": 0.25,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.SetAttachmentVisibility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AttachPoints": [
+            {
+              "Name": "Weapon",
+              "TriggerEffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Hook/Eff_Avatar_Hook_00_Common_WeaponEnd.prefab"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "AnimatorStateGroupEvents": [
+    {
+      "States": [
+        {
+          "Name": "Idle_Show_01"
+        },
+        {
+          "Name": "Idle_Show_02"
+        },
+        {
+          "Name": "Idle_Show_03"
+        }
+      ],
+      "OnEnter": [
+        {
+          "$type": "RPG.GameCore.EnableEmotion",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          }
+        }
+      ],
+      "OnExit": [
+        {
+          "$type": "RPG.GameCore.EnableEmotion",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "Enable": true
+        }
+      ]
+    },
+    {
+      "States": [
+        {
+          "Name": "Attack_1",
+          "NormalizedTime": 0.015,
+          "ExitInTransition": true
+        }
+      ],
+      "OnEnter": [
+        {
+          "$type": "RPG.GameCore.SetAttachmentVisibility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AttachPoints": [
+            {
+              "Name": "Weapon",
+              "TriggerEffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Hook/Eff_Avatar_Hook_00_Common_WeaponStart.prefab"
+            }
+          ],
+          "Visibility": true,
+          "VisibilityApplyDelay": 1
+        }
+      ],
+      "OnExit": [
+        {
+          "$type": "RPG.GameCore.SetAttachmentVisibility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AttachPoints": [
+            {
+              "Name": "Weapon",
+              "TriggerEffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Hook/Eff_Avatar_Hook_00_Common_WeaponEnd.prefab"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "States": [
+        {
+          "Name": "MazeSkill",
+          "NormalizedTime": 0.065,
+          "ExitInTransition": true
+        }
+      ],
+      "OnEnter": [
+        {
+          "$type": "RPG.GameCore.SetAttachmentVisibility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AttachPoints": [
+            {
+              "Name": "Weapon",
+              "TriggerEffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Hook/Eff_Avatar_Hook_00_Common_WeaponStart.prefab"
+            }
+          ],
+          "Visibility": true,
+          "VisibilityApplyDelay": 1
+        }
+      ],
+      "OnExit": [
+        {
+          "$type": "RPG.GameCore.SetAttachmentVisibility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AttachPoints": [
+            {
+              "Name": "Weapon",
+              "TriggerEffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Hook/Eff_Avatar_Hook_00_Common_WeaponEnd.prefab"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "States": [
+        {
+          "Name": "Idle_Show_01",
+          "ExitInTransition": true
+        }
+      ],
+      "OnEnter": [
+        {
+          "$type": "RPG.GameCore.SetAttachmentVisibility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AttachPoints": [
+            {
+              "Name": "Sweet"
+            }
+          ],
+          "Visibility": true,
+          "VisibilityApplyDelay": 1
+        }
+      ],
+      "OnExit": [
+        {
+          "$type": "RPG.GameCore.SetAttachmentVisibility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AttachPoints": [
+            {
+              "Name": "Sweet"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

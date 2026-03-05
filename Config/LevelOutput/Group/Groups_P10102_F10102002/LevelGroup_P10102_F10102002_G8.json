@@ -1,0 +1,95 @@
+﻿{
+  "GroupGUID": "d3920ec5-02bd-4e50-a63b-02761fa19ee5",
+  "GroupName": "New Group",
+  "AreaAnchorName": "LevelArea_P10102_F10102002_G8",
+  "AnchorList": [],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": 3.255,
+      "PosZ": -2.305,
+      "Name": "Prop1",
+      "RotY": 242.26,
+      "PropID": 100,
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "State": "TriggerEnable",
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300002,
+      "PosX": -1.444,
+      "PosZ": -0.04,
+      "Name": "Prop2",
+      "RotY": 72.98002,
+      "PropID": 100,
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "State": "TriggerEnable",
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300003,
+      "PosX": 2.477,
+      "PosZ": -0.886,
+      "Name": "Prop3",
+      "Comment": "床",
+      "PropID": 100,
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": [
+    {
+      "ID": 400001,
+      "PosX": 3.255,
+      "PosZ": -2.305,
+      "Name": "NPC1",
+      "RotY": 242.26,
+      "NPCID": 101080301,
+      "DialogueGroups": [
+        2013101
+      ],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400002,
+      "PosX": -1.444,
+      "PosZ": -0.04,
+      "Name": "NPC2",
+      "RotY": 72.98002,
+      "NPCID": 101080302,
+      "DialogueGroups": [
+        2013102
+      ],
+      "ServerInteractVerificationIDList": []
+    }
+  ]
+}

@@ -1,0 +1,530 @@
+﻿{
+  "SomatoType": "MiddleAvatar",
+  "BuffPanelOffset": {
+    "x": -0.2,
+    "y": 1.0,
+    "z": 0.0
+  },
+  "HitBoxWidth": 0.3,
+  "HitBoxHeight": 1.5,
+  "Location": {
+    "Width": 0.8
+  },
+  "SaveModelWhenDead": true,
+  "AnimEventConfigList": [
+    "Config/ConfigAnimEvents/Avatar/Designer/Avatar_Mar_7th_00_Designer_AnimEvent.json",
+    "Config/ConfigAnimEvents/Avatar/Effect/Avatar_Mar_7th_00_Effect_AnimEvent.json",
+    "Config/ConfigAnimEvents/Avatar/Audio/Avatar_Mar_7th_00_Audio_AnimEvent.json"
+  ],
+  "SoundBankList": [
+    "BK_VO_Avatar_Mar7th_Inlevel",
+    "BK_SFX_Avatar_Mar7th_Common"
+  ],
+  "SkillList": [
+    {
+      "Name": "Skill01",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "EnemySelect"
+      },
+      "UseReadyTransitAnim": true,
+      "ReadyAnimState": "Skill01_Ready",
+      "ReadyAnimWaitTime": 0.3,
+      "CameraConfig": {
+        "NormalConfig": {
+          "CameraState": "UseSkillPerform",
+          "AnchorTargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "IsLocalOffset": true,
+          "AnchorOffset": {
+            "x": 0.0,
+            "y": 1.5,
+            "z": 0.2
+          },
+          "AimTargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "SkillTargetEntityList"
+          },
+          "AimOffset": {
+            "x": 0.0,
+            "y": 1.5,
+            "z": 0.0
+          },
+          "ResetToDefault": true
+        },
+        "BlendConfig": {
+          "BlendType": "Cut"
+        }
+      },
+      "CameraConfigAdded": {
+        "NormalConfig": {
+          "CameraState": "SelectDarkTeamEntity",
+          "AnchorTargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "IsLocalOffset": true,
+          "AnchorOffset": {
+            "x": 0.19,
+            "y": 0.24,
+            "z": -0.56
+          },
+          "AimTargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "SkillTargetEntityList"
+          },
+          "AimOffset": {
+            "x": -2.8,
+            "y": 0.45,
+            "z": 0.0
+          },
+          "FollowRadius": 2.65,
+          "AnchorToAimAngle": 27.0,
+          "ResetToDefault": true
+        },
+        "BlendConfig": {
+          "BlendType": "Custom",
+          "CustomCurveName": "BlendCut_00to1",
+          "BlendTime": 2.0
+        }
+      },
+      "FormationType": "LightTeamSelectTarget",
+      "EntryAbility": "W_GuardianPlayer_Skill01_Phase01",
+      "ComplexSkillAI": {
+        "Groups": [
+          {
+            "GroupName": "BaseWeight",
+            "Weight": {
+              "Value": 0.3
+            }
+          },
+          {
+            "GroupName": "BasePp_Common_SingleAttack",
+            "Weight": {
+              "Value": 0.4
+            }
+          },
+          {
+            "GroupName": "BasePp_Common_WeakBreak",
+            "Weight": {
+              "Value": 0.3
+            }
+          }
+        ]
+      },
+      "ComplexSkillAIOverride": {
+        "Groups": [
+          {
+            "GroupName": "BasePp_Common_SingleAttack"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Skill02",
+      "SkillType": "Skill",
+      "UseType": "SelectEntity",
+      "AlwaysDoAutoLock": true,
+      "LockType": "LowHP",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "UseReadyTransitAnim": true,
+      "ReadyAnimState": "Skill02_Ready_Loop",
+      "ReadyAnimWaitTime": 0.3,
+      "CameraConfig": {
+        "NormalConfig": {
+          "CameraState": "SelectLightTeamEntity",
+          "AnchorTargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnchorRatio": 0.2,
+          "AimTargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "SkillTargetEntityList"
+          },
+          "ResetToDefault": true
+        },
+        "BlendConfig": {
+          "BlendType": "EaseInOut",
+          "FrameBlendSwitch": true,
+          "FrameBlendWeightStart": 0.5,
+          "FrameBlendDuration": 0.5
+        },
+        "ShowEntityConfig": {
+          "ShowTargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          }
+        }
+      },
+      "CameraConfigAdded": {
+        "NormalConfig": {
+          "CameraState": "SelectLightTeamEntity",
+          "AnchorTargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AnchorOffset": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.5
+          },
+          "AimTargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "SkillTargetEntityList"
+          },
+          "FollowDamp": 10.0,
+          "ResetToDefault": true
+        },
+        "CloseupShotConfig": {},
+        "ShowEntityConfig": {
+          "ShowTargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          }
+        }
+      },
+      "FormationType": "LightTeamNormal",
+      "TeamFormationConfigTemplateName": "LowSpacing",
+      "EntryAbility": "W_GuardianPlayer_Skill02_Phase01",
+      "ComplexSkillAI": {
+        "Groups": [
+          {
+            "GroupName": "Base_Mar7th_SingleShield",
+            "Weight": {
+              "Value": 0.8
+            }
+          },
+          {
+            "GroupName": "Add01_Common_CompareTeamSP",
+            "Weight": {
+              "Value": 0.1
+            }
+          },
+          {
+            "GroupName": "AddNP_Common_BPSkill",
+            "Weight": {
+              "Value": 0.1
+            }
+          }
+        ]
+      },
+      "ComplexSkillAIOverride": {
+        "SkillBasicPower": {
+          "Value": 0.9
+        },
+        "Groups": [
+          {
+            "GroupName": "Base_Mar7th_SingleShield"
+          },
+          {
+            "GroupName": "Add01_Common_CompareTeamSP",
+            "Weight": {
+              "Value": 0.1
+            }
+          },
+          {
+            "GroupName": "AddNP_Common_BPSkill",
+            "Weight": {
+              "Value": 0.1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Skill03",
+      "SkillType": "Ultra",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "AllEnemy"
+      },
+      "ReadyAnimState": "Skill03_Ready",
+      "CameraConfig": {},
+      "EntryAbility": "W_GuardianPlayer_Skill03_Phase01",
+      "PrepareAbility": "W_GuardianPlayer_Skill03_EnterReady",
+      "ComplexSkillAI": {
+        "SkillBasicPower": {
+          "Value": 70.0
+        },
+        "Groups": [
+          {
+            "GroupName": "Ultra_Common_ImmediateRelease"
+          }
+        ]
+      },
+      "ComplexSkillAIOverride": {
+        "SkillBasicPower": {
+          "Value": 70.0
+        },
+        "Groups": [
+          {
+            "GroupName": "Ultra_Common_ImmediateRelease"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Skill11",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "EnemySelect",
+        "SubTargetType": "TargetAdjoinEntity"
+      },
+      "UseReadyTransitAnim": true,
+      "ReadyAnimState": "Skill01_Ready",
+      "ReadyAnimWaitTime": 0.3,
+      "CameraConfig": {
+        "NormalConfig": {
+          "CameraState": "UseSkillPerform",
+          "AnchorTargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "IsLocalOffset": true,
+          "AnchorOffset": {
+            "x": 0.0,
+            "y": 1.5,
+            "z": 0.2
+          },
+          "AimTargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "SkillTargetEntityList"
+          },
+          "AimOffset": {
+            "x": 0.0,
+            "y": 1.5,
+            "z": 0.0
+          },
+          "ResetToDefault": true
+        },
+        "BlendConfig": {
+          "BlendType": "Cut"
+        }
+      },
+      "CameraConfigAdded": {
+        "NormalConfig": {
+          "CameraState": "SelectDarkTeamEntity",
+          "AnchorTargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "IsLocalOffset": true,
+          "AnchorOffset": {
+            "x": 0.19,
+            "y": 0.24,
+            "z": -0.56
+          },
+          "AimTargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "SkillTargetEntityList"
+          },
+          "AimOffset": {
+            "x": -2.8,
+            "y": 0.45,
+            "z": 0.0
+          },
+          "FollowRadius": 2.65,
+          "AnchorToAimAngle": 27.0,
+          "ResetToDefault": true
+        },
+        "BlendConfig": {
+          "BlendType": "Custom",
+          "CustomCurveName": "BlendCut_00to1",
+          "BlendTime": 2.0
+        }
+      },
+      "FormationType": "LightTeamSelectTarget",
+      "EntryAbility": "W_GuardianPlayer_Skill11_Phase01",
+      "ComplexSkillAI": {
+        "Groups": [
+          {
+            "GroupName": "BaseWeight",
+            "Weight": {
+              "Value": 0.3
+            }
+          },
+          {
+            "GroupName": "BasePp_Common_SingleAttack",
+            "Weight": {
+              "Value": 0.4
+            }
+          },
+          {
+            "GroupName": "BasePp_Common_WeakBreak",
+            "Weight": {
+              "Value": 0.3
+            }
+          }
+        ]
+      },
+      "ComplexSkillAIOverride": {
+        "Groups": [
+          {
+            "GroupName": "BasePp_Common_SingleAttack"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "SkillP01",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "W_GuardianPlayer_PassiveSkill01"
+    },
+    {
+      "Name": "PassiveSkill02",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Avatar_Common_PassiveSkill_SPAdd_On_Killing"
+    }
+  ],
+  "AbilityList": [
+    "Avatar_Common_PassiveSkill_SPAdd_On_Killing",
+    "Element_Fever",
+    "Element_Fever_DamageAbility"
+  ],
+  "SkillAbilityList": [
+    {
+      "Skill": "Skill01",
+      "AbilityList": [
+        "W_GuardianPlayer_Skill01_Phase01",
+        "W_GuardianPlayer_Skill01_Phase02",
+        "Avatar_Mar_7th_00_Skill01_Camera"
+      ]
+    },
+    {
+      "Skill": "Skill11",
+      "AbilityList": [
+        "W_GuardianPlayer_Skill11_Phase01",
+        "W_GuardianPlayer_Skill11_Phase02"
+      ]
+    },
+    {
+      "Skill": "Skill02",
+      "AbilityList": [
+        "W_GuardianPlayer_Skill02_Phase01",
+        "W_GuardianPlayer_Skill02_Phase02",
+        "Avatar_Mar_7th_00_Skill02_Camera_Self",
+        "Avatar_Mar_7th_00_Skill02_Camera_Other"
+      ]
+    },
+    {
+      "Skill": "Skill03",
+      "AbilityList": [
+        "W_GuardianPlayer_Skill03_Phase01",
+        "W_GuardianPlayer_Skill03_Phase02",
+        "Avatar_Mar_7th_00_Skill03_Camera",
+        "W_GuardianPlayer_Skill03_EnterReady"
+      ]
+    },
+    {
+      "Skill": "SkillP01",
+      "AbilityList": [
+        "W_GuardianPlayer_PassiveSkill01"
+      ]
+    }
+  ],
+  "DynamicValues": {
+    "Floats": {
+      "-866033058": {},
+      "-1126825319": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill01",
+          "Index": 0
+        }
+      },
+      "-218860801": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill01",
+          "Index": 1
+        }
+      },
+      "-1999440872": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill11",
+          "Index": 0
+        }
+      },
+      "-1695908581": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill11",
+          "Index": 1
+        }
+      },
+      "969008839": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill11",
+          "Index": 2
+        }
+      },
+      "1468227228": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill02",
+          "Index": 0
+        }
+      },
+      "-56289053": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill03",
+          "Index": 0
+        }
+      },
+      "-1849417852": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill03",
+          "Index": 1
+        }
+      },
+      "2121880715": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill03",
+          "Index": 2
+        }
+      },
+      "32520839": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "SkillP01",
+          "Index": 0
+        }
+      }
+    }
+  },
+  "WeaponType": "WP_Magic",
+  "SkillReadyTransits": [
+    {
+      "From": 1,
+      "To": 2,
+      "AnimStateName": "Skill01toSkill02",
+      "TransitionInTime": 0.05,
+      "ReverseOutroTime": 0.06
+    },
+    {
+      "From": 2,
+      "To": 1,
+      "AnimStateName": "Skill02toSkill01",
+      "TransitionInTime": 0.05,
+      "ReverseOutroTime": 0.06
+    }
+  ]
+}

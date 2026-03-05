@@ -1,0 +1,223 @@
+﻿{
+  "GroupGUID": "dabf9d7c-7635-4e9b-893d-cee855dfce4e",
+  "GroupName": "PlayerStart",
+  "AreaAnchorName": "LevelArea_P20123_F20123001_G2",
+  "AnchorList": [
+    {
+      "ID": 1,
+      "PosX": -8.48,
+      "PosY": 25.39901,
+      "PosZ": 91.33,
+      "Name": "Anchor1",
+      "RotY": 194.6781
+    },
+    {
+      "ID": 2,
+      "PosX": -34.89,
+      "PosY": 20.00002,
+      "PosZ": 35.4,
+      "Name": "Anchor2",
+      "Comment": "指引点01"
+    },
+    {
+      "ID": 3,
+      "PosX": -40.37,
+      "PosY": 20.00002,
+      "PosZ": 71.54,
+      "Name": "Anchor3",
+      "Comment": "指引点03"
+    },
+    {
+      "ID": 4,
+      "PosX": -4.93,
+      "PosY": 20.10341,
+      "PosZ": 13.1,
+      "Name": "Anchor4",
+      "RotY": 180.0,
+      "Comment": "锚点02"
+    },
+    {
+      "ID": 5,
+      "PosX": 4.869,
+      "PosY": 22.98061,
+      "PosZ": 55.338,
+      "Name": "Anchor5",
+      "Comment": "指引点02"
+    },
+    {
+      "ID": 6,
+      "PosX": -4.37,
+      "PosY": 20.0,
+      "PosZ": -33.46,
+      "Name": "Anchor6",
+      "RotY": 146.7474,
+      "Comment": "boss战刷新点"
+    }
+  ],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": -9.54,
+      "PosY": 25.39901,
+      "PosZ": 87.28,
+      "Name": "Prop1",
+      "RotY": 194.6781,
+      "Comment": "锚点1-trigger",
+      "PropID": 101,
+      "Trigger": {
+        "Radius": 6.0,
+        "DimX": 8.0,
+        "DimY": 2.0,
+        "DimZ": 8.0,
+        "TargetCamps": [],
+        "TriggerTimes": -1,
+        "Server": true
+      },
+      "ValueSource": {
+        "Values": []
+      },
+      "State": "CheckPointEnable",
+      "AnchorGroupID": 2,
+      "AnchorID": 1,
+      "MapTeleportID": 2012301,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300002,
+      "PosX": -11.34,
+      "PosY": 25.68126,
+      "PosZ": 87.71,
+      "Name": "Prop2",
+      "RotY": 135.0,
+      "Comment": "锚点1-模型",
+      "PropID": 102,
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "ValueSource": {
+        "Values": [
+          {
+            "$type": "RPG.GameCore.SharedInt",
+            "Key": "Maze_CheckPoint_RefreshGroupID",
+            "Value": 2
+          },
+          {
+            "$type": "RPG.GameCore.SharedInt",
+            "Key": "Maze_CheckPoint_RefreshPropID",
+            "Value": 300001
+          }
+        ]
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300003,
+      "PosX": -4.93,
+      "PosY": 20.10341,
+      "PosZ": 11.95,
+      "Name": "Prop3",
+      "RotY": 180.0,
+      "Comment": "锚点2-trigger",
+      "PropID": 101,
+      "Trigger": {
+        "Radius": 6.0,
+        "DimX": 8.0,
+        "DimY": 2.0,
+        "DimZ": 16.0,
+        "TargetCamps": [],
+        "TriggerTimes": -1,
+        "Server": true
+      },
+      "ValueSource": {
+        "Values": []
+      },
+      "State": "CheckPointDisable",
+      "AnchorGroupID": 2,
+      "AnchorID": 4,
+      "MapTeleportID": 2012302,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300004,
+      "PosX": -1.84,
+      "PosY": 20.38844,
+      "PosZ": 13.1,
+      "Name": "Prop4",
+      "RotY": 270.0,
+      "Comment": "锚点2-模型",
+      "PropID": 102,
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "ValueSource": {
+        "Values": [
+          {
+            "$type": "RPG.GameCore.SharedInt",
+            "Key": "Maze_CheckPoint_RefreshGroupID",
+            "Value": 2
+          },
+          {
+            "$type": "RPG.GameCore.SharedInt",
+            "Key": "Maze_CheckPoint_RefreshPropID",
+            "Value": 300003
+          }
+        ]
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300009,
+      "PosX": 34.52,
+      "PosY": 20.17721,
+      "PosZ": -58.62,
+      "Name": "Prop9",
+      "RotY": 225.0,
+      "Comment": "出口",
+      "PropID": 103,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/MainStory/M2_2_F20122001/M202_MazeExit.json",
+      "Trigger": {
+        "Radius": 2.5,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [
+    {
+      "ID": 1,
+      "PosX": -6.213479,
+      "PosY": 1.92,
+      "PosZ": 782.0,
+      "Name": "BattleArea1",
+      "RotY": 270.0,
+      "Tags": [
+        "BattleArea01"
+      ]
+    }
+  ],
+  "NPCList": [],
+  "GroupRefreshID": 1
+}

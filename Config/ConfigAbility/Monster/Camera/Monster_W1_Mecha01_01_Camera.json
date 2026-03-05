@@ -1,0 +1,87 @@
+﻿{
+  "AbilityList": [
+    {
+      "Name": "Monster_W1_Mecha01_01_Skill01_Camera",
+      "TargetInfo": {
+        "TargetType": "SkillTargetEntityList"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.VCameraConfigChange",
+          "CameraConfig": {
+            "NormalConfig": {
+              "CameraState": "CasterToTargetPerform",
+              "TemplateName": "Monster_Common_SoloRangeAttack",
+              "AnchorTargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "Caster"
+              },
+              "AimTargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "SkillTargetEntityList"
+              }
+            },
+            "BlendConfig": {
+              "BlendType": "Cut"
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.VCameraConfigChange",
+          "CameraConfig": {
+            "NormalConfig": {
+              "CameraState": "CameraMotion",
+              "AnchorTargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "Caster"
+              },
+              "AimTargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "SkillTargetEntityList"
+              }
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.WaitAnimState",
+          "AnimStateName": "Skill01",
+          "NormalizedTimeEnd": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 0.459
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.VCameraConfigChange",
+          "CameraConfig": {
+            "ShakeConfig": {
+              "UseFullPeroid": true,
+              "Amplitude": {
+                "x": 0.1,
+                "y": 0.1,
+                "z": 0.3
+              },
+              "PositionFreqV3": {
+                "x": 14.0,
+                "y": 16.0,
+                "z": 4.0
+              },
+              "ShakeTime": 0.2,
+              "PerlinNoiseAmplitude": {
+                "x": 0.03,
+                "y": 0.03,
+                "z": 0.03
+              },
+              "PerlinNoiseFreq": {
+                "x": 20.0,
+                "y": 22.0,
+                "z": 24.0
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

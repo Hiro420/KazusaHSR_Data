@@ -1,0 +1,58 @@
+﻿{
+  "GroupGUID": "8ca00dc1-3749-491d-9580-5bb55a11fcc1",
+  "GroupName": "AllHit_Puzzle",
+  "LevelGraph": "Config/Level/Maze/MazeExtra/Puzzle/M1-1/Maze_Prop_2xAll_M11_Puzzle_Group.json",
+  "AreaAnchorName": "LevelArea_P20111_F20111001_G20",
+  "SaveType": "Temporary",
+  "AnchorList": [],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": 0.59,
+      "PosY": -2.1,
+      "PosZ": -94.77,
+      "Name": "Prop1",
+      "PropID": 201,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300002,
+      "PosX": -5.45,
+      "PosY": -2.1,
+      "PosZ": -94.8,
+      "Name": "Prop2",
+      "PropID": 203,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300003,
+      "PosX": -2.47,
+      "PosY": -2.134002,
+      "PosZ": -91.535,
+      "Name": "Prop3",
+      "RotY": 180.0,
+      "Comment": "镜头处理",
+      "PropID": 100,
+      "InitLevelGraph": "Config/Level/Maze/MazeExtra/Puzzle/M1-1/Maze_Prop_2xAll_M11_Puzzle_Camera.json",
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": [],
+  "GroupRefreshID": 1
+}

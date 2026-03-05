@@ -1,0 +1,52 @@
+﻿{
+  "StateZoneConfig": {
+    "AnimatorStateZoneDescList": [
+      {
+        "StateName": "StandBy",
+        "ZoneList": [
+          {
+            "ZoneType": "Idle"
+          }
+        ]
+      },
+      {
+        "StateName": "IdleTurnR",
+        "ZoneList": [
+          {
+            "ZoneType": "Idle"
+          },
+          {
+            "ZoneType": "AnimSteer"
+          }
+        ]
+      },
+      {
+        "StateName": "IdleTurnL",
+        "ZoneList": [
+          {
+            "ZoneType": "Idle"
+          },
+          {
+            "ZoneType": "AnimSteer"
+          }
+        ]
+      },
+      {
+        "StateName": "Walk",
+        "ZoneList": [
+          {
+            "ZoneType": "Move"
+          }
+        ]
+      },
+      {
+        "StateName": "Run",
+        "ZoneList": [
+          {
+            "ZoneType": "Move"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropStateExecute",
+          "TargetIsOwner": true,
+          "Execute": [
+            {
+              "$type": "RPG.GameCore.DestroyProp"
+            }
+          ],
+          "State": "Open"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "TargetIsOwner": true,
+          "ButtonText": {
+            "hash": 278713937
+          },
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.PropSetVisibility",
+              "ID": 300004,
+              "GroupID": 7,
+              "SpecifiedRelativePaths": []
+            },
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "Prop_101010106_Ice"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+﻿{
+  "AnimatorStateEvents": [
+    {
+      "AnimatorStateName": "Attack_1",
+      "NormalizedTime": 0.075,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.TriggerEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Hook/Eff_Avatar_Hook_00_MazeAttack.prefab"
+        }
+      ],
+      "TriggerOnce": true
+    },
+    {
+      "AnimatorStateName": "Attack_2",
+      "NormalizedTime": 0.15,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.TriggerEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Himeko/Eff_LocalPlayer_Himeko_Skill01_2.prefab"
+        }
+      ],
+      "TriggerOnce": true
+    },
+    {
+      "AnimatorStateName": "MazeSkill",
+      "NormalizedTime": 0.08,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.TriggerEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Hook/Eff_Avatar_Hook_00_MazeSkill_Start01.prefab"
+        }
+      ],
+      "TriggerOnce": true
+    }
+  ],
+  "AnimatorStateGroupEvents": []
+}

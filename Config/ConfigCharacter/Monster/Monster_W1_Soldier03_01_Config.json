@@ -1,0 +1,163 @@
+﻿{
+  "SomatoType": "LittleMonster",
+  "CharacterHUDOffset": {
+    "x": 0.0,
+    "y": 2.6,
+    "z": 0.0
+  },
+  "BuffPanelOffset": {
+    "x": 0.0,
+    "y": 1.8,
+    "z": 0.0
+  },
+  "HitBoxHeight": 0.4,
+  "Location": {
+    "Width": 1.6,
+    "LocalZOffsetMin": 0.3,
+    "LocalZOffsetMax": 1.0
+  },
+  "VisualRadius": 0.8,
+  "AnimEventConfigList": [
+    "Config/ConfigAnimEvents/Monster/Designer/Monster_W1_Soldier03_00_Designer_AnimEvent.json",
+    "Config/ConfigAnimEvents/Monster/Effect/Monster_W1_Soldier03_00_Effect_AnimEvent.json",
+    "Config/ConfigAnimEvents/Monster/Audio/Monster_W1_Soldier03_00_Audio_AnimEvent.json"
+  ],
+  "SoundBankList": [
+    "BK_SFX_Monster_Common"
+  ],
+  "SkillList": [
+    {
+      "Name": "Skill01",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "EnemySelect"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Monster_W1_CWSoldier_04_Skill01_Phase01"
+    },
+    {
+      "Name": "Skill06",
+      "SkillType": "Skill",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "EnemySelect"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Monster_W1_CWSoldier_04_Skill06_Phase01"
+    },
+    {
+      "Name": "Skill11",
+      "SkillType": "Skill",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Monster_W1_CWSoldier_04_Skill11_Phase01"
+    },
+    {
+      "Name": "PassiveSkillInitiate",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Monster_W1_CWSoldier_04_PassiveSkillInitiate"
+    },
+    {
+      "Name": "PassiveSkill01",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Monster_Common_PassiveSkill_StanceBreak_Action"
+    },
+    {
+      "Name": "PassiveSkill02",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Monster_Common_Fever_Action"
+    },
+    {
+      "Name": "PassiveSkill03",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Monster_W1_CWSoldier_04_Passive_AIResetAndRemoveSkill10Aim"
+    },
+    {
+      "Name": "PassiveSkill05",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Monster_Common_MuteHitFly"
+    }
+  ],
+  "AbilityList": [
+    "Monster_Common_PassiveSkill_StanceBreak_Action",
+    "Monster_W1_CWSoldier_04_PassiveSkillInitiate",
+    "Monster_W1_CWSoldier_04_Passive_AIResetAndRemoveSkill10Aim",
+    "Monster_Common_Fever_Action",
+    "Monster_Common_MuteHitFly"
+  ],
+  "SkillAbilityList": [
+    {
+      "Skill": "Skill01",
+      "AbilityList": [
+        "Monster_W1_CWSoldier_04_Skill01_Camera",
+        "Monster_W1_CWSoldier_04_Skill01_Phase01",
+        "Monster_W1_CWSoldier_04_Skill01_Phase02"
+      ]
+    },
+    {
+      "Skill": "Skill06",
+      "AbilityList": [
+        "Monster_W1_CWSoldier_04_Skill06_Camera",
+        "Monster_W1_CWSoldier_04_Skill06_Phase01",
+        "Monster_W1_CWSoldier_04_Skill06_Phase02"
+      ]
+    },
+    {
+      "Skill": "Skill11",
+      "AbilityList": [
+        "Monster_W1_CWSoldier_04_Skill11_Camera",
+        "Monster_W1_CWSoldier_04_Skill11_Phase01",
+        "Monster_W1_CWSoldier_04_Skill11_Phase02"
+      ]
+    }
+  ],
+  "DynamicValues": {
+    "Floats": {
+      "-1126825319": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill01",
+          "Index": 0
+        }
+      },
+      "-1122549516": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill06",
+          "Index": 0
+        }
+      }
+    }
+  },
+  "CustomValues": {
+    "SummonID1": 1001010,
+    "SummonID2": 1001010,
+    "SummonID3": 1001020,
+    "Monster_W1_CWSoldier_04_AIFlag": 1
+  },
+  "WeaponType": "WP_Scythe",
+  "ArmorType": "Armor_Metal"
+}

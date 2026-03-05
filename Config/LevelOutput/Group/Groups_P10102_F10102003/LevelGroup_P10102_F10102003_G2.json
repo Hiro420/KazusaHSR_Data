@@ -1,0 +1,42 @@
+﻿{
+  "GroupGUID": "06436216-46be-42bb-9947-3855883eec0c",
+  "GroupName": "Default",
+  "AreaAnchorName": "LevelArea_P10102_F10102003_G2",
+  "AnchorList": [
+    {
+      "ID": 1,
+      "PosX": -5.045,
+      "PosZ": 5.335,
+      "Name": "Anchor1",
+      "RotY": 180.0
+    }
+  ],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": -5.045,
+      "PosY": 1.208,
+      "PosZ": 7.56,
+      "Name": "Prop1",
+      "Comment": "出口",
+      "PropID": 108,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/DownTown/DownTown_Chapter01_ClinicExit.json",
+      "Trigger": {
+        "Radius": 1.5,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": []
+}

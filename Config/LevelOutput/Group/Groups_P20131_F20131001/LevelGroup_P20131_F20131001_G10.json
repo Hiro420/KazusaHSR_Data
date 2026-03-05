@@ -1,0 +1,69 @@
+﻿{
+  "GroupGUID": "2c829bf2-4be0-47eb-b98a-61804364da86",
+  "GroupName": "New Group",
+  "AreaAnchorName": "LevelArea_P20131_F20131001_G10",
+  "AnchorList": [],
+  "ModelList": [],
+  "MonsterList": [
+    {
+      "ID": 200001,
+      "PosX": 14.79,
+      "PosY": 1.007364,
+      "PosZ": -187.67,
+      "Name": "Monster1",
+      "RotY": 180.0,
+      "Comment": "12",
+      "NPCMonsterID": 1013010,
+      "AIConfig": {
+        "AIFile": "Config/ConfigAI/Adventure/MazeMonster_LV3Common_idle_Loop.json",
+        "PathwayList": [
+          {}
+        ]
+      },
+      "CreateOnInitial": false,
+      "CampID": 3,
+      "BattleArea": {
+        "GroupID": 2,
+        "ID": 1
+      },
+      "EventID": 20131112
+    }
+  ],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": 14.79,
+      "PosY": 1.007364,
+      "PosZ": -187.67,
+      "IsDelete": true,
+      "Name": "Prop1",
+      "RotY": 180.0,
+      "PropID": 101014,
+      "CreateOnInitial": false,
+      "CampID": 2,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": [
+    {
+      "ID": 400001,
+      "PosX": 14.79,
+      "PosY": 1.007364,
+      "PosZ": -187.67,
+      "Name": "NPC1",
+      "RotY": 180.0,
+      "NPCID": 101090101,
+      "CampID": 3,
+      "AIConfig": {
+        "AIFile": "Config/ConfigAI/Adventure/MazeMonster_LV3Common_idle_Loop.json",
+        "PathwayList": []
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ]
+}

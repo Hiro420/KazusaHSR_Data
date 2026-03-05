@@ -1,0 +1,74 @@
+﻿{
+  "GroupGUID": "66189ad6-0296-429a-9e87-96b45e7e4466",
+  "GroupName": "NPCs",
+  "AreaAnchorName": "LevelArea_P10000_F10000000_G3",
+  "AnchorList": [
+    {
+      "ID": 1,
+      "PosX": -1.49,
+      "PosY": -1E-06,
+      "PosZ": 2.14,
+      "Name": "TalktoPam"
+    }
+  ],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": [
+    {
+      "ID": 400001,
+      "PosX": -1.38,
+      "PosZ": 3.16,
+      "Name": "NPC1",
+      "RotY": 180.0,
+      "Comment": "帕姆",
+      "NPCID": 1000001,
+      "Trigger": {
+        "Radius": 3.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": -1,
+        "Server": true
+      },
+      "AIConfig": {
+        "PathwayList": []
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "ID": 400002,
+      "PosX": 3.312,
+      "PosZ": 2.848,
+      "Name": "NPC2",
+      "RotY": 240.1102,
+      "Comment": "姬子",
+      "NPCID": 1000004,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400003,
+      "PosX": -4.42,
+      "PosY": 0.021,
+      "PosZ": -1.101,
+      "Name": "NPC3",
+      "RotY": 69.62791,
+      "Comment": "瓦尔特",
+      "NPCID": 1000005,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "GroupRefreshID": 1
+}

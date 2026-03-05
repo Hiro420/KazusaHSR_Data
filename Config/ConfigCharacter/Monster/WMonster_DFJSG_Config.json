@@ -1,0 +1,106 @@
+﻿{
+  "SomatoType": "LittleMonster",
+  "CharacterHUDOffset": {
+    "x": 0.0,
+    "y": 2.6,
+    "z": 0.0
+  },
+  "BuffPanelOffset": {
+    "x": 0.0,
+    "y": 1.8,
+    "z": 0.0
+  },
+  "HitBoxWidth": 0.36,
+  "Resilience": "A",
+  "Location": {
+    "Width": 1.6,
+    "LocalZOffsetMin": 0.3,
+    "LocalZOffsetMax": 1.0
+  },
+  "VisualRadius": 0.8,
+  "AnimEventConfigList": [
+    "Config/ConfigAnimEvents/Monster/Designer/Monster_W1_CWSoldier_04_Designer_AnimEvent.json",
+    "Config/ConfigAnimEvents/Monster/Effect/Monster_W1_CWSoldier_04_Effect_AnimEvent.json",
+    "Config/ConfigAnimEvents/Monster/Audio/Monster_W1_CWSoldier_04_Audio_AnimEvent.json"
+  ],
+  "SoundBankList": [],
+  "SkillList": [
+    {
+      "Name": "Skill01",
+      "SkillType": "Skill",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "EnemySelect"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "WMonster_DFJSG_Skill01_Phase01"
+    },
+    {
+      "Name": "Skill02",
+      "SkillType": "Skill",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "EnemySelect"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "WMonster_DFJSG_Skill02_Phase01"
+    },
+    {
+      "Name": "PassiveSkill01",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Monster_Common_PassiveSkill_StanceBreak_Action"
+    }
+  ],
+  "AbilityList": [
+    "Monster_Common_PassiveSkill_StanceBreak_Action"
+  ],
+  "SkillAbilityList": [
+    {
+      "Skill": "Skill01",
+      "AbilityList": [
+        "Monster_W1_CWSoldier_04_Skill01_Camera",
+        "WMonster_DFJSG_Skill01_Phase01",
+        "WMonster_DFJSG_Skill01_Phase02"
+      ]
+    },
+    {
+      "Skill": "Skill02",
+      "AbilityList": [
+        "Monster_W1_CWSoldier_04_Skill06_Camera",
+        "WMonster_DFJSG_Skill02_Phase01",
+        "WMonster_DFJSG_Skill02_Phase02"
+      ]
+    }
+  ],
+  "DynamicValues": {
+    "Floats": {
+      "-1126825319": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill01",
+          "Index": 0
+        }
+      },
+      "-1847083384": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill02",
+          "Index": 0
+        }
+      },
+      "-428472880": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill02",
+          "Index": 1
+        }
+      }
+    }
+  },
+  "WeaponType": "WP_Scythe",
+  "ArmorType": "Armor_Metal"
+}

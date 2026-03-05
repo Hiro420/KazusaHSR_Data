@@ -1,0 +1,101 @@
+﻿{
+  "AnimatorStateEvents": [
+    {
+      "AnimatorStateName": "Appear",
+      "NormalizedTime": 0.08647089,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.VCameraConfigChange",
+          "CameraConfig": {
+            "ShakeConfig": {
+              "UseFullPeroid": true,
+              "Amplitude": {
+                "x": 0.15,
+                "y": 0.15,
+                "z": 0.0
+              },
+              "PositionFreqV3": {
+                "x": 1.0,
+                "y": 5.0,
+                "z": 0.0
+              },
+              "ShakeTime": 0.2,
+              "RotationalAmplitude": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 1.5
+              },
+              "RotationFreqV3": {
+                "x": 1.0,
+                "y": 0.0,
+                "z": 8.0
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AnimatorStateName": "Appear",
+      "NormalizedTime": 0.126,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.VCameraConfigChange",
+          "CameraConfig": {
+            "ShakeConfig": {
+              "UseFullPeroid": true,
+              "Amplitude": {
+                "x": 0.15,
+                "y": 0.15,
+                "z": 0.0
+              },
+              "PositionFreqV3": {
+                "x": 1.0,
+                "y": 5.0,
+                "z": 0.0
+              },
+              "ShakeTime": 0.2,
+              "RotationalAmplitude": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 1.5
+              },
+              "RotationFreqV3": {
+                "x": 1.0,
+                "y": 0.0,
+                "z": 8.0
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "AnimatorStateName": "Die",
+      "NormalizedTime": 0.9,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.TriggerDeadHandler"
+        }
+      ]
+    },
+    {
+      "AnimatorStateName": "Die_Fly",
+      "NormalizedTime": 0.9,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.TriggerDeadHandler"
+        }
+      ]
+    },
+    {
+      "AnimatorStateName": "Die_Hit",
+      "NormalizedTime": 0.9,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.TriggerDeadHandler"
+        }
+      ]
+    }
+  ]
+}

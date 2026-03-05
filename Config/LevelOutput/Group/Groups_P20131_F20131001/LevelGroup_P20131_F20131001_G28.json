@@ -1,0 +1,54 @@
+﻿{
+  "GroupGUID": "91825dca-2974-4d11-8e0f-1d7fc0e8c785",
+  "GroupName": "SubjectMission",
+  "AreaAnchorName": "LevelArea_P20131_F20131001_G28",
+  "AnchorList": [],
+  "ModelList": [],
+  "MonsterList": [
+    {
+      "ID": 200001,
+      "PosX": -148.18,
+      "PosY": -2.120243,
+      "PosZ": -103.458,
+      "Name": "Monster1",
+      "RotY": 69.594,
+      "NPCMonsterID": 1013010,
+      "AIConfig": {
+        "AIFile": "Config/ConfigAI/Adventure/MazeMonster_LV3Common_idle_Loop.json",
+        "PathwayList": []
+      },
+      "BattleArea": {
+        "GroupID": 2,
+        "ID": 1
+      },
+      "EventID": 20131123
+    }
+  ],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": -146.81,
+      "PosY": 0.24,
+      "PosZ": -104.12,
+      "Name": "Prop1",
+      "Comment": "触发对话",
+      "PropID": 100,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 1.0,
+        "DimX": 10.0,
+        "DimY": 8.0,
+        "DimZ": 12.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueTriggerAngle": 0,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": []
+}

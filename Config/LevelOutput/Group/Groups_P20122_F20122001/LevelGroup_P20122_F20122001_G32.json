@@ -1,0 +1,84 @@
+﻿{
+  "GroupGUID": "5fe12da4-9b3a-4949-9ca3-a5dd28a2ddf0",
+  "GroupName": "SpecialBoss",
+  "LevelGraph": "Config/Level/Maze/MazeProp/Maze_SpecialBoss_Check101712.json",
+  "AreaAnchorName": "LevelArea_P20122_F20122001_G32",
+  "SaveType": "Temporary",
+  "UnlockMainMissionID": 1010704,
+  "AnchorList": [],
+  "ModelList": [],
+  "MonsterList": [
+    {
+      "ID": 200001,
+      "PosX": -46.39,
+      "PosY": 25.53537,
+      "PosZ": 101.09,
+      "Name": "ExtraBoss",
+      "Comment": "ExtraBoss",
+      "NPCMonsterID": 1023010,
+      "AIConfig": {
+        "AIFile": "Config/ConfigAI/Adventure/MazeMonster_LV3Common_idle_Loop.json",
+        "PathwayList": [
+          {}
+        ]
+      },
+      "CampID": 3,
+      "BattleArea": {
+        "GroupID": 2,
+        "ID": 1
+      },
+      "EventID": 101202
+    }
+  ],
+  "PropList": [
+    {
+      "ID": 300002,
+      "PosX": -46.39,
+      "PosY": 25.999,
+      "PosZ": 97.48,
+      "Name": "Prop2",
+      "Comment": "MappingInfo",
+      "PropID": 752,
+      "InitLevelGraph": "Config/Level/Maze/Props/Test_Prop_Mappinginfo.json",
+      "ValueSource": {
+        "Values": [
+          {
+            "$type": "RPG.GameCore.SharedInt",
+            "Key": "MappinginfoID",
+            "Value": 1102
+          }
+        ]
+      },
+      "CampID": 4,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300003,
+      "PosX": -46.39,
+      "PosY": 25.53537,
+      "PosZ": 97.48,
+      "Name": "Prop3",
+      "Comment": "宝箱",
+      "PropID": 701,
+      "InitLevelGraph": "Config/Level/Maze/MazeProp/Maze_SpecialBoss_Reward101712.json",
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "CampID": 4,
+      "State": "ChestLocked",
+      "EventID": 101712,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": []
+}

@@ -1,0 +1,1712 @@
+﻿{
+  "ModifierMap": {
+    "MAvatar_March7th_IceResistance": {
+      "DynamicValues": {
+        "Floats": {
+          "-1080497774": {
+            "Value": 0.1
+          }
+        }
+      },
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.StackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "Property": "IceResistanceDelta",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 2160995547
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "MAvatar_March7th_00_BPSkill_Shield": {
+      "Stacking": "Replace",
+      "DynamicValues": {
+        "Floats": {
+          "2128130574": {},
+          "-994449299": {}
+        }
+      },
+      "BehaviorFlagList": [
+        "Shield"
+      ],
+      "OnDestroy": [
+        {
+          "$type": "RPG.GameCore.RemoveShield",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          }
+        }
+      ],
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByCompareDynamicValue",
+            "TargetType": {
+              "$type": "RPG.GameCore.TargetAlias",
+              "Alias": "Caster"
+            },
+            "DynamicKey": "MDF_AggroUp",
+            "CompareType": "Equal",
+            "CompareValue": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 0.0
+              }
+            }
+          },
+          "FailedTaskList": [
+            {
+              "$type": "RPG.GameCore.StackStatusDesc",
+              "TextID": {
+                "hash": 413662310
+              }
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.InitShield",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "ShieldValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 4256261148
+                }
+              ]
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.StackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "Property": "AggroAddedRatio",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 1988898597
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "UseSnapshotEntity": true
+    },
+    "MAvatar_Hook_00_BPSkillAlter_Enable": {
+      "OnDestroy": [
+        {
+          "$type": "RPG.GameCore.SetControlSkillMapping",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ControlSkillType": "ControlSkill02",
+          "SkillTriggerKey": "Skill02"
+        }
+      ]
+    },
+    "MAvatar_DanHeng_00_Passive_BeginTargetEnhanceCD": {
+      "Stacking": "ReplaceByCaster",
+      "LifeTime": 2
+    },
+    "MAvatar_DanHeng_00_Passive_SelfBeingTargetEnhance": {
+      "DynamicValues": {
+        "Floats": {
+          "1231817797": {
+            "Value": 0.15
+          }
+        }
+      },
+      "OnBeforeHitAll": [
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByAny",
+            "PredicateList": [
+              {
+                "$type": "RPG.GameCore.ByCurrentSkillType"
+              },
+              {
+                "$type": "RPG.GameCore.ByCurrentSkillType",
+                "SkillType": "Skill"
+              },
+              {
+                "$type": "RPG.GameCore.ByCurrentSkillType",
+                "SkillType": "Ultra"
+              }
+            ]
+          },
+          "SuccessTaskList": [
+            {
+              "$type": "RPG.GameCore.ModifyDamageData",
+              "Attacker_WindPenetrate": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 2463635594
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "OnAfterSkillUse": [
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByAny",
+            "PredicateList": [
+              {
+                "$type": "RPG.GameCore.ByCurrentSkillType"
+              },
+              {
+                "$type": "RPG.GameCore.ByCurrentSkillType",
+                "SkillType": "Skill"
+              },
+              {
+                "$type": "RPG.GameCore.ByCurrentSkillType",
+                "SkillType": "Ultra"
+              }
+            ]
+          },
+          "SuccessTaskList": [
+            {
+              "$type": "RPG.GameCore.AddModifier",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "Caster"
+              },
+              "ModifierName": "MAvatar_DanHeng_00_Passive_BeginTargetEnhanceCD",
+              "LifeTime": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 3020811291
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "$type": "RPG.GameCore.RemoveModifier",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "Caster"
+              },
+              "ModifierName": "MAvatar_DanHeng_00_Passive_SelfBeingTargetEnhance"
+            }
+          ]
+        }
+      ]
+    },
+    "MAvatar_Himeko_00_FireTakenRatio": {
+      "Stacking": "ReplaceByCaster",
+      "DynamicValues": {
+        "Floats": {
+          "2128130574": {}
+        }
+      },
+      "LifeStepMoment": "ModifierPhase1End",
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.StackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "Property": "FireTakenRatio",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 4256261148
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "Avatar_Welt_DebuffModifier": {
+      "Stacking": "ReplaceByCaster",
+      "DynamicValues": {
+        "Floats": {
+          "2128130574": {},
+          "-1247013092": {}
+        }
+      },
+      "MaxLayer": 1,
+      "BehaviorFlagList": [
+        "STAT_SpeedDown"
+      ],
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.StackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "Property": "SpeedDelta",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "FixedNumber"
+                },
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 4256261148
+                },
+                {
+                  "Type": "Sub"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.BySkillPointActivated",
+            "PointTriggerKey": {
+              "EKFBPMCLPMD": 1455742905
+            }
+          },
+          "SuccessTaskList": [
+            {
+              "$type": "RPG.GameCore.StackStatusDesc",
+              "TextID": {
+                "hash": -1656462740
+              }
+            },
+            {
+              "$type": "RPG.GameCore.StackProperty",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "Property": "AllDamageTypeTakenRatio",
+              "PropertyValue": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 2494026183
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "MAvatar_Klara_00_MazeSkill_AggroUP": {
+      "Stacking": "ReplaceByCaster",
+      "DynamicValues": {
+        "Floats": {
+          "2128130574": {}
+        }
+      },
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.StackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "Property": "AggroAddedRatio",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 4256261148
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "MAvatar_Arlan_00_Passive_DamageUp": {
+      "Stacking": "ReplaceByCaster",
+      "DynamicValues": {
+        "Floats": {
+          "2128130574": {}
+        }
+      },
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.StackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "Property": "AllDamageTypeAddedRatio",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 4256261148
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "MAvatar_Asta_00_Ultra_AttackRatioUp": {
+      "Stacking": "ReplaceByCaster",
+      "DynamicValues": {
+        "Floats": {
+          "1521339462": {},
+          "-194676294": {}
+        }
+      },
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.StackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "Property": "AttackDelta",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 3042678924
+                }
+              ]
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.BySkillPointActivated",
+            "PointTriggerKey": {
+              "EKFBPMCLPMD": 1455742905
+            }
+          },
+          "SuccessTaskList": [
+            {
+              "$type": "RPG.GameCore.StackProperty",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "Property": "DefenceDelta",
+              "PropertyValue": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 389352587
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "$type": "RPG.GameCore.StackStatusDesc",
+              "TextID": {
+                "hash": -2039544258
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "MAvatar_Asta_FireAddedRatio": {
+      "Stacking": "ReplaceByCaster",
+      "DynamicValues": {
+        "Floats": {
+          "2128130574": {}
+        }
+      },
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.StackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "Property": "FireAddedRatio",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 4256261148
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "MAvatar_Bronya_00_Ultra_PowerUp": {
+      "Stacking": "ReplaceByCaster",
+      "DynamicValues": {
+        "Floats": {
+          "-1826473127": {
+            "Value": 0.2
+          },
+          "1424275782": {
+            "Value": 0.2
+          }
+        }
+      },
+      "LifeTime": 2,
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.StackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "Property": "AttackAddedRatio",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 3652946253
+                }
+              ]
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.StackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "Property": "CriticalDamage",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 2848551564
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "MAvatar_Bronya_00_BPSkill_DamageUp": {
+      "Stacking": "ReplaceByCaster",
+      "DynamicValues": {
+        "Floats": {
+          "625640552": {},
+          "-1017031234": {},
+          "748747390": {
+            "Value": 1.0
+          }
+        }
+      },
+      "OnDestroy": [
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "ModifierName": "MAvatar_Bronya_00_BPSkill_SpeedUp",
+          "LifeTime": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 1497494780
+                }
+              ]
+            }
+          },
+          "DynamicValues": {
+            "Bronya_SpeedUp": {
+              "Value": {
+                "IsDynamic": true,
+                "PostfixExpr": [
+                  {
+                    "Type": "DynamicNumber",
+                    "Int": 2034062467
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.StackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "Property": "AllDamageTypeAddedRatio",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 1251281104
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "MAvatar_Bronya_00_BPSkill_SpeedUp": {
+      "Stacking": "ReplaceByCaster",
+      "DynamicValues": {
+        "Floats": {
+          "27357520": {
+            "Value": 20.0
+          }
+        }
+      },
+      "LifeStepMoment": "ModifierPhase1End",
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.StackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "Property": "SpeedDelta",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 54715040
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "Bronya_Tree02_DamageUp": {
+      "Stacking": "ReplaceByCaster",
+      "DynamicValues": {
+        "Floats": {
+          "-831871865": {
+            "Value": 1.0
+          }
+        }
+      },
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.StackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "Property": "AllDamageTypeAddedRatio",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 1663743729
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "Bronya_Tree03_DefenceUp": {
+      "Stacking": "ReplaceByCaster",
+      "DynamicValues": {
+        "Floats": {
+          "1849530227": {
+            "Value": 1.0
+          }
+        }
+      },
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.StackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "Property": "DefenceAddedRatio",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 3699060454
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "MAvatar_Seele_00_Passive_DamageUp": {
+      "Stacking": "ReplaceByCaster",
+      "DynamicValues": {
+        "Floats": {
+          "-1644847981": {},
+          "-1431075176": {
+            "Value": 0.2
+          }
+        }
+      },
+      "LifeTime": 1,
+      "OnDestroy": [
+        {
+          "$type": "RPG.GameCore.RemoveEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Seele/Eff_Avatar_Seele_00_Common_Weapon.prefab"
+        }
+      ],
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.StackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "Property": "AllDamageTypeAddedRatio",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 3289695961
+                }
+              ]
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.BySkillPointActivated",
+            "PointTriggerKey": {
+              "EKFBPMCLPMD": 1455742905
+            }
+          },
+          "SuccessTaskList": [
+            {
+              "$type": "RPG.GameCore.StackProperty",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "Property": "QuantumPenetrate",
+              "PropertyValue": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 2862150351
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByAny",
+            "PredicateList": [
+              {
+                "$type": "RPG.GameCore.ByCurrentSkillType",
+                "SkillType": "Link"
+              },
+              {
+                "$type": "RPG.GameCore.ByCurrentSkillType",
+                "SkillType": "Ultra"
+              }
+            ]
+          },
+          "SuccessTaskList": [],
+          "FailedTaskList": [
+            {
+              "$type": "RPG.GameCore.TriggerEffect",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "Caster"
+              },
+              "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Seele/Eff_Avatar_Seele_00_Common_Weapon.prefab"
+            }
+          ]
+        }
+      ],
+      "OnAfterAttack": [
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByAny",
+            "PredicateList": [
+              {
+                "$type": "RPG.GameCore.ByCurrentSkillType",
+                "SkillType": "Link"
+              },
+              {
+                "$type": "RPG.GameCore.ByCurrentSkillType",
+                "SkillType": "Ultra"
+              }
+            ]
+          },
+          "SuccessTaskList": [
+            {
+              "$type": "RPG.GameCore.TriggerEffect",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "Caster"
+              },
+              "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Seele/Eff_Avatar_Seele_00_Common_Weapon.prefab"
+            }
+          ],
+          "FailedTaskList": []
+        }
+      ],
+      "OnBeforeSkillUse": [
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByAny",
+            "PredicateList": [
+              {
+                "$type": "RPG.GameCore.ByCurrentSkillType",
+                "SkillType": "Link"
+              },
+              {
+                "$type": "RPG.GameCore.ByCurrentSkillType",
+                "SkillType": "Ultra"
+              }
+            ]
+          },
+          "SuccessTaskList": [
+            {
+              "$type": "RPG.GameCore.RemoveEffect",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "Caster"
+              },
+              "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Seele/Eff_Avatar_Seele_00_Common_Weapon.prefab"
+            }
+          ],
+          "FailedTaskList": []
+        }
+      ]
+    },
+    "MAvatar_Seele_00_BPSkill_SpeedUp": {
+      "Stacking": "ReplaceByCaster",
+      "DynamicValues": {
+        "Floats": {
+          "2128130574": {}
+        }
+      },
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.StackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "Property": "SpeedDelta",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 4256261148
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "MAvatar_Gepard_00_Ultra_Shield": {
+      "Stacking": "Replace",
+      "DynamicValues": {
+        "Floats": {
+          "-295141034": {}
+        }
+      },
+      "BehaviorFlagList": [
+        "Shield"
+      ],
+      "OnCreate": [
+        {
+          "$type": "RPG.GameCore.SetResilience"
+        },
+        {
+          "$type": "RPG.GameCore.ModifierOverrideOnHitEffect",
+          "EffectPath": "Effects/Eff_Prefab/Eff_Common/Eff_Common_Shield_001.prefab",
+          "Priority": 1.0
+        }
+      ],
+      "OnDestroy": [
+        {
+          "$type": "RPG.GameCore.RemoveShield",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.SetResilience",
+          "DoReset": true
+        }
+      ],
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.InitShield",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "ShieldValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 590282067
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "Avatar_Gepard_Passive02_AttackDeltaUp": {
+      "Stacking": "ReplaceByCaster",
+      "DynamicValues": {
+        "Floats": {
+          "2128130574": {}
+        }
+      },
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.StackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "Property": "AttackDelta",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 4256261148
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "MAvatar_Natasha_00_Passive_FatigueRatio": {
+      "Stacking": "ReplaceByCaster",
+      "DynamicValues": {
+        "Floats": {
+          "2128130574": {}
+        }
+      },
+      "BehaviorFlagList": [
+        "STAT_Fatigue"
+      ],
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.StackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "Property": "FatigueRatio",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 4256261148
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "MAvatar_Natasha_00_BPSkill_DefenceRatioUp": {
+      "Stacking": "ReplaceByCaster",
+      "DynamicValues": {
+        "Floats": {
+          "2128130574": {}
+        }
+      },
+      "LifeStepMoment": "ModifierPhase1End",
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.StackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "Property": "DefenceAddedRatio",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 4256261148
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "MAvatar_Pela_00_BPSkill_Fatigue": {
+      "Stacking": "ReplaceByCaster",
+      "DynamicValues": {
+        "Floats": {
+          "2128130574": {},
+          "1835812793": {}
+        }
+      },
+      "BehaviorFlagList": [
+        "STAT_Fatigue"
+      ],
+      "OnBeforeHitAll": [
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.BySkillPointActivated",
+            "PointTriggerKey": {
+              "EKFBPMCLPMD": 1455742905
+            }
+          },
+          "SuccessTaskList": [
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByTargetListIntersects",
+                "FirstTargetType": {
+                  "$type": "RPG.GameCore.TargetAlias",
+                  "Alias": "Caster"
+                },
+                "SecondTargetType": {
+                  "$type": "RPG.GameCore.TargetAlias",
+                  "Alias": "DamageDefenderEntity"
+                }
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.ModifyDamageData",
+                  "Attacker_FatigueRatio": {
+                    "Value": {
+                      "IsDynamic": true,
+                      "PostfixExpr": [
+                        {
+                          "Type": "DynamicNumber",
+                          "Int": 3671625586
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.StackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "Property": "FatigueRatio",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 4256261148
+                }
+              ]
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.BySkillPointActivated",
+            "PointTriggerKey": {
+              "EKFBPMCLPMD": 1455742905
+            }
+          },
+          "SuccessTaskList": [
+            {
+              "$type": "RPG.GameCore.StackStatusDesc",
+              "TextID": {
+                "hash": 1274450309
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "MAvatar_Pela_00_MazeSkill_DefenceRatioDown": {
+      "Stacking": "ReplaceByCaster",
+      "DynamicValues": {
+        "Floats": {
+          "2128130574": {}
+        }
+      },
+      "LifeStepMoment": "ModifierPhase1End",
+      "BehaviorFlagList": [
+        "STAT_DefenceDown"
+      ],
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.StackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "Property": "DefenceAddedRatio",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "FixedNumber"
+                },
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 4256261148
+                },
+                {
+                  "Type": "Sub"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "MAvatar_Pela_StatusProbability": {
+      "Stacking": "ReplaceByCaster",
+      "DynamicValues": {
+        "Floats": {
+          "2128130574": {}
+        }
+      },
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.StackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "Property": "StatusProbability",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 4256261148
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "MAvatar_Pela_00_Ultra_DroneAnalysis": {
+      "Stacking": "ReplaceByCaster",
+      "DynamicValues": {
+        "Floats": {
+          "2077362225": {},
+          "1277100885": {}
+        }
+      },
+      "LifeStepMoment": "ModifierPhase1End",
+      "BehaviorFlagList": [
+        "STAT_DefenceDown"
+      ],
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.StackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "Property": "DefenceAddedRatio",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "FixedNumber"
+                },
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 4154724450
+                },
+                {
+                  "Type": "Sub"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.StackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "Property": "StanceBreakTakenRatio",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 2554201770
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "MAvatar_PlayerWarrior_00_Ultra_Transform": {
+      "LifeTime": 2,
+      "LifeStepMoment": "ActionPhaseEnd",
+      "BehaviorFlagList": [
+        "STAT_Burst"
+      ],
+      "OnDestroy": [
+        {
+          "$type": "RPG.GameCore.SetControlSkillMapping",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "SkillTriggerKey": "Skill01"
+        },
+        {
+          "$type": "RPG.GameCore.SetControlSkillMapping",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ControlSkillType": "ControlSkill02",
+          "SkillTriggerKey": "Skill02"
+        },
+        {
+          "$type": "RPG.GameCore.RemoveEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_PlayerBoy/Eff_PlayerBoy_00_Skill03_Weapon_JNT.prefab"
+        },
+        {
+          "$type": "RPG.GameCore.RemoveEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_PlayerBoy/Eff_PlayerBoy_00_Skill03_Weapon_JNT_2.prefab"
+        },
+        {
+          "$type": "RPG.GameCore.RemoveEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_PlayerBoy/Eff_PlayerBoy_00_Skill03_Strong.prefab"
+        },
+        {
+          "$type": "RPG.GameCore.ReplaceCharacterMaterial",
+          "IsReset": true
+        },
+        {
+          "$type": "RPG.GameCore.AnimSetParameter",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ParameterName": "isUltra"
+        }
+      ],
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.StackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "Property": "AllDamageTypeAddedRatio",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 1935662371
+                }
+              ]
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.TriggerEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_PlayerBoy/Eff_PlayerBoy_00_Skill03_Weapon_JNT_2.prefab"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_PlayerBoy/Eff_PlayerBoy_00_Skill03_Strong.prefab"
+        },
+        {
+          "$type": "RPG.GameCore.ReplaceCharacterMaterial",
+          "ReplaceConfig": [
+            {
+              "NodePath": "Avatar_PlayerBoy_00/Weapon",
+              "SourcePath": "Characters/Avatar/PlayerBoy/Avatar_00/Matierials/PlayerBoy_00_Mat_Weapon_E_1.mat"
+            }
+          ]
+        }
+      ]
+    },
+    "MAvatar_Klara_00_BPSkill_Revenge": {
+      "UIEffectPath": "UI/Battle/Widget/SpecialSkilMarkEff/SpecialSkillMark_Klara.prefab"
+    },
+    "MAvatar_Klara_00_Passive_DamageReduce": {
+      "Stacking": "ReplaceByCaster",
+      "DynamicValues": {
+        "Floats": {
+          "2128130574": {}
+        }
+      },
+      "OnBeforeBeingHitAll": [
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByIsContainModifier",
+            "TargetType": {
+              "$type": "RPG.GameCore.TargetAlias",
+              "Alias": "Caster"
+            },
+            "ModifierName": "MAvatar_Klara_00_Ultra_WarriorMode"
+          },
+          "SuccessTaskList": [],
+          "FailedTaskList": [
+            {
+              "$type": "RPG.GameCore.AnimSetParameter",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "Caster"
+              },
+              "ParameterName": "BeHit",
+              "IsTrigger": true
+            }
+          ]
+        }
+      ],
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.StackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "Property": "Level_AllDamageReduce",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 4256261148
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "MAvatar_Klara_00_Passive_ShowAmmo": {
+      "Stacking": "ReplaceByCaster",
+      "DynamicValues": {
+        "Floats": {
+          "1687192845": {}
+        }
+      }
+    },
+    "MAvatar_Sampo_00_Ultra_DefenceRatioDown": {
+      "Stacking": "ReplaceByCaster",
+      "DynamicValues": {
+        "Floats": {
+          "2128130574": {}
+        }
+      },
+      "LifeStepMoment": "ModifierPhase1End",
+      "BehaviorFlagList": [
+        "STAT_DefenceDown"
+      ],
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.StackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "Property": "DefenceAddedRatio",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "FixedNumber"
+                },
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 4256261148
+                },
+                {
+                  "Type": "Sub"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "M_LowHP_AggroDown": {
+      "Stacking": "ReplaceByCaster",
+      "DynamicValues": {
+        "Floats": {
+          "350792237": {},
+          "615124190": {}
+        }
+      },
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByCompareHPRatio",
+            "TargetType": {
+              "$type": "RPG.GameCore.TargetAlias",
+              "Alias": "ModifierOwnerEntity"
+            },
+            "CompareType": "LessEqual",
+            "CompareValue": {
+              "Value": {
+                "IsDynamic": true,
+                "PostfixExpr": [
+                  {
+                    "Type": "DynamicNumber",
+                    "Int": 701584474
+                  }
+                ]
+              }
+            }
+          },
+          "SuccessTaskList": [
+            {
+              "$type": "RPG.GameCore.AddModifier",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "ModifierName": "M_SkillTree_AggroDown",
+              "DynamicValues": {
+                "MDF_PropertyValue": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 1230248380
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "OnHPChange": [
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByCompareHPRatio",
+            "TargetType": {
+              "$type": "RPG.GameCore.TargetAlias",
+              "Alias": "ModifierOwnerEntity"
+            },
+            "CompareType": "LessEqual",
+            "CompareValue": {
+              "Value": {
+                "IsDynamic": true,
+                "PostfixExpr": [
+                  {
+                    "Type": "DynamicNumber",
+                    "Int": 701584474
+                  }
+                ]
+              }
+            }
+          },
+          "SuccessTaskList": [
+            {
+              "$type": "RPG.GameCore.AddModifier",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "ModifierName": "M_SkillTree_AggroDown",
+              "DynamicValues": {
+                "MDF_PropertyValue": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 1230248380
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ],
+          "FailedTaskList": [
+            {
+              "$type": "RPG.GameCore.RemoveModifier",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "ModifierName": "M_SkillTree_AggroDown",
+              "OnlyRemoveCasterAdded": true
+            }
+          ]
+        }
+      ]
+    },
+    "M_Ultra_ExtraSP": {
+      "OnAfterSkillUse": [
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByCurrentSkillType",
+            "SkillType": "Ultra"
+          },
+          "SuccessTaskList": [
+            {
+              "$type": "RPG.GameCore.ModifySPNew",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "AddValue": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 1802964208
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "M_SkillTree_HealRatioUp": {
+      "Stacking": "ReplaceByCaster",
+      "DynamicValues": {
+        "Floats": {
+          "2128130574": {}
+        }
+      },
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.StackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "Property": "HealRatio",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 4256261148
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "M_SkillTree_AggroUp": {
+      "Stacking": "ReplaceByCaster",
+      "DynamicValues": {
+        "Floats": {
+          "2128130574": {}
+        }
+      },
+      "LifeStepMoment": "ModifierPhase1End",
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.StackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "Property": "AggroAddedRatio",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 4256261148
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "M_SkillTree_AggroDown": {
+      "Stacking": "ReplaceByCaster",
+      "DynamicValues": {
+        "Floats": {
+          "2128130574": {}
+        }
+      },
+      "LifeStepMoment": "ModifierPhase1End",
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.StackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "Property": "AggroAddedRatio",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "FixedNumber"
+                },
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 4256261148
+                },
+                {
+                  "Type": "Sub"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

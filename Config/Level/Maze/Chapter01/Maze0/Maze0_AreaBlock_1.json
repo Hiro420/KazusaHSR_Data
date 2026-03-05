@@ -1,0 +1,98 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "TargetTypes": [],
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.LockPlayerControl"
+            },
+            {
+              "$type": "RPG.GameCore.ShowTalkUI",
+              "Show": true
+            },
+            {
+              "$type": "RPG.GameCore.CaptureLocalPlayer",
+              "CharacterUniqueName": "M0_Area_BlockPlayer_Blizzard"
+            },
+            {
+              "$type": "RPG.GameCore.EnableNPCMonsterAI",
+              "GroupID": 15,
+              "GroupMonsterIDs": [],
+              "UniqueNames": []
+            },
+            {
+              "$type": "RPG.GameCore.PlayScreenTransfer",
+              "Mode": "SwitchOut",
+              "CustomTime": 0.5
+            },
+            {
+              "$type": "RPG.GameCore.ActiveVirtualCamera",
+              "AreaName": "1010101_Temp",
+              "AnchorName": "Camera_AreaBlock",
+              "BlendConfig": {
+                "BlendType": "Cut",
+                "BlendTime": 1.0
+              }
+            },
+            {
+              "$type": "RPG.GameCore.SwitchCharacterAnchor",
+              "CharacterUniqueName": "M0_Area_BlockPlayer_Blizzard",
+              "AreaName": "1010101_Temp",
+              "AnchorName": "AreaBlock_BackPoint"
+            },
+            {
+              "$type": "RPG.GameCore.PlayScreenTransfer",
+              "CustomTime": 0.5
+            },
+            {
+              "$type": "RPG.GameCore.PlaySimpleTalk",
+              "SimpleTalkList": [
+                {
+                  "VoiceID": 201012303
+                },
+                {
+                  "VoiceID": 201012304
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+            },
+            {
+              "$type": "RPG.GameCore.UnLockPlayerControl"
+            },
+            {
+              "$type": "RPG.GameCore.ShowTalkUI"
+            },
+            {
+              "$type": "RPG.GameCore.ReleaseCharacter",
+              "CharacterUniqueName": "M0_Area_BlockPlayer_Blizzard"
+            },
+            {
+              "$type": "RPG.GameCore.ActiveVirtualCamera",
+              "AreaName": "1010101_Temp",
+              "AnchorName": "Camera_AreaBlock",
+              "IsActive": false,
+              "BlendConfig": {
+                "BlendType": "EaseInOut",
+                "BlendTime": 1.0
+              }
+            },
+            {
+              "$type": "RPG.GameCore.EnableNPCMonsterAI",
+              "Enable": true,
+              "GroupID": 15,
+              "GroupMonsterIDs": [],
+              "UniqueNames": []
+            }
+          ],
+          "OnTriggerExit": []
+        }
+      ]
+    }
+  ]
+}

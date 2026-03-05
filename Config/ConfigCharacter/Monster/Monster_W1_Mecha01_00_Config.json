@@ -1,0 +1,159 @@
+﻿{
+  "SomatoType": "LittleMonster",
+  "CharacterHUDOffset": {
+    "x": 0.1,
+    "y": 1.8,
+    "z": 0.0
+  },
+  "BuffPanelOffset": {
+    "x": 0.0,
+    "y": 1.5,
+    "z": 0.0
+  },
+  "HitBoxWidth": 0.7,
+  "HitBoxHeight": 0.8,
+  "Location": {
+    "Width": 1.6,
+    "LocalZOffsetMin": 0.3,
+    "LocalZOffsetMax": 1.0
+  },
+  "VisualRadius": 0.8,
+  "AnimEventConfigList": [
+    "Config/ConfigAnimEvents/Monster/Designer/Monster_W1_Mecha01_00_Designer_AnimEvent.json",
+    "Config/ConfigAnimEvents/Monster/Effect/Monster_W1_Mecha01_00_Effect_AnimEvent.json",
+    "Config/ConfigAnimEvents/Monster/Audio/Monster_W1_Mecha01_00_Audio_AnimEvent.json"
+  ],
+  "SoundBankList": [
+    "BK_SFX_Monster_Common"
+  ],
+  "SkillList": [
+    {
+      "Name": "Skill01",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "EnemySelect"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Monster_W1_GSMecha_01_Skill01_Phase01"
+    },
+    {
+      "Name": "Skill02",
+      "SkillType": "Skill",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Monster_W1_GSMecha_01_Skill02_Phase01"
+    },
+    {
+      "Name": "Skill03",
+      "SkillType": "Skill",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "EnemySelect",
+        "SubTargetType": "TargetAdjoinEntity"
+      },
+      "ReadyAnimState": "StandBy_Boom",
+      "EntryAbility": "Monster_W1_GSMecha_01_Skill03_Phase01"
+    },
+    {
+      "Name": "PassiveSkillInitiate",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Monster_W1_GSMecha_01_PassiveSkill_Initiate"
+    },
+    {
+      "Name": "PassiveSkill01",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Monster_Common_PassiveSkill_StanceBreak_Action"
+    },
+    {
+      "Name": "PassiveSkill02",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Monster_Common_Fever_Action"
+    }
+  ],
+  "AbilityList": [
+    "Monster_Common_PassiveSkill_StanceBreak_Action",
+    "Monster_Common_Fever_Action"
+  ],
+  "SkillAbilityList": [
+    {
+      "Skill": "Skill01",
+      "AbilityList": [
+        "Monster_W1_GSMecha_01_Skill01_Camera",
+        "Monster_W1_GSMecha_01_Skill01_Phase01",
+        "Monster_W1_GSMecha_01_Skill01_Phase02"
+      ]
+    },
+    {
+      "Skill": "Skill02",
+      "AbilityList": [
+        "Monster_W1_GSMecha_01_Skill02_Camera",
+        "Monster_W1_GSMecha_01_Skill02_Phase01",
+        "Monster_W1_GSMecha_01_Skill02_Phase02"
+      ]
+    },
+    {
+      "Skill": "Skill03",
+      "AbilityList": [
+        "Monster_W1_GSMecha_01_Skill03_Camera",
+        "Monster_W1_GSMecha_01_Skill03_Phase01",
+        "Monster_W1_GSMecha_01_Skill03_Phase02"
+      ]
+    },
+    {
+      "Skill": "PassiveSkillInitiate",
+      "AbilityList": [
+        "Monster_W1_GSMecha_01_PassiveSkill_Initiate",
+        "Monster_W1_GSMecha_01_PassiveSkill_Insert"
+      ]
+    }
+  ],
+  "DynamicValues": {
+    "Floats": {
+      "-1126825319": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill01",
+          "Index": 0
+        }
+      },
+      "-56289053": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill03",
+          "Index": 0
+        }
+      },
+      "1730888448": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "PassiveSkillInitiate",
+          "Index": 0
+        }
+      },
+      "-579756919": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "PassiveSkillInitiate",
+          "Index": 1
+        }
+      }
+    }
+  },
+  "WeaponType": "WP_Explode",
+  "ArmorType": "Armor_Metal"
+}

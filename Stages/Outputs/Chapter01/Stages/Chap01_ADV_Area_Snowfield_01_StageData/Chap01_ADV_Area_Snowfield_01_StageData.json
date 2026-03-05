@@ -1,0 +1,31 @@
+﻿{
+  "Name": "Chap01_ADV_Area_Snowfield_01_StageData",
+  "BlockNodeConfigList": [
+    {
+      "BlockName": "Chap01_DistantView_ADV_Area_Snowfield_01_BlockData",
+      "BlockTag": "TagName",
+      "StreamingLayerOverride": "DistantView"
+    },
+    {
+      "Index": 1,
+      "BlockName": "Chap01_CloseView_ADV_Area_Snowfield_01_BlockData",
+      "BlockTag": "TagName",
+      "PosY": 18.75
+    },
+    {
+      "Index": 2,
+      "BlockName": "Chap01_CloseView_BAT_Area_Snowfield_01_BlockData",
+      "BlockTag": "BattleArea01",
+      "StreamingLayerOverride": "PersistentLevel",
+      "PosY": 18.75,
+      "PosZ": 1000.0
+    },
+    {
+      "Index": 3,
+      "BlockName": "Chap01_DistantView_ADV_Area_Snowfield_01_BlockData",
+      "BlockTag": "TagName",
+      "StreamingLayerOverride": "DistantView",
+      "PosZ": 1000.0
+    }
+  ]
+}

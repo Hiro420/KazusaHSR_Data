@@ -1,0 +1,175 @@
+﻿{
+  "GroupGUID": "fb5cb1e1-71c8-4f50-b732-e86e50e79f75",
+  "GroupName": "MainMission",
+  "AreaAnchorName": "LevelArea_P20121_F20121001_G20",
+  "AnchorList": [
+    {
+      "ID": 1,
+      "PosX": -34.015,
+      "PosY": 3.239273,
+      "PosZ": -85.847,
+      "Name": "Anchor1",
+      "RotY": 58.16827
+    }
+  ],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": 56.38,
+      "PosY": 4.48,
+      "PosZ": -142.31,
+      "IsDelete": true,
+      "Name": "Prop1",
+      "Comment": "零件1",
+      "PropID": 100,
+      "Trigger": {
+        "Radius": 3.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "CreateOnInitial": false,
+      "State": "Locked",
+      "DialogueGroups": [],
+      "OverrideTriggerHint": true,
+      "HintRange": 20.0,
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300002,
+      "PosX": 11.44,
+      "PosY": 4.05,
+      "PosZ": -142.87,
+      "IsDelete": true,
+      "Name": "Prop2",
+      "Comment": "零件2",
+      "PropID": 100,
+      "Trigger": {
+        "Radius": 3.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "CreateOnInitial": false,
+      "State": "Locked",
+      "DialogueGroups": [],
+      "OverrideTriggerHint": true,
+      "HintRange": 20.0,
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300003,
+      "PosX": 56.38,
+      "PosY": 4.48,
+      "PosZ": -142.31,
+      "IsDelete": true,
+      "Name": "Prop3",
+      "PropID": 106,
+      "Trigger": {
+        "Radius": 3.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "State": "TriggerEnable",
+      "DialogueGroups": [],
+      "HintRange": 50.0,
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300004,
+      "PosX": 68.9,
+      "PosY": 4.12,
+      "PosZ": -120.29,
+      "Name": "Prop4",
+      "Comment": "零件01",
+      "PropID": 106,
+      "Trigger": {
+        "Radius": 3.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "HintRange": 50.0,
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300005,
+      "PosX": 52.26,
+      "PosY": 3.78,
+      "PosZ": -107.41,
+      "Name": "Prop5",
+      "Comment": "零件02",
+      "PropID": 106,
+      "Trigger": {
+        "Radius": 3.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": [
+    {
+      "ID": 400001,
+      "PosX": 57.34,
+      "PosY": 3.379438,
+      "PosZ": -142.05,
+      "IsDelete": true,
+      "Name": "NPC1",
+      "RotY": 284.8221,
+      "Comment": "Klara01",
+      "NPCID": 101070118,
+      "CreateOnInitial": false,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400002,
+      "PosX": 11.02,
+      "PosY": 3.239273,
+      "PosZ": -143.87,
+      "IsDelete": true,
+      "Name": "NPC2",
+      "RotY": 69.84245,
+      "Comment": "Klara02",
+      "NPCID": 101070118,
+      "CreateOnInitial": false,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400003,
+      "PosX": -32.26,
+      "PosY": 3.239273,
+      "PosZ": -85.62,
+      "IsDelete": true,
+      "Name": "NPC3",
+      "RotY": 264.1816,
+      "Comment": "Klara03",
+      "NPCID": 101070118,
+      "CreateOnInitial": false,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "GroupRefreshID": 1
+}

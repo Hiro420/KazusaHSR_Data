@@ -1,0 +1,104 @@
+﻿{
+  "CharacterHUDOffset": {
+    "x": 0.05,
+    "y": 2.2,
+    "z": 0.2
+  },
+  "BuffPanelOffset": {
+    "x": 0.0,
+    "y": 1.8,
+    "z": 0.0
+  },
+  "HitBoxWidth": 0.3,
+  "HitBoxHeight": 1.5,
+  "Location": {
+    "Width": 1.0,
+    "LocalZOffsetMin": 0.3,
+    "LocalZOffsetMax": 1.0
+  },
+  "VisualRadius": 0.8,
+  "AnimEventConfigList": [
+    "Config/ConfigAnimEvents/Monster/Designer/Monster_W1_Soldier02_00_Designer_AnimEvent.json",
+    "Config/ConfigAnimEvents/Monster/Audio/Monster_W1_Soldier02_00_Audio_AnimEvent.json",
+    "Config/ConfigAnimEvents/Monster/Effect/Monster_W1_Soldier02_00_Effect_AnimEvent.json"
+  ],
+  "SoundBankList": [
+    "BK_SFX_Monster_Common"
+  ],
+  "SkillList": [
+    {
+      "Name": "Skill01",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "EnemySelect"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "WMonster_SPThief_Skill01_Phase01"
+    },
+    {
+      "Name": "SkillP01",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "WMonster_SPThief_PassiveSkill01"
+    },
+    {
+      "Name": "PassiveSkill01",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Monster_Common_PassiveSkill_StanceBreak_Action"
+    }
+  ],
+  "AbilityList": [
+    "Monster_Common_PassiveSkill_StanceBreak_Action"
+  ],
+  "SkillAbilityList": [
+    {
+      "Skill": "Skill01",
+      "AbilityList": [
+        "Monster_W1_CWSoldier_02_Skill02_Camera",
+        "WMonster_SPThief_Skill01_Phase01",
+        "WMonster_SPThief_Skill01_Phase02"
+      ]
+    },
+    {
+      "Skill": "SkillP01",
+      "AbilityList": [
+        "WMonster_SPThief_PassiveSkill01"
+      ]
+    }
+  ],
+  "DynamicValues": {
+    "Floats": {
+      "-1126825319": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill01",
+          "Index": 0
+        }
+      },
+      "-1792955075": {
+        "Value": 10.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill01",
+          "Index": 1
+        }
+      },
+      "-386714664": {
+        "Value": 10.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "SkillP01",
+          "Index": 0
+        }
+      }
+    }
+  },
+  "WeaponType": "WP_Scythe"
+}

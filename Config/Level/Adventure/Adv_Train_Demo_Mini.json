@@ -1,0 +1,54 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.CreateLevelAreas",
+          "AssetPath": {
+            "Value": "Level/Train_Demo_mini.prefab"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC"
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC"
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC"
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC"
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC"
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC"
+        },
+        {
+          "$type": "RPG.GameCore.CreateProp",
+          "PropID": 100003,
+          "UniqueName": "Warp_1",
+          "AreaName": "Train_Demo_mini",
+          "AnchorName": "WarpPoint_1"
+        },
+        {
+          "$type": "RPG.GameCore.CreateProp",
+          "PropID": 100003,
+          "UniqueName": "Warp_2",
+          "AreaName": "Train_Demo_mini",
+          "AnchorName": "WarpPoint_2"
+        },
+        {
+          "$type": "RPG.GameCore.CreateProp",
+          "PropID": 100003,
+          "UniqueName": "Warp_3",
+          "AreaName": "Train_Demo_mini",
+          "AnchorName": "WarpPoint_2"
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": []
+}

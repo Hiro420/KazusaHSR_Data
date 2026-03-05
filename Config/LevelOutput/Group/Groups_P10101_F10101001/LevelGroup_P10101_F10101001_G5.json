@@ -1,0 +1,77 @@
+﻿{
+  "GroupGUID": "eb17b11e-0260-4515-9023-496a5ce46895",
+  "GroupName": "BGM",
+  "AreaAnchorName": "LevelArea_P10101_F10101001_G5",
+  "AnchorList": [],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": -5.17,
+      "PosY": -0.69,
+      "PosZ": 72.37,
+      "Name": "Prop1",
+      "RotY": 45.0,
+      "Comment": "剧院",
+      "PropID": 100,
+      "InitLevelGraph": "Config/Level/Maze/MazeTest/Maze_Test_TownBGM.json",
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 1.0,
+        "DimX": 25.0,
+        "DimY": 10.0,
+        "DimZ": 20.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300002,
+      "PosX": -15.04,
+      "PosY": 1.86,
+      "PosZ": 3.66,
+      "Name": "Prop2",
+      "Comment": "花店",
+      "PropID": 100,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 1.0,
+        "DimX": 10.0,
+        "DimY": 5.0,
+        "DimZ": 30.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300003,
+      "PosX": 2.5,
+      "PosY": 4.97,
+      "PosZ": -146.4,
+      "Name": "Prop3",
+      "Comment": "酒店",
+      "PropID": 100,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 20.0,
+        "DimX": 56.78,
+        "DimY": 10.0,
+        "DimZ": 49.6,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": [],
+  "GroupRefreshID": 1
+}

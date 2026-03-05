@@ -1,0 +1,30 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.CreateLevelAreas",
+          "AssetPath": {
+            "Value": "Level/Adventure_Demo.prefab"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC"
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC"
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "LevelFinish"
+        }
+      ]
+    }
+  ]
+}

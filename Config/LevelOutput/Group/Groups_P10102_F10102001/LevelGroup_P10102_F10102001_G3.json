@@ -1,0 +1,318 @@
+﻿{
+  "GroupGUID": "7a684621-b306-414b-89a6-1e5011dc195e",
+  "GroupName": "MapNPC",
+  "AreaAnchorName": "LevelArea_P10102_F10102001_G3",
+  "AnchorList": [
+    {
+      "ID": 1,
+      "PosX": -56.92,
+      "PosY": 6.032,
+      "PosZ": 26.96,
+      "Name": "Anchor1"
+    },
+    {
+      "ID": 2,
+      "PosX": -61.56,
+      "PosY": 5.000005,
+      "PosZ": 26.14,
+      "Name": "Anchor2",
+      "RotY": 355.2847,
+      "Comment": "与首领见面的位置"
+    }
+  ],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": -79.99,
+      "PosY": 5.97,
+      "PosZ": -7.48,
+      "Name": "Clinic",
+      "RotY": 316.0025,
+      "Comment": "101040901诊所用传送",
+      "PropID": 100,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 1.0,
+        "DimX": 2.0,
+        "DimY": 2.0,
+        "DimZ": 5.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300002,
+      "PosX": -14.13,
+      "PosY": 0.67,
+      "PosZ": 2.75,
+      "Name": "Shop",
+      "Comment": "101040201商店解锁教程",
+      "PropID": 100,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 1.0,
+        "DimX": 3.0,
+        "DimY": 3.0,
+        "DimZ": 4.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300003,
+      "PosX": -35.437,
+      "PosY": -0.057,
+      "PosZ": 56.19,
+      "Name": "Teleport",
+      "Comment": "101040501地图传送教程用",
+      "PropID": 100,
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300004,
+      "PosX": -6.22,
+      "PosY": 1.1E-05,
+      "PosZ": 53.35,
+      "Name": "Hotel",
+      "Comment": "101040502旅馆用传送",
+      "PropID": 100,
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": [
+    {
+      "ID": 400001,
+      "PosX": -2.34,
+      "PosY": -0.313043,
+      "PosZ": 18.64,
+      "IsDelete": true,
+      "Name": "NPC1",
+      "RotY": 35.29926,
+      "Comment": "巴鲁",
+      "NPCID": 101011001,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400002,
+      "PosX": -1.122,
+      "PosY": -0.134069,
+      "PosZ": 19.079,
+      "IsDelete": true,
+      "Name": "NPC2",
+      "RotY": 262.599,
+      "Comment": "雷安",
+      "NPCID": 101011002,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400003,
+      "PosX": 0.51,
+      "PosY": -0.115766,
+      "PosZ": 19.71,
+      "IsDelete": true,
+      "Name": "NPC3",
+      "RotY": 331.54,
+      "Comment": "雷安",
+      "NPCID": 101011003,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400004,
+      "PosX": -5.75,
+      "PosY": -0.29632,
+      "PosZ": 5.88,
+      "Name": "NPC4",
+      "RotY": 356.0231,
+      "Comment": "伊蕾恩",
+      "NPCID": 101021008,
+      "DialogueGroups": [
+        201050404
+      ],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400005,
+      "PosX": 5.01,
+      "PosY": 9.682209,
+      "PosZ": -3.32,
+      "IsDelete": true,
+      "Name": "NPC5",
+      "RotY": 225.2287,
+      "Comment": "奥列格",
+      "NPCID": 101021013,
+      "DialogueGroups": [
+        2013107
+      ],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400006,
+      "PosX": 3.882,
+      "PosY": -0.337504,
+      "PosZ": 32.957,
+      "Name": "NPC6",
+      "RotY": 280.6863,
+      "Comment": "安东尼娜",
+      "NPCID": 101021014,
+      "DialogueGroups": [
+        201050403,
+        201060503
+      ],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400007,
+      "PosX": -20.54,
+      "PosY": -0.298955,
+      "PosZ": 61.32,
+      "Name": "NPC7",
+      "RotY": 89.19039,
+      "Comment": "歌蒂",
+      "NPCID": 101021003,
+      "DialogueGroups": [
+        201050401,
+        201050405
+      ],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400008,
+      "PosX": -74.283,
+      "PosY": 4.624073,
+      "PosZ": -14.213,
+      "Name": "NPC8",
+      "RotY": 78.19,
+      "Comment": "道奇",
+      "NPCID": 101021001,
+      "DialogueGroups": [
+        201040101
+      ],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400009,
+      "PosX": -27.082,
+      "PosY": -0.104973,
+      "PosZ": 74.53,
+      "Name": "NPC9",
+      "RotY": 172.95,
+      "Comment": "菲多拉 ",
+      "NPCID": 101021002,
+      "DialogueGroups": [
+        201040301
+      ],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400010,
+      "PosX": 13.94,
+      "PosY": -0.284802,
+      "PosZ": 25.79,
+      "Name": "NPC10",
+      "RotY": 211.4406,
+      "Comment": "「矿灯」巴列维",
+      "NPCID": 101021004,
+      "DialogueGroups": [
+        201060501,
+        301050301,
+        301050303
+      ],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400011,
+      "PosX": -37.443,
+      "PosY": 7.204538,
+      "PosZ": -3.917,
+      "Name": "NPC11",
+      "RotY": 179.3437,
+      "Comment": "马克西姆 ",
+      "NPCID": 101021005,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400012,
+      "PosX": -32.15,
+      "PosY": -0.145979,
+      "PosZ": 33.94,
+      "Name": "NPC12",
+      "RotY": 179.3437,
+      "Comment": "匹克 ",
+      "NPCID": 101021006,
+      "DialogueGroups": [
+        5010401,
+        1000038
+      ],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400013,
+      "PosX": -9.927,
+      "PosY": -0.300076,
+      "PosZ": 25.305,
+      "Name": "NPC13",
+      "RotY": 48.7,
+      "Comment": "谭雅 ",
+      "NPCID": 101021007,
+      "CreateOnInitial": false,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400014,
+      "PosX": -81.68,
+      "PosY": 4.695096,
+      "PosZ": 62.64,
+      "Name": "NPC14",
+      "RotY": 140.1684,
+      "Comment": "伊妮丝 ",
+      "NPCID": 101021009,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400015,
+      "PosX": -81.68,
+      "PosY": 4.695096,
+      "PosZ": 62.64,
+      "IsDelete": true,
+      "Name": "NPC15",
+      "RotY": 140.1684,
+      "Comment": "伊妮丝 ",
+      "NPCID": 101011004,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ]
+}

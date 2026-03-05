@@ -1,0 +1,61 @@
+﻿{
+  "FloorID": 10101007,
+  "FloorName": "FloorName_10101007",
+  "StartGroupID": 1,
+  "StartAnchorID": 1,
+  "GroupList": [
+    {
+      "ID": 1,
+      "Name": "Default",
+      "GroupGUID": "ff568e14-ef1c-4e2b-9ebd-ef08bac4923b",
+      "GroupPath": "Config/LevelOutput/Group/Groups_P10101_F10101007/LevelGroup_P10101_F10101007_G1.json"
+    },
+    {
+      "ID": 5,
+      "Name": "NPCs",
+      "Comment": "常驻NPC",
+      "GroupGUID": "04c0273f-020a-4a1c-b812-64533026376d",
+      "GroupPath": "Config/LevelOutput/Group/Groups_P10101_F10101007/LevelGroup_P10101_F10101007_G5.json"
+    },
+    {
+      "ID": 3,
+      "Name": "Books",
+      "GroupGUID": "b6a776dc-851d-4a15-998e-7b5b0d9db62c",
+      "GroupPath": "Config/LevelOutput/Group/Groups_P10101_F10101007/LevelGroup_P10101_F10101007_G3.json"
+    },
+    {
+      "ID": 4,
+      "Name": "New Group",
+      "Comment": "NPC",
+      "GroupGUID": "993cabbb-25b8-441e-bca3-6415370ef884",
+      "GroupPath": "Config/LevelOutput/Group/Groups_P10101_F10101007/LevelGroup_P10101_F10101007_G4.json"
+    },
+    {
+      "ID": 6,
+      "Name": "SubjectMission",
+      "Comment": "支线任务201100209 钻头",
+      "GroupGUID": "71370bef-d015-45cb-a6e1-c8cfdc067a28",
+      "GroupPath": "Config/LevelOutput/Group/Groups_P10101_F10101007/LevelGroup_P10101_F10101007_G6.json"
+    },
+    {
+      "ID": 7,
+      "Name": "NPC",
+      "Comment": "常驻茉莉",
+      "GroupGUID": "eb200764-d11b-4958-bab5-f27a8c94b1a8",
+      "GroupPath": "Config/LevelOutput/Group/Groups_P10101_F10101007/LevelGroup_P10101_F10101007_G7.json"
+    }
+  ],
+  "DefaultGroupIDList": [
+    1,
+    5,
+    3
+  ],
+  "UnlockMainMissionGroupIDList": [
+    7
+  ],
+  "EnviroProfile": "Stages/Outputs/Chapter01/EnviroProfile/Chap01_CloseView_INT_MachineHouse_01.enviroProfile.asset",
+  "StageData": "Stages/Outputs/Chapter01/Stages/Chap01_INT_MachineHouse_01_StageData/Chap01_INT_MachineHouse_01_StageData.stage",
+  "NavMesh": "Level/NavMesh/NavMesh-Floor_10101007.asset",
+  "CameraType": "Room",
+  "MinimapVolumeData": {}
+}

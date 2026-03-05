@@ -1,0 +1,46 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "ColliderRelativePath": "Trigger",
+          "ButtonText": {
+            "hash": 1146022417
+          },
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "Maze_10101_LeaveHotelRoom"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_10101_LeaveHotelRoom",
+          "WaitOwnerOnly": true,
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.UnloadLevelGroup",
+          "GroupIDList": [
+            2
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.EnterMap",
+          "EntranceID": 1010104,
+          "GroupID": 1,
+          "AnchorID": 2
+        }
+      ]
+    }
+  ]
+}

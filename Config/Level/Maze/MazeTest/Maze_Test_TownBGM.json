@@ -1,0 +1,84 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300002,
+          "GroupID": 5,
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.LevelAudioState",
+              "GroupName": "StateGroup_Adventure_Noncombat",
+              "StateName": {
+                "Value": "State_FlowerShop"
+              }
+            }
+          ],
+          "OnTriggerExit": [
+            {
+              "$type": "RPG.GameCore.LevelAudioState",
+              "GroupName": "StateGroup_Adventure_Noncombat",
+              "StateName": {
+                "Value": "State_Overworld_Default"
+              }
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300001,
+          "GroupID": 5,
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.LevelAudioState",
+              "GroupName": "StateGroup_Adventure_Noncombat",
+              "StateName": {
+                "Value": "State_GrandTheater"
+              }
+            }
+          ],
+          "OnTriggerExit": [
+            {
+              "$type": "RPG.GameCore.LevelAudioState",
+              "GroupName": "StateGroup_Adventure_Noncombat",
+              "StateName": {
+                "Value": "State_Overworld_Default"
+              }
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300003,
+          "GroupID": 5,
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.LevelAudioState",
+              "GroupName": "StateGroup_Adventure_Noncombat",
+              "StateName": {
+                "Value": "State_GrandHotel"
+              }
+            }
+          ],
+          "OnTriggerExit": [
+            {
+              "$type": "RPG.GameCore.LevelAudioState",
+              "GroupName": "StateGroup_Adventure_Noncombat",
+              "StateName": {
+                "Value": "State_Overworld_Default"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

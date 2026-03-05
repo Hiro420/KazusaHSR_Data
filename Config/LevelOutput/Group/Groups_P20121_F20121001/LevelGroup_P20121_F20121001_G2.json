@@ -1,0 +1,255 @@
+﻿{
+  "GroupGUID": "4fa82f37-f085-4fd9-aff1-47211edd3a73",
+  "GroupName": "DefaultData",
+  "AreaAnchorName": "LevelArea_P20121_F20121001_G2",
+  "AnchorList": [
+    {
+      "ID": 1,
+      "PosX": -46.4,
+      "PosY": -1.205659,
+      "PosZ": 12.2,
+      "Name": "SavePoint1",
+      "RotY": 180.0
+    },
+    {
+      "ID": 2,
+      "PosX": 37.54,
+      "PosY": 2.999998,
+      "PosZ": -79.0,
+      "Name": "SavePoint2",
+      "RotY": 135.0
+    },
+    {
+      "ID": 4,
+      "PosX": -31.2,
+      "PosY": 3.00015,
+      "PosZ": -105.75,
+      "Name": "SavePoint3",
+      "RotY": 315.0
+    }
+  ],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [
+    {
+      "ID": 300006,
+      "PosX": -43.55,
+      "PosY": -1.0464,
+      "PosZ": 11.2,
+      "Name": "Prop6",
+      "Comment": "Savepoint1",
+      "PropID": 101,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 8.0,
+        "DimX": 14.0,
+        "DimY": 2.0,
+        "DimZ": 8.0,
+        "TargetCamps": [],
+        "TriggerTimes": -1,
+        "Server": true
+      },
+      "ValueSource": {
+        "Values": []
+      },
+      "State": "CheckPointEnable",
+      "AnchorGroupID": 2,
+      "AnchorID": 1,
+      "MapTeleportID": 2012101,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300002,
+      "PosX": 37.31,
+      "PosY": 3.0,
+      "PosZ": -79.29,
+      "Name": "Prop2",
+      "Comment": "Savepoint2",
+      "PropID": 101,
+      "Trigger": {
+        "Radius": 4.0,
+        "DimX": 8.0,
+        "DimY": 2.0,
+        "DimZ": 8.0,
+        "TargetCamps": [],
+        "TriggerTimes": -1,
+        "Server": true
+      },
+      "ValueSource": {
+        "Values": []
+      },
+      "State": "CheckPointDisable",
+      "AnchorGroupID": 2,
+      "AnchorID": 2,
+      "MapTeleportID": 2012102,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300004,
+      "PosX": -30.48,
+      "PosY": 3.012644,
+      "PosZ": -104.34,
+      "Name": "Prop4",
+      "Comment": "Savepoint3",
+      "PropID": 101,
+      "Trigger": {
+        "Radius": 6.0,
+        "DimX": 8.0,
+        "DimY": 2.0,
+        "DimZ": 8.0,
+        "TargetCamps": [],
+        "TriggerTimes": -1,
+        "Server": true
+      },
+      "ValueSource": {
+        "Values": []
+      },
+      "State": "CheckPointDisable",
+      "AnchorGroupID": 2,
+      "AnchorID": 4,
+      "MapTeleportID": 2012103,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300005,
+      "PosX": -60.9,
+      "PosY": -0.707907,
+      "PosZ": -48.09,
+      "Name": "Prop5",
+      "RotY": 90.0,
+      "Comment": "出口",
+      "RotX": 359.9757,
+      "PropID": 103,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/Town/Town_Chapter01_EntryMaze.json",
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 8.0,
+        "DimY": 2.0,
+        "DimZ": 8.0,
+        "TargetCamps": [],
+        "TriggerTimes": -1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300015,
+      "PosX": -44.73,
+      "PosY": -0.76,
+      "PosZ": 12.41,
+      "Name": "SavePointModel1",
+      "RotY": 180.0,
+      "PropID": 102,
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "ValueSource": {
+        "Values": [
+          {
+            "$type": "RPG.GameCore.SharedInt",
+            "Key": "Maze_CheckPoint_RefreshGroupID",
+            "Value": 2
+          },
+          {
+            "$type": "RPG.GameCore.SharedInt",
+            "Key": "Maze_CheckPoint_RefreshPropID",
+            "Value": 300006
+          }
+        ]
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300016,
+      "PosX": 36.3,
+      "PosY": 3.35,
+      "PosZ": -80.49,
+      "Name": "SavePointModel2",
+      "RotY": 45.12399,
+      "PropID": 102,
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "ValueSource": {
+        "Values": [
+          {
+            "$type": "RPG.GameCore.SharedInt",
+            "Key": "Maze_CheckPoint_RefreshGroupID",
+            "Value": 2
+          },
+          {
+            "$type": "RPG.GameCore.SharedInt",
+            "Key": "Maze_CheckPoint_RefreshPropID",
+            "Value": 300002
+          }
+        ]
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300018,
+      "PosX": -29.2,
+      "PosY": 3.53442,
+      "PosZ": -102.83,
+      "Name": "SavePointModel3",
+      "RotY": 45.0,
+      "PropID": 102,
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "ValueSource": {
+        "Values": [
+          {
+            "$type": "RPG.GameCore.SharedInt",
+            "Key": "Maze_CheckPoint_RefreshGroupID",
+            "Value": 2
+          },
+          {
+            "$type": "RPG.GameCore.SharedInt",
+            "Key": "Maze_CheckPoint_RefreshPropID",
+            "Value": 300004
+          }
+        ]
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [
+    {
+      "ID": 1,
+      "PosX": -6.213479,
+      "PosY": 1.92,
+      "PosZ": 782.0,
+      "Name": "BattleArea1",
+      "RotY": 270.0,
+      "Tags": [
+        "BattleArea01"
+      ]
+    }
+  ],
+  "NPCList": [],
+  "GroupRefreshID": 1
+}

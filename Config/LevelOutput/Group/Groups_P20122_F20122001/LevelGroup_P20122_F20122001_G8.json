@@ -1,0 +1,120 @@
+﻿{
+  "GroupGUID": "9a9a96dc-404e-432a-856d-8701a79e5d7c",
+  "GroupName": "MainMission0",
+  "AreaAnchorName": "LevelArea_P20122_F20122001_G8",
+  "AnchorList": [],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": -6.17,
+      "PosY": 25.5129,
+      "PosZ": 70.65,
+      "Name": "SubMission_Barrier1_Trigger",
+      "PropID": 100,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/MainStory/M2_2_F20122001/M202_Barrier1_Trigger.json",
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 1.0,
+        "DimX": 10.0,
+        "DimY": 2.0,
+        "DimZ": 6.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "CreateOnInitial": false,
+      "State": "Locked",
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300002,
+      "PosX": -40.24,
+      "PosY": 20.35745,
+      "PosZ": 160.35,
+      "Name": "SubMission_Barrier2_Trigger",
+      "PropID": 100,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/MainStory/M2_2_F20122001/M202_Barrier2_Trigger.json",
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 5.0,
+        "DimX": 8.0,
+        "DimY": 2.0,
+        "DimZ": 4.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "CreateOnInitial": false,
+      "State": "Locked",
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300003,
+      "PosX": -8.85,
+      "PosY": 25.35221,
+      "PosZ": 125.07,
+      "Name": "Barrier1Trigger0107",
+      "RotY": 225.0,
+      "PropID": 100,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 1.0,
+        "DimX": 15.0,
+        "DimY": 2.0,
+        "DimZ": 5.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "CreateOnInitial": false,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300004,
+      "PosX": 3.71,
+      "PosY": 22.3546,
+      "PosZ": 150.83,
+      "Name": "SubMission_Barrier3_Trigger",
+      "RotY": 315.0,
+      "PropID": 100,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/MainStory/M2_2_F20122001/M202_Barrier3_Trigger.json",
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 5.0,
+        "DimX": 8.0,
+        "DimY": 2.0,
+        "DimZ": 4.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "CreateOnInitial": false,
+      "State": "Locked",
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": [
+    {
+      "ID": 400001,
+      "PosX": -20.75,
+      "PosY": 25.38271,
+      "PosZ": 107.68,
+      "Name": "NPC1",
+      "RotY": 315.0,
+      "Comment": "虎克",
+      "NPCID": 2012201,
+      "AIConfig": {
+        "AIFile": "Config/ConfigAI/Adventure/MazeNPC_FollowPlayer_10106_Hook.json",
+        "PathwayList": []
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "GroupRefreshID": 1
+}

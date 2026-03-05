@@ -1,0 +1,132 @@
+﻿{
+  "GroupGUID": "f0f71a69-230a-40dd-a9e0-e1d2ecf56cdf",
+  "GroupName": "DefaultMonster02",
+  "AreaAnchorName": "LevelArea_P20121_F20121001_G8",
+  "UnlockMainMissionID": 1010503,
+  "AnchorList": [],
+  "ModelList": [],
+  "MonsterList": [
+    {
+      "ID": 200005,
+      "PosX": 55.9,
+      "PosY": 2.999998,
+      "PosZ": -98.96,
+      "Name": "Monster5",
+      "RotY": 45.0,
+      "Comment": "4",
+      "NPCMonsterID": 1022010,
+      "AIConfig": {
+        "AIFile": "Config/ConfigAI/Adventure/MazeMonster_Soldier_Common_Patrol_Loop.json",
+        "PathwayList": [
+          {
+            "UseGroup": 8,
+            "UseID": 4,
+            "StartAt": 10
+          }
+        ]
+      },
+      "CampID": 3,
+      "BattleArea": {
+        "GroupID": 2,
+        "ID": 1
+      },
+      "EventID": 20121004
+    },
+    {
+      "ID": 200006,
+      "PosX": 51.9,
+      "PosY": 2.999998,
+      "PosZ": -131.2,
+      "Name": "Monster6",
+      "RotY": 135.0,
+      "Comment": "5",
+      "NPCMonsterID": 8001020,
+      "AIConfig": {
+        "AIFile": "Config/ConfigAI/Adventure/MazeMonster_XP_Minion_Ice_Patrol_Loop.json",
+        "PathwayList": [
+          {
+            "UseGroup": 8,
+            "UseID": 5,
+            "StartAt": 13
+          }
+        ]
+      },
+      "CampID": 3,
+      "BattleArea": {
+        "GroupID": 2,
+        "ID": 1
+      },
+      "EventID": 20121005
+    }
+  ],
+  "PropList": [],
+  "WaypointList": [
+    {
+      "ID": 10,
+      "PosX": 62.58,
+      "PosY": 2.999998,
+      "PosZ": -91.46
+    },
+    {
+      "ID": 11,
+      "PosX": 49.4,
+      "PosY": 2.999998,
+      "PosZ": -104.4
+    },
+    {
+      "ID": 12,
+      "PosX": 65.81,
+      "PosY": 2.999998,
+      "PosZ": -94.61
+    },
+    {
+      "ID": 13,
+      "PosX": 57.35,
+      "PosY": 2.999998,
+      "PosZ": -136.73
+    },
+    {
+      "ID": 14,
+      "PosX": 52.71,
+      "PosY": 2.999998,
+      "PosZ": -132.37
+    },
+    {
+      "ID": 23,
+      "PosX": 62.88,
+      "PosY": 2.999998,
+      "PosZ": -131.96
+    },
+    {
+      "ID": 24,
+      "PosX": 64.1,
+      "PosY": 6.99998,
+      "PosZ": -110.3
+    }
+  ],
+  "PathwayList": [
+    {
+      "ID": 4,
+      "Name": "Pathway4",
+      "WaypointIDList": [
+        10,
+        11,
+        10,
+        12
+      ]
+    },
+    {
+      "ID": 5,
+      "Name": "Pathway5",
+      "WaypointIDList": [
+        13,
+        14,
+        13,
+        23
+      ]
+    }
+  ],
+  "BattleAreaList": [],
+  "NPCList": [],
+  "GroupRefreshID": 1001
+}

@@ -1,0 +1,51 @@
+﻿{
+  "GroupGUID": "517de9a2-3a23-466c-8ece-01d6d762cb1a",
+  "GroupName": "Default",
+  "AreaAnchorName": "LevelArea_P10102_F10102002_G2",
+  "SaveType": "Temporary",
+  "AnchorList": [
+    {
+      "ID": 1,
+      "PosX": 1.89,
+      "PosZ": 2.67,
+      "Name": "Anchor1",
+      "RotY": 180.0
+    },
+    {
+      "ID": 2,
+      "PosX": -0.005,
+      "PosY": 2E-06,
+      "PosZ": -1.625,
+      "Name": "Anchor2",
+      "RotY": 19.1
+    }
+  ],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": 1.95,
+      "PosY": 1.202,
+      "PosZ": 3.864,
+      "Name": "Prop1",
+      "Comment": "出口",
+      "PropID": 108,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/DownTown/DownTown_Chapter01_HotelExit.json",
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": []
+}

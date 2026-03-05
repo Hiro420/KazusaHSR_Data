@@ -1,0 +1,264 @@
+﻿{
+  "AnimatorStateEvents": [
+    {
+      "AnimatorStateName": "Appear",
+      "NormalizedTime": 0.5,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.AnimSetParameter",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ParameterName": "Skill_ID",
+          "FloatValue": 3.402823E+38,
+          "IntegerValue": 0
+        }
+      ]
+    },
+    {
+      "AnimatorStateName": "Skill_Passive01",
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.AnimSetParameter",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ParameterName": "Skill_ID",
+          "FloatValue": 3.402823E+38,
+          "IntegerValue": 3
+        }
+      ]
+    },
+    {
+      "AnimatorStateName": "Skill_Passive01",
+      "NormalizedTime": 0.159,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.AnimSetParameter",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ParameterName": "Skill_ID",
+          "FloatValue": 3.402823E+38,
+          "IntegerValue": 4
+        }
+      ]
+    },
+    {
+      "AnimatorStateName": "Die",
+      "NormalizedTime": 0.9,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.TriggerDeadHandler"
+        }
+      ]
+    },
+    {
+      "AnimatorStateName": "Die_Hit",
+      "NormalizedTime": 0.9,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.TriggerDeadHandler"
+        }
+      ]
+    },
+    {
+      "AnimatorStateName": "Die_Fly",
+      "NormalizedTime": 0.9,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.TriggerDeadHandler"
+        }
+      ]
+    }
+  ],
+  "AnimatorStateGroupEvents": [
+    {
+      "States": [
+        {
+          "Name": "Skill01"
+        },
+        {
+          "Name": "Skill02"
+        },
+        {
+          "Name": "Skill03"
+        },
+        {
+          "Name": "Skill03_Ready"
+        },
+        {
+          "Name": "Skill03_Ready_Loop"
+        }
+      ],
+      "OnEnter": [
+        {
+          "$type": "RPG.GameCore.EnableEmotion",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          }
+        }
+      ],
+      "OnExit": [
+        {
+          "$type": "RPG.GameCore.EnableEmotion",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "Enable": true
+        }
+      ]
+    },
+    {
+      "States": [
+        {
+          "Name": "StandBy",
+          "NormalizedTime": 0.01
+        }
+      ],
+      "OnEnter": [
+        {
+          "$type": "RPG.GameCore.AnimSetParameter",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ParameterName": "Skill_ID",
+          "IntegerValue": 0
+        }
+      ],
+      "OnExit": []
+    },
+    {
+      "States": [
+        {
+          "Name": "Skill02_Ready"
+        },
+        {
+          "Name": "Skill02",
+          "NormalizedTime": 0.01
+        },
+        {
+          "Name": "Skill02_Ready_Loop"
+        }
+      ],
+      "OnEnter": [
+        {
+          "$type": "RPG.GameCore.AnimSetParameter",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ParameterName": "Skill_ID",
+          "IntegerValue": 2
+        }
+      ],
+      "OnExit": []
+    },
+    {
+      "States": [
+        {
+          "Name": "Skill01_Ready",
+          "NormalizedTime": 0.01
+        },
+        {
+          "Name": "Skill01",
+          "NormalizedTime": 0.01
+        },
+        {
+          "Name": "Skill01_Ready_Loop"
+        },
+        {
+          "Name": "Skill02toSkill01"
+        },
+        {
+          "Name": "Skill01toSkill02"
+        }
+      ],
+      "OnEnter": [
+        {
+          "$type": "RPG.GameCore.AnimSetParameter",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ParameterName": "Skill_ID",
+          "IntegerValue": 1
+        }
+      ],
+      "OnExit": []
+    },
+    {
+      "States": [
+        {
+          "Name": "Skill03_Ready"
+        },
+        {
+          "Name": "Skill03",
+          "NormalizedTime": 0.01
+        },
+        {
+          "Name": "Skill03_Ready_Loop",
+          "NormalizedTime": 0.01
+        }
+      ],
+      "OnEnter": [
+        {
+          "$type": "RPG.GameCore.AnimSetParameter",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ParameterName": "Skill_ID",
+          "IntegerValue": 3
+        }
+      ],
+      "OnExit": []
+    },
+    {
+      "States": [
+        {
+          "Name": "Skill01",
+          "NormalizedTime": 0.305
+        },
+        {
+          "Name": "Skill_Passive01"
+        }
+      ],
+      "OnEnter": [
+        {
+          "$type": "RPG.GameCore.SetAttachmentVisibility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AttachPoints": [
+            {
+              "Name": "SkillWeapon01_Ball"
+            }
+          ],
+          "Visibility": true
+        }
+      ],
+      "OnExit": [
+        {
+          "$type": "RPG.GameCore.SetAttachmentVisibility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AttachPoints": [
+            {
+              "Name": "SkillWeapon01_Ball"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

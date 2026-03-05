@@ -1,0 +1,89 @@
+﻿{
+  "CharacterHUDOffset": {
+    "x": 0.0,
+    "y": 2.6,
+    "z": 0.0
+  },
+  "HitBoxWidth": 0.39,
+  "HitBoxHeight": 1.95,
+  "Location": {
+    "Width": 1.04
+  },
+  "SaveModelWhenDead": true,
+  "AnimEventConfigList": [
+    "Config/ConfigAnimEvents/Monster/Designer/Boss_cocolia_P2_Designer_AnimEvent.json"
+  ],
+  "SoundBankList": [
+    "BK_SFX_Monster_Common"
+  ],
+  "SkillList": [
+    {
+      "Name": "Skill01",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "AllEnemy"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Boss_cocolia_P2_Skill01_BattleEvent_Skill01_Phase01"
+    },
+    {
+      "Name": "Passive01",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Boss_cocolia_P2_Skill01_BattleEvent_PassiveSkill01"
+    }
+  ],
+  "AbilityList": [
+    "Boss_cocolia_P2_Skill01_BattleEvent_PassiveSkill01",
+    "Boss_Cocolia_BattleEvent_OnPlayerUltraInsert"
+  ],
+  "SkillAbilityList": [
+    {
+      "Skill": "Skill01",
+      "AbilityList": [
+        "Boss_cocolia_P2_Skill01_BattleEvent_Skill01_Phase01",
+        "Boss_cocolia_P2_Skill01_BattleEvent_Skill01_Phase02",
+        "Boss_cocolia_P2_Skill01_BattleEvent_Skill01_Camera"
+      ]
+    }
+  ],
+  "DynamicValues": {
+    "Floats": {
+      "-253107436": {
+        "Value": 1.0
+      },
+      "-871204762": {
+        "Min": 0.0,
+        "Max": 6.0
+      },
+      "-1126825319": {
+        "Value": 5.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill01",
+          "Index": 0
+        }
+      },
+      "-1720844712": {
+        "Value": 8.5,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill01",
+          "Index": 1
+        }
+      },
+      "2140539517": {
+        "Value": 10.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill01",
+          "Index": 2
+        }
+      }
+    }
+  },
+  "WeaponType": "WP_Magic"
+}

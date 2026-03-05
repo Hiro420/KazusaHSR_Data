@@ -1,0 +1,95 @@
+﻿{
+  "AnimatorStateEvents": [],
+  "AnimatorStateGroupEvents": [
+    {
+      "States": [
+        {
+          "Name": "Skill03_Ready"
+        },
+        {
+          "Name": "Skill03_Ready_Loop"
+        }
+      ],
+      "OnEnter": [
+        {
+          "$type": "RPG.GameCore.TriggerEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Serval/Eff_Avatar_Serval_00_Skill03_Ready.prefab"
+        }
+      ],
+      "OnExit": [
+        {
+          "$type": "RPG.GameCore.RemoveEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Serval/Eff_Avatar_Serval_00_Skill03_Ready.prefab"
+        }
+      ]
+    },
+    {
+      "States": [
+        {
+          "Name": "Skill03_Ready"
+        },
+        {
+          "Name": "Skill03_Ready_Loop"
+        },
+        {
+          "Name": "Skill01_Ready"
+        },
+        {
+          "Name": "Skill01"
+        },
+        {
+          "Name": "Skill01_Ready_Loop"
+        },
+        {
+          "Name": "Skill01toSkill02"
+        },
+        {
+          "Name": "Skill02_Ready_Loop"
+        },
+        {
+          "Name": "Skill02toSkill01"
+        },
+        {
+          "Name": "Skill02"
+        },
+        {
+          "Name": "Skill03_Ready"
+        },
+        {
+          "Name": "Skill03_Ready_Loop"
+        },
+        {
+          "Name": "Skill03"
+        }
+      ],
+      "OnEnter": [
+        {
+          "$type": "RPG.GameCore.TriggerEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Serval/Eff_Avatar_Serval_00_Common_Weapon_Effect.prefab"
+        }
+      ],
+      "OnExit": [
+        {
+          "$type": "RPG.GameCore.RemoveEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Serval/Eff_Avatar_Serval_00_Common_Weapon_Effect.prefab"
+        }
+      ]
+    }
+  ]
+}

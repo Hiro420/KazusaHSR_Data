@@ -1,0 +1,81 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.CreateLevelAreas",
+          "AssetPath": {
+            "Value": "Level/Common_Adventure/LookatPhone.prefab"
+          }
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.EnableNPCMonsterAI",
+          "GroupMonsterIDs": [],
+          "UniqueNames": []
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode",
+          "Enable": true
+        },
+        {
+          "$type": "RPG.GameCore.CaptureLocalPlayer",
+          "CharacterUniqueName": "Player"
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "LookatPhone",
+          "AnchorName": "LookatPhone_Camera",
+          "FollowTargetUniqueName": "Player",
+          "LookAtTargetUniqueName": "Player",
+          "BlendConfig": {
+            "BlendType": "Cut",
+            "CustomCurveName": "BlendCut_08to1",
+            "BlendTime": 1.0
+          },
+          "VCameraDitherNPCOn": true,
+          "VCameraDitherMaxDistance": 3.0
+        },
+        {
+          "$type": "RPG.GameCore.CharacterTriggerAnimState",
+          "CharType": "LocalPlayer",
+          "CharacterUniqueName": "Player",
+          "AnimStateName": "LookatPhoneBS",
+          "NormalizedTransitionDuration": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.CharacterDisableLookAt",
+          "CharacterUniqueName": "Player"
+        },
+        {
+          "$type": "RPG.GameCore.CreatePhoneOnCharacter"
+        },
+        {
+          "$type": "RPG.GameCore.ReleaseCharacter",
+          "CharacterUniqueName": "Player"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 2.0
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "LookatPhoneFinish"
+        },
+        {
+          "$type": "RPG.GameCore.RemoveLevelAreas",
+          "AreaName": "LookatPhone"
+        }
+      ]
+    }
+  ]
+}

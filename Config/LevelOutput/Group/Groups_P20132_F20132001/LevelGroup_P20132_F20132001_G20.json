@@ -1,0 +1,37 @@
+﻿{
+  "GroupGUID": "4546411a-04af-4d1a-98ec-de02f3ccb846",
+  "GroupName": "DefaultTreasureUnlock",
+  "LevelGraph": "Config/Level/Maze/Chapter01/Maze302/Maze_Chap01_M302_TreasureCheck1.json",
+  "AreaAnchorName": "LevelArea_P20132_F20132001_G20",
+  "AnchorList": [],
+  "ModelList": [],
+  "MonsterList": [
+    {
+      "ID": 200001,
+      "PosX": 64.6,
+      "PosY": 3.944304,
+      "PosZ": 255.94,
+      "Name": "Monster1",
+      "RotY": 270.0,
+      "NPCMonsterID": 8003020,
+      "AIConfig": {
+        "AIFile": "Config/ConfigAI/Adventure/MazeMonster_LV3Common_idle_Loop.json",
+        "PathwayList": [
+          {}
+        ]
+      },
+      "CampID": 3,
+      "BattleArea": {
+        "GroupID": 1,
+        "ID": 1
+      },
+      "EventID": 20132110
+    }
+  ],
+  "PropList": [],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": [],
+  "GroupRefreshID": 1
+}

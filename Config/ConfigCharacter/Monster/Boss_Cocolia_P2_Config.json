@@ -1,0 +1,398 @@
+﻿{
+  "SomatoType": "LargeMonster",
+  "CharacterHUDOffset": {
+    "x": 0.0,
+    "y": 2.0,
+    "z": 0.0
+  },
+  "BuffPanelOffset": {
+    "x": 0.0,
+    "y": 1.8,
+    "z": 0.0
+  },
+  "HitBoxWidth": 1.3,
+  "HitBoxHeight": 0.6,
+  "Location": {
+    "Width": 3.2
+  },
+  "AnimEventConfigList": [
+    "Config/ConfigAnimEvents/Monster/Designer/Boss_Cocolia_P2_Designer_AnimEvent.json",
+    "Config/ConfigAnimEvents/Monster/Effect/Boss_Cocolia_P2_Effect_AnimEvent.json"
+  ],
+  "SoundBankList": [
+    "BK_SFX_Monster_Common"
+  ],
+  "SkillList": [
+    {
+      "Name": "Skill01",
+      "SkillType": "Skill",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "EnemySelect"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Boss_Cocolia_P2_Skill01_Phase01"
+    },
+    {
+      "Name": "Skill02",
+      "SkillType": "Skill",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "EnemySelect"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Boss_Cocolia_P2_Skill02_Phase01"
+    },
+    {
+      "Name": "Skill03",
+      "SkillType": "Skill",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "AllEnemy"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Boss_Cocolia_P2_Skill03_Phase01"
+    },
+    {
+      "Name": "Skill04",
+      "SkillType": "Skill",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "EnemySelect"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Boss_Cocolia_P2_Skill04_Phase01"
+    },
+    {
+      "Name": "Skill05",
+      "SkillType": "Skill",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Boss_Cocolia_P2_Skill05_Phase01"
+    },
+    {
+      "Name": "Skill06",
+      "SkillType": "Skill",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "AllEnemy"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Boss_Cocolia_P2_Skill06_Phase01"
+    },
+    {
+      "Name": "Skill07",
+      "SkillType": "Skill",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Boss_Cocolia_P2_Skill07_Phase01"
+    },
+    {
+      "Name": "Skill08",
+      "SkillType": "Skill",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "EnemySelect"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Boss_Cocolia_P2_Skill08_Phase01"
+    },
+    {
+      "Name": "PassiveSkill01",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Monster_Common_PassiveSkill_StanceBreak_Action"
+    },
+    {
+      "Name": "PassiveSkill02",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Boss_Cocolia_AIControl"
+    },
+    {
+      "Name": "PassiveSkill03",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Boss_Cocolia_IceValue_P2"
+    },
+    {
+      "Name": "PassiveSkill04",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Boss_Cocolia_CameraAdjust"
+    },
+    {
+      "Name": "PassiveSkill05",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Boss_Cocolia_P2_Skill06_Passive"
+    },
+    {
+      "Name": "PassiveSkill06",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Boss_Cocolia_P2_MuteHitFly"
+    }
+  ],
+  "AbilityList": [
+    "Monster_Common_PassiveSkill_StanceBreak_Action",
+    "Monster_Common_Fever_Action",
+    "Boss_Cocolia_IceValue_P2",
+    "Boss_Cocolia_AIControl",
+    "Boss_Cocolia_P2_BossModifier",
+    "Boss_Cocolia_CameraAdjust",
+    "Boss_Cocolia_P2_Insert",
+    "Boss_Cocolia_P1_StateCameraChange_01",
+    "Boss_Cocolia_P1_StateCameraChange_02",
+    "Boss_Cocolia_P2_Skill04_Insert",
+    "Boss_Cocolia_P2_Skill05_Shield_Insert",
+    "Boss_Cocolia_P2_Skill08_Insert",
+    "Boss_Cocolia_P2_Skill06_Passive",
+    "Boss_Cocolia_P2_MuteHitFly"
+  ],
+  "SkillAbilityList": [
+    {
+      "Skill": "Skill01",
+      "AbilityList": [
+        "Boss_Cocolia_P2_Skill01_Camera",
+        "Boss_Cocolia_P2_Skill01_Phase01",
+        "Boss_Cocolia_P2_Skill01_Phase02"
+      ]
+    },
+    {
+      "Skill": "Skill02",
+      "AbilityList": [
+        "Boss_Cocolia_P2_Skill02_Camera",
+        "Boss_Cocolia_P2_Skill02_Phase01",
+        "Boss_Cocolia_P2_Skill02_Phase02"
+      ]
+    },
+    {
+      "Skill": "Skill03",
+      "AbilityList": [
+        "Boss_Cocolia_P2_Skill03_Camera",
+        "Boss_Cocolia_P2_Skill03_Phase01",
+        "Boss_Cocolia_P2_Skill03_Phase02"
+      ]
+    },
+    {
+      "Skill": "Skill04",
+      "AbilityList": [
+        "Boss_Cocolia_P2_Skill04_Phase01",
+        "Boss_Cocolia_P2_Skill04_Phase02",
+        "Boss_Cocolia_P2_Skill04_Camera"
+      ]
+    },
+    {
+      "Skill": "Skill05",
+      "AbilityList": [
+        "Boss_Cocolia_P2_Skill05_Phase01",
+        "Boss_Cocolia_P2_Skill05_Phase02",
+        "Boss_Cocolia_P2_Skill05_Camera"
+      ]
+    },
+    {
+      "Skill": "Skill06",
+      "AbilityList": [
+        "Boss_Cocolia_P2_Skill06_Phase01",
+        "Boss_Cocolia_P2_Skill06_Phase02",
+        "Boss_Cocolia_P2_Skill06_Camera"
+      ]
+    },
+    {
+      "Skill": "Skill07",
+      "AbilityList": [
+        "Boss_Cocolia_P2_Skill07_Camera",
+        "Boss_Cocolia_P2_Skill07_Phase01",
+        "Boss_Cocolia_P2_Skill07_Phase02"
+      ]
+    },
+    {
+      "Skill": "Skill08",
+      "AbilityList": [
+        "Boss_Cocolia_P2_Skill08_Camera",
+        "Boss_Cocolia_P2_Skill08_Phase01",
+        "Boss_Cocolia_P2_Skill08_Phase02"
+      ]
+    }
+  ],
+  "DynamicValues": {
+    "Floats": {
+      "-1742872294": {
+        "Min": 0.0,
+        "Max": 6.0
+      },
+      "-1087981386": {
+        "Min": 0.0,
+        "Max": 6.0
+      },
+      "-1126825319": {
+        "Value": 1.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill01",
+          "Index": 0
+        }
+      },
+      "-56289053": {
+        "Value": 3.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill03",
+          "Index": 0
+        }
+      },
+      "734867428": {
+        "Value": 1.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill03",
+          "Index": 1
+        }
+      },
+      "-190305622": {
+        "Value": 1.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill04",
+          "Index": 0
+        }
+      },
+      "600850859": {
+        "Value": 2.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill04",
+          "Index": 1
+        }
+      },
+      "-1755273258": {
+        "Value": 2.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill04",
+          "Index": 2
+        }
+      },
+      "1169872039": {
+        "Value": 20.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill04",
+          "Index": 3
+        }
+      },
+      "987625329": {
+        "Value": 300.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill05",
+          "Index": 0
+        }
+      },
+      "-1201862104": {
+        "Value": 10.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill05",
+          "Index": 1
+        }
+      },
+      "-1340496871": {
+        "Value": 2.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill05",
+          "Index": 2
+        }
+      },
+      "904231864": {
+        "Value": 0.1,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill06",
+          "Index": 0
+        }
+      },
+      "-1923078003": {
+        "Value": -100.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill06",
+          "Index": 1
+        }
+      },
+      "-1434318368": {
+        "Value": 10.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill06",
+          "Index": 2
+        }
+      },
+      "1643420006": {
+        "Value": 1.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill08",
+          "Index": 0
+        }
+      },
+      "-1860390809": {
+        "Value": 1.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill08",
+          "Index": 1
+        }
+      },
+      "1703986762": {
+        "Value": 20.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill08",
+          "Index": 2
+        }
+      },
+      "-192125991": {
+        "Value": 1.0
+      },
+      "1195978959": {}
+    }
+  },
+  "CustomValues": {
+    "Ice_Lance_ID": 1005011,
+    "Ice_Lance_ID_2": 1005012,
+    "AIFlag": 1,
+    "Phase_Flag": 1,
+    "WeaponDeathCount": 0,
+    "Skill06_SummonID": 9005011,
+    "BOSS_COCOLIA_CHARGE_FLAG": 2,
+    "Blizzard_Trigger_Times": 0
+  },
+  "ArmorType": "Armor_Metal"
+}

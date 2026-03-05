@@ -1,0 +1,37 @@
+﻿{
+  "GroupGUID": "3d8cfdf5-797c-488d-a533-2c80cfe894aa",
+  "GroupName": "SubjectMission",
+  "AreaAnchorName": "LevelArea_P20132_F20132001_G24",
+  "AnchorList": [],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": 104.68,
+      "PosY": -4.576,
+      "PosZ": 261.754,
+      "Name": "Prop1",
+      "PropID": 100,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/Maze01_SubMission/Drop_201100101.json",
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [
+        201100101
+      ],
+      "OverrideTriggerHint": true,
+      "HintRange": 5.0,
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": []
+}

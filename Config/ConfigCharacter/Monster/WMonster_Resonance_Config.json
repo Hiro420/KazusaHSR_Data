@@ -1,0 +1,114 @@
+﻿{
+  "CharacterHUDOffset": {
+    "x": 0.125,
+    "y": 2.6,
+    "z": 0.125
+  },
+  "BuffPanelOffset": {
+    "x": 0.0,
+    "y": 1.8,
+    "z": 0.0
+  },
+  "HitBoxWidth": 0.39,
+  "HitBoxHeight": 1.95,
+  "Location": {
+    "Width": 1.04
+  },
+  "AnimEventConfigList": [
+    "Config/ConfigAnimEvents/Monster/Designer/Monster_W1_Gepard_00_Designer_AnimEvent.json",
+    "Config/ConfigAnimEvents/Monster/Effect/Monster_W1_Gepard_00_Effect_AnimEvent.json",
+    "Config/ConfigAnimEvents/Monster/Audio/Monster_W1_Gepard_00_Audio_AnimEvent.json"
+  ],
+  "SoundBankList": [
+    "BK_SFX_Monster_Common",
+    "BK_SFX_Avatar_Gepard_Common",
+    "BK_VO_Avatar_Gepard_Inlevel"
+  ],
+  "SkillList": [
+    {
+      "Name": "Skill01",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "EnemySelect"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "WMonster_Resonance_Skill01_Phase01"
+    },
+    {
+      "Name": "Skill02",
+      "SkillType": "Skill",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "AllEnemy"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "WMonster_Resonance_Skill02_Phase01"
+    },
+    {
+      "Name": "CommonPassiveSkill",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "WMonster_Resonance_PassiveSkillInitiate"
+    },
+    {
+      "Name": "CommonPassiveSkill",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Monster_Common_PassiveSkill_StanceBreak_Action"
+    }
+  ],
+  "AbilityList": [
+    "Monster_Common_PassiveSkill_StanceBreak_Action",
+    "WMonster_Resonance_PassiveSkillInitiate"
+  ],
+  "SkillAbilityList": [
+    {
+      "Skill": "Skill01",
+      "AbilityList": [
+        "WMonster_Resonance_Skill01_Phase01",
+        "WMonster_Resonance_Skill01_Phase02",
+        "Monster_W1_Gepard_00_Skill01_Camera"
+      ]
+    },
+    {
+      "Skill": "Skill02",
+      "AbilityList": [
+        "WMonster_Resonance_Skill02_Phase01",
+        "WMonster_Resonance_Skill02_Phase02",
+        "Monster_W1_Gepard_00_Skill04_Camera"
+      ]
+    }
+  ],
+  "DynamicValues": {
+    "Floats": {
+      "-1126825319": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill01",
+          "Index": 0
+        }
+      },
+      "-335668838": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill01",
+          "Index": 1
+        }
+      },
+      "-1847083384": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill02",
+          "Index": 0
+        }
+      }
+    }
+  },
+  "WeaponType": "WP_Magic"
+}

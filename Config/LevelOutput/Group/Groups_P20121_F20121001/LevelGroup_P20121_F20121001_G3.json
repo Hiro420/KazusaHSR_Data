@@ -1,0 +1,785 @@
+﻿{
+  "GroupGUID": "be532b39-9203-45ed-8441-b726096ea6fe",
+  "GroupName": "DefaultProp",
+  "AreaAnchorName": "LevelArea_P20121_F20121001_G3",
+  "AnchorList": [
+    {
+      "ID": 1,
+      "PosX": 50.93,
+      "PosY": 3.467,
+      "PosZ": -122.99,
+      "Name": "300033_1F",
+      "RotY": 135.0
+    },
+    {
+      "ID": 2,
+      "PosX": 50.93,
+      "PosY": 7.07,
+      "PosZ": -122.99,
+      "Name": "300033_2F",
+      "RotY": 135.0
+    },
+    {
+      "ID": 3,
+      "PosX": -63.58,
+      "PosY": 3.62,
+      "PosZ": -124.6,
+      "Name": "300005_1F",
+      "RotY": 315.0
+    },
+    {
+      "ID": 4,
+      "PosX": -63.58,
+      "PosY": 8.38,
+      "PosZ": -124.6,
+      "Name": "300005_2F",
+      "RotY": 315.0
+    },
+    {
+      "ID": 5,
+      "PosX": 69.96,
+      "PosY": 3.488,
+      "PosZ": -104.44,
+      "Name": "300024_1F",
+      "RotY": 135.0
+    },
+    {
+      "ID": 6,
+      "PosX": 69.96,
+      "PosY": 6.96,
+      "PosZ": -104.44,
+      "Name": "300024_2F",
+      "RotY": 135.0
+    }
+  ],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": -37.26,
+      "PosY": -1.0464,
+      "PosZ": -9.79,
+      "Name": "Prop1",
+      "RotY": 180.0,
+      "Comment": "门1",
+      "PropID": 101005,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/Maze2_1/Maze_Chapter_01_M0201_LockedDoor_01.json",
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 1.0,
+        "DimX": 3.5,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1,
+        "Offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -0.6
+        }
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300002,
+      "PosX": -39.66,
+      "PosY": -1.046401,
+      "PosZ": -11.92,
+      "Name": "Prop2",
+      "RotY": 180.0,
+      "Comment": "门1开关",
+      "PropID": 101001,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/Maze2_1/Maze_Chapter_01_M0201_OpenDoor_01.json",
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300003,
+      "PosX": -15.95,
+      "PosY": 2.999998,
+      "PosZ": -55.06,
+      "Name": "Prop3",
+      "RotY": 180.0,
+      "Comment": "门2",
+      "PropID": 101005,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/Maze2_1/Maze_Chapter_01_M0201_LockedDoor_02.json",
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 1.0,
+        "DimX": 3.5,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1,
+        "Offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -0.6
+        }
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300004,
+      "PosX": -13.48,
+      "PosY": 3.168933,
+      "PosZ": -60.05,
+      "Name": "Prop4",
+      "RotY": 180.0,
+      "Comment": "门2开关",
+      "PropID": 101001,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/Maze2_1/Maze_Chapter_01_M0201_OpenDoor_02.json",
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300015,
+      "PosX": 44.83,
+      "PosY": 3.26,
+      "PosZ": -107.78,
+      "Name": "Prop15",
+      "RotY": 225.0,
+      "Comment": "门N1",
+      "PropID": 101005,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/Maze2_1/Maze_Chapter_01_M0201_LockedDoor_N1.json",
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 1.0,
+        "DimX": 8.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1,
+        "Offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -1.0
+        }
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300016,
+      "PosX": 41.86,
+      "PosY": 3.239343,
+      "PosZ": -107.6,
+      "Name": "Prop16",
+      "RotY": 225.0,
+      "Comment": "门N1开关",
+      "PropID": 101001,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/Maze2_1/Maze_Chapter_01_M0201_OpenDoor_N1.json",
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300017,
+      "PosX": 79.8,
+      "PosY": 2.999998,
+      "PosZ": -108.64,
+      "Name": "Prop17",
+      "RotY": 135.0,
+      "Comment": "门N2",
+      "PropID": 101005,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/Maze2_1/Maze_Chapter_01_M0201_LockedDoor_N2.json",
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 1.0,
+        "DimX": 8.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1,
+        "Offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -1.0
+        }
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300018,
+      "PosX": 78.806,
+      "PosY": 2.999998,
+      "PosZ": -112.064,
+      "Name": "Prop18",
+      "RotY": 135.0,
+      "Comment": "门N2开关",
+      "PropID": 101001,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/Maze2_1/Maze_Chapter_01_M0201_OpenDoor_N2.json",
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300019,
+      "PosX": 31.316,
+      "PosY": 2.913393,
+      "PosZ": -121.286,
+      "Name": "Prop19",
+      "RotY": 45.0,
+      "Comment": "门N3",
+      "PropID": 101004,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/Maze2_1/Maze_Chapter_01_M0201_LockedDoor_N3.json",
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 1.0,
+        "DimX": 8.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1,
+        "Offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -1.27
+        }
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300020,
+      "PosX": 28.543,
+      "PosY": 3.069,
+      "PosZ": -120.091,
+      "Name": "Prop20",
+      "RotY": 225.0,
+      "Comment": "门N3开关",
+      "PropID": 101001,
+      "CreateOnInitial": false,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300008,
+      "PosX": -41.57,
+      "PosY": 3.1,
+      "PosZ": -93.39,
+      "Name": "Prop8",
+      "RotY": 225.0,
+      "Comment": "最终门1",
+      "PropID": 101005,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/Maze2_1/Maze_Chapter_01_M0201_LockedDoor_03.json",
+      "Trigger": {
+        "Radius": 1.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300014,
+      "PosX": -59.34,
+      "PosY": 7.586,
+      "PosZ": -154.6,
+      "Name": "Prop14",
+      "RotY": 270.0,
+      "Comment": "钥匙获取",
+      "PropID": 603,
+      "InitLevelGraph": "Config/Level/Mission/1010501/Key_101050104_1.json",
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "ChestID": 20121502,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300009,
+      "PosX": -38.66,
+      "PosY": 3.1,
+      "PosZ": -104.25,
+      "Name": "Prop9",
+      "RotY": 135.0,
+      "Comment": "钥匙门",
+      "PropID": 101005,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/Maze2_1/Maze_Chapter_01_M0201_LockedDoor_G1.json",
+      "Trigger": {
+        "Radius": 1.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300010,
+      "PosX": -36.188,
+      "PosY": 3.06324,
+      "PosZ": -102.84,
+      "Name": "Prop10",
+      "RotY": 135.0,
+      "Comment": "需要钥匙的控制台",
+      "PropID": 101003,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/Maze2_1/Maze_Chapter_01_M0201_OpenDoor_G1.json",
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300029,
+      "PosX": -56.32,
+      "PosY": 3.1,
+      "PosZ": -86.26,
+      "Name": "Prop29",
+      "RotY": 135.0,
+      "Comment": "非必须单向门",
+      "PropID": 101005,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/Maze2_1/Maze_Chapter_01_M0201_LockedDoor_G2.json",
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 1.0,
+        "DimX": 4.35,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1,
+        "Offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.59
+        }
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300012,
+      "PosX": -53.676,
+      "PosY": 3.164263,
+      "PosZ": -85.064,
+      "Name": "Prop12",
+      "RotY": 135.0,
+      "Comment": "门1开关",
+      "PropID": 101001,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/Maze2_1/Maze_Chapter_01_M0201_OpenDoor_G2.json",
+      "Trigger": {
+        "Radius": 1.65,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1,
+        "Offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.73
+        }
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300013,
+      "PosX": -63.58,
+      "PosY": 0.08,
+      "PosZ": -124.6,
+      "Name": "Prop13",
+      "RotY": 45.0,
+      "Comment": "电梯台子",
+      "PropID": 301004,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300021,
+      "PosX": 69.96,
+      "PosY": -1.29,
+      "PosZ": -104.44,
+      "Name": "Prop21",
+      "RotY": 315.0,
+      "Comment": "电梯台子",
+      "PropID": 301004,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300026,
+      "PosX": 50.93,
+      "PosY": -1.29,
+      "PosZ": -122.99,
+      "Name": "Prop26",
+      "RotY": 135.0,
+      "Comment": "电梯台子",
+      "PropID": 301004,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300027,
+      "PosX": -69.4,
+      "PosY": 8.724289,
+      "PosZ": -121.79,
+      "Name": "Prop27",
+      "RotY": 315.0,
+      "Comment": "电梯01控制器上",
+      "PropID": 101009,
+      "Trigger": {
+        "Radius": 1.5,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "ValueSource": {
+        "Values": [
+          {
+            "$type": "RPG.GameCore.SharedString",
+            "Key": "Maze_Chap01_Elevator_01",
+            "Value": "3,300005"
+          }
+        ]
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300011,
+      "PosX": -58.34,
+      "PosY": 3.07,
+      "PosZ": -125.02,
+      "Name": "Prop11",
+      "RotY": 135.0,
+      "Comment": "电梯01控制器下",
+      "PropID": 101008,
+      "Trigger": {
+        "Radius": 1.5,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "ValueSource": {
+        "Values": [
+          {
+            "$type": "RPG.GameCore.SharedString",
+            "Key": "Maze_Chap01_Elevator_01",
+            "Value": "3,300005"
+          }
+        ]
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300005,
+      "PosX": -63.58,
+      "PosY": 3.62,
+      "PosZ": -124.6,
+      "Name": "Prop5",
+      "RotY": 315.0,
+      "Comment": "电梯01",
+      "PropID": 101007,
+      "Trigger": {
+        "Radius": 2.5,
+        "DimX": 2.0,
+        "DimY": 15.0,
+        "DimZ": 2.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "ValueSource": {
+        "Values": [
+          {
+            "$type": "RPG.GameCore.SharedString",
+            "Key": "Maze_Chap01_Lift_1F",
+            "Value": "LevelArea_P20121_F20121001_G3,300005_1F"
+          },
+          {
+            "$type": "RPG.GameCore.SharedString",
+            "Key": "Maze_Chap01_Lift_2F",
+            "Value": "LevelArea_P20121_F20121001_G3,300005_2F"
+          }
+        ]
+      },
+      "State": "Elevator1",
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300035,
+      "PosX": -63.58,
+      "PosY": 2.85,
+      "PosZ": -124.6,
+      "Name": "Prop35",
+      "RotY": 315.0,
+      "Comment": "电梯01底座",
+      "PropID": 301005,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300024,
+      "PosX": 69.96,
+      "PosY": 3.38,
+      "PosZ": -104.44,
+      "Name": "Prop24",
+      "RotY": 135.0,
+      "Comment": "电梯02",
+      "PropID": 101007,
+      "Trigger": {
+        "Radius": 2.8,
+        "DimX": 3.0,
+        "DimY": 1.0,
+        "DimZ": 3.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "ValueSource": {
+        "Values": [
+          {
+            "$type": "RPG.GameCore.SharedString",
+            "Key": "Maze_Chap01_Lift_1F",
+            "Value": "LevelArea_P20121_F20121001_G3,300024_1F"
+          },
+          {
+            "$type": "RPG.GameCore.SharedString",
+            "Key": "Maze_Chap01_Lift_2F",
+            "Value": "LevelArea_P20121_F20121001_G3,300024_2F"
+          }
+        ]
+      },
+      "State": "Elevator1",
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300032,
+      "PosX": 64.572,
+      "PosY": 7.387593,
+      "PosZ": -106.416,
+      "Name": "Prop32",
+      "RotY": 225.0,
+      "Comment": "电梯02控制器上",
+      "PropID": 101009,
+      "Trigger": {
+        "Radius": 1.5,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "ValueSource": {
+        "Values": [
+          {
+            "$type": "RPG.GameCore.SharedString",
+            "Key": "Maze_Chap01_Elevator_01",
+            "Value": "3,300024"
+          }
+        ]
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300007,
+      "PosX": 74.2,
+      "PosY": 3.136178,
+      "PosZ": -105.49,
+      "Name": "Prop7",
+      "RotY": 45.0,
+      "Comment": "电梯02控制器下",
+      "PropID": 101008,
+      "Trigger": {
+        "Radius": 1.5,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "ValueSource": {
+        "Values": [
+          {
+            "$type": "RPG.GameCore.SharedString",
+            "Key": "Maze_Chap01_Elevator_01",
+            "Value": "3,300024"
+          }
+        ]
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300036,
+      "PosX": 69.96,
+      "PosY": 2.74,
+      "PosZ": -104.44,
+      "Name": "Prop36",
+      "RotY": 135.0,
+      "Comment": "电梯02底座",
+      "PropID": 301005,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300031,
+      "PosX": 56.759,
+      "PosY": 7.219338,
+      "PosZ": -120.849,
+      "Name": "Prop31",
+      "RotY": 45.0,
+      "Comment": "电梯03控制器上",
+      "PropID": 101009,
+      "Trigger": {
+        "Radius": 1.5,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "ValueSource": {
+        "Values": [
+          {
+            "$type": "RPG.GameCore.SharedString",
+            "Key": "Maze_Chap01_Elevator_01",
+            "Value": "3,300033"
+          }
+        ]
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300006,
+      "PosX": 46.06,
+      "PosY": 3.24,
+      "PosZ": -122.16,
+      "Name": "Prop6",
+      "RotY": 225.0,
+      "Comment": "电梯03控制器下",
+      "PropID": 101008,
+      "Trigger": {
+        "Radius": 1.5,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "ValueSource": {
+        "Values": [
+          {
+            "$type": "RPG.GameCore.SharedString",
+            "Key": "Maze_Chap01_Elevator_01",
+            "Value": "3,300033"
+          }
+        ]
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300033,
+      "PosX": 50.93,
+      "PosY": 3.38,
+      "PosZ": -122.99,
+      "Name": "Prop33",
+      "RotY": 135.0,
+      "Comment": "电梯03",
+      "PropID": 101007,
+      "Trigger": {
+        "Radius": 2.5,
+        "DimX": 3.0,
+        "DimY": 1.0,
+        "DimZ": 3.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "ValueSource": {
+        "Values": [
+          {
+            "$type": "RPG.GameCore.SharedString",
+            "Key": "Maze_Chap01_Lift_1F",
+            "Value": "LevelArea_P20121_F20121001_G3,300033_1F"
+          },
+          {
+            "$type": "RPG.GameCore.SharedString",
+            "Key": "Maze_Chap01_Lift_2F",
+            "Value": "LevelArea_P20121_F20121001_G3,300033_2F"
+          }
+        ]
+      },
+      "State": "Elevator1",
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300025,
+      "PosX": 50.93,
+      "PosY": 2.74,
+      "PosZ": -122.99,
+      "Name": "Prop25",
+      "RotY": 135.0,
+      "Comment": "电梯03底座",
+      "PropID": 301005,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": [],
+  "GroupRefreshID": 1
+}

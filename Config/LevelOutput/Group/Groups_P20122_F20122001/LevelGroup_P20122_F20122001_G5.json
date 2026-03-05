@@ -1,0 +1,82 @@
+﻿{
+  "GroupGUID": "6e08a757-9a48-4c1d-9ef5-989257639baa",
+  "GroupName": "MainMission1",
+  "AreaAnchorName": "LevelArea_P20122_F20122001_G5",
+  "AnchorList": [],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": 19.42,
+      "PosY": 25.0481,
+      "PosZ": 64.72,
+      "Name": "Trigger0102",
+      "RotY": 45.0,
+      "Comment": "接近淘金者",
+      "PropID": 100,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 1.0,
+        "DimX": 10.0,
+        "DimY": 2.0,
+        "DimZ": 10.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300002,
+      "PosX": 13.81,
+      "PosY": 25.0594,
+      "PosZ": 84.19,
+      "Name": "Trigger0103",
+      "RotY": 45.0,
+      "Comment": "遭遇淘金者",
+      "PropID": 100,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 1.0,
+        "DimX": 15.0,
+        "DimY": 2.0,
+        "DimZ": 15.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": [
+    {
+      "ID": 400001,
+      "PosX": 12.47,
+      "PosY": 25.05939,
+      "PosZ": 82.36,
+      "Name": "NPC1",
+      "RotY": 128.0,
+      "Comment": "淘金者A",
+      "NPCID": 201223001,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400002,
+      "PosX": 15.0,
+      "PosY": 25.05939,
+      "PosZ": 85.01,
+      "Name": "NPC2",
+      "RotY": 149.7,
+      "Comment": "淘金者B",
+      "NPCID": 201223001,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "GroupRefreshID": 1
+}

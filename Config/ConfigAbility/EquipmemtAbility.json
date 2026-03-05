@@ -1,0 +1,3494 @@
+﻿{
+  "AbilityList": [
+    {
+      "Name": "Ability29000",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      }
+    },
+    {
+      "Name": "Ability20000",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ModifierName": "MEquip_20000_Main"
+        }
+      ],
+      "DynamicValues": {
+        "Floats": {
+          "-1330896030": {
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 0
+            }
+          }
+        }
+      },
+      "Modifiers": {
+        "MEquip_20000_Main": {
+          "OnStack": [
+            {
+              "$type": "RPG.GameCore.StackProperty",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "Property": "CriticalChance",
+              "PropertyValue": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 2661792059
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Name": "Ability20001",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ModifierName": "MEquip_20001_Main"
+        }
+      ],
+      "DynamicValues": {
+        "Floats": {
+          "1811799848": {
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 0
+            }
+          }
+        }
+      },
+      "Modifiers": {
+        "MEquip_20001_Main": {
+          "OnStack": [
+            {
+              "$type": "RPG.GameCore.StackProperty",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "Property": "HealRatio",
+              "PropertyValue": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 3623599696
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Name": "Ability20002",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ModifierName": "MEquip_20002_Main"
+        }
+      ],
+      "DynamicValues": {
+        "Floats": {
+          "-939895411": {
+            "Value": 10.0,
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 0
+            }
+          }
+        }
+      },
+      "Modifiers": {
+        "MEquip_20002_Main": {
+          "OnBeforeHit": [
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByAttackType",
+                "AttackTypes": [
+                  "Normal",
+                  "BPSkill"
+                ]
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.ModifyDamageData",
+                  "Attacker_AllDamageTypeAddedRatio": {
+                    "Value": {
+                      "IsDynamic": true,
+                      "PostfixExpr": [
+                        {
+                          "Type": "DynamicNumber",
+                          "Int": 1879790821
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Name": "Ability20003",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ModifierName": "MEquip_20003_Main"
+        }
+      ],
+      "DynamicValues": {
+        "Floats": {
+          "1688621528": {
+            "Value": 10.0,
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 0
+            }
+          },
+          "1462102009": {
+            "Value": 0.5,
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 1
+            }
+          },
+          "1605700834": {
+            "Value": 10.0,
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 2
+            }
+          }
+        }
+      },
+      "Modifiers": {
+        "MEquip_20003_Main": {
+          "OnStack": [
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByCompareHPRatio",
+                "TargetType": {
+                  "$type": "RPG.GameCore.TargetAlias",
+                  "Alias": "ModifierOwnerEntity"
+                },
+                "CompareType": "Greater",
+                "CompareValue": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 2924204018
+                      }
+                    ]
+                  }
+                }
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.AddModifier",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "ModifierOwnerEntity"
+                  },
+                  "ModifierName": "MEquip_20003_DefenceAddedRatio",
+                  "DynamicValues": {
+                    "MDF_PropertyValue": {
+                      "Value": {
+                        "IsDynamic": true,
+                        "PostfixExpr": [
+                          {
+                            "Type": "DynamicNumber",
+                            "Int": 3377243056
+                          },
+                          {
+                            "Type": "DynamicNumber",
+                            "Int": 3211401668
+                          },
+                          {
+                            "Type": "Add"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              ],
+              "FailedTaskList": [
+                {
+                  "$type": "RPG.GameCore.AddModifier",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "ModifierOwnerEntity"
+                  },
+                  "ModifierName": "MEquip_20003_DefenceAddedRatio",
+                  "DynamicValues": {
+                    "MDF_PropertyValue": {
+                      "Value": {
+                        "IsDynamic": true,
+                        "PostfixExpr": [
+                          {
+                            "Type": "DynamicNumber",
+                            "Int": 3377243056
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "OnHPChange": [
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByCompareHPRatio",
+                "TargetType": {
+                  "$type": "RPG.GameCore.TargetAlias",
+                  "Alias": "ModifierOwnerEntity"
+                },
+                "CompareType": "Less",
+                "CompareValue": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 2924204018
+                      }
+                    ]
+                  }
+                }
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.AddModifier",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "ModifierOwnerEntity"
+                  },
+                  "ModifierName": "MEquip_20003_DefenceAddedRatio",
+                  "DynamicValues": {
+                    "MDF_PropertyValue": {
+                      "Value": {
+                        "IsDynamic": true,
+                        "PostfixExpr": [
+                          {
+                            "Type": "DynamicNumber",
+                            "Int": 3377243056
+                          },
+                          {
+                            "Type": "DynamicNumber",
+                            "Int": 3211401668
+                          },
+                          {
+                            "Type": "Add"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              ],
+              "FailedTaskList": [
+                {
+                  "$type": "RPG.GameCore.AddModifier",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "ModifierOwnerEntity"
+                  },
+                  "ModifierName": "MEquip_20003_DefenceAddedRatio",
+                  "DynamicValues": {
+                    "MDF_PropertyValue": {
+                      "Value": {
+                        "IsDynamic": true,
+                        "PostfixExpr": [
+                          {
+                            "Type": "DynamicNumber",
+                            "Int": 3377243056
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "MEquip_20003_DefenceAddedRatio": {
+          "Stacking": "ReplaceByCaster",
+          "DynamicValues": {
+            "Floats": {
+              "2128130574": {}
+            }
+          },
+          "OnStack": [
+            {
+              "$type": "RPG.GameCore.StackProperty",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "Property": "DefenceAddedRatio",
+              "PropertyValue": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 4256261148
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Name": "Ability20004",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ModifierName": "MEquip_20004_Main"
+        }
+      ],
+      "DynamicValues": {
+        "Floats": {
+          "-3029360": {
+            "Value": 10.0,
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 0
+            }
+          }
+        }
+      },
+      "Modifiers": {
+        "MEquip_20004_Main": {
+          "OnStack": [
+            {
+              "$type": "RPG.GameCore.StackProperty",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "Property": "StatusProbability",
+              "PropertyValue": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 6058719
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Name": "Ability20005",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ModifierName": "MEquip_20005_Main"
+        }
+      ],
+      "DynamicValues": {
+        "Floats": {
+          "-300499686": {
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 0
+            }
+          }
+        }
+      },
+      "Modifiers": {
+        "MEquip_20005_Main": {
+          "OnBeingLimbo": [
+            {
+              "$type": "RPG.GameCore.RemoveModifier",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "AllTeamMember"
+              },
+              "ModifierName": "MEquip_EquipUnique_AttackAddedRatio"
+            }
+          ],
+          "OnStack": [
+            {
+              "$type": "RPG.GameCore.AddModifier",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "AllTeamMember"
+              },
+              "ModifierName": "MEquip_EquipUnique_AttackAddedRatio",
+              "DynamicValues": {
+                "MDF_PropertyValue": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 600999371
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ],
+          "OnCharacterCreate": [
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByIsTeammate",
+                "TargetType": {
+                  "$type": "RPG.GameCore.TargetAlias",
+                  "Alias": "ParamEntity"
+                }
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.AddModifier",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "ParamEntity"
+                  },
+                  "ModifierName": "MEquip_EquipUnique_AttackAddedRatio",
+                  "DynamicValues": {
+                    "MDF_PropertyValue": {
+                      "Value": {
+                        "IsDynamic": true,
+                        "PostfixExpr": [
+                          {
+                            "Type": "DynamicNumber",
+                            "Int": 600999371
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Name": "Ability20006",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ModifierName": "MEquip_20006_Main"
+        }
+      ],
+      "DynamicValues": {
+        "Floats": {
+          "-939895411": {
+            "Value": 10.0,
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 0
+            }
+          }
+        }
+      },
+      "Modifiers": {
+        "MEquip_20006_Main": {
+          "OnBeforeHit": [
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByAttackType",
+                "AttackTypes": [
+                  "Ultra"
+                ]
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.ModifyDamageData",
+                  "Attacker_AllDamageTypeAddedRatio": {
+                    "Value": {
+                      "IsDynamic": true,
+                      "PostfixExpr": [
+                        {
+                          "Type": "DynamicNumber",
+                          "Int": 1879790821
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Name": "Ability21000",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ModifierName": "MEquip_21000_Main"
+        }
+      ],
+      "DynamicValues": {
+        "Floats": {
+          "1181250513": {
+            "Value": 10.0,
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 0
+            }
+          },
+          "-189278419": {
+            "Value": 0.9,
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 1
+            }
+          }
+        }
+      },
+      "Modifiers": {
+        "MEquip_21000_Main": {
+          "OnBeforeDealHeal": [
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByCurrentSkillType",
+                "SkillType": "Ultra"
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.ModifyHealData",
+                  "Healer_HealRatio": {
+                    "Value": {
+                      "IsDynamic": true,
+                      "PostfixExpr": [
+                        {
+                          "Type": "DynamicNumber",
+                          "Int": 378556837
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "OnStack": [
+            {
+              "$type": "RPG.GameCore.StackProperty",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "Property": "SPRatio",
+              "PropertyValue": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 2362501026
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Name": "Ability21001",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ModifierName": "MEquip_21001_Main"
+        }
+      ],
+      "DynamicValues": {
+        "Floats": {
+          "-3029360": {
+            "Value": 10.0,
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 0
+            }
+          },
+          "-1063950616": {
+            "Value": 0.9,
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 1
+            }
+          }
+        }
+      },
+      "Modifiers": {
+        "MEquip_21001_Main": {
+          "OnStack": [
+            {
+              "$type": "RPG.GameCore.StackProperty",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "Property": "StatusProbability",
+              "PropertyValue": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 6058719
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "OnSnapshotCreate": [
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByIsSnapshotSourceContainBehaviorFlag",
+                "Flag": "STAT_DOT"
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.ModifySnapshotDamageData",
+                  "Attacker_AllDamageTypeAddedRatio": {
+                    "Value": {
+                      "IsDynamic": true,
+                      "PostfixExpr": [
+                        {
+                          "Type": "DynamicNumber",
+                          "Int": 2127901231
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Name": "Ability21002",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ModifierName": "MEquip_21002_Main"
+        }
+      ],
+      "DynamicValues": {
+        "Floats": {
+          "-1558958362": {
+            "Value": 10.0,
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 0
+            }
+          },
+          "-62811673": {
+            "Value": 0.9,
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 1
+            }
+          },
+          "1605700834": {
+            "Value": 0.9,
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 2
+            }
+          }
+        }
+      },
+      "Modifiers": {
+        "MEquip_21002_Main": {
+          "OnPhase2": [
+            {
+              "$type": "RPG.GameCore.AddModifier",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "ModifierName": "MEquip_21002_DefenceAddedRatio",
+              "DynamicValues": {
+                "MDF_PropertyValue": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 125623345
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ],
+          "OnStack": [
+            {
+              "$type": "RPG.GameCore.StackProperty",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "Property": "AggroAddedRatio",
+              "PropertyValue": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 3117916723
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "$type": "RPG.GameCore.AddModifier",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "ModifierName": "MEquip_21002_DefenceAddedRatio",
+              "DynamicValues": {
+                "MDF_PropertyValue": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 125623345
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ],
+          "OnAfterBeingAttacked": [
+            {
+              "$type": "RPG.GameCore.AddModifier",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "ModifierName": "MEquip_21002_DefenceAddedRatio",
+              "DynamicValues": {
+                "MDF_PropertyValue": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 125623345
+                      },
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 3211401668
+                      },
+                      {
+                        "Type": "Add"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "MEquip_21002_DefenceAddedRatio": {
+          "Stacking": "ReplaceByCaster",
+          "DynamicValues": {
+            "Floats": {
+              "2128130574": {}
+            }
+          },
+          "LifeStepMoment": "ModifierPhase1End",
+          "OnStack": [
+            {
+              "$type": "RPG.GameCore.StackProperty",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "Property": "DefenceAddedRatio",
+              "PropertyValue": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 4256261148
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Name": "Ability23000",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ModifierName": "MEquip_23000_Main"
+        }
+      ],
+      "DynamicValues": {
+        "Floats": {
+          "-939895411": {
+            "Value": 10.0,
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 0
+            }
+          },
+          "169274933": {
+            "Value": 10.0,
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 1
+            }
+          }
+        }
+      },
+      "Modifiers": {
+        "MEquip_23000_Main": {
+          "DynamicValues": {
+            "Floats": {
+              "64930929": {}
+            }
+          },
+          "OnBeforeHitAll": [
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByContainBehaviorFlag",
+                "TargetType": {
+                  "$type": "RPG.GameCore.TargetAlias",
+                  "Alias": "DamageDefenderEntity"
+                },
+                "Flag": "Break"
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.ModifyDamageData",
+                  "Attacker_AllDamageTypeAddedRatio": {
+                    "Value": {
+                      "IsDynamic": true,
+                      "PostfixExpr": [
+                        {
+                          "Type": "DynamicNumber",
+                          "Int": 1879790821
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "OnStack": [
+            {
+              "$type": "RPG.GameCore.SetDynamicValueByCharacterCount",
+              "DynamicKey": "EnemyCount",
+              "ReadTargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "AllEnemy"
+              }
+            },
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByCompareDynamicValue",
+                "TargetType": {
+                  "$type": "RPG.GameCore.TargetAlias",
+                  "Alias": "Caster"
+                },
+                "DynamicKey": "EnemyCount",
+                "CompareType": "Greater",
+                "CompareValue": {
+                  "FixedValue": {
+                    "IsDynamic": false,
+                    "FixedValue": 5.0
+                  }
+                }
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.SetDynamicValue",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "Caster"
+                  },
+                  "DynamicKey": "EnemyCount",
+                  "Value": {
+                    "FixedValue": {
+                      "IsDynamic": false,
+                      "FixedValue": 5.0
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.AddModifier",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "ModifierName": "MEquip_23000_AttackAddedRatio",
+              "DynamicValues": {
+                "MDF_PropertyValue": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 338549866
+                      },
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 129861858
+                      },
+                      {
+                        "Type": "Mul"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ],
+          "OnCharacterDie": [
+            {
+              "$type": "RPG.GameCore.SetDynamicValueByCharacterCount",
+              "DynamicKey": "EnemyCount",
+              "ReadTargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "AllEnemy"
+              }
+            },
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByCompareDynamicValue",
+                "TargetType": {
+                  "$type": "RPG.GameCore.TargetAlias",
+                  "Alias": "Caster"
+                },
+                "DynamicKey": "EnemyCount",
+                "CompareType": "Greater",
+                "CompareValue": {
+                  "FixedValue": {
+                    "IsDynamic": false,
+                    "FixedValue": 5.0
+                  }
+                }
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.SetDynamicValue",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "Caster"
+                  },
+                  "DynamicKey": "EnemyCount",
+                  "Value": {
+                    "FixedValue": {
+                      "IsDynamic": false,
+                      "FixedValue": 5.0
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.AddModifier",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "ModifierName": "MEquip_23000_AttackAddedRatio",
+              "DynamicValues": {
+                "MDF_PropertyValue": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 338549866
+                      },
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 129861858
+                      },
+                      {
+                        "Type": "Mul"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ],
+          "OnCharacterCreate": [
+            {
+              "$type": "RPG.GameCore.SetDynamicValueByCharacterCount",
+              "DynamicKey": "EnemyCount",
+              "ReadTargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "AllEnemy"
+              }
+            },
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByCompareDynamicValue",
+                "TargetType": {
+                  "$type": "RPG.GameCore.TargetAlias",
+                  "Alias": "Caster"
+                },
+                "DynamicKey": "EnemyCount",
+                "CompareType": "Greater",
+                "CompareValue": {
+                  "FixedValue": {
+                    "IsDynamic": false,
+                    "FixedValue": 5.0
+                  }
+                }
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.SetDynamicValue",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "Caster"
+                  },
+                  "DynamicKey": "EnemyCount",
+                  "Value": {
+                    "FixedValue": {
+                      "IsDynamic": false,
+                      "FixedValue": 5.0
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.AddModifier",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "ModifierName": "MEquip_23000_AttackAddedRatio",
+              "DynamicValues": {
+                "MDF_PropertyValue": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 338549866
+                      },
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 129861858
+                      },
+                      {
+                        "Type": "Mul"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "MEquip_23000_AttackAddedRatio": {
+          "Stacking": "ReplaceByCaster",
+          "DynamicValues": {
+            "Floats": {
+              "2128130574": {}
+            }
+          },
+          "OnStack": [
+            {
+              "$type": "RPG.GameCore.StackProperty",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "Property": "AttackAddedRatio",
+              "PropertyValue": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 4256261148
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Name": "Ability23001",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ModifierName": "MEquip_23001_Main"
+        }
+      ],
+      "DynamicValues": {
+        "Floats": {
+          "-1330896030": {
+            "Value": 10.0,
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 0
+            }
+          },
+          "1733221380": {
+            "Value": 0.9,
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 1
+            }
+          },
+          "-1081790508": {
+            "Value": 0.2,
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 2
+            }
+          }
+        }
+      },
+      "Modifiers": {
+        "MEquip_23001_Main": {
+          "OnBeforeHitAll": [
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByTargetIsStanceWeakForCurrentSkill",
+                "AttackerType": {
+                  "$type": "RPG.GameCore.TargetAlias",
+                  "Alias": "Caster"
+                },
+                "TargetType": {
+                  "$type": "RPG.GameCore.TargetAlias",
+                  "Alias": "DamageDefenderEntity"
+                }
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.ModifyDamageData",
+                  "Attacker_CriticalChance": {
+                    "Value": {
+                      "IsDynamic": true,
+                      "PostfixExpr": [
+                        {
+                          "Type": "DynamicNumber",
+                          "Int": 2661792059
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByCompareHPRatio",
+                "TargetType": {
+                  "$type": "RPG.GameCore.TargetAlias",
+                  "Alias": "DamageDefenderEntity"
+                },
+                "CompareType": "Less",
+                "CompareValue": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 2163581015
+                      }
+                    ]
+                  }
+                }
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.ModifyDamageData",
+                  "Defender_DefenceAddedRatio": {
+                    "Value": {
+                      "IsDynamic": true,
+                      "PostfixExpr": [
+                        {
+                          "Type": "DynamicNumber",
+                          "Int": 3466442760
+                        },
+                        {
+                          "Type": "Sub"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Name": "Ability23002",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ModifierName": "MEquip_23002_Main"
+        }
+      ],
+      "DynamicValues": {
+        "Floats": {
+          "-300499686": {
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 0
+            }
+          },
+          "-1063950616": {
+            "Value": 0.3,
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 1
+            }
+          },
+          "10077482": {
+            "Value": 0.3,
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 2
+            }
+          }
+        }
+      },
+      "Modifiers": {
+        "MEquip_23002_Main": {
+          "OnBeforeHitAll": [
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByContainBehaviorFlag",
+                "TargetType": {
+                  "$type": "RPG.GameCore.TargetAlias",
+                  "Alias": "ModifierOwnerEntity"
+                },
+                "Flag": "STAT_Burst"
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.ModifyDamageData",
+                  "Attacker_AllDamageTypeAddedRatio": {
+                    "Value": {
+                      "IsDynamic": true,
+                      "PostfixExpr": [
+                        {
+                          "Type": "DynamicNumber",
+                          "Int": 2127901231
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "OnBeforeBeingHitAll": [
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByContainBehaviorFlag",
+                "TargetType": {
+                  "$type": "RPG.GameCore.TargetAlias",
+                  "Alias": "ModifierOwnerEntity"
+                },
+                "Flag": "STAT_Burst"
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.ModifyDamageData",
+                  "Defender_AllDamageReduce": {
+                    "Value": {
+                      "IsDynamic": true,
+                      "PostfixExpr": [
+                        {
+                          "Type": "DynamicNumber",
+                          "Int": 20154964
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "OnStack": [
+            {
+              "$type": "RPG.GameCore.StackProperty",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "Property": "AttackAddedRatio",
+              "PropertyValue": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 600999371
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Name": "Ability23003",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ModifierName": "MEquip_23003_Main"
+        }
+      ],
+      "DynamicValues": {
+        "Floats": {
+          "1181250513": {
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 0
+            }
+          },
+          "280661584": {
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 1
+            }
+          }
+        }
+      },
+      "Modifiers": {
+        "MEquip_23003_Main": {
+          "OnStack": [
+            {
+              "$type": "RPG.GameCore.StackProperty",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "Property": "SPRatio",
+              "PropertyValue": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 2362501026
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "OnBeforeSkillUse": [
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByAnd",
+                "PredicateList": [
+                  {
+                    "$type": "RPG.GameCore.ByCurrentSkillType",
+                    "SkillType": "Skill"
+                  },
+                  {
+                    "$type": "RPG.GameCore.ByTargetListIntersects",
+                    "FirstTargetType": {
+                      "$type": "RPG.GameCore.TargetAlias",
+                      "Alias": "SkillTargetEntityList"
+                    },
+                    "SecondTargetType": {
+                      "$type": "RPG.GameCore.TargetAlias",
+                      "Alias": "AllTeamMember"
+                    }
+                  },
+                  {
+                    "$type": "RPG.GameCore.ByNot",
+                    "Predicate": {
+                      "$type": "RPG.GameCore.ByIsContainModifier",
+                      "TargetType": {
+                        "$type": "RPG.GameCore.TargetAlias",
+                        "Alias": "ModifierOwnerEntity"
+                      },
+                      "ModifierName": "MEquip_23003_TriggerCD"
+                    }
+                  }
+                ]
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.PredicateTaskList",
+                  "Predicate": {
+                    "$type": "RPG.GameCore.ByRandomChance",
+                    "Chance": {
+                      "Value": {
+                        "IsDynamic": true,
+                        "PostfixExpr": [
+                          {
+                            "Type": "DynamicNumber",
+                            "Int": 561323168
+                          }
+                        ]
+                      }
+                    },
+                    "LogComment": "光锥加BP"
+                  },
+                  "SuccessTaskList": [
+                    {
+                      "$type": "RPG.GameCore.ModifyTeamBoostPoint",
+                      "ModifyFunction": "Add",
+                      "ModifyValue": {
+                        "FixedValue": {
+                          "IsDynamic": false,
+                          "FixedValue": 1.0
+                        }
+                      }
+                    },
+                    {
+                      "$type": "RPG.GameCore.AddModifier",
+                      "TargetType": {
+                        "$type": "RPG.GameCore.TargetAlias",
+                        "Alias": "ModifierOwnerEntity"
+                      },
+                      "ModifierName": "MEquip_23003_TriggerCD"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "MEquip_23003_TriggerCD": {
+          "LifeTime": 1
+        }
+      }
+    },
+    {
+      "Name": "Ability23004",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ModifierName": "MEquip_23004_Main"
+        }
+      ],
+      "DynamicValues": {
+        "Floats": {
+          "-3029360": {
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 0
+            }
+          },
+          "2022948381": {
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 1
+            }
+          },
+          "615861046": {
+            "Value": 5.0,
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 2
+            }
+          }
+        }
+      },
+      "Modifiers": {
+        "MEquip_23004_Main": {
+          "OnAfterHitAll": [
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByAttackType",
+                "AttackTypes": [
+                  "Pursued"
+                ]
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.AddModifier",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "ModifierOwnerEntity"
+                  },
+                  "ModifierName": "MEquip_23004_CriticalChance",
+                  "MaxLayer": {
+                    "Value": {
+                      "IsDynamic": true,
+                      "PostfixExpr": [
+                        {
+                          "Type": "DynamicNumber",
+                          "Int": 1231722092
+                        }
+                      ]
+                    }
+                  },
+                  "DynamicValues": {
+                    "MDF_PropertyValue": {
+                      "Value": {
+                        "IsDynamic": true,
+                        "PostfixExpr": [
+                          {
+                            "Type": "DynamicNumber",
+                            "Int": 4045896762
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "OnStack": [
+            {
+              "$type": "RPG.GameCore.StackProperty",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "Property": "StatusProbability",
+              "PropertyValue": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 6058719
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "MEquip_23004_CriticalChance": {
+          "Stacking": "ReplaceByCaster",
+          "DynamicValues": {
+            "Floats": {
+              "1912601768": {},
+              "2128130574": {}
+            }
+          },
+          "MaxLayer": 5,
+          "LayerAddWhenStack": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 1.0
+            }
+          },
+          "OnStack": [
+            {
+              "$type": "RPG.GameCore.SetDynamicValueByModifierValue",
+              "ReadTargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "ValueType": "Layer",
+              "Multiplier": {
+                "FixedValue": {
+                  "IsDynamic": false,
+                  "FixedValue": 1.0
+                }
+              },
+              "DynamicKey": "_Layer"
+            },
+            {
+              "$type": "RPG.GameCore.StackProperty",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "Property": "CriticalChance",
+              "PropertyValue": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 4256261148
+                    },
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 3825203536
+                    },
+                    {
+                      "Type": "Mul"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Name": "Ability21003",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ModifierName": "MEquip_21003_Main"
+        }
+      ],
+      "DynamicValues": {
+        "Floats": {
+          "-300499686": {
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 0
+            }
+          },
+          "2022948381": {
+            "Value": 0.3,
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 1
+            }
+          },
+          "1605700834": {
+            "Value": 0.3,
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 2
+            }
+          }
+        }
+      },
+      "Modifiers": {
+        "MEquip_21003_Main": {
+          "DynamicValues": {
+            "Floats": {
+              "162653260": {}
+            }
+          },
+          "OnStack": [
+            {
+              "$type": "RPG.GameCore.StackProperty",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "Property": "AttackAddedRatio",
+              "PropertyValue": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 600999371
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "OnCharacterDie": [
+            {
+              "$type": "RPG.GameCore.SetDynamicValueByCharacterCount",
+              "DynamicKey": "_EnemyCount",
+              "ReadTargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "AllEnemy"
+              }
+            },
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByCompareDynamicValue",
+                "TargetType": {
+                  "$type": "RPG.GameCore.TargetAlias",
+                  "Alias": "Caster"
+                },
+                "DynamicKey": "_EnemyCount",
+                "CompareType": "LessEqual",
+                "CompareValue": {
+                  "FixedValue": {
+                    "IsDynamic": false,
+                    "FixedValue": 2.0
+                  }
+                }
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.AddModifier",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "ModifierOwnerEntity"
+                  },
+                  "ModifierName": "MEquip_21003_CriticalChance",
+                  "DynamicValues": {
+                    "MDF_PropertyValue": {
+                      "Value": {
+                        "IsDynamic": true,
+                        "PostfixExpr": [
+                          {
+                            "Type": "DynamicNumber",
+                            "Int": 4045896762
+                          }
+                        ]
+                      }
+                    }
+                  }
+                },
+                {
+                  "$type": "RPG.GameCore.RemoveModifier",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "ModifierOwnerEntity"
+                  },
+                  "ModifierName": "MEquip_21003_DefenceAddedRatio"
+                }
+              ],
+              "FailedTaskList": [
+                {
+                  "$type": "RPG.GameCore.AddModifier",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "ModifierOwnerEntity"
+                  },
+                  "ModifierName": "MEquip_21003_DefenceAddedRatio",
+                  "DynamicValues": {
+                    "MDF_PropertyValue": {
+                      "Value": {
+                        "IsDynamic": true,
+                        "PostfixExpr": [
+                          {
+                            "Type": "DynamicNumber",
+                            "Int": 3211401668
+                          }
+                        ]
+                      }
+                    }
+                  }
+                },
+                {
+                  "$type": "RPG.GameCore.RemoveModifier",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "ModifierOwnerEntity"
+                  },
+                  "ModifierName": "MEquip_21003_CriticalChance"
+                }
+              ]
+            }
+          ],
+          "OnCharacterCreate": [
+            {
+              "$type": "RPG.GameCore.SetDynamicValueByCharacterCount",
+              "DynamicKey": "_EnemyCount",
+              "ReadTargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "AllEnemy"
+              }
+            },
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByCompareDynamicValue",
+                "TargetType": {
+                  "$type": "RPG.GameCore.TargetAlias",
+                  "Alias": "Caster"
+                },
+                "DynamicKey": "_EnemyCount",
+                "CompareType": "LessEqual",
+                "CompareValue": {
+                  "FixedValue": {
+                    "IsDynamic": false,
+                    "FixedValue": 2.0
+                  }
+                }
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.AddModifier",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "ModifierOwnerEntity"
+                  },
+                  "ModifierName": "MEquip_21003_CriticalChance",
+                  "DynamicValues": {
+                    "MDF_PropertyValue": {
+                      "Value": {
+                        "IsDynamic": true,
+                        "PostfixExpr": [
+                          {
+                            "Type": "DynamicNumber",
+                            "Int": 4045896762
+                          }
+                        ]
+                      }
+                    }
+                  }
+                },
+                {
+                  "$type": "RPG.GameCore.RemoveModifier",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "ModifierOwnerEntity"
+                  },
+                  "ModifierName": "MEquip_21003_DefenceAddedRatio"
+                }
+              ],
+              "FailedTaskList": [
+                {
+                  "$type": "RPG.GameCore.AddModifier",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "ModifierOwnerEntity"
+                  },
+                  "ModifierName": "MEquip_21003_DefenceAddedRatio",
+                  "DynamicValues": {
+                    "MDF_PropertyValue": {
+                      "Value": {
+                        "IsDynamic": true,
+                        "PostfixExpr": [
+                          {
+                            "Type": "DynamicNumber",
+                            "Int": 3211401668
+                          }
+                        ]
+                      }
+                    }
+                  }
+                },
+                {
+                  "$type": "RPG.GameCore.RemoveModifier",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "ModifierOwnerEntity"
+                  },
+                  "ModifierName": "MEquip_21003_CriticalChance"
+                }
+              ]
+            }
+          ]
+        },
+        "MEquip_21003_CriticalChance": {
+          "Stacking": "ReplaceByCaster",
+          "DynamicValues": {
+            "Floats": {
+              "2128130574": {}
+            }
+          },
+          "OnStack": [
+            {
+              "$type": "RPG.GameCore.StackProperty",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "Property": "CriticalChance",
+              "PropertyValue": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 4256261148
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "MEquip_21003_DefenceAddedRatio": {
+          "Stacking": "ReplaceByCaster",
+          "DynamicValues": {
+            "Floats": {
+              "2128130574": {}
+            }
+          },
+          "OnStack": [
+            {
+              "$type": "RPG.GameCore.StackProperty",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "Property": "DefenceAddedRatio",
+              "PropertyValue": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 4256261148
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Name": "Ability21004",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ModifierName": "MEquip_21004_Main"
+        }
+      ],
+      "DynamicValues": {
+        "Floats": {
+          "1181250513": {
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 0
+            }
+          },
+          "548846315": {
+            "Value": 0.3,
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 1
+            }
+          },
+          "615861046": {
+            "Value": 0.3,
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 2
+            }
+          }
+        }
+      },
+      "Modifiers": {
+        "MEquip_21004_Main": {
+          "OnBeforeHitAll": [
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByAttackType",
+                "AttackTypes": [
+                  "Normal",
+                  "BPSkill"
+                ]
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.ModifyDamageData",
+                  "Attacker_SPRatio": {
+                    "Value": {
+                      "IsDynamic": true,
+                      "PostfixExpr": [
+                        {
+                          "Type": "DynamicNumber",
+                          "Int": 2362501026
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "OnTriggerBreak": [
+            {
+              "$type": "RPG.GameCore.AddModifier",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "ModifierName": "MEquip_21004_SpeedUp",
+              "MaxLayer": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 1231722092
+                    }
+                  ]
+                }
+              },
+              "DynamicValues": {
+                "MDF_PropertyValue": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 1097692630
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "MEquip_21004_SpeedUp": {
+          "Stacking": "ReplaceByCaster",
+          "DynamicValues": {
+            "Floats": {
+              "1912601768": {},
+              "2128130574": {}
+            }
+          },
+          "MaxLayer": 3,
+          "LayerAddWhenStack": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 1.0
+            }
+          },
+          "OnStack": [
+            {
+              "$type": "RPG.GameCore.SetDynamicValueByModifierValue",
+              "ReadTargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "ValueType": "Layer",
+              "Multiplier": {
+                "FixedValue": {
+                  "IsDynamic": false,
+                  "FixedValue": 1.0
+                }
+              },
+              "DynamicKey": "_Layer"
+            },
+            {
+              "$type": "RPG.GameCore.StackProperty",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "Property": "SpeedDelta",
+              "PropertyValue": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 4256261148
+                    },
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 3825203536
+                    },
+                    {
+                      "Type": "Mul"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Name": "Ability29019",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ModifierName": "MEquip_29019_Main"
+        }
+      ],
+      "DynamicValues": {
+        "Floats": {
+          "1473024938": {
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 0
+            }
+          },
+          "280661584": {
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 1
+            }
+          }
+        }
+      },
+      "Modifiers": {
+        "MEquip_29019_Main": {
+          "OnPhase1": [
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByRandomChance",
+                "Chance": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 561323168
+                      }
+                    ]
+                  }
+                },
+                "LogComment": "回合开始加BP"
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.ModifyTeamBoostPoint",
+                  "ModifyFunction": "Add",
+                  "ModifyValue": {
+                    "FixedValue": {
+                      "IsDynamic": false,
+                      "FixedValue": 1.0
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "OnStack": [
+            {
+              "$type": "RPG.GameCore.StackProperty",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "Property": "HPAddedRatio",
+              "PropertyValue": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 2946049876
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Name": "Ability29020",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ModifierName": "MEquip_29020_Main"
+        }
+      ],
+      "DynamicValues": {
+        "Floats": {
+          "1948938386": {},
+          "1224889099": {},
+          "1912601768": {},
+          "669094668": {},
+          "-387886244": {},
+          "-1797254339": {},
+          "-939895411": {
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 0
+            }
+          },
+          "169274933": {
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 1
+            }
+          }
+        }
+      },
+      "Modifiers": {
+        "MEquip_29020_Main": {
+          "OnBeforeHitAll": [
+            {
+              "$type": "RPG.GameCore.SetDynamicValueByHPRatio",
+              "DynamicKey": "_CasterRatio",
+              "ReadTargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              }
+            },
+            {
+              "$type": "RPG.GameCore.SetDynamicValueByHPRatio",
+              "DynamicKey": "_TargetRatio",
+              "ReadTargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "DamageDefenderEntity"
+              }
+            },
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByCompareDynamicValue",
+                "TargetType": {
+                  "$type": "RPG.GameCore.TargetAlias",
+                  "Alias": "Caster"
+                },
+                "DynamicKey": "_TargetRatio",
+                "CompareType": "GreaterEqual",
+                "CompareValue": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 3897876772
+                      }
+                    ]
+                  }
+                }
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.ModifyDamageData",
+                  "Attacker_AllDamageTypeAddedRatio": {
+                    "Value": {
+                      "IsDynamic": true,
+                      "PostfixExpr": [
+                        {
+                          "Type": "DynamicNumber",
+                          "Int": 1879790821
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "OnAfterAttack": [
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByCurrentSkillType"
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.SetDynamicValue",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "Caster"
+                  },
+                  "DynamicKey": "_Normal",
+                  "Value": {
+                    "FixedValue": {
+                      "IsDynamic": false,
+                      "FixedValue": 1.0
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByCurrentSkillType",
+                "SkillType": "Skill"
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.SetDynamicValue",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "Caster"
+                  },
+                  "DynamicKey": "_Skill",
+                  "Value": {
+                    "FixedValue": {
+                      "IsDynamic": false,
+                      "FixedValue": 1.0
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByCurrentSkillType",
+                "SkillType": "Ultra"
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.SetDynamicValue",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "Caster"
+                  },
+                  "DynamicKey": "_Ultra",
+                  "Value": {
+                    "FixedValue": {
+                      "IsDynamic": false,
+                      "FixedValue": 1.0
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByIsContainModifier",
+                "TargetType": {
+                  "$type": "RPG.GameCore.TargetAlias",
+                  "Alias": "ModifierOwnerEntity"
+                },
+                "ModifierName": "MEquip_29020_AttackAddedRatio"
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.PredicateTaskList",
+                  "Predicate": {
+                    "$type": "RPG.GameCore.ByCompareDynamicValue",
+                    "TargetType": {
+                      "$type": "RPG.GameCore.TargetAlias",
+                      "Alias": "Caster"
+                    },
+                    "DynamicKey": "_Layer",
+                    "CompareType": "Less",
+                    "CompareValue": {
+                      "Value": {
+                        "IsDynamic": true,
+                        "PostfixExpr": [
+                          {
+                            "Type": "DynamicNumber",
+                            "Int": 1338189336
+                          },
+                          {
+                            "Type": "DynamicNumber",
+                            "Int": 775772487
+                          },
+                          {
+                            "Type": "Add"
+                          },
+                          {
+                            "Type": "DynamicNumber",
+                            "Int": 3594508677
+                          },
+                          {
+                            "Type": "Add"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "SuccessTaskList": [
+                    {
+                      "$type": "RPG.GameCore.AddModifier",
+                      "TargetType": {
+                        "$type": "RPG.GameCore.TargetAlias",
+                        "Alias": "ModifierOwnerEntity"
+                      },
+                      "ModifierName": "MEquip_29020_AttackAddedRatio",
+                      "DynamicValues": {
+                        "MDF_PropertyValue": {
+                          "Value": {
+                            "IsDynamic": true,
+                            "PostfixExpr": [
+                              {
+                                "Type": "DynamicNumber",
+                                "Int": 338549866
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "FailedTaskList": [
+                {
+                  "$type": "RPG.GameCore.PredicateTaskList",
+                  "Predicate": {
+                    "$type": "RPG.GameCore.ByAny",
+                    "PredicateList": [
+                      {
+                        "$type": "RPG.GameCore.ByCompareDynamicValue",
+                        "TargetType": {
+                          "$type": "RPG.GameCore.TargetAlias",
+                          "Alias": "Caster"
+                        },
+                        "DynamicKey": "_Normal",
+                        "CompareType": "Equal",
+                        "CompareValue": {
+                          "FixedValue": {
+                            "IsDynamic": false,
+                            "FixedValue": 1.0
+                          }
+                        }
+                      },
+                      {
+                        "$type": "RPG.GameCore.ByCompareDynamicValue",
+                        "TargetType": {
+                          "$type": "RPG.GameCore.TargetAlias",
+                          "Alias": "Caster"
+                        },
+                        "DynamicKey": "_Skill",
+                        "CompareType": "Equal",
+                        "CompareValue": {
+                          "FixedValue": {
+                            "IsDynamic": false,
+                            "FixedValue": 1.0
+                          }
+                        }
+                      },
+                      {
+                        "$type": "RPG.GameCore.ByCompareDynamicValue",
+                        "TargetType": {
+                          "$type": "RPG.GameCore.TargetAlias",
+                          "Alias": "Caster"
+                        },
+                        "DynamicKey": "_Ultra",
+                        "CompareType": "Equal",
+                        "CompareValue": {
+                          "FixedValue": {
+                            "IsDynamic": false,
+                            "FixedValue": 1.0
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "SuccessTaskList": [
+                    {
+                      "$type": "RPG.GameCore.AddModifier",
+                      "TargetType": {
+                        "$type": "RPG.GameCore.TargetAlias",
+                        "Alias": "ModifierOwnerEntity"
+                      },
+                      "ModifierName": "MEquip_29020_AttackAddedRatio",
+                      "DynamicValues": {
+                        "MDF_PropertyValue": {
+                          "Value": {
+                            "IsDynamic": true,
+                            "PostfixExpr": [
+                              {
+                                "Type": "DynamicNumber",
+                                "Int": 338549866
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "MEquip_29020_AttackAddedRatio": {
+          "Stacking": "ReplaceByCaster",
+          "DynamicValues": {
+            "Floats": {
+              "2128130574": {}
+            }
+          },
+          "MaxLayer": 3,
+          "LayerAddWhenStack": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 1.0
+            }
+          },
+          "OnStack": [
+            {
+              "$type": "RPG.GameCore.SetDynamicValueByModifierValue",
+              "ReadTargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "ValueType": "Layer",
+              "Multiplier": {
+                "FixedValue": {
+                  "IsDynamic": false,
+                  "FixedValue": 1.0
+                }
+              },
+              "DynamicKey": "_Layer"
+            },
+            {
+              "$type": "RPG.GameCore.StackProperty",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "Property": "AttackAddedRatio",
+              "PropertyValue": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 4256261148
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Name": "Ability29021",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ModifierName": "MEquip_29021_Main"
+        }
+      ],
+      "DynamicValues": {
+        "Floats": {
+          "-939895411": {
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 0
+            }
+          },
+          "-1647848345": {
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 1
+            }
+          }
+        }
+      },
+      "Modifiers": {
+        "MEquip_29021_Main": {
+          "OnStack": [
+            {
+              "$type": "RPG.GameCore.AddModifier",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "ModifierName": "MEquip_29021_DamageUp_Debuff",
+              "DynamicValues": {
+                "MDF_PropertyValue": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 1879790821
+                      }
+                    ]
+                  }
+                },
+                "MDF_MaxCount": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 3295696689
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ],
+          "OnSnapshotCreate": [
+            {
+              "$type": "RPG.GameCore.AddModifier",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ParamEntity"
+              },
+              "ModifierName": "MEquip_29021_DamageUp_Debuff",
+              "DynamicValues": {
+                "MDF_PropertyValue": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 1879790821
+                      }
+                    ]
+                  }
+                },
+                "MDF_MaxCount": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 3295696689
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "MEquip_29021_DamageUp_Debuff": {
+          "DynamicValues": {
+            "Floats": {
+              "-1601007696": {},
+              "2128130574": {},
+              "-769102293": {}
+            }
+          },
+          "OnBeforeHitAll": [
+            {
+              "$type": "RPG.GameCore.SetDynamicValueByStatusCount",
+              "DynamicKey": "_DebuffCount",
+              "ReadTargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "DamageDefenderEntity"
+              }
+            },
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByCompareDynamicValue",
+                "TargetType": {
+                  "$type": "RPG.GameCore.TargetAlias",
+                  "Alias": "Caster"
+                },
+                "DynamicKey": "_DebuffCount",
+                "CompareType": "Greater",
+                "CompareValue": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 1538204585
+                      }
+                    ]
+                  }
+                }
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.SetDynamicValue",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "Caster"
+                  },
+                  "DynamicKey": "_DebuffCount",
+                  "Value": {
+                    "Value": {
+                      "IsDynamic": true,
+                      "PostfixExpr": [
+                        {
+                          "Type": "DynamicNumber",
+                          "Int": 1538204585
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.ModifyDamageData",
+              "Attacker_AllDamageTypeAddedRatio": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 4256261148
+                    },
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 3202015391
+                    },
+                    {
+                      "Type": "Mul"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Name": "Ability29022",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ModifierName": "MEquip_29022_Main"
+        }
+      ],
+      "DynamicValues": {
+        "Floats": {
+          "-300499686": {
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 0
+            }
+          }
+        }
+      },
+      "Modifiers": {
+        "MEquip_29022_Main": {
+          "OnBeingLimbo": [
+            {
+              "$type": "RPG.GameCore.RemoveModifier",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "AllTeamMember"
+              },
+              "ModifierName": "MEquip_EquipUnique_AttackAddedRatio"
+            }
+          ],
+          "OnStack": [
+            {
+              "$type": "RPG.GameCore.AddModifier",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "AllTeamMember"
+              },
+              "ModifierName": "MEquip_EquipUnique_AttackAddedRatio",
+              "DynamicValues": {
+                "MDF_PropertyValue": {
+                  "Value": {
+                    "IsDynamic": true,
+                    "PostfixExpr": [
+                      {
+                        "Type": "DynamicNumber",
+                        "Int": 600999371
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ],
+          "OnCharacterCreate": [
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByIsTeammate",
+                "TargetType": {
+                  "$type": "RPG.GameCore.TargetAlias",
+                  "Alias": "ParamEntity"
+                }
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.AddModifier",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "ParamEntity"
+                  },
+                  "ModifierName": "MEquip_EquipUnique_AttackAddedRatio",
+                  "DynamicValues": {
+                    "MDF_PropertyValue": {
+                      "Value": {
+                        "IsDynamic": true,
+                        "PostfixExpr": [
+                          {
+                            "Type": "DynamicNumber",
+                            "Int": 600999371
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Name": "Ability29023",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ModifierName": "MEquip_29023_Main"
+        }
+      ],
+      "DynamicValues": {
+        "Floats": {
+          "-300499686": {
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 0
+            }
+          },
+          "2022948381": {
+            "Value": 0.3,
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 1
+            }
+          },
+          "1605700834": {
+            "Value": 0.3,
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 2
+            }
+          }
+        }
+      },
+      "Modifiers": {
+        "MEquip_29023_Main": {
+          "DynamicValues": {
+            "Floats": {
+              "162653260": {}
+            }
+          },
+          "OnStack": [
+            {
+              "$type": "RPG.GameCore.StackProperty",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "Property": "AttackAddedRatio",
+              "PropertyValue": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 600999371
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "OnCharacterDie": [
+            {
+              "$type": "RPG.GameCore.SetDynamicValueByCharacterCount",
+              "DynamicKey": "_EnemyCount",
+              "ReadTargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "AllEnemy"
+              }
+            },
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByCompareDynamicValue",
+                "TargetType": {
+                  "$type": "RPG.GameCore.TargetAlias",
+                  "Alias": "Caster"
+                },
+                "DynamicKey": "_EnemyCount",
+                "CompareType": "GreaterEqual",
+                "CompareValue": {
+                  "FixedValue": {
+                    "IsDynamic": false,
+                    "FixedValue": 3.0
+                  }
+                }
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.AddModifier",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "ModifierOwnerEntity"
+                  },
+                  "ModifierName": "MEquip_29023_CriticalChance",
+                  "DynamicValues": {
+                    "MDF_PropertyValue": {
+                      "Value": {
+                        "IsDynamic": true,
+                        "PostfixExpr": [
+                          {
+                            "Type": "DynamicNumber",
+                            "Int": 4045896762
+                          }
+                        ]
+                      }
+                    }
+                  }
+                },
+                {
+                  "$type": "RPG.GameCore.RemoveModifier",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "ModifierOwnerEntity"
+                  },
+                  "ModifierName": "MEquip_29023_DefenceAddedRatio"
+                }
+              ],
+              "FailedTaskList": [
+                {
+                  "$type": "RPG.GameCore.AddModifier",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "ModifierOwnerEntity"
+                  },
+                  "ModifierName": "MEquip_29023_DefenceAddedRatio",
+                  "DynamicValues": {
+                    "MDF_PropertyValue": {
+                      "Value": {
+                        "IsDynamic": true,
+                        "PostfixExpr": [
+                          {
+                            "Type": "DynamicNumber",
+                            "Int": 3211401668
+                          }
+                        ]
+                      }
+                    }
+                  }
+                },
+                {
+                  "$type": "RPG.GameCore.RemoveModifier",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "ModifierOwnerEntity"
+                  },
+                  "ModifierName": "MEquip_29023_CriticalChance"
+                }
+              ]
+            }
+          ],
+          "OnCharacterCreate": [
+            {
+              "$type": "RPG.GameCore.SetDynamicValueByCharacterCount",
+              "DynamicKey": "_EnemyCount",
+              "ReadTargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "AllEnemy"
+              }
+            },
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByCompareDynamicValue",
+                "TargetType": {
+                  "$type": "RPG.GameCore.TargetAlias",
+                  "Alias": "Caster"
+                },
+                "DynamicKey": "_EnemyCount",
+                "CompareType": "GreaterEqual",
+                "CompareValue": {
+                  "FixedValue": {
+                    "IsDynamic": false,
+                    "FixedValue": 3.0
+                  }
+                }
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.AddModifier",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "ModifierOwnerEntity"
+                  },
+                  "ModifierName": "MEquip_29023_CriticalChance",
+                  "DynamicValues": {
+                    "MDF_PropertyValue": {
+                      "Value": {
+                        "IsDynamic": true,
+                        "PostfixExpr": [
+                          {
+                            "Type": "DynamicNumber",
+                            "Int": 4045896762
+                          }
+                        ]
+                      }
+                    }
+                  }
+                },
+                {
+                  "$type": "RPG.GameCore.RemoveModifier",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "ModifierOwnerEntity"
+                  },
+                  "ModifierName": "MEquip_29023_DefenceAddedRatio"
+                }
+              ],
+              "FailedTaskList": [
+                {
+                  "$type": "RPG.GameCore.AddModifier",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "ModifierOwnerEntity"
+                  },
+                  "ModifierName": "MEquip_29023_DefenceAddedRatio",
+                  "DynamicValues": {
+                    "MDF_PropertyValue": {
+                      "Value": {
+                        "IsDynamic": true,
+                        "PostfixExpr": [
+                          {
+                            "Type": "DynamicNumber",
+                            "Int": 3211401668
+                          }
+                        ]
+                      }
+                    }
+                  }
+                },
+                {
+                  "$type": "RPG.GameCore.RemoveModifier",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "ModifierOwnerEntity"
+                  },
+                  "ModifierName": "MEquip_29023_CriticalChance"
+                }
+              ]
+            }
+          ]
+        },
+        "MEquip_29023_CriticalChance": {
+          "Stacking": "ReplaceByCaster",
+          "DynamicValues": {
+            "Floats": {
+              "2128130574": {}
+            }
+          },
+          "OnStack": [
+            {
+              "$type": "RPG.GameCore.StackProperty",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "Property": "CriticalChance",
+              "PropertyValue": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 4256261148
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "MEquip_29023_DefenceAddedRatio": {
+          "Stacking": "ReplaceByCaster",
+          "DynamicValues": {
+            "Floats": {
+              "2128130574": {}
+            }
+          },
+          "OnStack": [
+            {
+              "$type": "RPG.GameCore.StackProperty",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "Property": "DefenceAddedRatio",
+              "PropertyValue": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 4256261148
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Name": "Ability29024",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ModifierName": "MEquip_29024_Main"
+        }
+      ],
+      "DynamicValues": {
+        "Floats": {
+          "-939895411": {
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 0
+            }
+          },
+          "-407239784": {
+            "ReadInfo": {
+              "Type": "SkillEquip",
+              "TriggerKey": "",
+              "Index": 1
+            }
+          }
+        }
+      },
+      "Modifiers": {
+        "MEquip_29024_Main": {
+          "OnBeforeHit": [
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByAttackType",
+                "AttackTypes": [
+                  "Ultra"
+                ]
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.ModifyDamageData",
+                  "Attacker_AllDamageTypeAddedRatio": {
+                    "Value": {
+                      "IsDynamic": true,
+                      "PostfixExpr": [
+                        {
+                          "Type": "DynamicNumber",
+                          "Int": 1879790821
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "OnStack": [
+            {
+              "$type": "RPG.GameCore.ModifySPNew",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "FixedAddValue": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 814479567
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "GlobalModifiers": {
+    "MEquip_EquipUnique_AttackAddedRatio": {
+      "DynamicValues": {
+        "Floats": {
+          "2128130574": {}
+        }
+      },
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.StackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "Property": "AttackAddedRatio",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 4256261148
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

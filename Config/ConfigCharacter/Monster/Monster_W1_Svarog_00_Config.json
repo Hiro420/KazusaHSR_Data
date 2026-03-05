@@ -1,0 +1,376 @@
+﻿{
+  "SomatoType": "LargeMonster",
+  "CharacterHUDOffset": {
+    "x": 0.0,
+    "y": 3.0,
+    "z": 0.4
+  },
+  "BuffPanelOffset": {
+    "x": 0.0,
+    "y": 1.8,
+    "z": 0.0
+  },
+  "HitBoxOffset": {
+    "x": 0.0,
+    "y": 0.6,
+    "z": 0.0
+  },
+  "HitBoxWidth": 0.5,
+  "HitBoxHeight": 0.9,
+  "Location": {
+    "Width": 1.0
+  },
+  "VisualRadius": 0.8,
+  "SaveModelWhenDead": true,
+  "AnimEventConfigList": [
+    "Config/ConfigAnimEvents/Monster/Designer/Monster_W1_GS_Svarog_Designer_AnimEvent.json",
+    "Config/ConfigAnimEvents/Monster/Effect/Monster_W1_GS_Svarog_Effect_AnimEvent.json",
+    "Config/ConfigAnimEvents/Monster/Audio/Monster_W1_GS_Svarog_Audio_AnimEvent.json"
+  ],
+  "SoundBankList": [
+    "BK_SFX_Monster_Common"
+  ],
+  "SkillList": [
+    {
+      "Name": "Skill01",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "EnemySelect"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Monster_W1_GS_Svarog_Skill01_Phase01"
+    },
+    {
+      "Name": "Skill02",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "EnemySelect"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Monster_W1_GS_Svarog_Skill02_Phase01"
+    },
+    {
+      "Name": "Skill03",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "EnemySelect"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Monster_W1_GS_Svarog_Skill03_Phase01"
+    },
+    {
+      "Name": "Skill04",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "AllEnemy"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Monster_W1_GS_Svarog_Skill04_Phase01"
+    },
+    {
+      "Name": "Skill05",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "EnemySelect"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Monster_W1_GS_Svarog_Skill05_Phase01"
+    },
+    {
+      "Name": "Skill06",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "EnemySelect"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Monster_W1_GS_Svarog_Skill06_Phase01"
+    },
+    {
+      "Name": "Skill07",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "EnemySelect"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Monster_W1_GS_Svarog_Skill07_Phase01"
+    },
+    {
+      "Name": "Skill08",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "EnemySelect"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Monster_W1_GS_Svarog_Skill08_Phase01"
+    },
+    {
+      "Name": "PassiveSkill01",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Monster_Common_PassiveSkill_StanceBreak_Action"
+    },
+    {
+      "Name": "PassiveSkill02",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Monster_W1_GS_Svarog_PassiveSkill02"
+    },
+    {
+      "Name": "PassiveSkill04",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Monster_W1_GS_Svarog_PassiveSkill04"
+    },
+    {
+      "Name": "PassiveSkill05",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Monster_Common_MuteHitFly"
+    }
+  ],
+  "SkillAbilityList": [
+    {
+      "Skill": "Skill01",
+      "AbilityList": [
+        "Monster_W1_GS_Svarog_Skill01_Phase01",
+        "Monster_W1_GS_Svarog_Skill01_Phase02",
+        "Monster_W1_GS_Svarog_Skill01_Camera"
+      ]
+    },
+    {
+      "Skill": "Skill02",
+      "AbilityList": [
+        "Monster_W1_GS_Svarog_Skill02_Phase01",
+        "Monster_W1_GS_Svarog_Skill02_Phase02",
+        "Monster_W1_GS_Svarog_Skill02_Camera"
+      ]
+    },
+    {
+      "Skill": "Skill03",
+      "AbilityList": [
+        "Monster_W1_GS_Svarog_Skill03_Phase01",
+        "Monster_W1_GS_Svarog_Skill03_Phase02",
+        "Monster_W1_GS_Svarog_Skill03_Camera"
+      ]
+    },
+    {
+      "Skill": "Skill04",
+      "AbilityList": [
+        "Monster_W1_GS_Svarog_Skill04_Phase01",
+        "Monster_W1_GS_Svarog_Skill04_Phase02",
+        "Monster_W1_GS_Svarog_Skill04_Camera"
+      ]
+    },
+    {
+      "Skill": "Skill05",
+      "AbilityList": [
+        "Monster_W1_GS_Svarog_Skill05_Phase01",
+        "Monster_W1_GS_Svarog_Skill05_Phase02",
+        "Monster_W1_GS_Svarog_Skill05_Camera"
+      ]
+    },
+    {
+      "Skill": "Skill06",
+      "AbilityList": [
+        "Monster_W1_GS_Svarog_Skill06_Phase01",
+        "Monster_W1_GS_Svarog_Skill06_Phase02",
+        "Monster_W1_GS_Svarog_Skill06_Camera"
+      ]
+    },
+    {
+      "Skill": "Skill07",
+      "AbilityList": [
+        "Monster_W1_GS_Svarog_Skill07_Phase01",
+        "Monster_W1_GS_Svarog_Skill07_Phase02",
+        "Monster_W1_GS_Svarog_Skill07_Camera"
+      ]
+    },
+    {
+      "Skill": "Skill08",
+      "AbilityList": [
+        "Monster_W1_GS_Svarog_Skill08_Phase01",
+        "Monster_W1_GS_Svarog_Skill08_Phase02",
+        "Monster_W1_GS_Svarog_Skill08_Camera"
+      ]
+    },
+    {
+      "Skill": "PassiveSkill01",
+      "AbilityList": [
+        "Monster_Common_PassiveSkill_StanceBreak_Action"
+      ]
+    },
+    {
+      "Skill": "PassiveSkill02",
+      "AbilityList": [
+        "Monster_W1_GS_Svarog_PassiveSkill02"
+      ]
+    },
+    {
+      "Skill": "PassiveSkill04",
+      "AbilityList": [
+        "Monster_W1_GS_Svarog_PassiveSkill04"
+      ]
+    },
+    {
+      "Skill": "PassiveSkill05",
+      "AbilityList": [
+        "Monster_Common_MuteHitFly"
+      ]
+    }
+  ],
+  "DynamicValues": {
+    "Floats": {
+      "-1126825319": {
+        "Value": 1.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill01",
+          "Index": 0
+        }
+      },
+      "-1847083384": {
+        "Value": 2.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill02",
+          "Index": 0
+        }
+      },
+      "-56289053": {
+        "Value": 0.3,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill03",
+          "Index": 0
+        }
+      },
+      "-910497618": {
+        "Value": 100.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill03",
+          "Index": 1
+        }
+      },
+      "-190305622": {
+        "Value": 2.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill04",
+          "Index": 0
+        }
+      },
+      "-1472943660": {
+        "Value": 0.5,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill04",
+          "Index": 1
+        }
+      },
+      "222217766": {
+        "Value": 2.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill04",
+          "Index": 2
+        }
+      },
+      "774604529": {
+        "Value": 1.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill04",
+          "Index": 3
+        }
+      },
+      "862372648": {
+        "Value": 0.5,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill04",
+          "Index": 4
+        }
+      },
+      "-402291451": {
+        "Value": 2.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill05",
+          "Index": 0
+        }
+      },
+      "1743825935": {
+        "Value": 1.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill06",
+          "Index": 0
+        }
+      },
+      "-475963017": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill07",
+          "Index": 0
+        }
+      },
+      "1420011043": {
+        "Value": 0.5,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "PassiveSkill02",
+          "Index": 0
+        }
+      },
+      "1414365862": {
+        "Value": 0.5,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "PassiveSkill02",
+          "Index": 1
+        }
+      },
+      "1522836929": {
+        "Value": 1.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "PassiveSkill02",
+          "Index": 2
+        }
+      },
+      "669813281": {
+        "Value": 1.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "PassiveSkill02",
+          "Index": 3
+        }
+      },
+      "1042262115": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "PassiveSkill04",
+          "Index": 0
+        }
+      }
+    }
+  },
+  "CustomValues": {
+    "Arm_Dead": 1,
+    "AIFlag": 0,
+    "Phase_Flag": 1,
+    "SelfDestroy_Controller": 0,
+    "CanUseSkill03": 1
+  },
+  "WeaponType": "WP_Scythe",
+  "ArmorType": "Armor_Metal"
+}

@@ -1,0 +1,36 @@
+﻿{
+  "GroupGUID": "c1ee324b-3699-45cd-b5ca-d3d1bb8dd9d5",
+  "GroupName": "MainStoryNPC",
+  "AreaAnchorName": "LevelArea_P20131_F20131001_G15",
+  "SaveType": "Temporary",
+  "AnchorList": [],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": [
+    {
+      "ID": 400001,
+      "PosX": 111.41,
+      "PosY": 2.01,
+      "PosZ": -0.279999,
+      "Name": "NPC1",
+      "Comment": "希罗瓦",
+      "NPCID": 101080304,
+      "LevelGraph": "Config/Level/NPC/NPC_SetFollow.json",
+      "AIConfig": {
+        "AIFile": "Config/ConfigAI/Adventure/MazeNPC_FollowPlayer_10106_Hook.json",
+        "PathwayList": [
+          {
+            "UseGroup": 1,
+            "UseID": 6
+          }
+        ]
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ]
+}

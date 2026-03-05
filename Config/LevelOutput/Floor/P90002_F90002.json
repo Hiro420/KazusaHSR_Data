@@ -1,0 +1,56 @@
+﻿{
+  "FloorID": 90002,
+  "FloorName": "FloorName_90002",
+  "StartGroupID": 1,
+  "StartAnchorID": 1,
+  "GroupList": [
+    {
+      "ID": 1,
+      "Name": "Model",
+      "Comment": "TrainStage",
+      "GroupGUID": "4188660f-5c1f-45e5-bf6c-6c53b1005dc7",
+      "GroupPath": "Config/LevelOutput/Group/Groups_P90002_F90002/LevelGroup_P90002_F90002_G1.json"
+    },
+    {
+      "ID": 3,
+      "Name": "Prop1",
+      "Comment": "门和控制台",
+      "GroupGUID": "4114fe6e-da79-4471-aaa3-0fd4e1459a3b",
+      "GroupPath": "Config/LevelOutput/Group/Groups_P90002_F90002/LevelGroup_P90002_F90002_G3.json"
+    },
+    {
+      "ID": 4,
+      "Name": "Prop2",
+      "Comment": "宝箱",
+      "GroupGUID": "bc8f61d4-62e9-469d-a831-56b80bfc9272",
+      "GroupPath": "Config/LevelOutput/Group/Groups_P90002_F90002/LevelGroup_P90002_F90002_G4.json"
+    },
+    {
+      "ID": 5,
+      "Name": "Prop3",
+      "Comment": "瘫痪机器人",
+      "GroupGUID": "39c0f168-a8c1-4f6a-853e-06fbe498fa5e",
+      "GroupPath": "Config/LevelOutput/Group/Groups_P90002_F90002/LevelGroup_P90002_F90002_G5.json"
+    },
+    {
+      "ID": 6,
+      "Name": "Prop4",
+      "Comment": "可破坏物",
+      "GroupGUID": "113de7bc-78b7-4a71-9214-0c7020ddffd1",
+      "GroupPath": "Config/LevelOutput/Group/Groups_P90002_F90002/LevelGroup_P90002_F90002_G6.json"
+    }
+  ],
+  "DefaultGroupIDList": [
+    1,
+    3,
+    4,
+    5,
+    6
+  ],
+  "UnlockMainMissionGroupIDList": [],
+  "EnviroProfile": "Stages/Outputs/Chapter01/EnviroProfile/Chap01_Maze_01.enviroProfile.asset",
+  "StageData": "Stages/Outputs/Chapter01/Stages/Chap01_MAZ_M301_MainLine_01_StageData/Chap01_MAZ_M301_MainLine_01_StageData.stage",
+  "NavMesh": "Level/NavMesh/NavMesh-Floor_90002.asset",
+  "CameraType": "Maze",
+  "MinimapVolumeData": {}
+}

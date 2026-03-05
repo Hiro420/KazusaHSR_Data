@@ -1,0 +1,329 @@
+﻿{
+  "SomatoType": "MiddleAvatar",
+  "HitBoxWidth": 0.3,
+  "HitBoxHeight": 1.5,
+  "Location": {
+    "Width": 0.8
+  },
+  "SaveModelWhenDead": true,
+  "AnimEventConfigList": [
+    "Config/ConfigAnimEvents/Avatar/Designer/Avatar_Pela_00_Designer_AnimEvent.json",
+    "Config/ConfigAnimEvents/Avatar/Effect/Avatar_Pela_00_Effect_AnimEvent.json",
+    "Config/ConfigAnimEvents/Avatar/Audio/Avatar_Pela_00_Audio_AnimEvent.json"
+  ],
+  "SoundBankList": [
+    "BK_VO_Avatar_Pela_Inlevel",
+    "BK_SFX_Avatar_Pela_Common"
+  ],
+  "SkillList": [
+    {
+      "Name": "Skill01",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "EnemySelect"
+      },
+      "UseReadyTransitAnim": true,
+      "ReadyAnimState": "Skill01_Ready",
+      "ReadyAnimWaitTime": 0.3,
+      "CameraConfig": {
+        "NormalConfig": {
+          "CameraState": "UseSkillPerform",
+          "AnchorTargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "IsLocalOffset": true,
+          "AnchorOffset": {
+            "x": 0.0,
+            "y": 1.5,
+            "z": 0.2
+          },
+          "AimTargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "SkillTargetEntityList"
+          },
+          "AimOffset": {
+            "x": 0.0,
+            "y": 1.5,
+            "z": 0.0
+          },
+          "ResetToDefault": true
+        },
+        "BlendConfig": {
+          "BlendType": "Cut"
+        }
+      },
+      "CameraConfigAdded": {
+        "NormalConfig": {
+          "CameraState": "SelectDarkTeamEntity",
+          "AnchorTargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "IsLocalOffset": true,
+          "AnchorOffset": {
+            "x": -0.12,
+            "y": -0.18,
+            "z": 0.03
+          },
+          "AimTargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "SkillTargetEntityList"
+          },
+          "AimOffset": {
+            "x": -2.8,
+            "y": 0.45,
+            "z": 0.0
+          },
+          "AimRatio": 1.0,
+          "AnchorToAimAngle": 27.0,
+          "ResetToDefault": true
+        },
+        "BlendConfig": {
+          "BlendType": "Custom",
+          "CustomCurveName": "BlendCut_00to1",
+          "BlendTime": 2.0
+        }
+      },
+      "EntryAbility": "W_ChargeSor_Skill01_Phase01",
+      "ComplexSkillAI": {
+        "Groups": [
+          {
+            "GroupName": "BasePp_Common_SingleAttack"
+          }
+        ]
+      },
+      "ComplexSkillAIOverride": {
+        "Groups": [
+          {
+            "GroupName": "BasePp_Common_SingleAttack"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Skill02",
+      "SkillType": "Skill",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "EnemySelect"
+      },
+      "UseReadyTransitAnim": true,
+      "ReadyAnimState": "Skill02_Ready_Loop",
+      "ReadyAnimWaitTime": 0.3,
+      "CameraConfig": {
+        "NormalConfig": {
+          "CameraState": "SelectDarkTeamEntity",
+          "AnchorTargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "IsLocalOffset": true,
+          "AnchorOffset": {
+            "x": -0.64,
+            "y": 0.07,
+            "z": 0.12
+          },
+          "AimTargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "SkillTargetEntityList"
+          },
+          "AimOffset": {
+            "x": -2.07,
+            "y": 1.03,
+            "z": 0.0
+          },
+          "AimRatio": 1.0,
+          "AnchorToAimAngle": 27.0,
+          "ResetToDefault": true
+        },
+        "BlendConfig": {
+          "BlendType": "Custom",
+          "CustomCurveName": "BlendCut_00to1",
+          "BlendTime": 2.0
+        }
+      },
+      "EntryAbility": "W_ChargeSor_Skill02_Phase01",
+      "ComplexSkillAI": {
+        "Groups": [
+          {
+            "GroupName": "BaseWeight",
+            "Weight": {
+              "Value": 0.7
+            }
+          },
+          {
+            "GroupName": "AddNP_Common_BPSkill",
+            "Weight": {
+              "Value": 0.2
+            }
+          }
+        ]
+      },
+      "ComplexSkillAIOverride": {
+        "Groups": [
+          {
+            "GroupName": "BaseWeight",
+            "Weight": {
+              "Value": 0.7
+            }
+          },
+          {
+            "GroupName": "AddNP_Common_BPSkill",
+            "Weight": {
+              "Value": 0.2
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Name": "Skill03",
+      "SkillType": "Ultra",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "AllEnemy"
+      },
+      "ReadyAnimState": "Skill03_Ready",
+      "EntryAbility": "W_ChargeSor_Skill03_Phase01",
+      "PrepareAbility": "Avatar_Pela_00_Skill03_Cutin",
+      "ComplexSkillAI": {
+        "SkillBasicPower": {
+          "Value": 70.0
+        },
+        "Groups": [
+          {
+            "GroupName": "Ultra_Common_ImmediateRelease"
+          }
+        ]
+      },
+      "ComplexSkillAIOverride": {
+        "SkillBasicPower": {
+          "Value": 70.0
+        },
+        "Groups": [
+          {
+            "GroupName": "Ultra_Common_ImmediateRelease"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "SkillP01",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "W_ChargeSor_PassiveSkill01"
+    },
+    {
+      "Name": "PassiveSkill02",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Avatar_Common_PassiveSkill_SPAdd_On_Killing"
+    }
+  ],
+  "AbilityList": [
+    "Avatar_Common_PassiveSkill_SPAdd_On_Killing",
+    "Element_Fever",
+    "Element_Fever_DamageAbility"
+  ],
+  "SkillAbilityList": [
+    {
+      "Skill": "Skill01",
+      "AbilityList": [
+        "Avatar_Pela_00_Skill01_Camera",
+        "W_ChargeSor_Skill01_Phase01",
+        "W_ChargeSor_Skill01_Phase02"
+      ]
+    },
+    {
+      "Skill": "Skill02",
+      "AbilityList": [
+        "Avatar_Pela_00_Skill02_Camera",
+        "W_ChargeSor_Skill02_Phase01",
+        "W_ChargeSor_Skill02_Phase02"
+      ]
+    },
+    {
+      "Skill": "Skill03",
+      "AbilityList": [
+        "Avatar_Pela_00_Skill03_Camera",
+        "W_ChargeSor_Skill03_Phase01",
+        "W_ChargeSor_Skill03_Phase02",
+        "Avatar_Pela_00_Skill03_Cutin"
+      ]
+    },
+    {
+      "Skill": "SkillP01",
+      "AbilityList": [
+        "W_ChargeSor_PassiveSkill01"
+      ]
+    },
+    {
+      "Skill": "SkillMaze",
+      "AbilityList": []
+    }
+  ],
+  "DynamicValues": {
+    "Floats": {
+      "-1126825319": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill01",
+          "Index": 0
+        }
+      },
+      "-1847083384": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill02",
+          "Index": 0
+        }
+      },
+      "842688498": {
+        "Value": 1.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill02",
+          "Index": 1
+        }
+      },
+      "-56289053": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill03",
+          "Index": 0
+        }
+      },
+      "-324756979": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "SkillP01",
+          "Index": 0
+        }
+      }
+    }
+  },
+  "WeaponType": "WP_Bullet",
+  "SkillReadyTransits": [
+    {
+      "From": 1,
+      "To": 2,
+      "AnimStateName": "Skill01toSkill02",
+      "TransitionInTime": 0.05,
+      "ReverseOutroTime": 0.06
+    },
+    {
+      "From": 2,
+      "To": 1,
+      "AnimStateName": "Skill02toSkill01",
+      "TransitionInTime": 0.05,
+      "ReverseOutroTime": 0.06
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+﻿{
+  "AbilityList": [
+    {
+      "Name": "Avatar_Common_PassiveSkill_SPAdd_On_Killing",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "AbilityTargetEntity"
+          },
+          "ModifierName": "Local_SPAdd"
+        }
+      ],
+      "Modifiers": {
+        "Local_SPAdd": {
+          "OnTriggerDeath": [
+            {
+              "$type": "RPG.GameCore.ModifySPNew",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ModifierOwnerEntity"
+              },
+              "AddValue": {
+                "FixedValue": {
+                  "IsDynamic": false,
+                  "FixedValue": 10.0
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Name": "Element_Fever",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "OnAdd": []
+    },
+    {
+      "Name": "Element_Fever_DamageAbility",
+      "TargetInfo": {
+        "TargetType": "InherentTargetEntity"
+      }
+    },
+    {
+      "Name": "Avatar_Common_SkillMazeInLevel",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "OnStart": []
+    }
+  ]
+}

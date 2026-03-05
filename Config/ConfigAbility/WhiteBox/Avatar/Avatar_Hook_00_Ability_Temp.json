@@ -1,0 +1,150 @@
+﻿{
+  "AbilityList": [
+    {
+      "Name": "Avatar_Hook_00_PassiveSkill001",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.SetAvatarAlwaysAutoBattle",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ModifierName": "MCommon_Property_Config",
+          "LifeTime": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": -1.0
+            }
+          },
+          "DynamicValues": {
+            "MDF_AttackAddedRatio": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 1.45
+              }
+            },
+            "MDF_DefenceAddedRatio": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 0.8
+              }
+            },
+            "MDF_HPAddedRatio": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 0.8
+              }
+            },
+            "MDF_SpeedValue": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 17.0
+              }
+            },
+            "MDF_CriticalChance": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 0.5
+              }
+            },
+            "MDF_CriticalDamage": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 0.5
+              }
+            },
+            "MDF_AllDamageTypeAddedRatio": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 0.2
+              }
+            },
+            "MDF_StanceBreakAddedRatio": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 0.14
+              }
+            },
+            "MDF_FireResistance": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 0.1
+              }
+            },
+            "MDF_StatusProbability": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 0.15
+              }
+            },
+            "MDF_StatusResistance": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 0.075
+              }
+            },
+            "MDF_FireAddedRatio": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 0.4
+              }
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.AddModifier",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "ModifierName": "WHook_KillFriend",
+          "LifeTime": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": -1.0
+            }
+          }
+        }
+      ],
+      "Modifiers": {
+        "WHook_KillFriend": {
+          "OnBeingLimbo": [
+            {
+              "$type": "RPG.GameCore.ForceKill",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "AllTeamMember"
+              }
+            }
+          ],
+          "OnStack": [
+            {
+              "$type": "RPG.GameCore.StackProperty",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "Caster"
+              },
+              "Property": "AggroAddedRatio",
+              "PropertyValue": {
+                "FixedValue": {
+                  "IsDynamic": false,
+                  "FixedValue": 10.0
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

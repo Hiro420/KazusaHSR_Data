@@ -1,0 +1,161 @@
+﻿{
+  "GroupGUID": "4146b6b7-77b1-4d50-9bcb-226c17aceff8",
+  "GroupName": "OrderPuzzle",
+  "ConfigPrefabPath": "Level/Maze/Chapter01/Chap01_MAZ_M301_OrderPuzzle_LevelArea.prefab",
+  "LevelGraph": "Config/Level/Maze/MazeExtra/Puzzle/M3-1/Maze_Prop_4xOrder_M31_Puzzle_Group.json",
+  "AreaAnchorName": "LevelArea_P20131_F20131001_G33",
+  "SaveType": "Temporary",
+  "AnchorList": [],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": -55.31,
+      "PosY": -0.984844,
+      "PosZ": -193.53,
+      "Name": "Prop1",
+      "RotY": 90.0,
+      "Comment": "物理",
+      "PropID": 202,
+      "State": "Locked",
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300002,
+      "PosX": -50.784,
+      "PosY": -0.984844,
+      "PosZ": -193.69,
+      "Name": "Prop2",
+      "RotY": 90.0,
+      "Comment": "物理",
+      "PropID": 202,
+      "State": "Locked",
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300003,
+      "PosX": -50.784,
+      "PosY": -0.984844,
+      "PosZ": -198.85,
+      "Name": "Prop3",
+      "RotY": 90.0,
+      "Comment": "风",
+      "PropID": 203,
+      "State": "Locked",
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300004,
+      "PosX": -55.31,
+      "PosY": -0.984844,
+      "PosZ": -198.89,
+      "Name": "Prop4",
+      "RotY": 90.0,
+      "Comment": "风",
+      "PropID": 203,
+      "State": "Locked",
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300005,
+      "PosX": -55.31,
+      "PosY": -0.984844,
+      "PosZ": -198.89,
+      "Name": "Prop5",
+      "RotY": 90.0,
+      "Comment": "提示",
+      "PropID": 100,
+      "InitLevelGraph": "Config/Level/Maze/MazeExtra/Puzzle/M3-1/Maze_Prop_4xOrder_M31_Puzzle_HintProp.json",
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300006,
+      "PosX": -55.31,
+      "PosY": -0.984844,
+      "PosZ": -193.53,
+      "Name": "Prop6",
+      "RotY": 90.0,
+      "Comment": "提示",
+      "PropID": 100,
+      "InitLevelGraph": "Config/Level/Maze/MazeExtra/Puzzle/M3-1/Maze_Prop_4xOrder_M31_Puzzle_HintProp.json",
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300007,
+      "PosX": -50.784,
+      "PosY": -0.984844,
+      "PosZ": -193.69,
+      "Name": "Prop7",
+      "RotY": 90.0,
+      "Comment": "提示",
+      "PropID": 100,
+      "InitLevelGraph": "Config/Level/Maze/MazeExtra/Puzzle/M3-1/Maze_Prop_4xOrder_M31_Puzzle_HintProp.json",
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300008,
+      "PosX": -50.784,
+      "PosY": -0.984844,
+      "PosZ": -198.85,
+      "Name": "Prop8",
+      "RotY": 90.0,
+      "Comment": "提示",
+      "PropID": 100,
+      "InitLevelGraph": "Config/Level/Maze/MazeExtra/Puzzle/M3-1/Maze_Prop_4xOrder_M31_Puzzle_HintProp.json",
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300009,
+      "Name": "Prop9",
+      "PropID": 100,
+      "InitLevelGraph": "Config/Level/Maze/MazeExtra/Puzzle/M3-1/Maze_Prop_4xOrder_M31_Puzzle_Checker.json",
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": []
+}

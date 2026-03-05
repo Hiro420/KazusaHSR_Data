@@ -1,0 +1,106 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "TargetIsOwner": true,
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.SelectorConfig",
+              "TaskList": [
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "TargetIsOwner": true,
+                  "GroupPropID": 300001,
+                  "GroupID": 5,
+                  "Execute": [
+                    {
+                      "$type": "RPG.GameCore.TriggerCustomString",
+                      "CustomString": {
+                        "Value": "Maze_Chap01_M302_TriggerChallenge_01"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "TargetIsOwner": true,
+                  "GroupPropID": 300001,
+                  "GroupID": 5,
+                  "Execute": [
+                    {
+                      "$type": "RPG.GameCore.PlayBackgroundTalk",
+                      "BackgroundTalkList": [
+                        {
+                          "AutoSkipTime": 3.0,
+                          "VoiceID": 1000
+                        }
+                      ]
+                    }
+                  ],
+                  "State": "Locked"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Chap01_M302_TriggerChallenge_01",
+          "WaitOwnerOnly": true,
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.PropReqInteract",
+          "TargetIsOwner": true,
+          "GroupPropID": 300001,
+          "GroupID": 12,
+          "InteractID": 1010
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUIPage",
+          "AssetPath": "UI/Mission/MissionStartHintDialog.prefab",
+          "UIImageNodes": [],
+          "UITextNodes": [
+            {
+              "TextPath": "Dialog/MissionTitle/Text",
+              "TextContent": {
+                "hash": 114458715
+              }
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 1.0
+        },
+        {
+          "$type": "RPG.GameCore.ShowUIPage",
+          "AssetPath": "UI/Mission/MissionStartHintDialog.prefab",
+          "UIImageNodes": [],
+          "UITextNodes": [
+            {
+              "TextPath": "Dialog/MissionTitle/Text",
+              "TextContent": {
+                "hash": -2040712855
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

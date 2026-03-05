@@ -1,0 +1,137 @@
+﻿{
+  "GroupGUID": "18764f7d-2db5-47c8-aa96-25659cdfef60",
+  "GroupName": "1000002",
+  "AreaAnchorName": "LevelArea_P10000_F10000000_G5",
+  "SaveType": "Temporary",
+  "AnchorList": [],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": -0.22,
+      "PosZ": -8.75,
+      "Name": "Prop1",
+      "Comment": "姬子对话",
+      "PropID": 100,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 1.0,
+        "DimX": 18.0,
+        "DimY": 1.0,
+        "DimZ": 4.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "CreateOnInitial": false,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": [
+    {
+      "ID": 400001,
+      "PosX": 4.84,
+      "PosY": -1E-06,
+      "PosZ": 7.44,
+      "Name": "NPC1",
+      "RotY": 73.9557,
+      "Comment": "三月七",
+      "NPCID": 1000008,
+      "AIConfig": {
+        "PathwayList": []
+      },
+      "DialogueGroups": [
+        1000019
+      ],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400002,
+      "PosX": 3.17,
+      "PosY": -3E-06,
+      "PosZ": 17.59,
+      "Name": "NPC2",
+      "RotY": 336.028,
+      "Comment": "丹恒",
+      "NPCID": 1000009,
+      "AIConfig": {
+        "PathwayList": []
+      },
+      "DialogueGroups": [
+        1000012,
+        1000017
+      ],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400003,
+      "PosX": -2.524482,
+      "PosY": -1E-06,
+      "PosZ": -9.274504,
+      "Name": "NPC3",
+      "RotY": 259.6511,
+      "Comment": "姬子",
+      "NPCID": 1000010,
+      "AIConfig": {
+        "PathwayList": []
+      },
+      "DialogueGroups": [
+        1000023
+      ],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400004,
+      "PosX": -3.71,
+      "PosY": -2E-06,
+      "PosZ": 1.86,
+      "Name": "NPC4",
+      "RotY": 100.8658,
+      "Comment": "杨",
+      "NPCID": 1000011,
+      "AIConfig": {
+        "PathwayList": []
+      },
+      "DialogueGroups": [
+        1000011,
+        1000016
+      ],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400005,
+      "PosX": 2.23,
+      "PosY": 3E-06,
+      "PosZ": -15.91,
+      "Name": "NPC5",
+      "RotY": 355.2151,
+      "Comment": "帕姆",
+      "NPCID": 1000007,
+      "Trigger": {
+        "Radius": 3.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": -1,
+        "Server": true
+      },
+      "AIConfig": {
+        "PathwayList": []
+      },
+      "DialogueGroups": [
+        1000015
+      ],
+      "ServerInteractVerificationIDList": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ]
+}

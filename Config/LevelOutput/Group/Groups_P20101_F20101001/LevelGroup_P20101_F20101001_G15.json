@@ -1,0 +1,209 @@
+﻿{
+  "GroupGUID": "14c30aca-a36e-4f73-a653-6edab24e2a39",
+  "GroupName": "ExploreMonster",
+  "AreaAnchorName": "LevelArea_P20101_F20101001_G15",
+  "UnlockMainMissionID": 1010301,
+  "AnchorList": [],
+  "ModelList": [],
+  "MonsterList": [
+    {
+      "ID": 200001,
+      "PosX": -86.02,
+      "PosY": 15.6542,
+      "PosZ": -4.7,
+      "Name": "Monster1",
+      "NPCMonsterID": 1001010,
+      "AIConfig": {
+        "AIFile": "Config/ConfigAI/Adventure/MazeMonster_Soldier_Common_Patrol_Loop.json",
+        "PathwayList": [
+          {
+            "UseGroup": 15,
+            "UseID": 1,
+            "StartAt": 1
+          }
+        ]
+      },
+      "CampID": 3,
+      "BattleArea": {
+        "GroupID": 2,
+        "ID": 1
+      },
+      "EventID": 20101003
+    },
+    {
+      "ID": 200002,
+      "PosX": -63.0,
+      "PosY": 15.93196,
+      "PosZ": -19.56,
+      "Name": "Monster2",
+      "NPCMonsterID": 1001010,
+      "AIConfig": {
+        "AIFile": "Config/ConfigAI/Adventure/MazeMonster_Soldier_Common_Patrol_Loop.json",
+        "PathwayList": [
+          {
+            "UseGroup": 15,
+            "UseID": 2,
+            "StartAt": 3
+          }
+        ]
+      },
+      "CampID": 3,
+      "BattleArea": {
+        "GroupID": 2,
+        "ID": 1
+      },
+      "EventID": 20101004
+    },
+    {
+      "ID": 200003,
+      "PosX": -22.1,
+      "PosY": 18.89044,
+      "PosZ": -3.0,
+      "Name": "Monster3",
+      "NPCMonsterID": 1001010,
+      "AIConfig": {
+        "AIFile": "Config/ConfigAI/Adventure/MazeMonster_Soldier_Common_Patrol_Loop.json",
+        "PathwayList": [
+          {
+            "UseGroup": 15,
+            "UseID": 3,
+            "StartAt": 5
+          }
+        ]
+      },
+      "CampID": 3,
+      "BattleArea": {
+        "GroupID": 2,
+        "ID": 1
+      },
+      "EventID": 20101005
+    },
+    {
+      "ID": 200004,
+      "PosX": 13.4,
+      "PosY": 13.48753,
+      "PosZ": -32.53,
+      "Name": "Monster4",
+      "NPCMonsterID": 1001010,
+      "AIConfig": {
+        "AIFile": "Config/ConfigAI/Adventure/MazeMonster_Soldier_Common_Patrol_Loop.json",
+        "PathwayList": [
+          {
+            "UseGroup": 15,
+            "UseID": 4,
+            "StartAt": 7
+          }
+        ]
+      },
+      "CampID": 3,
+      "BattleArea": {
+        "GroupID": 2,
+        "ID": 1
+      },
+      "EventID": 20101006
+    }
+  ],
+  "PropList": [],
+  "WaypointList": [
+    {
+      "ID": 1,
+      "PosX": -95.88,
+      "PosY": 16.22736,
+      "PosZ": 9.69
+    },
+    {
+      "ID": 2,
+      "PosX": -87.05,
+      "PosY": 16.1542,
+      "PosZ": -4.68
+    },
+    {
+      "ID": 3,
+      "PosX": -63.0,
+      "PosY": 15.93196,
+      "PosZ": -19.56
+    },
+    {
+      "ID": 4,
+      "PosX": -48.15,
+      "PosY": 15.56346,
+      "PosZ": -10.82
+    },
+    {
+      "ID": 5,
+      "PosX": -22.1,
+      "PosY": 18.89044,
+      "PosZ": -3.0
+    },
+    {
+      "ID": 6,
+      "PosX": -4.09,
+      "PosY": 19.17851,
+      "PosZ": -1.03
+    },
+    {
+      "ID": 7,
+      "PosX": 13.4,
+      "PosY": 13.48753,
+      "PosZ": -32.53
+    },
+    {
+      "ID": 8,
+      "PosX": 15.36,
+      "PosY": 15.77942,
+      "PosZ": -6.7
+    },
+    {
+      "ID": 9,
+      "PosX": -41.19,
+      "PosY": 16.04098,
+      "PosZ": 2.01
+    },
+    {
+      "ID": 10,
+      "PosX": -72.3,
+      "PosY": 15.80717,
+      "PosZ": 4.7
+    }
+  ],
+  "PathwayList": [
+    {
+      "ID": 1,
+      "Name": "Pathway1",
+      "WaypointIDList": [
+        1,
+        2,
+        10
+      ]
+    },
+    {
+      "ID": 2,
+      "Name": "Pathway2",
+      "WaypointIDList": [
+        3,
+        4,
+        9,
+        4
+      ]
+    },
+    {
+      "ID": 3,
+      "Name": "Pathway3",
+      "WaypointIDList": [
+        5,
+        6
+      ]
+    },
+    {
+      "ID": 4,
+      "Name": "Pathway4",
+      "WaypointIDList": [
+        7,
+        8
+      ]
+    }
+  ],
+  "BattleAreaList": [],
+  "NPCList": [],
+  "GroupRefreshID": 1001
+}

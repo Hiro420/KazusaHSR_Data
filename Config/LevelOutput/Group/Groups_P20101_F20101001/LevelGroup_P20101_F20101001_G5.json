@@ -1,0 +1,116 @@
+﻿{
+  "GroupGUID": "aa34ca3e-d1b8-4e4b-aa9c-bae4992f43f6",
+  "GroupName": "Day",
+  "AreaAnchorName": "LevelArea_P20101_F20101001_G5",
+  "AnchorList": [],
+  "ModelList": [],
+  "MonsterList": [
+    {
+      "ID": 200001,
+      "PosX": -46.6,
+      "PosY": 16.01734,
+      "PosZ": 3.3,
+      "Name": "Monster1",
+      "RotY": 270.0,
+      "Comment": "巡逻1",
+      "NPCMonsterID": 1003011,
+      "AIConfig": {
+        "AIFile": "Config/ConfigAI/Adventure/MazeMonster_Soldier_Common_Patrol_Loop.json",
+        "PathwayList": [
+          {}
+        ]
+      },
+      "CampID": 3,
+      "BattleArea": {
+        "GroupID": 2,
+        "ID": 1
+      },
+      "EventID": 202201
+    },
+    {
+      "ID": 200002,
+      "PosX": -46.95,
+      "PosY": 16.01734,
+      "PosZ": -14.44,
+      "Name": "Monster2",
+      "RotY": 270.0,
+      "Comment": "巡逻1",
+      "NPCMonsterID": 1001030,
+      "AIConfig": {
+        "AIFile": "Config/ConfigAI/Adventure/MazeMonster_XP_Minion_Ice_Patrol_Loop.json",
+        "PathwayList": [
+          {}
+        ]
+      },
+      "CreateOnInitial": false,
+      "CampID": 3,
+      "BattleArea": {
+        "GroupID": 2,
+        "ID": 1
+      },
+      "EventID": 99999011
+    },
+    {
+      "ID": 200003,
+      "PosX": -62.88,
+      "PosY": 16.01734,
+      "PosZ": -0.28,
+      "Name": "Monster3",
+      "RotY": 270.0,
+      "Comment": "巡逻1",
+      "NPCMonsterID": 1001030,
+      "AIConfig": {
+        "AIFile": "Config/ConfigAI/Adventure/MazeMonster_XP_Minion_Ice_Patrol_Loop.json",
+        "PathwayList": [
+          {}
+        ]
+      },
+      "CreateOnInitial": false,
+      "CampID": 3,
+      "BattleArea": {
+        "GroupID": 2,
+        "ID": 1
+      },
+      "EventID": 99999011
+    }
+  ],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": -95.22,
+      "PosY": 18.28,
+      "PosZ": 16.88,
+      "Name": "Prop1",
+      "RotY": 270.0,
+      "PropID": 100,
+      "Trigger": {
+        "Radius": 1.5,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "CreateOnInitial": false,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": [
+    {
+      "ID": 400001,
+      "PosX": -95.22,
+      "PosY": 17.63832,
+      "PosZ": 16.88,
+      "Name": "NPC1",
+      "RotY": 270.0,
+      "NPCID": 110105,
+      "CreateOnInitial": false,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ]
+}

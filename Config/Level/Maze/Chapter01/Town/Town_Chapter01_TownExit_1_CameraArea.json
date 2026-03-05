@@ -1,0 +1,40 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "TargetTypes": [],
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.ActiveVirtualCamera",
+              "AreaName": "Chap01_ADV_Area_Square_LevelArea",
+              "AnchorName": "TownExit_1_Cam",
+              "IsEntryPointCamera": true,
+              "FollowTargetAnchorName": "LocalPlayer",
+              "LookAtTargetAnchorName": "LocalPlayer",
+              "BlendConfig": {
+                "BlendType": "EaseInOut",
+                "BlendTime": 1.0
+              }
+            }
+          ],
+          "OnTriggerExit": [
+            {
+              "$type": "RPG.GameCore.ActiveVirtualCamera",
+              "AreaName": "Chap01_ADV_Area_Square_LevelArea",
+              "AnchorName": "TownExit_1_Cam",
+              "IsEntryPointCamera": true,
+              "IsActive": false,
+              "BlendConfig": {
+                "BlendType": "EaseInOut",
+                "BlendTime": 1.0
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

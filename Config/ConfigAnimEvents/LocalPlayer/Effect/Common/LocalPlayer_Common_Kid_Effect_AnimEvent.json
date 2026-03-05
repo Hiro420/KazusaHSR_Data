@@ -1,0 +1,27 @@
+﻿{
+  "AnimatorStateEvents": [
+    {
+      "AnimatorStateName": "Run",
+      "NormalizedTime": 0.46,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.TriggerWalkingEffect",
+          "FootName": "FootL",
+          "EffectPrefab": "Effects/Eff_Prefab/Eff_Common/Eff_Common_Run_smoke.prefab"
+        }
+      ]
+    },
+    {
+      "AnimatorStateName": "Run",
+      "NormalizedTime": 0.96,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.TriggerWalkingEffect",
+          "FootName": "FootR",
+          "EffectPrefab": "Effects/Eff_Prefab/Eff_Common/Eff_Common_Run_smoke.prefab"
+        }
+      ]
+    }
+  ],
+  "AnimatorStateGroupEvents": []
+}

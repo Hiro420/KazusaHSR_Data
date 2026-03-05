@@ -1,0 +1,139 @@
+﻿{
+  "SomatoType": "LittleMonster",
+  "CharacterHUDOffset": {
+    "x": 0.2,
+    "y": 2.2,
+    "z": 0.4
+  },
+  "BuffPanelOffset": {
+    "x": 0.5,
+    "y": 1.8,
+    "z": 0.0
+  },
+  "HitBoxHeight": 0.4,
+  "Location": {
+    "Width": 2.0,
+    "LocalZOffsetMin": 0.3,
+    "LocalZOffsetMax": 1.0
+  },
+  "VisualRadius": 0.8,
+  "AnimEventConfigList": [
+    "Config/ConfigAnimEvents/Monster/Designer/Monster_W1_Mecha03_01_Designer_AnimEvent.json",
+    "Config/ConfigAnimEvents/Monster/Effect/Monster_W1_Mecha03_01_Effect_AnimEvent.json",
+    "Config/ConfigAnimEvents/Monster/Audio/Monster_W1_Mecha03_01_Audio_AnimEvent.json"
+  ],
+  "SoundBankList": [],
+  "SkillList": [
+    {
+      "Name": "Skill01",
+      "SkillType": "Skill",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "EnemySelect"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Monster_W1_Mecha03_01_Skill01_Phase01"
+    },
+    {
+      "Name": "Skill03",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "EnemySelect"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Monster_W1_Mecha03_01_Skill03_Phase01"
+    },
+    {
+      "Name": "Skill05",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "EnemySelect"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Monster_W1_Mecha03_01_Skill05_Phase01"
+    },
+    {
+      "Name": "PassiveSkill01",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Monster_Common_PassiveSkill_StanceBreak_Action"
+    }
+  ],
+  "AbilityList": [
+    "Monster_Common_PassiveSkill_StanceBreak_Action",
+    "Monster_W1_Mecha03_01_Skill01_Phase01",
+    "Monster_W1_Mecha03_01_Skill01_Phase02",
+    "Monster_W1_Mecha03_01_Skill03_Phase01",
+    "Monster_W1_Mecha03_01_Skill03_Phase02",
+    "Monster_W1_Mecha03_01_Skill05_Phase01",
+    "Monster_W1_Mecha03_01_Skill05_Phase02",
+    "Monster_W1_Mecha03_01_Skill01_Camera",
+    "Monster_W1_Mecha03_01_Skill03_Camera",
+    "Monster_W1_Mecha03_01_Skill04_Camera"
+  ],
+  "SkillAbilityList": [
+    {
+      "Skill": "Skill01",
+      "AbilityList": [
+        "Monster_W1_Mecha03_01_Skill01_Camera",
+        "Monster_W1_Mecha03_01_Skill01_Phase01",
+        "Monster_W1_Mecha03_01_Skill01_Phase02"
+      ]
+    },
+    {
+      "Skill": "Skill03",
+      "AbilityList": [
+        "Monster_W1_Mecha03_01_Skill03_Camera",
+        "Monster_W1_Mecha03_01_Skill03_Phase01",
+        "Monster_W1_Mecha03_01_Skill03_Phase02"
+      ]
+    },
+    {
+      "Skill": "Skill05",
+      "AbilityList": [
+        "Monster_W1_Mecha03_01_Skill04_Camera",
+        "Monster_W1_Mecha03_01_Skill05_Phase01",
+        "Monster_W1_Mecha03_01_Skill05_Phase02"
+      ]
+    }
+  ],
+  "DynamicValues": {
+    "Floats": {
+      "-1126825319": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill01",
+          "Index": 0
+        }
+      },
+      "-56289053": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill03",
+          "Index": 0
+        }
+      },
+      "-1653764133": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill03",
+          "Index": 1
+        }
+      },
+      "-2019821738": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill03",
+          "Index": 2
+        }
+      }
+    }
+  },
+  "CustomValues": {
+    "Monster_W1_Mecha03_01_AICounter_01": 1
+  },
+  "WeaponType": "WP_Scythe",
+  "ArmorType": "Armor_Metal"
+}

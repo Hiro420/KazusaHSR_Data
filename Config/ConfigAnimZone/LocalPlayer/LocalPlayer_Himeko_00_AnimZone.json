@@ -1,0 +1,51 @@
+﻿{
+  "StateZoneConfig": {
+    "AnimatorStateZoneDescList": [
+      {
+        "StateName": "Attack_1",
+        "TransitionType": "Next",
+        "ZoneList": [
+          {
+            "ZoneType": "ForbidOffStage",
+            "NTimeEnd": 0.13
+          },
+          {
+            "ZoneType": "ForbidMove",
+            "NTimeEnd": 0.145
+          },
+          {
+            "ZoneType": "ForbidAtk",
+            "NTimeEnd": 0.28
+          },
+          {
+            "ZoneType": "ForbidRotation"
+          }
+        ]
+      },
+      {
+        "StateName": "MazeSkill",
+        "TransitionType": "Next",
+        "ZoneList": [
+          {
+            "ZoneType": "ForbidOffStage",
+            "NTimeEnd": 0.2
+          },
+          {
+            "ZoneType": "ForbidMove",
+            "NTimeEnd": 0.21
+          },
+          {
+            "ZoneType": "ForbidAtk",
+            "NTimeEnd": 0.415
+          },
+          {
+            "ZoneType": "ForbidRotation"
+          }
+        ]
+      }
+    ]
+  },
+  "ClipZoneConfig": {
+    "AnimatorClipZoneDescList": []
+  }
+}

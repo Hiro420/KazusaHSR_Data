@@ -1,0 +1,110 @@
+﻿{
+  "GroupGUID": "5a9b7e6b-9351-41b3-b3ed-ae0f51435f1d",
+  "GroupName": "Day",
+  "AreaAnchorName": "LevelArea_P20122_F20122001_G17",
+  "AnchorList": [],
+  "ModelList": [],
+  "MonsterList": [
+    {
+      "ID": 200001,
+      "PosX": -23.69,
+      "PosY": 22.35459,
+      "PosZ": 183.29,
+      "Name": "Monster1",
+      "RotY": 270.0,
+      "Comment": "巡逻1",
+      "NPCMonsterID": 1001030,
+      "AIConfig": {
+        "AIFile": "Config/ConfigAI/Adventure/MazeMonster_XP_Minion_Ice_Patrol_Loop.json",
+        "PathwayList": [
+          {}
+        ]
+      },
+      "CampID": 3,
+      "BattleArea": {
+        "GroupID": 2,
+        "ID": 1
+      },
+      "EventID": 20121001
+    },
+    {
+      "ID": 200002,
+      "PosX": -31.82,
+      "PosY": 22.35459,
+      "PosZ": 191.84,
+      "Name": "Monster2",
+      "RotY": 190.92,
+      "Comment": "巡逻1",
+      "NPCMonsterID": 1001030,
+      "AIConfig": {
+        "AIFile": "Config/ConfigAI/Adventure/MazeMonster_XP_Minion_Ice_Patrol_Loop.json",
+        "PathwayList": [
+          {}
+        ]
+      },
+      "CampID": 3,
+      "BattleArea": {
+        "GroupID": 2,
+        "ID": 1
+      },
+      "EventID": 20121001
+    },
+    {
+      "ID": 200003,
+      "PosX": -34.58,
+      "PosY": 22.35459,
+      "PosZ": 179.72,
+      "Name": "Monster3",
+      "RotY": 190.92,
+      "Comment": "巡逻1",
+      "NPCMonsterID": 1001030,
+      "AIConfig": {
+        "AIFile": "Config/ConfigAI/Adventure/MazeMonster_XP_Minion_Ice_Patrol_Loop.json",
+        "PathwayList": [
+          {}
+        ]
+      },
+      "CampID": 3,
+      "BattleArea": {
+        "GroupID": 2,
+        "ID": 1
+      },
+      "EventID": 20121001
+    }
+  ],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": -42.27,
+      "PosY": 20.35465,
+      "PosZ": 177.15,
+      "Name": "Prop1",
+      "RotY": 312.4,
+      "PropID": 100,
+      "Trigger": {
+        "Radius": 1.5,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": [
+    {
+      "ID": 400001,
+      "PosX": -42.27,
+      "PosY": 20.35465,
+      "PosZ": 177.15,
+      "Name": "NPC1",
+      "RotY": 312.4,
+      "NPCID": 110105,
+      "DialogueGroups": []
+    }
+  ]
+}

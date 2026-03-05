@@ -1,0 +1,160 @@
+﻿{
+  "GroupGUID": "b397c9dd-cc67-45d6-81e9-fc72be38b736",
+  "GroupName": "MainMission04",
+  "AreaAnchorName": "LevelArea_P10102_F10102001_G7",
+  "AnchorList": [
+    {
+      "ID": 1,
+      "PosX": -56.92,
+      "PosY": 5.000014,
+      "PosZ": 26.96,
+      "Name": "Anchor1"
+    },
+    {
+      "ID": 2,
+      "PosX": -58.597,
+      "PosY": 5.000014,
+      "PosZ": 32.147,
+      "Name": "Anchor2"
+    },
+    {
+      "ID": 3,
+      "PosX": -66.38,
+      "PosY": 5.000017,
+      "PosZ": 22.28,
+      "Name": "Anchor3"
+    },
+    {
+      "ID": 4,
+      "PosX": -76.48,
+      "PosY": 5.000015,
+      "PosZ": 21.16,
+      "Name": "Anchor4"
+    },
+    {
+      "ID": 5,
+      "PosX": -76.345,
+      "PosY": 5.000018,
+      "PosZ": 37.891,
+      "Name": "Anchor5"
+    },
+    {
+      "ID": 6,
+      "PosX": -52.97,
+      "PosY": 1.8E-05,
+      "PosZ": 37.39,
+      "Name": "Anchor6"
+    }
+  ],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": -61.39,
+      "PosY": 6.286,
+      "PosZ": 28.25,
+      "Name": "WatchDouge",
+      "RotY": 26.16539,
+      "PropID": 100,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 1.0,
+        "DimX": 2.0,
+        "DimY": 3.0,
+        "DimZ": 16.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": []
+    },
+    {
+      "ID": 300002,
+      "PosX": -61.67,
+      "PosY": 2.93,
+      "PosZ": 37.51,
+      "Name": "FinishDouge",
+      "PropID": 100,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 1.0,
+        "DimX": 3.0,
+        "DimY": 5.0,
+        "DimZ": 5.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": []
+    }
+  ],
+  "WaypointList": [
+    {
+      "ID": 1,
+      "PosX": -56.92,
+      "PosY": 5.000014,
+      "PosZ": 26.96
+    },
+    {
+      "ID": 2,
+      "PosX": -58.597,
+      "PosY": 5.000014,
+      "PosZ": 32.147
+    },
+    {
+      "ID": 3,
+      "PosX": -66.38,
+      "PosY": 5.000017,
+      "PosZ": 22.28
+    },
+    {
+      "ID": 4,
+      "PosX": -76.48,
+      "PosY": 5.000015,
+      "PosZ": 21.16
+    },
+    {
+      "ID": 5,
+      "PosX": -76.345,
+      "PosY": 5.000018,
+      "PosZ": 37.891
+    },
+    {
+      "ID": 6,
+      "PosX": -52.97,
+      "PosY": 1.8E-05,
+      "PosZ": 37.39
+    }
+  ],
+  "PathwayList": [
+    {
+      "ID": 1,
+      "Name": "Pathway1",
+      "WaypointIDList": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  ],
+  "BattleAreaList": [],
+  "NPCList": [
+    {
+      "ID": 400001,
+      "PosX": -56.92,
+      "PosY": 5.000014,
+      "PosZ": 26.96,
+      "Name": "NPC1",
+      "RotY": 122.4134,
+      "Comment": "道奇",
+      "NPCID": 101040701,
+      "CreateOnInitial": false,
+      "AIConfig": {
+        "PathwayList": []
+      },
+      "DialogueGroups": []
+    }
+  ]
+}

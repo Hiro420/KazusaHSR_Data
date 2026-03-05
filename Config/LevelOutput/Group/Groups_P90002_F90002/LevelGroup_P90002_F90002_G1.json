@@ -1,0 +1,98 @@
+﻿{
+  "GroupGUID": "4188660f-5c1f-45e5-bf6c-6c53b1005dc7",
+  "GroupName": "Model",
+  "LevelGraph": "Config/Level/Maze/Chapter00/Train/TrainConfig.json",
+  "AreaAnchorName": "LevelArea_P90002_F90002_G1",
+  "SaveType": "Temporary",
+  "AnchorList": [
+    {
+      "ID": 1,
+      "PosX": -31.13,
+      "PosY": 3.993778,
+      "PosZ": 21.23,
+      "Name": "PlayerStartPoint",
+      "RotY": 133.42
+    },
+    {
+      "ID": 2,
+      "PosY": -3.000065,
+      "PosZ": -65.04,
+      "Name": "Anchor2",
+      "RotY": 180.0
+    }
+  ],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [
+    {
+      "ID": 300002,
+      "PosX": -32.51,
+      "PosY": 3.993778,
+      "PosZ": 23.04,
+      "Name": "Prop2",
+      "PropID": 102,
+      "Trigger": {
+        "Radius": 1.5,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1,
+        "Offset": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0
+        }
+      },
+      "ValueSource": {
+        "Values": [
+          {
+            "$type": "RPG.GameCore.SharedInt",
+            "Key": "Maze_CheckPoint_RefreshGroupID"
+          },
+          {
+            "$type": "RPG.GameCore.SharedInt",
+            "Key": "Maze_CheckPoint_RefreshPropID"
+          }
+        ]
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300005,
+      "PosX": -25.23,
+      "PosY": 4.51,
+      "PosZ": 24.77,
+      "Name": "Prop5",
+      "PropID": 103,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300001,
+      "PosX": -27.21,
+      "PosY": 3.993778,
+      "PosZ": 22.96,
+      "Name": "Prop1",
+      "PropID": 104,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [
+    {
+      "ID": 1,
+      "PosX": 10.4,
+      "PosZ": 513.21,
+      "Name": "BattleArea1",
+      "RotY": 234.0,
+      "Tags": [
+        "BattleArea01"
+      ]
+    }
+  ],
+  "NPCList": []
+}

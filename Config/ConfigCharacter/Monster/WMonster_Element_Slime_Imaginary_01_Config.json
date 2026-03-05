@@ -1,0 +1,90 @@
+﻿{
+  "CharacterHUDOffset": {
+    "x": 0.3,
+    "y": 2.0,
+    "z": 0.0
+  },
+  "BuffPanelOffset": {
+    "x": 0.0,
+    "y": 1.8,
+    "z": 0.0
+  },
+  "HitBoxWidth": 0.3,
+  "HitBoxHeight": 1.5,
+  "Location": {
+    "Width": 1.1,
+    "LocalZOffsetMin": 0.3,
+    "LocalZOffsetMax": 1.0
+  },
+  "VisualRadius": 0.8,
+  "AnimEventConfigList": [
+    "Config/ConfigAnimEvents/Monster/Designer/WMonster_Element_Slime_Imaginary_01_Designer_AnimEvent.json"
+  ],
+  "SoundBankList": [
+    "BK_SFX_Monster_Common"
+  ],
+  "SkillList": [
+    {
+      "Name": "Skill01",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "EnemySelect"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "WMonster_Element_Slime_01_Skill01_Phase01"
+    },
+    {
+      "Name": "Skill02",
+      "SkillType": "Skill",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "EnemySelect"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "WMonster_Element_Slime_01_Imaginary_Skill02_Phase01",
+      "ParaMapping": [
+        {
+          "DynamicValues": {
+            "Skill02_Para1_DamagePercentage": {}
+          }
+        }
+      ]
+    },
+    {
+      "Name": "PassiveSkill01",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Monster_Common_PassiveSkill_StanceBreak_Action"
+    }
+  ],
+  "AbilityList": [
+    "Monster_Common_PassiveSkill_StanceBreak_Action"
+  ],
+  "SkillAbilityList": [
+    {
+      "Skill": "Skill01",
+      "AbilityList": [
+        "WMonster_Element_Slime_01_Skill01_Phase01",
+        "WMonster_Element_Slime_01_Skill01_Phase02"
+      ]
+    },
+    {
+      "Skill": "Skill02",
+      "AbilityList": [
+        "WMonster_Element_Slime_01_Imaginary_Skill02_Phase01",
+        "WMonster_Element_Slime_01_Imaginary_Skill02_Phase02"
+      ]
+    }
+  ],
+  "DynamicValues": {
+    "Floats": {
+      "-1729031150": {
+        "Value": 0.5
+      }
+    }
+  },
+  "WeaponType": "WP_Scythe"
+}

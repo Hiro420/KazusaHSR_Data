@@ -1,0 +1,187 @@
+﻿{
+  "GroupGUID": "00e6ac6c-9124-4316-8849-55d02e4e80fc",
+  "GroupName": "Contents",
+  "LevelGraph": "Config/Level/Maze/MazeExtra/TowerChallenge/Maze_ChallengeTower_Check2.json",
+  "AreaAnchorName": "LevelArea_P30106_F30106001_G3",
+  "SaveType": "Temporary",
+  "AnchorList": [],
+  "ModelList": [],
+  "MonsterList": [
+    {
+      "ID": 200001,
+      "PosX": 91.88,
+      "PosY": 1.942146,
+      "PosZ": 91.54,
+      "Name": "Monster1",
+      "RotY": 270.0,
+      "NPCMonsterID": 8003020,
+      "AIConfig": {
+        "AIFile": "Config/ConfigAI/Adventure/MazeMonster_LV3Common_idle_Loop.json",
+        "PathwayList": [
+          {}
+        ]
+      },
+      "CampID": 3,
+      "BattleArea": {
+        "GroupID": 1,
+        "ID": 1
+      },
+      "EventID": 30106201
+    },
+    {
+      "ID": 200003,
+      "PosX": 64.44,
+      "PosY": 1.942146,
+      "PosZ": 91.83,
+      "Name": "Monster3",
+      "RotY": 270.0,
+      "NPCMonsterID": 1022020,
+      "AIConfig": {
+        "AIFile": "Config/ConfigAI/Adventure/MazeMonster_Soldier_Common_Patrol_Loop.json",
+        "PathwayList": [
+          {}
+        ]
+      },
+      "CampID": 3,
+      "BattleArea": {
+        "GroupID": 1,
+        "ID": 1
+      },
+      "EventID": 30106101
+    }
+  ],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": 30.29,
+      "PosY": 1.942146,
+      "PosZ": 91.54,
+      "Name": "BuffMachine",
+      "RotY": 90.0,
+      "PropID": 100,
+      "InitLevelGraph": "Config/Level/Maze/MazeExtra/TowerChallenge/Maze_ChallengeTower_Initial06.json",
+      "Trigger": {
+        "Radius": 1.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "CampID": 4,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300002,
+      "PosX": 98.68,
+      "PosY": 1.942146,
+      "PosZ": 95.77,
+      "Name": "Reward",
+      "RotY": 250.0,
+      "PropID": 104,
+      "InitLevelGraph": "Config/Level/Maze/MazeExtra/TowerChallenge/Maze_ChallengeTower_Reward.json",
+      "Trigger": {
+        "Radius": 3.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "CampID": 4,
+      "State": "ChestLocked",
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300003,
+      "PosX": 69.82,
+      "PosY": 1.942146,
+      "PosZ": 91.54,
+      "Name": "BarrierTemp",
+      "RotY": 90.0,
+      "PropID": 105,
+      "CampID": 4,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300004,
+      "PosX": 47.77,
+      "PosY": 1.942146,
+      "PosZ": 114.09,
+      "IsDelete": true,
+      "Name": "Barrier",
+      "RotY": 90.0,
+      "PropID": 105,
+      "CampID": 4,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300005,
+      "PosX": 40.01,
+      "PosY": 1.942146,
+      "PosZ": 91.61,
+      "Name": "Barrier",
+      "RotY": 90.0,
+      "PropID": 105,
+      "CampID": 4,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [
+    {
+      "ID": 1,
+      "PosX": -105.75,
+      "PosY": -2.114354,
+      "PosZ": -93.96,
+      "IsDelete": true
+    },
+    {
+      "ID": 2,
+      "PosX": -79.53,
+      "PosY": -0.110988,
+      "PosZ": -93.96,
+      "IsDelete": true
+    },
+    {
+      "ID": 3,
+      "PosX": -75.11,
+      "PosY": -0.110988,
+      "PosZ": -93.96,
+      "IsDelete": true
+    },
+    {
+      "ID": 4,
+      "PosX": -75.11,
+      "PosY": -0.110988,
+      "PosZ": -74.67,
+      "IsDelete": true
+    }
+  ],
+  "PathwayList": [
+    {
+      "ID": 1,
+      "IsDelete": true,
+      "Name": "Pathway1",
+      "WaypointIDList": [
+        1,
+        2
+      ]
+    },
+    {
+      "ID": 2,
+      "IsDelete": true,
+      "Name": "Pathway2",
+      "WaypointIDList": [
+        4,
+        3
+      ]
+    }
+  ],
+  "BattleAreaList": [],
+  "NPCList": []
+}

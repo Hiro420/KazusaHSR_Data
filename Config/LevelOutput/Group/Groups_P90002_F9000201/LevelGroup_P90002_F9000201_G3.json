@@ -1,0 +1,146 @@
+﻿{
+  "GroupGUID": "93e73ada-2b6e-424b-9ce4-c8bb36d31997",
+  "GroupName": "LiftGroup",
+  "AreaAnchorName": "LevelArea_P90002_F9000201_G3",
+  "AnchorList": [
+    {
+      "ID": 1,
+      "PosX": 71.28,
+      "PosY": 3.5,
+      "PosZ": -103.12,
+      "Name": "Anchor1",
+      "RotY": 135.0
+    },
+    {
+      "ID": 2,
+      "PosX": 71.28,
+      "PosY": 7.04,
+      "PosZ": -103.12,
+      "Name": "Anchor2",
+      "RotY": 135.0
+    }
+  ],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [
+    {
+      "ID": 300002,
+      "PosX": 71.28,
+      "PosY": -1.29,
+      "PosZ": -103.12,
+      "Name": "liftplane",
+      "RotY": 315.0,
+      "PropID": 301004,
+      "State": "BridgeState2",
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300008,
+      "PosX": 71.28,
+      "PosY": 2.74,
+      "PosZ": -103.12,
+      "Name": "Prop8",
+      "RotY": 135.0,
+      "Comment": "底座",
+      "PropID": 301005,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300001,
+      "PosX": 71.28,
+      "PosY": 3.5,
+      "PosZ": -103.12,
+      "Name": "lift",
+      "RotY": 135.0,
+      "PropID": 101007,
+      "Trigger": {
+        "Radius": 2.8,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "ValueSource": {
+        "Values": [
+          {
+            "$type": "RPG.GameCore.SharedString",
+            "Key": "Maze_Chap01_Lift_1F",
+            "Value": "LevelArea_P90002_F9000201_G3,Anchor1"
+          },
+          {
+            "$type": "RPG.GameCore.SharedString",
+            "Key": "Maze_Chap01_Lift_2F",
+            "Value": "LevelArea_P90002_F9000201_G3,Anchor2"
+          }
+        ]
+      },
+      "State": "Elevator1",
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300004,
+      "PosX": 73.91,
+      "PosY": 3.116995,
+      "PosZ": -105.96,
+      "Name": "DownControler",
+      "RotY": 45.0,
+      "PropID": 101008,
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "ValueSource": {
+        "Values": [
+          {
+            "$type": "RPG.GameCore.SharedString",
+            "Key": "Maze_Chap01_Elevator_01",
+            "Value": "3,300001"
+          }
+        ]
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300005,
+      "PosX": 64.04,
+      "PosY": 7.259122,
+      "PosZ": -105.47,
+      "Name": "UpControler",
+      "RotY": 136.63,
+      "PropID": 101009,
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "ValueSource": {
+        "Values": [
+          {
+            "$type": "RPG.GameCore.SharedString",
+            "Key": "Maze_Chap01_Elevator_01",
+            "Value": "3,300001"
+          }
+        ]
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": [],
+  "GroupRefreshID": 1
+}

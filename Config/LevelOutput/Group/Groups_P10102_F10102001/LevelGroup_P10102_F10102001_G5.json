@@ -1,0 +1,161 @@
+﻿{
+  "GroupGUID": "8f481ca0-011b-4222-ace3-5ce3249e27a9",
+  "GroupName": "MainMission02",
+  "AreaAnchorName": "LevelArea_P10102_F10102001_G5",
+  "AnchorList": [],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": -65.58,
+      "PosY": 5.68,
+      "PosZ": 33.57,
+      "Name": "Prop1",
+      "RotY": 26.16539,
+      "Comment": "板鸭阻止",
+      "PropID": 100,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 1.0,
+        "DimX": 2.0,
+        "DimY": 3.0,
+        "DimZ": 6.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300002,
+      "PosX": -70.41,
+      "PosY": 6.24,
+      "PosZ": 20.38,
+      "Name": "Prop2",
+      "RotY": 0.764764,
+      "Comment": "丹恒阻止",
+      "PropID": 100,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 1.0,
+        "DimX": 2.0,
+        "DimY": 3.0,
+        "DimZ": 9.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": [
+    {
+      "ID": 400004,
+      "PosX": -68.33,
+      "PosY": 4.701647,
+      "PosZ": 22.8,
+      "Name": "NPC4",
+      "RotY": 94.04934,
+      "Comment": "桑博",
+      "NPCID": 101040201,
+      "AIConfig": {
+        "PathwayList": []
+      },
+      "DialogueGroups": [
+        101040201,
+        101040211
+      ],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400006,
+      "PosX": -59.92,
+      "PosY": 4.713162,
+      "PosZ": 25.01,
+      "Name": "NPC6",
+      "RotY": 270.1227,
+      "Comment": "丹恒",
+      "NPCID": 101040202,
+      "AIConfig": {
+        "PathwayList": []
+      },
+      "DialogueGroups": [
+        101040202,
+        101040212
+      ],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400007,
+      "PosX": -62.25,
+      "PosY": 4.735898,
+      "PosZ": 25.08,
+      "Name": "NPC7",
+      "RotY": 102.7239,
+      "Comment": "三月七",
+      "NPCID": 101040203,
+      "AIConfig": {
+        "PathwayList": []
+      },
+      "DialogueGroups": [
+        101040203,
+        101040213
+      ],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400005,
+      "PosX": -66.23,
+      "PosY": 4.728453,
+      "PosZ": 25.96,
+      "Name": "NPC5",
+      "RotY": 119.6353,
+      "Comment": "布洛妮娅",
+      "NPCID": 101040204,
+      "AIConfig": {
+        "PathwayList": []
+      },
+      "DialogueGroups": [
+        101040204,
+        101040214
+      ],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400009,
+      "PosX": -60.63,
+      "PosY": 4.812743,
+      "PosZ": 32.38,
+      "Name": "NPC9",
+      "RotY": 193.6113,
+      "Comment": "希儿",
+      "NPCID": 101040205,
+      "DialogueGroups": [
+        101040205,
+        101040215
+      ],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400008,
+      "PosX": -58.9,
+      "PosY": 4.730099,
+      "PosZ": 31.09,
+      "IsDelete": true,
+      "Name": "NPC8",
+      "RotY": 201.9114,
+      "Comment": "奥列格",
+      "NPCID": 101040206,
+      "CreateOnInitial": false,
+      "AIConfig": {
+        "PathwayList": []
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ]
+}

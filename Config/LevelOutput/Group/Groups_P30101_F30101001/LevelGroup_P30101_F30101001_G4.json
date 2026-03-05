@@ -1,0 +1,280 @@
+﻿{
+  "GroupGUID": "b3ed053b-1cf0-4791-9638-d2dcac2d01e4",
+  "GroupName": "Door",
+  "AreaAnchorName": "LevelArea_P30101_F30101001_G4",
+  "AnchorList": [],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": 13.127,
+      "PosY": -2.139023,
+      "PosZ": -16.017,
+      "Name": "Prop1_Door01",
+      "RotY": 225.0,
+      "Comment": "闸门01",
+      "PropID": 101004,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 1.0,
+        "DimX": 4.04,
+        "DimY": 1.0,
+        "DimZ": 1.6,
+        "TargetCamps": [],
+        "TriggerTimes": 1,
+        "Offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": -0.8
+        }
+      },
+      "State": "TriggerEnable",
+      "RecordID": 1,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300008,
+      "PosX": 10.81,
+      "PosY": -2.16,
+      "PosZ": -20.56,
+      "IsDelete": true,
+      "Name": "Prop8_DoorController01",
+      "RotY": 315.0,
+      "Comment": "闸门01开关",
+      "PropID": 101001,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 2.0,
+        "DimX": 1.5,
+        "DimY": 3.0,
+        "DimZ": 2.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1,
+        "Offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        }
+      },
+      "RecordID": 1,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300002,
+      "PosX": 29.457,
+      "PosY": -1.113807,
+      "PosZ": -87.132,
+      "Name": "Prop2_Door02",
+      "Comment": "闸门02",
+      "PropID": 101004,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 1.0,
+        "DimX": 4.04,
+        "DimY": 1.0,
+        "DimZ": 1.6,
+        "TargetCamps": [],
+        "TriggerTimes": 1,
+        "Offset": {
+          "x": 0.0,
+          "y": 0.5,
+          "z": 0.8
+        }
+      },
+      "State": "TriggerEnable",
+      "RecordID": 1,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300003,
+      "PosX": 26.76,
+      "PosY": -1.15,
+      "PosZ": -82.588,
+      "Name": "Prop3_DoorController02",
+      "Comment": "闸门02开关",
+      "PropID": 101001,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 2.0,
+        "DimX": 1.5,
+        "DimY": 3.0,
+        "DimZ": 2.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1,
+        "Offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        }
+      },
+      "RecordID": 1,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300005,
+      "PosX": -5.29,
+      "PosY": -2.107291,
+      "PosZ": -170.316,
+      "Name": "Prop5_Door03",
+      "RotY": 90.0,
+      "Comment": "闸门03",
+      "PropID": 101004,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 1.0,
+        "DimX": 4.2,
+        "DimY": 1.0,
+        "DimZ": 3.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "RecordID": 1,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300004,
+      "PosX": 4.8,
+      "PosY": -2.16,
+      "PosZ": -208.496,
+      "Name": "Prop4_DoorController03",
+      "Comment": "闸门03开关",
+      "PropID": 101001,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 2.0,
+        "DimX": 1.5,
+        "DimY": 3.0,
+        "DimZ": 2.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1,
+        "Offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        }
+      },
+      "RecordID": 1,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300006,
+      "PosX": -2.4176,
+      "PosY": -2.134,
+      "PosZ": -88.89,
+      "Name": "Prop6_Door04",
+      "RotY": 180.0,
+      "Comment": "闸门04",
+      "PropID": 101004,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 1.0,
+        "DimX": 6.0,
+        "DimY": 1.0,
+        "DimZ": 1.6,
+        "TargetCamps": [],
+        "TriggerTimes": 1,
+        "Offset": {
+          "x": 0.0,
+          "y": 0.5,
+          "z": -0.8
+        }
+      },
+      "State": "TriggerEnable",
+      "RecordID": 1,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300007,
+      "PosX": 0.25,
+      "PosY": -2.134002,
+      "PosZ": -89.82,
+      "Name": "Prop7_DoorController04",
+      "RotY": 180.0,
+      "Comment": "闸门04开关",
+      "PropID": 101001,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 2.0,
+        "DimX": 1.5,
+        "DimY": 3.0,
+        "DimZ": 2.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1,
+        "Offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        }
+      },
+      "RecordID": 1,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300010,
+      "PosX": -97.82,
+      "PosY": 0.852646,
+      "PosZ": -133.45,
+      "Name": "Prop10_DoorController05",
+      "RotY": 135.0,
+      "Comment": "闸门05",
+      "PropID": 101004,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 1.0,
+        "DimX": 5.0,
+        "DimY": 1.0,
+        "DimZ": 3.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1,
+        "Offset": {
+          "x": 0.0,
+          "y": 0.5,
+          "z": 0.0
+        }
+      },
+      "RecordID": 1,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300011,
+      "PosX": -97.12,
+      "PosY": 0.852646,
+      "PosZ": -137.28,
+      "Name": "Prop11",
+      "RotY": 135.0,
+      "Comment": "闸门05开关",
+      "PropID": 101001,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 2.0,
+        "DimX": 1.5,
+        "DimY": 3.0,
+        "DimZ": 2.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1,
+        "Offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        }
+      },
+      "RecordID": 1,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": []
+}

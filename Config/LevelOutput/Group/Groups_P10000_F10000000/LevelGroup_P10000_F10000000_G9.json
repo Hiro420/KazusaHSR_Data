@@ -1,0 +1,75 @@
+﻿{
+  "GroupGUID": "dc98da5f-5bdd-45b8-a106-6fd202782477",
+  "GroupName": "Tutorial10000000",
+  "AreaAnchorName": "LevelArea_P10000_F10000000_G9",
+  "AnchorList": [],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": -0.41,
+      "PosY": -1E-06,
+      "PosZ": 4.54,
+      "IsDelete": true,
+      "Name": "Tutorial_203",
+      "PropID": 100,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/Town/tutorial203.json",
+      "Trigger": {
+        "Radius": 2.2,
+        "DimX": 4.0,
+        "DimY": 5.0,
+        "DimZ": 5.0,
+        "TargetCamps": [],
+        "TriggerTimes": -1,
+        "CD": -1.0
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300002,
+      "PosX": 0.14,
+      "PosY": -2E-06,
+      "PosZ": 9.37,
+      "Name": "Tutorial_203_1",
+      "PropID": 100,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/Town/tutorial203_1.json",
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 1.0,
+        "DimX": 16.0,
+        "DimY": 4.0,
+        "DimZ": 5.0,
+        "TargetCamps": [],
+        "TriggerTimes": -1,
+        "CD": -1.0
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300003,
+      "PosZ": -1.83,
+      "Name": "Tutorial_203_2",
+      "PropID": 100,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/Town/tutorial203_2.json",
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 1.0,
+        "DimX": 16.0,
+        "DimY": 4.0,
+        "DimZ": 5.0,
+        "TargetCamps": [],
+        "TriggerTimes": -1,
+        "CD": -1.0
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": []
+}

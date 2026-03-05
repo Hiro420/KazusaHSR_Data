@@ -1,0 +1,291 @@
+﻿{
+  "SomatoType": "LittleMonster",
+  "CharacterHUDOffset": {
+    "x": 0.0,
+    "y": 2.6,
+    "z": 0.0
+  },
+  "BuffPanelOffset": {
+    "x": 0.0,
+    "y": 1.8,
+    "z": 0.0
+  },
+  "HitBoxWidth": 0.36,
+  "Resilience": "A",
+  "Location": {
+    "Width": 1.6,
+    "LocalZOffsetMin": 0.3,
+    "LocalZOffsetMax": 1.0
+  },
+  "VisualRadius": 0.8,
+  "AnimEventConfigList": [
+    "Config/ConfigAnimEvents/Monster/Designer/Monster_W1_Soldier03_00_Designer_AnimEvent.json",
+    "Config/ConfigAnimEvents/Monster/Effect/Monster_W1_Soldier03_00_Effect_AnimEvent.json",
+    "Config/ConfigAnimEvents/Monster/Audio/Monster_W1_Soldier03_00_Audio_AnimEvent.json"
+  ],
+  "SoundBankList": [
+    "BK_SFX_Monster_Common"
+  ],
+  "SkillList": [
+    {
+      "Name": "Skill01",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "EnemySelect"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Monster_W1_CWSoldier_04_Skill01_Phase01"
+    },
+    {
+      "Name": "Skill06",
+      "SkillType": "Skill",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "EnemySelect"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Monster_W1_CWSoldier_04_Skill06_Phase01"
+    },
+    {
+      "Name": "Skill07",
+      "SkillType": "Skill",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Monster_W1_CWSoldier_04_Skill07_Phase01"
+    },
+    {
+      "Name": "Skill08",
+      "SkillType": "Skill",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Monster_W1_CWSoldier_04_Skill08_Phase01"
+    },
+    {
+      "Name": "Skill09",
+      "SkillType": "Skill",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "AllEnemy"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Monster_W1_CWSoldier_04_Alter01_Skill09_Phase01"
+    },
+    {
+      "Name": "Skill10",
+      "SkillType": "Skill",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "EnemySelect"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Monster_W1_CWSoldier_04_Skill10_Phase01"
+    },
+    {
+      "Name": "Skill11",
+      "SkillType": "Skill",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Monster_W1_CWSoldier_04_Skill11_Phase01"
+    },
+    {
+      "Name": "PassiveSkillInitiate",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Monster_W1_CWSoldier_04_PassiveSkillInitiate"
+    },
+    {
+      "Name": "PassiveSkill01",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Monster_Common_PassiveSkill_StanceBreak_Action"
+    },
+    {
+      "Name": "PassiveSkill02",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Monster_Common_Fever_Action"
+    },
+    {
+      "Name": "PassiveSkill03",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Monster_W1_CWSoldier_04_Passive_AIResetAndRemoveSkill10Aim"
+    },
+    {
+      "Name": "PassiveSkill04",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Monster_W1_CWSoldier_04_AIControl"
+    },
+    {
+      "Name": "PassiveSkill05",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Monster_Common_MuteHitFly"
+    }
+  ],
+  "AbilityList": [
+    "Monster_Common_PassiveSkill_StanceBreak_Action",
+    "Monster_W1_CWSoldier_04_PassiveSkillInitiate",
+    "Monster_W1_CWSoldier_04_Passive_AIResetAndRemoveSkill10Aim",
+    "Monster_W1_CWSoldier_04_AIControl",
+    "Monster_Common_Fever_Action",
+    "WMonster_W1_CWSoldiers_04_Skill02_ListenHitInsert",
+    "Monster_Common_MuteHitFly"
+  ],
+  "SkillAbilityList": [
+    {
+      "Skill": "Skill01",
+      "AbilityList": [
+        "Monster_W1_CWSoldier_04_Skill01_Camera",
+        "Monster_W1_CWSoldier_04_Skill01_Phase01",
+        "Monster_W1_CWSoldier_04_Skill01_Phase02"
+      ]
+    },
+    {
+      "Skill": "Skill06",
+      "AbilityList": [
+        "Monster_W1_CWSoldier_04_Skill06_Camera",
+        "Monster_W1_CWSoldier_04_Skill06_Phase01",
+        "Monster_W1_CWSoldier_04_Skill06_Phase02"
+      ]
+    },
+    {
+      "Skill": "Skill07",
+      "AbilityList": [
+        "Monster_W1_CWSoldier_04_Skill07_Camera",
+        "Monster_W1_CWSoldier_04_Skill07_Phase01",
+        "Monster_W1_CWSoldier_04_Skill07_Phase02"
+      ]
+    },
+    {
+      "Skill": "Skill08",
+      "AbilityList": [
+        "Monster_W1_CWSoldier_04_Skill08_Camera",
+        "Monster_W1_CWSoldier_04_Skill08_Phase01",
+        "Monster_W1_CWSoldier_04_Skill08_Phase02"
+      ]
+    },
+    {
+      "Skill": "Skill09",
+      "AbilityList": [
+        "Monster_W1_CWSoldier_04_Skill09_Camera",
+        "Monster_W1_CWSoldier_04_Alter01_Skill09_Phase01",
+        "Monster_W1_CWSoldier_04_Alter01_Skill09_Phase02"
+      ]
+    },
+    {
+      "Skill": "Skill10",
+      "AbilityList": [
+        "Monster_W1_CWSoldier_04_Skill10_Camera",
+        "Monster_W1_CWSoldier_04_Skill10_Phase01",
+        "Monster_W1_CWSoldier_04_Skill10_Phase02"
+      ]
+    },
+    {
+      "Skill": "Skill11",
+      "AbilityList": [
+        "Monster_W1_CWSoldier_04_Skill11_Camera",
+        "Monster_W1_CWSoldier_04_Skill11_Phase01",
+        "Monster_W1_CWSoldier_04_Skill11_Phase02"
+      ]
+    }
+  ],
+  "DynamicValues": {
+    "Floats": {
+      "-2067735049": {
+        "Min": 0.0,
+        "Max": 3.0
+      },
+      "-1126825319": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill01",
+          "Index": 0
+        }
+      },
+      "-1122549516": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill06",
+          "Index": 0
+        }
+      },
+      "-1172927831": {
+        "Value": 0.6,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill07",
+          "Index": 0
+        }
+      },
+      "1199988596": {
+        "Value": 0.2,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill07",
+          "Index": 1
+        }
+      },
+      "-1068473584": {
+        "Value": 60.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill07",
+          "Index": 2
+        }
+      },
+      "411654794": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill08",
+          "Index": 0
+        }
+      },
+      "-790767069": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill08",
+          "Index": 1
+        }
+      }
+    }
+  },
+  "CustomValues": {
+    "SummonID1": 1001010,
+    "SummonID2": 1001020,
+    "SummonID3": 1012010,
+    "AIFlag": 1,
+    "Phase_Flag": 1,
+    "BeingDamageFlag": 0
+  },
+  "WeaponType": "WP_Scythe",
+  "ArmorType": "Armor_Metal"
+}

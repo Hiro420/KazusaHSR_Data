@@ -1,0 +1,47 @@
+﻿{
+  "AnimatorStateEvents": [
+    {
+      "AnimatorStateName": "Appear",
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.TriggerEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Monster/Eff_XP_Minion01_01/Eff_Monster_XP_Minion01_01_Common_Ball1_M.prefab"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Monster/Eff_XP_Minion01_01/Eff_Monster_XP_Minion01_01_Common_wing2_L.prefab"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Monster/Eff_XP_Minion01_01/Eff_Monster_XP_Minion01_01_Common_wing2_R.prefab"
+        }
+      ]
+    },
+    {
+      "AnimatorStateName": "Skill02_Attack",
+      "NormalizedTime": 0.07,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.TriggerEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Monster/Eff_XP_Minion01_01/Eff_Monster_XP_Minion01_01_Skill01_Strike.prefab"
+        }
+      ]
+    }
+  ]
+}

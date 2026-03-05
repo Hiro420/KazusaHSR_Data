@@ -1,0 +1,234 @@
+﻿{
+  "AbilityList": [
+    {
+      "Name": "Avatar_Test_Skill01_Phase01_Camera",
+      "TargetInfo": {
+        "TargetType": "SkillTargetEntityList"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.VCameraConfigChange",
+          "CameraConfig": {
+            "NormalConfig": {
+              "CameraState": "LightEntityAttack",
+              "AttackType": "RangeAttack",
+              "AnchorTargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "Caster"
+              },
+              "AnchorOffset": {
+                "x": 0.001,
+                "y": 0.35,
+                "z": 0.0
+              },
+              "AimTargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "SkillTargetEntityList"
+              },
+              "AimOffset": {
+                "x": 0.001,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "FollowRadius": 2.2,
+              "AnchorToAimAngle": 28.0,
+              "FollowDamp": 2.0,
+              "AimDamp": 2.0,
+              "Dutch": 2.5,
+              "ResetToDefault": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Avatar_Test_Skill02_Phase01_Camera",
+      "TargetInfo": {
+        "TargetType": "SkillTargetEntityList"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.VCameraConfigChange",
+          "CameraConfig": {
+            "NormalConfig": {
+              "CameraState": "LightEntityAttack",
+              "AttackType": "RangeAttack",
+              "AnchorTargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "Caster"
+              },
+              "AnchorOffset": {
+                "x": 0.001,
+                "y": 0.35,
+                "z": 0.0
+              },
+              "AimTargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "SkillTargetEntityList"
+              },
+              "AimOffset": {
+                "x": 0.001,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "FollowRadius": 2.2,
+              "AnchorToAimAngle": 28.0,
+              "FollowDamp": 2.0,
+              "AimDamp": 2.0,
+              "Dutch": 2.5,
+              "ResetToDefault": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Avatar_Test_Skill03_Phase01_Camera",
+      "TargetInfo": {
+        "TargetType": "SkillTargetEntityList"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.VCameraConfigChange",
+          "CameraConfig": {
+            "NormalConfig": {
+              "CameraState": "LightEntityAttack",
+              "AttackType": "RangeAttack",
+              "AnchorTargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "Caster"
+              },
+              "AnchorOffset": {
+                "x": 0.001,
+                "y": 0.35,
+                "z": 0.0
+              },
+              "AimTargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "SkillTargetEntityList"
+              },
+              "AimOffset": {
+                "x": 0.001,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "FollowRadius": 2.2,
+              "AnchorToAimAngle": 28.0,
+              "FollowDamp": 2.0,
+              "AimDamp": 2.0,
+              "Dutch": 2.5,
+              "ResetToDefault": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Avatar_Test_Skill_LinkAttack_Camera",
+      "TargetInfo": {
+        "TargetType": "StanceBreakTargetEntity"
+      },
+      "OnStart": [
+        {
+          "$type": "RPG.GameCore.VCameraConfigChange",
+          "CameraConfig": {
+            "CloseupShotConfig": {
+              "CameraTimelineAssetName": "Character_Eileen_00_QTE_TimeLine",
+              "TransTypeFollow": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "Caster"
+              },
+              "TransTypeAim": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "AllEnemy"
+              },
+              "Override": true
+            },
+            "BlendConfig": {
+              "BlendType": "Cut"
+            },
+            "ShowEntityConfig": {
+              "ShowTargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "CasterWithAllStanceBreakEntity"
+              }
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.WaitAnimState",
+          "AnimStateName": "Skill_QTE",
+          "NormalizedTimeEnd": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 1.0
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.VCameraConfigChange",
+          "CameraConfig": {
+            "NormalConfig": {
+              "CameraState": "UseSkillPerform",
+              "AnchorTargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "StanceBreakTargetEntity"
+              },
+              "AnchorOffset": {
+                "x": 1.5,
+                "y": 1.6,
+                "z": 0.01
+              },
+              "AimTargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "StanceBreakTargetEntity"
+              },
+              "AimOffset": {
+                "x": 0.01,
+                "y": 0.8,
+                "z": 0.01
+              },
+              "FollowRadius": 5.0,
+              "ResetToDefault": true
+            },
+            "CloseupShotConfig": {
+              "Exit": true
+            },
+            "BlendConfig": {
+              "BlendType": "Cut"
+            },
+            "ShowEntityConfig": {
+              "ShowTargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "CasterWithAllStanceBreakEntity"
+              }
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.WaitAnimState",
+          "AnimStateName": "Skill_QTE",
+          "NormalizedTimeEnd": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 1.057
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.VCameraConfigChange",
+          "CameraConfig": {
+            "ShakeConfig": {
+              "Amplitude": {
+                "x": -0.2,
+                "y": -0.1,
+                "z": 0.0
+              },
+              "Freq": 20.0
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

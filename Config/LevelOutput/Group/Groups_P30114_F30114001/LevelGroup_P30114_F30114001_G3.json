@@ -1,0 +1,139 @@
+﻿{
+  "GroupGUID": "7c97bf81-6a38-4d5b-9edc-1166b8117fc2",
+  "GroupName": "Contents",
+  "LevelGraph": "Config/Level/Maze/MazeExtra/TowerChallenge/Maze_ChallengeTower_Check2.json",
+  "AreaAnchorName": "LevelArea_P30114_F30114001_G3",
+  "SaveType": "Temporary",
+  "AnchorList": [],
+  "ModelList": [],
+  "MonsterList": [
+    {
+      "ID": 200001,
+      "PosX": 91.88,
+      "PosY": 1.942146,
+      "PosZ": 91.54,
+      "Name": "Monster1",
+      "RotY": 270.0,
+      "NPCMonsterID": 1003010,
+      "AIConfig": {
+        "AIFile": "Config/ConfigAI/Adventure/MazeMonster_LV3Common_idle_Loop.json",
+        "PathwayList": [
+          {}
+        ]
+      },
+      "CampID": 3,
+      "BattleArea": {
+        "GroupID": 1,
+        "ID": 1
+      },
+      "EventID": 30114201
+    },
+    {
+      "ID": 200003,
+      "PosX": 64.44,
+      "PosY": 1.942146,
+      "PosZ": 91.83,
+      "Name": "Monster3",
+      "RotY": 270.0,
+      "NPCMonsterID": 1003010,
+      "AIConfig": {
+        "AIFile": "Config/ConfigAI/Adventure/MazeMonster_LV3Common_idle_Loop.json",
+        "PathwayList": [
+          {}
+        ]
+      },
+      "CampID": 3,
+      "BattleArea": {
+        "GroupID": 1,
+        "ID": 1
+      },
+      "EventID": 30114101
+    }
+  ],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": 30.29,
+      "PosY": 1.942146,
+      "PosZ": 91.54,
+      "Name": "BuffMachine",
+      "RotY": 90.0,
+      "PropID": 100,
+      "InitLevelGraph": "Config/Level/Maze/MazeExtra/TowerChallenge/Maze_ChallengeTower_Initial14.json",
+      "Trigger": {
+        "Radius": 1.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "CampID": 4,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300002,
+      "PosX": 98.68,
+      "PosY": 1.942146,
+      "PosZ": 95.77,
+      "Name": "Reward",
+      "RotY": 250.0,
+      "PropID": 104,
+      "InitLevelGraph": "Config/Level/Maze/MazeExtra/TowerChallenge/Maze_ChallengeTower_Reward.json",
+      "Trigger": {
+        "Radius": 3.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "CampID": 4,
+      "State": "ChestLocked",
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300003,
+      "PosX": 69.82,
+      "PosY": 1.942146,
+      "PosZ": 91.54,
+      "Name": "BarrierTemp",
+      "RotY": 90.0,
+      "PropID": 105,
+      "CampID": 4,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300004,
+      "PosX": 47.77,
+      "PosY": 1.942146,
+      "PosZ": 114.09,
+      "IsDelete": true,
+      "Name": "Barrier",
+      "RotY": 90.0,
+      "PropID": 105,
+      "CampID": 4,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300005,
+      "PosX": 40.01,
+      "PosY": 1.942146,
+      "PosZ": 91.61,
+      "Name": "Barrier",
+      "RotY": 90.0,
+      "PropID": 105,
+      "CampID": 4,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": []
+}

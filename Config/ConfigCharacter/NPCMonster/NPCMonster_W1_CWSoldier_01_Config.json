@@ -1,0 +1,38 @@
+﻿{
+  "WalkSpeedRatio": 1.45,
+  "RunSpeedRatio": 0.8,
+  "NavTurnSpeed": 300.0,
+  "NavTurnBackTurnSpeed": 300.0,
+  "AnimEventConfigList": [
+    "Config/ConfigAnimEvents/Monster/Designer/Monster_W1_Soldier01_00_Designer_AnimEvent.json",
+    "Config/ConfigAnimEvents/NPC/Audio/MazeMonster_W1_CWSoldier_01_Audio_AnimEvent.json",
+    "Config/ConfigAnimEvents/Monster/Effect/Monster_W1_Soldier01_00_Effect_AnimEvent.json",
+    "Config/ConfigAnimEvents/NPCMonster/Audio/Template/NPCMonster_W1_Soldier01_Move_Audio_AnimEvent.json"
+  ],
+  "AnimZoneConfigPath": "Config/ConfigAnimZone/NPCMonster/NPCMonster_W1_Soldier01_01_AnimZone.json",
+  "SkillList": [
+    {
+      "Name": "MazeAtk01",
+      "UseType": "UIButtonClick",
+      "TargetInfo": {
+        "TargetType": "EnemySelect"
+      },
+      "EntryAbility": "MazeMonster_W1_CWSoldier_NormalAtk01"
+    },
+    {
+      "Name": "Maze_DisAdventage",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "MazeMonster_CommonAbility_DisAdventage"
+    }
+  ],
+  "AbilityList": [
+    "MazeMonster_W1_CWSoldier_NormalAtk01",
+    "MazeMonster_CommonAbility_DisAdventage"
+  ],
+  "SoundBankList": [
+    "BK_SFX_Monster_Common"
+  ]
+}

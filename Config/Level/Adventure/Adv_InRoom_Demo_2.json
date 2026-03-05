@@ -1,0 +1,39 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.CreateLevelAreas",
+          "AssetPath": {
+            "Value": "Level/InRoom_Demo.prefab"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.CreateProp",
+          "UniqueName": "Cam_T",
+          "AreaName": "InRoom_Demo",
+          "AnchorName": "CamTrigger",
+          "AnchorNativeProp": "Trigger",
+          "OnCreate": [
+            {
+              "$type": "RPG.GameCore.PropSetupTrigger",
+              "UniqueName": "Cam_T",
+              "TargetTypes": [],
+              "OnTriggerEnter": [
+                {
+                  "$type": "RPG.GameCore.ActiveVirtualCamera",
+                  "AreaName": "InRoom_Demo",
+                  "AnchorName": "VCam_1",
+                  "BlendConfig": {
+                    "BlendType": "Linear"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": []
+}

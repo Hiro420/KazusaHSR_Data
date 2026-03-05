@@ -1,0 +1,34 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.CreateLevelAreas",
+          "AssetPath": {
+            "Value": "Level/AdventureStory.prefab"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC"
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC"
+        },
+        {
+          "$type": "RPG.GameCore.TakeMission",
+          "MissionID": 200201
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "LevelFinish"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+﻿{
+  "GroupGUID": "93cba895-2a8e-4114-9659-f16e8eed0785",
+  "GroupName": "Day",
+  "AreaAnchorName": "LevelArea_P20121_F20121001_G15",
+  "AnchorList": [],
+  "ModelList": [],
+  "MonsterList": [
+    {
+      "ID": 200001,
+      "PosX": -13.49,
+      "PosY": -1.040001,
+      "PosZ": -15.73,
+      "Name": "Monster1",
+      "NPCMonsterID": 8001020,
+      "AIConfig": {
+        "AIFile": "Config/ConfigAI/Adventure/MazeMonster_XP_Minion_Ice_Patrol_Loop.json",
+        "PathwayList": [
+          {}
+        ]
+      },
+      "CampID": 3,
+      "BattleArea": {
+        "GroupID": 2,
+        "ID": 1
+      },
+      "EventID": 20121001
+    },
+    {
+      "ID": 200002,
+      "PosX": -3.46,
+      "PosY": -1.040001,
+      "PosZ": -11.42,
+      "Name": "Monster2",
+      "NPCMonsterID": 8001020,
+      "AIConfig": {
+        "AIFile": "Config/ConfigAI/Adventure/MazeMonster_XP_Minion_Ice_Patrol_Loop.json",
+        "PathwayList": [
+          {}
+        ]
+      },
+      "CampID": 3,
+      "BattleArea": {
+        "GroupID": 2,
+        "ID": 1
+      },
+      "EventID": 20121001
+    },
+    {
+      "ID": 200003,
+      "PosX": -11.28,
+      "PosY": -1.040001,
+      "PosZ": -7.72,
+      "Name": "Monster3",
+      "NPCMonsterID": 8001020,
+      "AIConfig": {
+        "AIFile": "Config/ConfigAI/Adventure/MazeMonster_XP_Minion_Ice_Patrol_Loop.json",
+        "PathwayList": [
+          {}
+        ]
+      },
+      "CampID": 3,
+      "BattleArea": {
+        "GroupID": 2,
+        "ID": 1
+      },
+      "EventID": 20121001
+    }
+  ],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": -19.54,
+      "PosY": -1.04,
+      "PosZ": -5.44,
+      "Name": "Prop1",
+      "PropID": 100,
+      "Trigger": {
+        "Radius": 1.5,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": [
+    {
+      "ID": 400001,
+      "PosX": -19.54,
+      "PosY": -1.04,
+      "PosZ": -5.38,
+      "Name": "NPC1",
+      "NPCID": 110105,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+﻿{
+  "CharacterHUDOffset": {
+    "x": 0.0,
+    "y": 2.6,
+    "z": 0.0
+  },
+  "HitBoxWidth": 0.39,
+  "HitBoxHeight": 1.95,
+  "Location": {
+    "Width": 1.04
+  },
+  "SaveModelWhenDead": true,
+  "AnimEventConfigList": [
+    "Config/ConfigAnimEvents/Monster/Designer/WMonster_Gepard_00_Designer_AnimEvent.json"
+  ],
+  "SoundBankList": [
+    "BK_SFX_Monster_Common"
+  ],
+  "SkillList": [
+    {
+      "Name": "Skill08",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "AllEnemy"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "WMonster_Gepard_00_Skill08_Blizzard_Skill01_Phase01"
+    },
+    {
+      "Name": "PassiveSkillInitiate",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "WMonster_Gepard_00_Skill08_Blizzard_PassiveSkill01"
+    }
+  ],
+  "AbilityList": [
+    "WMonster_Gepard_00_Skill08_Blizzard_PassiveSkill01"
+  ],
+  "SkillAbilityList": [
+    {
+      "Skill": "Skill08",
+      "AbilityList": [
+        "WMonster_Gepard_00_Skill08_Blizzard_Skill01_Phase01",
+        "WMonster_Gepard_00_Skill08_Blizzard_Skill01_Phase02",
+        "WMonster_Gepard_00_Skill08_Blizzard_Skill01_Camera"
+      ]
+    }
+  ],
+  "DynamicValues": {
+    "Floats": {
+      "-1742086972": {},
+      "1643420006": {
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill08",
+          "Index": 0
+        }
+      }
+    }
+  },
+  "WeaponType": "WP_Magic"
+}

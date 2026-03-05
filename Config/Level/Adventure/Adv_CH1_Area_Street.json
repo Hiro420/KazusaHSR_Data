@@ -1,0 +1,48 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.CreateLevelAreas",
+          "AssetPath": {
+            "Value": "Level/Adv_CH1_Area_Street.prefab"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC"
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC"
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC"
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC"
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC"
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC"
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC"
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "LevelFinish"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+﻿{
+  "SomatoType": "LittleMonster",
+  "CharacterHUDOffset": {
+    "x": 0.0,
+    "y": 2.2,
+    "z": 0.4
+  },
+  "BuffPanelOffset": {
+    "x": 0.5,
+    "y": 1.8,
+    "z": 0.0
+  },
+  "HitBoxHeight": 0.4,
+  "Location": {
+    "Width": 1.0
+  },
+  "VisualRadius": 0.8,
+  "AnimEventConfigList": [
+    "Config/ConfigAnimEvents/Monster/Designer/Monster_W1_Bronya_00_Designer_AnimEvent.json",
+    "Config/ConfigAnimEvents/Monster/Effect/Monster_W1_Bronya_00_Effect_AnimEvent.json",
+    "Config/ConfigAnimEvents/Monster/Audio/Monster_W1_Bronya_00_Audio_AnimEvent.json"
+  ],
+  "SoundBankList": [
+    "BK_SFX_Monster_Common"
+  ],
+  "SkillList": [
+    {
+      "Name": "Skill01",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "EnemySelect"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Monster_W1_Bronya_00_Skill01_Phase01"
+    },
+    {
+      "Name": "Skill02",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "FriendSelect",
+        "MaxTargetCount": 4,
+        "AvoidSelf": true
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Monster_W1_Bronya_00_Skill02_Phase01"
+    },
+    {
+      "Name": "Skill03",
+      "UseType": "SelectEntity",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "ReadyAnimState": "StandBy",
+      "EntryAbility": "Monster_W1_Bronya_00_Skill03_Phase01"
+    },
+    {
+      "Name": "PassiveSkill01",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Monster_W1_Bronya_00_PassiveSkill01"
+    },
+    {
+      "Name": "PassiveSkill02",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Monster_Common_PassiveSkill_StanceBreak_Action"
+    },
+    {
+      "Name": "PassiveSkill03",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Monster_W1_Bronya_00_PassiveSkill03"
+    },
+    {
+      "Name": "PassiveSkill05",
+      "SkillType": "Passive",
+      "UseType": "Passive",
+      "TargetInfo": {
+        "TargetType": "Caster"
+      },
+      "EntryAbility": "Monster_Common_MuteHitFly"
+    }
+  ],
+  "AbilityList": [
+    "Monster_Common_PassiveSkill_StanceBreak_Action",
+    "Monster_Common_MuteHitFly",
+    "Monster_W1_Bronya_00_Skill01_Phase01",
+    "Monster_W1_Bronya_00_Skill01_Phase02",
+    "Monster_W1_Bronya_00_Skill02_Phase01",
+    "Monster_W1_Bronya_00_Skill02_Phase02",
+    "Monster_W1_Bronya_00_Skill03_Phase01",
+    "Monster_W1_Bronya_00_Skill03_Phase02",
+    "Monster_W1_Bronya_00_PassiveSkill01",
+    "Monster_W1_Bronya_00_Skill01_Camera",
+    "Monster_W1_Bronya_00_Skill02_Camera",
+    "Monster_W1_Bronya_00_Skill03_Camera",
+    "Monster_W1_Bronya_00_PassiveSkill03"
+  ],
+  "DynamicValues": {
+    "Floats": {
+      "-1126825319": {
+        "Value": 1.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill01",
+          "Index": 0
+        }
+      },
+      "147328743": {
+        "Value": 0.2,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill02",
+          "Index": 0
+        }
+      },
+      "-2081132956": {
+        "Value": 20.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill02",
+          "Index": 1
+        }
+      },
+      "1483309121": {
+        "Value": 1.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill02",
+          "Index": 2
+        }
+      },
+      "-386378880": {
+        "Value": 1.0,
+        "ReadInfo": {
+          "Type": "SkillParam",
+          "TriggerKey": "Skill02",
+          "Index": 3
+        }
+      }
+    }
+  },
+  "CustomValues": {
+    "AIFlag": 1
+  },
+  "WeaponType": "WP_Scythe",
+  "ArmorType": "Armor_Metal"
+}

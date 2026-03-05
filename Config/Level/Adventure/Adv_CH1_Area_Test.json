@@ -1,0 +1,168 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.CreateLevelAreas",
+          "AssetPath": {
+            "Value": "Level/Adv_CH1_Area_Square.prefab"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.CreateLevelAreas",
+          "AssetPath": {
+            "Value": "Level/Adv_CH1_Area_Square2.prefab"
+          }
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.TriggerLoopScene",
+          "PositionOffset": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1000.0
+          },
+          "ModelPath": "Prefabs/LoopSceneDemo.prefab",
+          "CameraPositionOffset": {
+            "x": -3.5,
+            "y": 2.5,
+            "z": -3.0
+          },
+          "CameraDirection": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "CameraRotationOffset": {
+            "x": 15.0,
+            "y": -10.0,
+            "z": 0.0
+          },
+          "MoveSpeed": 3.0,
+          "SceneLength": 65.0,
+          "MoveObjects": [
+            {
+              "UniqueName": "test_1",
+              "AvatarID": "Gepard_00",
+              "MoveDirection": {
+                "x": -1.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "PositionOffset": {
+                "x": -6.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "RotationOffset": {
+                "x": 0.0,
+                "y": -90.0,
+                "z": 0.0
+              }
+            },
+            {
+              "UniqueName": "test_2",
+              "AvatarID": "PlayerBoy_00",
+              "MoveDirection": {
+                "x": -1.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "PositionOffset": {
+                "x": -5.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "RotationOffset": {
+                "x": 0.0,
+                "y": -90.0,
+                "z": 0.0
+              }
+            },
+            {
+              "UniqueName": "test_3",
+              "AvatarID": "DanHeng_00",
+              "MoveDirection": {
+                "x": -1.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "PositionOffset": {
+                "x": -4.0,
+                "y": 0.0,
+                "z": -0.5
+              },
+              "RotationOffset": {
+                "x": 0.0,
+                "y": -90.0,
+                "z": 0.0
+              }
+            },
+            {
+              "UniqueName": "test_4",
+              "AvatarID": "Mar_7th_00",
+              "MoveDirection": {
+                "x": -1.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "PositionOffset": {
+                "x": -4.0,
+                "y": 0.0,
+                "z": 0.5
+              },
+              "RotationOffset": {
+                "x": 0.0,
+                "y": -90.0,
+                "z": 0.0
+              }
+            },
+            {
+              "UniqueName": "test_5",
+              "AvatarID": "NPC_01",
+              "MoveDirection": {
+                "x": -1.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "PositionOffset": {
+                "x": -2.5,
+                "y": 0.0,
+                "z": 0.7
+              },
+              "RotationOffset": {
+                "x": 0.0,
+                "y": -90.0,
+                "z": 0.0
+              }
+            },
+            {
+              "UniqueName": "test_6",
+              "AvatarID": "NPC_01",
+              "MoveDirection": {
+                "x": -1.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "PositionOffset": {
+                "x": -2.5,
+                "y": 0.0,
+                "z": -0.7
+              },
+              "RotationOffset": {
+                "x": 0.0,
+                "y": -90.0,
+                "z": 0.0
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

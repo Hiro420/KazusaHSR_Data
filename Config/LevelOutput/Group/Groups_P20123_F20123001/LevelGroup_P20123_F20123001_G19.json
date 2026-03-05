@@ -1,0 +1,54 @@
+﻿{
+  "GroupGUID": "797e1f5f-1786-4db1-954b-fbd241e56463",
+  "GroupName": "MainMission",
+  "AreaAnchorName": "LevelArea_P20123_F20123001_G19",
+  "AnchorList": [],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": 5.01,
+      "PosY": 22.98132,
+      "PosZ": 55.3,
+      "Name": "Prop1",
+      "PropID": 100,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/Maze2_3/Maze_Chapter_01_M0203_QA2.json",
+      "Trigger": {
+        "Radius": 2.5,
+        "DimX": 3.0,
+        "DimY": 3.0,
+        "DimZ": 8.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300002,
+      "PosX": -40.51,
+      "PosY": 19.97904,
+      "PosZ": 71.44,
+      "Name": "Prop2",
+      "RotY": 313.0341,
+      "PropID": 100,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/Maze2_3/Maze_Chapter_01_M0203_QA3.json",
+      "Trigger": {
+        "Radius": 2.5,
+        "DimX": 5.0,
+        "DimY": 5.0,
+        "DimZ": 10.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": [],
+  "GroupRefreshID": 1
+}

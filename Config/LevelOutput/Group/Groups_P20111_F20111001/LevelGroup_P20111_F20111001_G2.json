@@ -1,0 +1,270 @@
+﻿{
+  "GroupGUID": "c30ac7bc-9105-41fe-bf40-0a5ec5a9fbea",
+  "GroupName": "Public01",
+  "AreaAnchorName": "LevelArea_P20111_F20111001_G2",
+  "AnchorList": [
+    {
+      "ID": 1,
+      "PosX": 34.19,
+      "PosY": -2.167227,
+      "PosZ": -8.49,
+      "Name": "CHeckPoint01",
+      "RotY": 270.0,
+      "Comment": "玩家起点默认/复活点01"
+    },
+    {
+      "ID": 2,
+      "PosX": 9.37,
+      "PosY": -2.134002,
+      "PosZ": -77.16,
+      "Name": "CHeckPoint02",
+      "RotY": 90.0,
+      "Comment": "复活点02"
+    },
+    {
+      "ID": 3,
+      "PosX": -16.59,
+      "PosY": -2.033928,
+      "PosZ": -170.3,
+      "Name": "CHeckPoint03",
+      "RotY": 270.0,
+      "Comment": "复活点03"
+    }
+  ],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": 36.03,
+      "PosY": -2.034807,
+      "PosZ": -8.73,
+      "Name": "Prop1_CheckPointTrigger01",
+      "Comment": "复苏之门01",
+      "PropID": 101,
+      "Trigger": {
+        "Radius": 6.0,
+        "DimX": 8.0,
+        "DimY": 2.0,
+        "DimZ": 8.0,
+        "TargetCamps": [],
+        "TriggerTimes": -1,
+        "Server": true
+      },
+      "ValueSource": {
+        "Values": []
+      },
+      "State": "CheckPointEnable",
+      "RecordID": 1,
+      "AnchorGroupID": 2,
+      "AnchorID": 1,
+      "MapTeleportID": 2011101,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300002,
+      "PosX": 7.97,
+      "PosY": -1.134002,
+      "PosZ": -77.45,
+      "Name": "Prop2_CheckPointTrigger02",
+      "Comment": "复苏之门02",
+      "PropID": 101,
+      "Trigger": {
+        "Radius": 8.0,
+        "DimX": 8.0,
+        "DimY": 2.0,
+        "DimZ": 4.0,
+        "TargetCamps": [],
+        "TriggerTimes": -1,
+        "Server": true
+      },
+      "ValueSource": {
+        "Values": []
+      },
+      "State": "CheckPointDisable",
+      "RecordID": 1,
+      "AnchorGroupID": 2,
+      "AnchorID": 2,
+      "MapTeleportID": 2011102,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300004,
+      "PosX": -16.29,
+      "PosY": -2.131,
+      "PosZ": -167.74,
+      "Name": "Prop4_CheckPointTrigger03",
+      "Comment": "复苏之门03",
+      "PropID": 101,
+      "Trigger": {
+        "Radius": 4.0,
+        "DimX": 4.0,
+        "DimY": 2.0,
+        "DimZ": 10.0,
+        "TargetCamps": [],
+        "TriggerTimes": -1,
+        "Server": true
+      },
+      "ValueSource": {
+        "Values": []
+      },
+      "State": "CheckPointDisable",
+      "RecordID": 1,
+      "AnchorGroupID": 2,
+      "AnchorID": 3,
+      "MapTeleportID": 2011103,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300005,
+      "PosX": -70.71,
+      "PosY": -1.941058,
+      "PosZ": -170.25,
+      "Name": "Prop5_OutPoint",
+      "RotY": 90.0,
+      "Comment": "迷宫出口",
+      "PropID": 103,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/Town/Town_Chapter01_EntryMaze.json",
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "RecordID": 1,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300009,
+      "PosX": 41.4,
+      "PosY": -1.873,
+      "PosZ": -8.57,
+      "Name": "Prop9_CheckPointProp01",
+      "RotY": 270.0,
+      "Comment": "复苏之门01模型",
+      "PropID": 102,
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 3.0,
+        "DimY": 2.0,
+        "DimZ": 3.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "ValueSource": {
+        "Values": [
+          {
+            "$type": "RPG.GameCore.SharedInt",
+            "Key": "Maze_CheckPoint_RefreshGroupID",
+            "Value": 2
+          },
+          {
+            "$type": "RPG.GameCore.SharedInt",
+            "Key": "Maze_CheckPoint_RefreshPropID",
+            "Value": 300001
+          }
+        ]
+      },
+      "RecordID": 1,
+      "AnchorGroupID": 2,
+      "AnchorID": 1,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300010,
+      "PosX": 8.25,
+      "PosY": -1.86,
+      "PosZ": -78.7,
+      "Name": "Prop10_CheckPointProp02",
+      "Comment": "复苏之门02模型",
+      "PropID": 102,
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 4.0,
+        "DimY": 2.0,
+        "DimZ": 3.0,
+        "TargetCamps": [],
+        "TriggerTimes": -1
+      },
+      "ValueSource": {
+        "Values": [
+          {
+            "$type": "RPG.GameCore.SharedInt",
+            "Key": "Maze_CheckPoint_RefreshGroupID",
+            "Value": 2
+          },
+          {
+            "$type": "RPG.GameCore.SharedInt",
+            "Key": "Maze_CheckPoint_RefreshPropID",
+            "Value": 300002
+          }
+        ]
+      },
+      "RecordID": 1,
+      "AnchorGroupID": 2,
+      "AnchorID": 2,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300011,
+      "PosX": -16.72,
+      "PosY": -1.79,
+      "PosZ": -167.83,
+      "Name": "Prop11_CheckPointProp03",
+      "RotY": 180.0,
+      "Comment": "复苏之门03模型",
+      "PropID": 102,
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 4.0,
+        "DimY": 2.0,
+        "DimZ": 3.0,
+        "TargetCamps": [],
+        "TriggerTimes": -1
+      },
+      "ValueSource": {
+        "Values": [
+          {
+            "$type": "RPG.GameCore.SharedInt",
+            "Key": "Maze_CheckPoint_RefreshGroupID",
+            "Value": 2
+          },
+          {
+            "$type": "RPG.GameCore.SharedInt",
+            "Key": "Maze_CheckPoint_RefreshPropID",
+            "Value": 300004
+          }
+        ]
+      },
+      "RecordID": 1,
+      "AnchorGroupID": 2,
+      "AnchorID": 3,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [
+    {
+      "ID": 1,
+      "PosX": 1235.5,
+      "PosZ": -1593.2,
+      "Name": "BattleArea1",
+      "RotY": 271.69,
+      "Tags": [
+        "BattleArea01"
+      ]
+    }
+  ],
+  "NPCList": [],
+  "GroupRefreshID": 1
+}

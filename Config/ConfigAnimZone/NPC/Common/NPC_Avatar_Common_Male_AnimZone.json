@@ -1,0 +1,174 @@
+﻿{
+  "StateZoneConfig": {
+    "AnimatorStateZoneDescList": [
+      {
+        "StateName": "StandBy",
+        "TransitionType": "Current",
+        "ZoneList": [
+          {
+            "ZoneType": "Idle"
+          },
+          {
+            "ZoneType": "FootIK"
+          },
+          {
+            "ZoneType": "FootIKLock"
+          }
+        ]
+      },
+      {
+        "StateName": "IdleTurnR",
+        "ZoneList": [
+          {
+            "ZoneType": "Idle"
+          },
+          {
+            "ZoneType": "AnimSteer"
+          }
+        ]
+      },
+      {
+        "StateName": "IdleTurnL",
+        "ZoneList": [
+          {
+            "ZoneType": "Idle"
+          },
+          {
+            "ZoneType": "AnimSteer"
+          }
+        ]
+      },
+      {
+        "StateName": "Walk",
+        "ZoneList": [
+          {
+            "ZoneType": "Move"
+          }
+        ]
+      },
+      {
+        "StateName": "RunBS_R",
+        "ZoneList": [
+          {
+            "ZoneType": "Move"
+          }
+        ]
+      },
+      {
+        "StateName": "RunBS_L",
+        "ZoneList": [
+          {
+            "ZoneType": "Move"
+          }
+        ]
+      },
+      {
+        "StateName": "Run",
+        "ZoneList": [
+          {
+            "ZoneType": "Move"
+          }
+        ]
+      },
+      {
+        "StateName": "RunStop_R",
+        "ZoneList": [
+          {
+            "ZoneType": "Move",
+            "NTimeEnd": 0.2
+          },
+          {
+            "ZoneType": "Idle",
+            "NTimeStart": 0.2
+          },
+          {
+            "ZoneType": "FootIK",
+            "NTimeStart": 0.419
+          }
+        ]
+      },
+      {
+        "StateName": "RunStop_L",
+        "ZoneList": [
+          {
+            "ZoneType": "Move",
+            "NTimeEnd": 0.2
+          },
+          {
+            "ZoneType": "Idle",
+            "NTimeStart": 0.2
+          },
+          {
+            "ZoneType": "FootIK",
+            "NTimeStart": 0.419
+          }
+        ]
+      },
+      {
+        "StateName": "Run_TurnLeft_L",
+        "ZoneList": [
+          {
+            "ZoneType": "Move"
+          },
+          {
+            "ZoneType": "TurnBack"
+          }
+        ]
+      },
+      {
+        "StateName": "Run_TurnLeft_R",
+        "ZoneList": [
+          {
+            "ZoneType": "Move"
+          },
+          {
+            "ZoneType": "TurnBack"
+          }
+        ]
+      },
+      {
+        "StateName": "Run_TurnRight_L",
+        "ZoneList": [
+          {
+            "ZoneType": "Move"
+          },
+          {
+            "ZoneType": "TurnBack"
+          }
+        ]
+      },
+      {
+        "StateName": "Run_TurnRight_R",
+        "ZoneList": [
+          {
+            "ZoneType": "Move"
+          },
+          {
+            "ZoneType": "TurnBack"
+          }
+        ]
+      },
+      {
+        "StateName": "WalktoStop_R",
+        "ZoneList": [
+          {
+            "ZoneType": "FootIK",
+            "NTimeStart": 0.66
+          }
+        ]
+      },
+      {
+        "StateName": "WalktoStop_L",
+        "ZoneList": [
+          {
+            "ZoneType": "FootIK",
+            "NTimeStart": 0.66
+          }
+        ]
+      }
+    ]
+  },
+  "ClipZoneConfig": {
+    "AnimatorClipZoneDescList": []
+  }
+}

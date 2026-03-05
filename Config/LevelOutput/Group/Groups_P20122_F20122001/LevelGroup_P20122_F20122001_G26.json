@@ -1,0 +1,77 @@
+﻿{
+  "GroupGUID": "40f7da66-f00d-4ff7-8e57-ca8fedd857a5",
+  "GroupName": "DefaultCocoon",
+  "AreaAnchorName": "LevelArea_P20122_F20122001_G26",
+  "UnlockMainMissionID": 1010601,
+  "AnchorList": [],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": -30.61,
+      "PosY": 22.68129,
+      "PosZ": 221.74,
+      "Name": "Prop1",
+      "RotY": 90.0,
+      "Comment": "茧",
+      "PropID": 801,
+      "InitLevelGraph": "Config/Level/Maze/Props/Test_Prop_Cocoon.json",
+      "Trigger": {
+        "Radius": 3.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": -1
+      },
+      "ValueSource": {
+        "Values": [
+          {
+            "$type": "RPG.GameCore.SharedInt",
+            "Key": "CocoonID",
+            "Value": 1004
+          },
+          {
+            "$type": "RPG.GameCore.SharedInt",
+            "Key": "BattleAreaGroupID",
+            "Value": 2
+          },
+          {
+            "$type": "RPG.GameCore.SharedInt",
+            "Key": "BattleAreaID",
+            "Value": 1
+          }
+        ]
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300002,
+      "PosX": -30.61,
+      "PosY": 22.68129,
+      "PosZ": 221.74,
+      "Name": "Prop2",
+      "Comment": "Mappinginfo",
+      "PropID": 904,
+      "InitLevelGraph": "Config/Level/Maze/Props/Test_Prop_Mappinginfo.json",
+      "ValueSource": {
+        "Values": [
+          {
+            "$type": "RPG.GameCore.SharedInt",
+            "Key": "MappinginfoID",
+            "Value": 1004
+          }
+        ]
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": [],
+  "GroupRefreshID": 1
+}

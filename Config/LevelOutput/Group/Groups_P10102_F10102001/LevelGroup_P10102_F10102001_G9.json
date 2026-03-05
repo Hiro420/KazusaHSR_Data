@@ -1,0 +1,66 @@
+﻿{
+  "GroupGUID": "57435c20-aaa6-4d1a-8acd-72d00b2233c2",
+  "GroupName": "MainMission",
+  "AreaAnchorName": "LevelArea_P10102_F10102001_G9",
+  "AnchorList": [
+    {
+      "ID": 1,
+      "PosX": -68.98,
+      "PosY": 5.178946,
+      "PosZ": 32.7,
+      "Name": "Anchor1",
+      "RotY": 270.0
+    },
+    {
+      "ID": 2,
+      "PosX": -62.18,
+      "PosY": 5.697805,
+      "PosZ": 28.53,
+      "Name": "Anchor2",
+      "RotY": 270.0
+    }
+  ],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": -70.17,
+      "PosY": 5.000005,
+      "PosZ": 26.89,
+      "Name": "Prop1",
+      "Comment": "触发剧情",
+      "PropID": 100,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 3.0,
+        "DimX": 5.0,
+        "DimY": 5.0,
+        "DimZ": 15.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": [
+    {
+      "ID": 400001,
+      "PosX": -57.11,
+      "PosY": 4.713101,
+      "PosZ": 28.57,
+      "Name": "NPC1",
+      "RotY": 270.0,
+      "Comment": "奥列格",
+      "NPCID": 101023001,
+      "CreateOnInitial": false,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "GroupRefreshID": 1
+}

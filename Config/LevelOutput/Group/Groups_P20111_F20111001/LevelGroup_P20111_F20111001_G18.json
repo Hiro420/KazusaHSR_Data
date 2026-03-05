@@ -1,0 +1,64 @@
+﻿{
+  "GroupGUID": "655df394-c5ae-48b0-9b2d-2ade1039f351",
+  "GroupName": "DayMission",
+  "AreaAnchorName": "LevelArea_P20111_F20111001_G18",
+  "AnchorList": [],
+  "ModelList": [],
+  "MonsterList": [
+    {
+      "ID": 200001,
+      "PosX": 40.88,
+      "PosY": -1.134002,
+      "PosZ": -96.0,
+      "Name": "Monster1",
+      "RotY": 270.0,
+      "Comment": "任务怪1",
+      "NPCMonsterID": 1022020,
+      "AIConfig": {
+        "AIFile": "Config/ConfigAI/Adventure/MazeMonster_Soldier_Common_Patrol_Loop.json",
+        "PathwayList": [
+          {
+            "UseGroup": 18,
+            "UseID": 1,
+            "StartAt": 1
+          }
+        ]
+      },
+      "CampID": 3,
+      "BattleArea": {
+        "GroupID": 2,
+        "ID": 1
+      },
+      "RecordID": 1,
+      "EventID": 202201
+    }
+  ],
+  "PropList": [],
+  "WaypointList": [
+    {
+      "ID": 1,
+      "PosX": 40.88,
+      "PosY": -1.134002,
+      "PosZ": -96.0
+    },
+    {
+      "ID": 2,
+      "PosX": 32.66,
+      "PosY": -1.134002,
+      "PosZ": -96.0
+    }
+  ],
+  "PathwayList": [
+    {
+      "ID": 1,
+      "Name": "Pathway1",
+      "WaypointIDList": [
+        1,
+        2
+      ]
+    }
+  ],
+  "BattleAreaList": [],
+  "NPCList": [],
+  "GroupRefreshID": 1
+}

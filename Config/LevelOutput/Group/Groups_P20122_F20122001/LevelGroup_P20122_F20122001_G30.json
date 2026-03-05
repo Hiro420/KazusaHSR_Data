@@ -1,0 +1,149 @@
+﻿{
+  "GroupGUID": "597b54b7-08ba-4bde-abb3-6a606580cf1a",
+  "GroupName": "SubMission",
+  "AreaAnchorName": "LevelArea_P20122_F20122001_G30",
+  "AnchorList": [],
+  "ModelList": [],
+  "MonsterList": [
+    {
+      "ID": 200001,
+      "PosX": -57.23,
+      "PosY": 20.47728,
+      "PosZ": 141.74,
+      "Name": "Monster1",
+      "RotY": 144.3272,
+      "NPCMonsterID": 1022010,
+      "AIConfig": {
+        "AIFile": "Config/ConfigAI/Adventure/MazeMonster_Soldier_Common_Patrol_Loop.json",
+        "PathwayList": [
+          {
+            "UseGroup": 30,
+            "UseID": 1,
+            "Type": "Reverse",
+            "StartAt": 1
+          }
+        ]
+      },
+      "BattleArea": {
+        "GroupID": 2,
+        "ID": 1
+      },
+      "EventID": 20122121
+    },
+    {
+      "ID": 200003,
+      "PosX": -18.83,
+      "PosY": 21.61908,
+      "PosZ": 268.39,
+      "Name": "Monster3",
+      "RotY": 95.6715,
+      "NPCMonsterID": 1022010,
+      "AIConfig": {
+        "AIFile": "Config/ConfigAI/Adventure/MazeMonster_Soldier_Common_Patrol_Loop.json",
+        "PathwayList": [
+          {
+            "UseGroup": 30,
+            "UseID": 2,
+            "Type": "Reverse",
+            "StartAt": 4
+          }
+        ]
+      },
+      "BattleArea": {
+        "GroupID": 2,
+        "ID": 1
+      },
+      "EventID": 20122122
+    }
+  ],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": 2.626,
+      "PosY": 25.04,
+      "PosZ": 220.19,
+      "Name": "Prop1",
+      "PropID": 603,
+      "InitLevelGraph": "Config/Level/Maze/Props/Test_Prop_PickupItem.json",
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "EventID": 20122521,
+      "ChestID": 20122521,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [
+    {
+      "ID": 1,
+      "PosX": -63.78,
+      "PosY": 20.44944,
+      "PosZ": 154.96
+    },
+    {
+      "ID": 2,
+      "PosX": -61.69,
+      "PosY": 20.57355,
+      "PosZ": 146.82
+    },
+    {
+      "ID": 3,
+      "PosX": -56.27,
+      "PosY": 20.50045,
+      "PosZ": 140.95
+    },
+    {
+      "ID": 4,
+      "PosX": -18.63,
+      "PosY": 21.58474,
+      "PosZ": 268.75
+    },
+    {
+      "ID": 5,
+      "PosX": -24.84,
+      "PosY": 21.57845,
+      "PosZ": 264.69
+    },
+    {
+      "ID": 6,
+      "PosX": -26.64,
+      "PosY": 21.61891,
+      "PosZ": 258.6
+    }
+  ],
+  "PathwayList": [
+    {
+      "ID": 1,
+      "PosX": -32.11,
+      "PosY": 22.73461,
+      "PosZ": 214.89,
+      "Name": "Pathway1",
+      "WaypointIDList": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "ID": 2,
+      "PosX": 48.4,
+      "PosY": 29.14157,
+      "PosZ": 207.52,
+      "Name": "Pathway2",
+      "RotY": 95.6715,
+      "WaypointIDList": [
+        4,
+        5,
+        6
+      ]
+    }
+  ],
+  "BattleAreaList": [],
+  "NPCList": []
+}

@@ -1,0 +1,274 @@
+﻿{
+  "GroupGUID": "60dda409-a2af-40da-bcb8-8f49cea383f4",
+  "GroupName": "DefaultData",
+  "AreaAnchorName": "LevelArea_P20131_F20131001_G2",
+  "AnchorList": [
+    {
+      "ID": 1,
+      "PosX": 114.24,
+      "PosY": 2.007029,
+      "PosZ": -93.74,
+      "Name": "StartPoint",
+      "RotY": 270.0,
+      "Comment": "出生点"
+    },
+    {
+      "ID": 3,
+      "PosX": 14.12,
+      "PosY": -0.984844,
+      "PosZ": -221.44,
+      "Name": "Anchor3"
+    },
+    {
+      "ID": 4,
+      "PosX": -56.96,
+      "PosY": -0.110988,
+      "PosZ": -93.8,
+      "Name": "Anchor4",
+      "RotY": 270.0
+    },
+    {
+      "ID": 2,
+      "PosX": -47.43,
+      "PosY": -0.984844,
+      "PosZ": -195.95,
+      "Name": "Anchor2",
+      "Comment": "01柱附近"
+    },
+    {
+      "ID": 5,
+      "PosX": -17.99,
+      "PosY": -0.98,
+      "PosZ": -207.99,
+      "Name": "Anchor5",
+      "Comment": "回头"
+    }
+  ],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [
+    {
+      "ID": 300006,
+      "PosX": 112.54,
+      "PosY": 2.007029,
+      "PosZ": -93.3,
+      "Name": "Checkpoint1",
+      "PropID": 101,
+      "Trigger": {
+        "Radius": 8.0,
+        "DimX": 16.0,
+        "DimY": 4.0,
+        "DimZ": 16.0,
+        "TargetCamps": [],
+        "TriggerTimes": -1,
+        "Server": true
+      },
+      "ValueSource": {
+        "Values": []
+      },
+      "State": "CheckPointEnable",
+      "AnchorGroupID": 2,
+      "AnchorID": 1,
+      "MapTeleportID": 2013101,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300011,
+      "PosX": 114.04,
+      "PosY": 2.307029,
+      "PosZ": -87.08,
+      "Name": "Prop11",
+      "RotY": 180.0,
+      "Comment": "cp1模型",
+      "PropID": 102,
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "ValueSource": {
+        "Values": [
+          {
+            "$type": "RPG.GameCore.SharedInt",
+            "Key": "Maze_CheckPoint_RefreshGroupID",
+            "Value": 2
+          },
+          {
+            "$type": "RPG.GameCore.SharedInt",
+            "Key": "Maze_CheckPoint_RefreshPropID",
+            "Value": 300006
+          }
+        ]
+      },
+      "AnchorGroupID": 2,
+      "AnchorID": 1,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300003,
+      "PosX": 14.1,
+      "PosY": -0.984844,
+      "PosZ": -223.33,
+      "Name": "Checkpoint2",
+      "PropID": 101,
+      "Trigger": {
+        "Radius": 6.0,
+        "DimX": 13.5,
+        "DimY": 4.0,
+        "DimZ": 5.2,
+        "TargetCamps": [],
+        "TriggerTimes": -1,
+        "Server": true
+      },
+      "ValueSource": {
+        "Values": []
+      },
+      "State": "CheckPointDisable",
+      "AnchorGroupID": 2,
+      "AnchorID": 3,
+      "MapTeleportID": 2013102,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300008,
+      "PosX": 16.55,
+      "PosY": -0.684844,
+      "PosZ": -222.5,
+      "Name": "Prop8",
+      "RotY": 270.0,
+      "Comment": "cp2模型",
+      "PropID": 102,
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "ValueSource": {
+        "Values": [
+          {
+            "$type": "RPG.GameCore.SharedInt",
+            "Key": "Maze_CheckPoint_RefreshGroupID",
+            "Value": 2
+          },
+          {
+            "$type": "RPG.GameCore.SharedInt",
+            "Key": "Maze_CheckPoint_RefreshPropID",
+            "Value": 300003
+          }
+        ]
+      },
+      "AnchorGroupID": 2,
+      "AnchorID": 3,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300004,
+      "PosX": -54.47,
+      "PosY": -0.110988,
+      "PosZ": -93.69,
+      "Name": "Checkpoint3",
+      "PropID": 101,
+      "Trigger": {
+        "Radius": 4.0,
+        "DimX": 6.21,
+        "DimY": 4.0,
+        "DimZ": 11.63,
+        "TargetCamps": [],
+        "TriggerTimes": -1,
+        "Server": true
+      },
+      "ValueSource": {
+        "Values": []
+      },
+      "State": "CheckPointDisable",
+      "AnchorGroupID": 2,
+      "AnchorID": 4,
+      "MapTeleportID": 2013103,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300009,
+      "PosX": -53.77,
+      "PosY": 0.22,
+      "PosZ": -92.2,
+      "Name": "Prop9",
+      "RotY": 180.0,
+      "Comment": "cp3模型",
+      "PropID": 102,
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "ValueSource": {
+        "Values": [
+          {
+            "$type": "RPG.GameCore.SharedInt",
+            "Key": "Maze_CheckPoint_RefreshGroupID",
+            "Value": 2
+          },
+          {
+            "$type": "RPG.GameCore.SharedInt",
+            "Key": "Maze_CheckPoint_RefreshPropID",
+            "Value": 300004
+          }
+        ]
+      },
+      "AnchorGroupID": 2,
+      "AnchorID": 4,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300001,
+      "PosX": -140.71,
+      "PosY": -1.920243,
+      "PosZ": -96.2,
+      "Name": "Exit",
+      "RotY": 90.0,
+      "Comment": "迷宫出口",
+      "PropID": 103,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/Town/Town_Chapter01_EntryMaze.json",
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [
+    {
+      "ID": 1,
+      "PosX": 10.38,
+      "PosZ": 511.06,
+      "Name": "BattleArea1",
+      "RotY": 271.69,
+      "Tags": [
+        "BattleArea01"
+      ]
+    }
+  ],
+  "NPCList": [],
+  "GroupRefreshID": 1
+}

@@ -1,0 +1,41 @@
+﻿{
+  "GroupGUID": "6b455829-3d07-430e-adeb-e069665ab686",
+  "GroupName": "Default",
+  "AreaAnchorName": "LevelArea_P10101_F10101003_G1",
+  "SaveType": "Temporary",
+  "AnchorList": [
+    {
+      "ID": 1,
+      "PosZ": 2.557,
+      "Name": "Anchor1",
+      "RotY": 180.0
+    }
+  ],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosY": 0.945,
+      "PosZ": 4.892,
+      "Name": "Prop1",
+      "Comment": "传送点",
+      "PropID": 108,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/Town/Town_Chapter01_FlowerShop_Exit.json",
+      "Trigger": {
+        "Radius": 1.5,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": []
+}

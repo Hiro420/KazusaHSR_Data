@@ -1,0 +1,41 @@
+﻿{
+  "GroupGUID": "b9387692-3e77-4bae-a0f2-400ed6ee6ccf",
+  "GroupName": "MainMission",
+  "AreaAnchorName": "LevelArea_P20123_F20123001_G15",
+  "SaveType": "Reset",
+  "AnchorList": [
+    {
+      "ID": 1,
+      "PosX": 5.04,
+      "PosY": 20.0,
+      "PosZ": -46.75,
+      "Name": "Anchor1"
+    }
+  ],
+  "ModelList": [],
+  "MonsterList": [
+    {
+      "ID": 200001,
+      "PosX": 5.04,
+      "PosY": 20.0,
+      "PosZ": -46.75,
+      "Name": "Monster1",
+      "RotY": 326.6949,
+      "NPCMonsterID": 1004020,
+      "AIConfig": {
+        "AIFile": "Config/ConfigAI/Adventure/MazeMonster_LV3Common_idle_Loop.json"
+      },
+      "CampID": 3,
+      "BattleArea": {
+        "GroupID": 2,
+        "ID": 1
+      },
+      "EventID": 20123201
+    }
+  ],
+  "PropList": [],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": []
+}

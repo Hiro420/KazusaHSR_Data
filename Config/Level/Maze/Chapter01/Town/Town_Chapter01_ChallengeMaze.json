@@ -1,0 +1,36 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByShowChallengeSelectPage"
+          },
+          "SuccessTaskList": [
+            {
+              "$type": "RPG.GameCore.ShowUI",
+              "Name": "Ui.Challenge.ChallengeSelectPage"
+            }
+          ],
+          "FailedTaskList": []
+        },
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "TargetIsOwner": true,
+          "ColliderRelativePath": "Trigger",
+          "ButtonText": {
+            "hash": 1706038403
+          },
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.ShowUI",
+              "Name": "Ui.Challenge.ChallengeSelectPage"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

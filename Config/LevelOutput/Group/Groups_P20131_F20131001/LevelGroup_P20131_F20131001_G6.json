@@ -1,0 +1,786 @@
+﻿{
+  "GroupGUID": "28c863a0-6d34-4ddc-a181-506044e03332",
+  "GroupName": "DefaultProp",
+  "ConfigPrefabPath": "Level/Mission/Mission_9010901.prefab",
+  "AreaAnchorName": "LevelArea_P20131_F20131001_G6",
+  "AnchorList": [
+    {
+      "ID": 1,
+      "PosX": 0.00035,
+      "PosY": -2.7,
+      "PosZ": -94.00024,
+      "Name": "North"
+    },
+    {
+      "ID": 2,
+      "PosX": 0.00035,
+      "PosY": -2.7,
+      "PosZ": -94.00024,
+      "Name": "East",
+      "RotY": 90.0
+    },
+    {
+      "ID": 3,
+      "PosX": 0.00035,
+      "PosY": -2.7,
+      "PosZ": -94.00024,
+      "Name": "South",
+      "RotY": 180.0
+    },
+    {
+      "ID": 4,
+      "PosX": 0.00035,
+      "PosY": -2.7,
+      "PosZ": -94.00024,
+      "Name": "West",
+      "RotY": 270.0
+    }
+  ],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": 104.02,
+      "PosY": 2.0,
+      "PosZ": -100.27,
+      "IsDelete": true,
+      "Name": "Prop1",
+      "Comment": "岗哨的路障",
+      "PropID": 2013109,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300002,
+      "PosX": 104.18,
+      "PosY": 2.0,
+      "PosZ": -88.36,
+      "IsDelete": true,
+      "Name": "Prop2",
+      "Comment": "岗哨的路障",
+      "PropID": 2013109,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300003,
+      "PosX": -47.494,
+      "PosY": -1.0,
+      "PosZ": -180.11,
+      "Name": "Prop3",
+      "RotY": 90.0,
+      "Comment": "铁门墙",
+      "PropID": 2013110,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300004,
+      "PosX": -0.07,
+      "PosY": -0.49,
+      "PosZ": -54.79,
+      "Name": "Prop4",
+      "RotY": 90.0,
+      "Comment": "4区域封路",
+      "PropID": 2013110,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300005,
+      "PosX": -0.01,
+      "PosY": -0.46,
+      "PosZ": -54.68,
+      "Name": "Prop5",
+      "RotY": 180.0,
+      "Comment": "4区域封路",
+      "PropID": 101004,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300006,
+      "PosX": 0.000309,
+      "PosY": -2.7,
+      "PosZ": -94.0,
+      "Name": "Prop6",
+      "RotY": 180.0,
+      "Comment": "旋转桥",
+      "PropID": 301011,
+      "ValueSource": {
+        "Values": [
+          {
+            "$type": "RPG.GameCore.SharedString",
+            "Key": "Bridge_Rotate_North",
+            "Value": "LevelArea_P20131_F20131001_G6,North"
+          },
+          {
+            "$type": "RPG.GameCore.SharedString",
+            "Key": "Bridge_Rotate_East",
+            "Value": "LevelArea_P20131_F20131001_G6,East"
+          },
+          {
+            "$type": "RPG.GameCore.SharedString",
+            "Key": "Bridge_Rotate_South",
+            "Value": "LevelArea_P20131_F20131001_G6,South"
+          },
+          {
+            "$type": "RPG.GameCore.SharedString",
+            "Key": "Bridge_Rotate_West",
+            "Value": "LevelArea_P20131_F20131001_G6,West"
+          }
+        ]
+      },
+      "State": "BridgeState1",
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": [],
+      "StageObjectCapture": {
+        "BlockAlias": "Chap01_CloseView_MAZ_M301_MazePart07",
+        "PrefabAlias": "Chap01_Grd_WheelGear_01_part01"
+      }
+    },
+    {
+      "ID": 300036,
+      "PosX": 0.000309,
+      "PosY": -2.7,
+      "PosZ": -94.0,
+      "Name": "Prop36",
+      "RotY": 180.0,
+      "Comment": "旋转桥小齿轮",
+      "PropID": 301001,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": [],
+      "StageObjectCapture": {
+        "BlockAlias": "Chap01_CloseView_MAZ_M301_MazePart07",
+        "PrefabAlias": "Chap01_Grd_WheelGear_01_part02"
+      }
+    },
+    {
+      "ID": 300037,
+      "PosX": 0.000309,
+      "PosY": -2.7,
+      "PosZ": -94.0,
+      "Name": "Prop37",
+      "RotY": 180.0,
+      "Comment": "旋转桥底盘",
+      "PropID": 301001,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": [],
+      "StageObjectCapture": {
+        "BlockAlias": "Chap01_CloseView_MAZ_M301_MazePart07",
+        "PrefabAlias": "Chap01_Grd_WheelGear_02"
+      }
+    },
+    {
+      "ID": 300007,
+      "PosX": -2.83,
+      "PosY": -2.999994,
+      "PosZ": -65.467,
+      "Name": "Prop7",
+      "Comment": "桥控制4",
+      "PropID": 1010108,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300009,
+      "PosX": 3.6,
+      "PosY": -3.000002,
+      "PosZ": -122.7,
+      "Name": "Prop9",
+      "RotY": 180.0,
+      "Comment": "桥控制2",
+      "PropID": 101001,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/M301/Maze_Chap01_M301_RotateBridge_Control_02.json",
+      "Trigger": {
+        "Radius": 1.5,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "State": "Locked",
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300010,
+      "PosX": 27.32,
+      "PosY": -2.999997,
+      "PosZ": -87.29,
+      "Name": "Prop10",
+      "RotY": 77.5,
+      "Comment": "桥控制1",
+      "PropID": 101001,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/M301/Maze_Chap01_M301_RotateBridge_Control_02.json",
+      "Trigger": {
+        "Radius": 1.5,
+        "DimX": 3.0,
+        "DimY": 3.0,
+        "DimZ": 3.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "State": "Locked",
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300011,
+      "PosX": 0.22,
+      "PosY": 1.01,
+      "PosZ": -182.63,
+      "Name": "Prop11",
+      "Comment": "电房大门",
+      "PropID": 101004,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/M301/Maze_Chapter_01_M0301_LockedDoor_01.json",
+      "Trigger": {
+        "Radius": 1.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300013,
+      "PosX": -47.46,
+      "PosY": -0.98,
+      "PosZ": -180.11,
+      "Name": "Prop13",
+      "RotY": 180.0,
+      "Comment": "军火库大门",
+      "PropID": 101005,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300015,
+      "PosX": 100.37,
+      "PosY": 2.0,
+      "PosZ": -93.83,
+      "Name": "Prop15",
+      "Comment": "进来后的第一段开车对话",
+      "PropID": 100,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 1.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 25.69,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300016,
+      "PosX": 38.41,
+      "PosY": 2.0,
+      "PosZ": -93.99,
+      "Name": "Prop16",
+      "RotY": 270.0,
+      "Comment": "旋转桥前对话trigger",
+      "PropID": 100,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 1.0,
+        "DimX": 10.13,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300017,
+      "PosX": 30.5,
+      "PosY": -3.0,
+      "PosZ": -106.33,
+      "Name": "Prop17",
+      "Comment": "旋转桥放飞无人机",
+      "PropID": 100,
+      "Trigger": {
+        "Radius": 7.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300018,
+      "PosX": -1.96,
+      "PosY": 1.01,
+      "PosZ": -179.77,
+      "Name": "Prop18",
+      "Comment": "电房门口剧情",
+      "PropID": 100,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 7.0,
+        "DimX": 8.0,
+        "DimY": 1.0,
+        "DimZ": 4.86,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300019,
+      "PosX": 3.92,
+      "PosY": 1.01,
+      "PosZ": -179.61,
+      "Name": "Prop19",
+      "Comment": "电房前的npc对话1",
+      "PropID": 100,
+      "Trigger": {
+        "Radius": 1.5,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300020,
+      "PosX": -5.95,
+      "PosY": 1.01,
+      "PosZ": -181.64,
+      "Name": "Prop20",
+      "Comment": "电房前的npc对话2",
+      "PropID": 100,
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300021,
+      "PosX": 5.82,
+      "PosY": 1.01,
+      "PosZ": -181.05,
+      "Name": "Prop21",
+      "Comment": "电房前的npc1离开",
+      "PropID": 100,
+      "Trigger": {
+        "Radius": 4.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300022,
+      "PosX": -5.95,
+      "PosY": 1.01,
+      "PosZ": -181.64,
+      "Name": "Prop22",
+      "Comment": "电房前的npc2离开",
+      "PropID": 100,
+      "Trigger": {
+        "Radius": 4.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300023,
+      "PosX": -2.21,
+      "PosY": -0.98,
+      "PosZ": -234.7,
+      "Name": "Prop23",
+      "RotY": 270.0,
+      "Comment": "费斯上校的对话1",
+      "PropID": 100,
+      "Trigger": {
+        "Radius": 3.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300024,
+      "PosX": 0.02,
+      "PosY": 3.81,
+      "PosZ": -193.25,
+      "Name": "Prop24",
+      "Comment": "电房主核",
+      "PropID": 100,
+      "Trigger": {
+        "Radius": 4.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300025,
+      "Name": "Prop25",
+      "Comment": "用来unload和loadG的prop",
+      "PropID": 100,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/MainStory/M3_1_test_F90131001/Maze_Chapter_01_M301_SetGroupProp.json",
+      "CreateOnInitial": false,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300026,
+      "PosX": 2.77,
+      "PosY": 1.01,
+      "PosZ": -181.438,
+      "Name": "Prop26",
+      "Comment": "电房大门trigger",
+      "PropID": 101003,
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "State": "Locked",
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300027,
+      "PosX": 14.79,
+      "PosY": 1.007364,
+      "PosZ": -197.31,
+      "Name": "Prop27",
+      "RotY": 180.0,
+      "Comment": "提醒你靠近强敌",
+      "PropID": 100,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 15.0,
+        "DimX": 9.91,
+        "DimY": 5.49,
+        "DimZ": 7.18,
+        "TargetCamps": [],
+        "TriggerTimes": 1,
+        "Offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 3.2
+        }
+      },
+      "State": "TriggerEnable",
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300028,
+      "PosX": -0.08,
+      "PosY": -3.0,
+      "PosZ": -132.47,
+      "Name": "Prop28",
+      "Comment": "突出废铁区，被小兵偷袭",
+      "PropID": 100,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 1.0,
+        "DimX": 10.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300029,
+      "PosX": -67.34,
+      "PosY": -0.1,
+      "PosZ": -93.78,
+      "Name": "Prop29",
+      "Comment": "最终boss",
+      "PropID": 100,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 1.0,
+        "DimX": 20.0,
+        "DimY": 1.0,
+        "DimZ": 10.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300030,
+      "PosX": -75.39,
+      "PosY": -0.1,
+      "PosZ": -93.78,
+      "Name": "Prop30",
+      "Comment": "最终boss",
+      "PropID": 100,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 1.0,
+        "DimX": 20.0,
+        "DimY": 1.0,
+        "DimZ": 10.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300031,
+      "PosX": -0.1,
+      "PosY": 1.01,
+      "PosZ": -179.99,
+      "Name": "Prop31",
+      "Comment": "电房门口剧情",
+      "PropID": 100,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 7.0,
+        "DimX": 38.3,
+        "DimY": 1.0,
+        "DimZ": 22.5,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300032,
+      "PosX": 3.37,
+      "PosY": -0.4,
+      "PosZ": -230.35,
+      "Name": "Prop32",
+      "RotY": 270.0,
+      "Comment": "费斯上校的对话1",
+      "PropID": 100,
+      "Trigger": {
+        "Radius": 1.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "OverrideTriggerHint": true,
+      "HintRange": 5.0,
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300033,
+      "Name": "Prop33",
+      "Comment": "加载希罗瓦",
+      "PropID": 100,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/MainStory/M3_1_test_F90131001/Maze_Chapter_01_M301_SetGroupProp2.json",
+      "CreateOnInitial": false,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300034,
+      "Name": "Prop34",
+      "Comment": "卸载希罗瓦",
+      "PropID": 100,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/MainStory/M3_1_test_F90131001/Maze_Chapter_01_M301_SetGroupProp3.json",
+      "CreateOnInitial": false,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300035,
+      "PosX": -27.22,
+      "PosY": -3.0,
+      "PosZ": -100.84,
+      "Name": "Prop35",
+      "RotY": 251.7,
+      "Comment": "桥控制3",
+      "PropID": 101001,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/M301/Maze_Chap01_M301_RotateBridge_Control_02.json",
+      "Trigger": {
+        "Radius": 1.5,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "State": "Locked",
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300008,
+      "PosX": 0.02,
+      "PosY": 1.01,
+      "PosZ": -193.25,
+      "Name": "Prop8",
+      "Comment": "电房主核",
+      "PropID": 301003,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/M301/Maze_Chapter_01_M301_Power_Core.json",
+      "CampID": 4,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": [],
+      "StageObjectCapture": {
+        "BlockAlias": "Chap01_CloseView_MAZ_M301_MazePart08",
+        "PrefabAlias": "Chap01_Prop_PowerMerge_01"
+      }
+    },
+    {
+      "ID": 300014,
+      "PosX": 3.6,
+      "PosY": -3.000002,
+      "PosZ": -122.7,
+      "Name": "Prop14",
+      "RotY": 180.0,
+      "Comment": "第一次帮你转桥",
+      "PropID": 100,
+      "Trigger": {
+        "Radius": 4.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [
+    {
+      "ID": 1,
+      "PosX": 26.97,
+      "PosY": -3.0,
+      "PosZ": -108.47
+    },
+    {
+      "ID": 2,
+      "PosX": 22.46,
+      "PosY": -3.0,
+      "PosZ": -74.75
+    },
+    {
+      "ID": 3,
+      "PosX": 30.28,
+      "PosY": -3.0,
+      "PosZ": -90.37
+    },
+    {
+      "ID": 4,
+      "PosX": 14.84,
+      "PosY": -0.98,
+      "PosZ": -163.15
+    },
+    {
+      "ID": 5,
+      "PosX": 14.16,
+      "PosY": -0.98,
+      "PosZ": -208.18
+    },
+    {
+      "ID": 6,
+      "PosX": -10.52,
+      "PosY": -0.98,
+      "PosZ": -208.25
+    },
+    {
+      "ID": 7,
+      "PosX": -13.7,
+      "PosY": -1.0,
+      "PosZ": -208.2
+    },
+    {
+      "ID": 8,
+      "PosX": -13.86,
+      "PosY": -0.98,
+      "PosZ": -163.28
+    },
+    {
+      "ID": 9,
+      "PosX": 10.82,
+      "PosY": -0.98,
+      "PosZ": -163.22
+    }
+  ],
+  "PathwayList": [
+    {
+      "ID": 1,
+      "Name": "Pathway1",
+      "Comment": "Npc巡逻1",
+      "WaypointIDList": [
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "ID": 2,
+      "PosZ": -180.7,
+      "Name": "Pathway2",
+      "WaypointIDList": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "ID": 3,
+      "Name": "Pathway3",
+      "WaypointIDList": [
+        7,
+        8,
+        9
+      ]
+    }
+  ],
+  "BattleAreaList": [],
+  "NPCList": [],
+  "GroupRefreshID": 1
+}

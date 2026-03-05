@@ -1,0 +1,182 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "TargetIsOwner": true,
+          "ColliderRelativePath": "Trigger",
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.LockPlayerControl"
+            },
+            {
+              "$type": "RPG.GameCore.ShowTalkUI",
+              "Show": true
+            },
+            {
+              "$type": "RPG.GameCore.PlayOptionTalk",
+              "OptionList": [
+                {
+                  "OptionTextmapID": {
+                    "hash": -114646264
+                  },
+                  "TriggerCustomString": "Maze_Chap01_M301_SwitchAnchor_01"
+                },
+                {
+                  "OptionTextmapID": {
+                    "hash": -114646261
+                  },
+                  "TriggerCustomString": "Maze_Chap01_M301_SwitchAnchor_02"
+                },
+                {
+                  "OptionTextmapID": {
+                    "hash": -114646262
+                  },
+                  "TriggerCustomString": "Maze_Chap01_M301_SwitchAnchor_03"
+                },
+                {
+                  "OptionTextmapID": {
+                    "hash": -114646259
+                  },
+                  "TriggerCustomString": "Maze_Chap01_M301_SwitchAnchor_04"
+                },
+                {
+                  "OptionTextmapID": {
+                    "hash": 1723323179
+                  },
+                  "TriggerCustomString": "Maze_Chap01_M301_SwitchAnchor_Cancel"
+                },
+                {
+                  "OptionTextmapID": {
+                    "hash": 1462036552
+                  },
+                  "TriggerCustomString": "Story_1011004"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Chap01_M301_SwitchAnchor_01",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.SwitchCharacterAnchor",
+          "IsLocalPlayer": true,
+          "AreaName": "LevelArea_P20131_F20131001_G2",
+          "AnchorName": "StartPoint"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Chap01_M301_SwitchAnchor_02",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.SwitchCharacterAnchor",
+          "IsLocalPlayer": true,
+          "AreaName": "LevelArea_P20131_F20131001_G2",
+          "AnchorName": "Anchor2"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Chap01_M301_SwitchAnchor_03",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.SwitchCharacterAnchor",
+          "IsLocalPlayer": true,
+          "AreaName": "LevelArea_P20131_F20131001_G2",
+          "AnchorName": "Anchor3"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Chap01_M301_SwitchAnchor_04",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.SwitchCharacterAnchor",
+          "IsLocalPlayer": true,
+          "AreaName": "LevelArea_P20131_F20131001_G2",
+          "AnchorName": "Anchor4"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Chap01_M301_SwitchAnchor_Cancel",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Story_1011004",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.EnterMap",
+          "EntranceID": 10010101
+        }
+      ]
+    }
+  ]
+}

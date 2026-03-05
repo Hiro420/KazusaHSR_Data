@@ -1,0 +1,364 @@
+﻿{
+  "GroupGUID": "e218b053-6f96-45dd-af37-ac73b13324e7",
+  "GroupName": "Group0",
+  "ConfigPrefabPath": "Level/Mission/1010801/1010801_temp.prefab",
+  "AreaAnchorName": "LevelArea_P10101_F10101001_G11",
+  "SaveType": "Temporary",
+  "AnchorList": [
+    {
+      "ID": 1,
+      "PosX": -19.61,
+      "PosY": -0.093048,
+      "PosZ": -27.5,
+      "Name": "Anchor1",
+      "Comment": "杰帕德"
+    },
+    {
+      "ID": 2,
+      "PosX": -39.46,
+      "PosY": 0.008186,
+      "PosZ": -37.9,
+      "Name": "Anchor2",
+      "Comment": "希儿"
+    },
+    {
+      "ID": 3,
+      "PosX": -39.46,
+      "PosY": 0.008186,
+      "PosZ": -35.19,
+      "Name": "Anchor3",
+      "Comment": "瓦尔特"
+    },
+    {
+      "ID": 4,
+      "PosX": -23.39,
+      "PosY": -2.045807,
+      "PosZ": -144.24,
+      "Name": "Anchor4",
+      "Comment": "迷宫入口"
+    },
+    {
+      "ID": 5,
+      "PosX": -23.39,
+      "PosY": -2.045807,
+      "PosZ": -144.24,
+      "Name": "Anchor5",
+      "Comment": "M3-1入口"
+    },
+    {
+      "ID": 6,
+      "PosX": -23.39,
+      "PosY": -2.045807,
+      "PosZ": -144.24,
+      "Name": "Anchor6",
+      "Comment": "M3-2入口"
+    },
+    {
+      "ID": 7,
+      "PosX": -15.73,
+      "PosY": -0.093048,
+      "PosZ": -39.94,
+      "Name": "Anchor7",
+      "RotY": 270.0,
+      "Comment": "3-1回上城区的点"
+    },
+    {
+      "ID": 8,
+      "PosX": -32.38,
+      "PosY": -0.093037,
+      "PosZ": -109.93,
+      "Name": "Anchor8",
+      "RotY": 26.69999,
+      "Comment": "3-1回上城区的点"
+    }
+  ],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": -23.39,
+      "PosY": -2.045807,
+      "PosZ": -144.24,
+      "Name": "Prop1",
+      "Comment": "M2-1 M3-1",
+      "PropID": 100,
+      "Trigger": {
+        "Radius": 3.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300002,
+      "PosX": -23.39,
+      "PosY": -2.045807,
+      "PosZ": -144.24,
+      "Name": "Prop2",
+      "Comment": "M3-1入口指引",
+      "PropID": 100,
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300003,
+      "PosX": -23.39,
+      "PosY": -2.045807,
+      "PosZ": -144.24,
+      "Name": "Prop3",
+      "Comment": "M3-2入口指引",
+      "PropID": 100,
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300004,
+      "Name": "Prop4",
+      "Comment": "任务状态计数用",
+      "PropID": 100,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300005,
+      "Name": "Prop5",
+      "Comment": "任务状态计数用",
+      "PropID": 100,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300006,
+      "Name": "Prop6",
+      "Comment": "任务状态计数用",
+      "PropID": 100,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": [
+    {
+      "ID": 400001,
+      "PosX": -19.61,
+      "PosY": -0.093048,
+      "PosZ": -27.5,
+      "Name": "NPC_Japa",
+      "RotY": 322.174,
+      "NPCID": 101080101,
+      "CreateOnInitial": false,
+      "AIConfig": {},
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400002,
+      "PosX": -39.46,
+      "PosY": 0.008186,
+      "PosZ": -37.9,
+      "Name": "NPC_Xier",
+      "RotY": 90.0,
+      "NPCID": 101080102,
+      "CreateOnInitial": false,
+      "AIConfig": {},
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400003,
+      "PosX": -39.46,
+      "PosY": 0.008186,
+      "PosZ": -35.19,
+      "Name": "NPC_Walter",
+      "RotY": 90.0,
+      "NPCID": 101080103,
+      "CreateOnInitial": false,
+      "AIConfig": {
+        "PathwayList": []
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400004,
+      "PosX": -20.01,
+      "PosY": -0.093048,
+      "PosZ": -39.64,
+      "Name": "NPC_Serval",
+      "RotY": 90.0,
+      "NPCID": 101080104,
+      "CreateOnInitial": false,
+      "AIConfig": {
+        "PathwayList": []
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400005,
+      "PosX": -30.612,
+      "PosY": -0.093033,
+      "PosZ": -107.93,
+      "Name": "NPC_Natasha",
+      "RotY": 217.1,
+      "NPCID": 101080106,
+      "CreateOnInitial": false,
+      "AIConfig": {
+        "PathwayList": []
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400006,
+      "PosX": -32.34,
+      "PosY": -0.09304,
+      "PosZ": -106.66,
+      "Name": "NPC_Seele",
+      "RotY": 183.1,
+      "NPCID": 101080105,
+      "CreateOnInitial": false,
+      "AIConfig": {
+        "PathwayList": []
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400007,
+      "PosX": -27.99,
+      "PosY": -0.09304,
+      "PosZ": -115.83,
+      "Name": "NPC_Danheng",
+      "RotY": 293.8,
+      "NPCID": 101080107,
+      "CreateOnInitial": false,
+      "AIConfig": {
+        "PathwayList": []
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400008,
+      "PosX": -27.99,
+      "PosY": -0.09304,
+      "PosZ": -108.88,
+      "Name": "NPC_7thMarch",
+      "RotY": 243.1,
+      "NPCID": 101080108,
+      "CreateOnInitial": false,
+      "AIConfig": {
+        "PathwayList": []
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400009,
+      "PosX": -30.16,
+      "PosY": -0.093033,
+      "PosZ": -103.93,
+      "Name": "NPC_Natasha2",
+      "RotY": 217.1,
+      "NPCID": 101080106,
+      "CreateOnInitial": false,
+      "AIConfig": {
+        "PathwayList": []
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400010,
+      "PosX": -33.35,
+      "PosY": -0.09304,
+      "PosZ": -105.93,
+      "Name": "NPC_Seele2",
+      "RotY": 183.1,
+      "NPCID": 101080105,
+      "CreateOnInitial": false,
+      "AIConfig": {
+        "PathwayList": []
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400011,
+      "PosX": -30.16,
+      "PosY": -0.093033,
+      "PosZ": -103.93,
+      "Name": "NPC_Natasha3",
+      "RotY": 217.1,
+      "NPCID": 101080109,
+      "CreateOnInitial": false,
+      "AIConfig": {},
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400012,
+      "PosX": -27.99,
+      "PosY": -0.09304,
+      "PosZ": -115.83,
+      "Name": "NPC_Danheng2",
+      "RotY": 293.8,
+      "NPCID": 101080111,
+      "CreateOnInitial": false,
+      "AIConfig": {},
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400013,
+      "PosX": -27.99,
+      "PosY": -0.09304,
+      "PosZ": -108.88,
+      "Name": "NPC_7thMarch2",
+      "RotY": 243.1,
+      "NPCID": 101080112,
+      "CreateOnInitial": false,
+      "AIConfig": {},
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400014,
+      "PosX": -33.35,
+      "PosY": -0.09304,
+      "PosZ": -105.93,
+      "Name": "NPC_Seele3",
+      "RotY": 183.1,
+      "NPCID": 101080110,
+      "CreateOnInitial": false,
+      "AIConfig": {},
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "GroupRefreshID": 1
+}

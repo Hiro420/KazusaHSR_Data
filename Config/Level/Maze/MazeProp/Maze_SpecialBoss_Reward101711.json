@@ -1,0 +1,105 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropStateChangeListenerConfig",
+          "FromState": "ChestLocked",
+          "ToState": "ChestClosed",
+          "OnChange": [
+            {
+              "$type": "RPG.GameCore.ShowUIPage",
+              "AssetPath": "UI/Mission/MissionStartHintDialog.prefab",
+              "UIImageNodes": [],
+              "UITextNodes": [
+                {
+                  "TextPath": "Dialog/MissionTitle/Text",
+                  "TextContent": {
+                    "hash": 1977127729
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "TargetIsOwner": true,
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.SelectorConfig",
+              "TaskList": [
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "TargetIsOwner": true,
+                  "GroupPropID": 300003,
+                  "GroupID": 19,
+                  "Execute": [
+                    {
+                      "$type": "RPG.GameCore.ToastPile",
+                      "DescTextID": {
+                        "hash": -793379246
+                      }
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropRemoveEffect",
+                      "EffectPath": "Effects/Eff_Prefab/Eff_Scene/Interactive Object/Eff_Common_PropBlockade_Idle_Locked.prefab"
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropTriggerEffectList",
+                      "EffectList": [
+                        {
+                          "EffectPath": "Effects/Eff_Prefab/Eff_Scene/Interactive Object/Eff_Common_PropBlockade_Trigger.prefab",
+                          "AttachPoint": "Root"
+                        }
+                      ]
+                    },
+                    {
+                      "$type": "RPG.GameCore.WaitSecond",
+                      "WaitTime": 0.2
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropTriggerEffectList",
+                      "EffectList": [
+                        {
+                          "EffectPath": "Effects/Eff_Prefab/Eff_Scene/Interactive Object/Eff_Common_PropBlockade_Idle_Locked.prefab",
+                          "AttachPoint": "Root"
+                        }
+                      ]
+                    }
+                  ],
+                  "State": "ChestLocked"
+                },
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "TargetIsOwner": true,
+                  "GroupPropID": 300003,
+                  "GroupID": 19,
+                  "Execute": [
+                    {
+                      "$type": "RPG.GameCore.PropReqInteract",
+                      "TargetIsOwner": true,
+                      "InteractID": 212130
+                    },
+                    {
+                      "$type": "RPG.GameCore.ToastPile",
+                      "DescTextID": {
+                        "hash": -176186068
+                      }
+                    }
+                  ],
+                  "State": "ChestClosed"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

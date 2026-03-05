@@ -1,0 +1,50 @@
+﻿{
+  "ModifierMap": {
+    "WMCommon_DOT_ThunderCurse": {
+      "Stacking": "ReplaceByCaster",
+      "DynamicValues": {
+        "Floats": {
+          "33051896": {},
+          "-1060106919": {}
+        }
+      },
+      "LifeStepMoment": "ModifierPhase1End",
+      "OnAfterBeingAttacked": [
+        {
+          "$type": "RPG.GameCore.DamageByAttackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "AttackProperty": {
+            "DamageType": "Thunder",
+            "DamagePercentage": {
+              "Value": {
+                "IsDynamic": true,
+                "PostfixExpr": [
+                  {
+                    "Type": "DynamicNumber",
+                    "Int": 66103792
+                  }
+                ]
+              }
+            },
+            "DamageValue": {
+              "Value": {
+                "IsDynamic": true,
+                "PostfixExpr": [
+                  {
+                    "Type": "DynamicNumber",
+                    "Int": 2120213837
+                  }
+                ]
+              }
+            },
+            "AttackType": "Pursued"
+          }
+        }
+      ],
+      "UseSnapshotEntity": true
+    }
+  }
+}

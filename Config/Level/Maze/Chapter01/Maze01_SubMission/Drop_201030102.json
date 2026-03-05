@@ -1,0 +1,29 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "201030101_Read2",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.PropStateExecute",
+          "TargetIsOwner": true,
+          "GroupPropID": 300008,
+          "GroupID": 12,
+          "Execute": [
+            {
+              "$type": "RPG.GameCore.PropReqInteract",
+              "TargetIsOwner": true,
+              "GroupPropID": 300008,
+              "GroupID": 12,
+              "InteractID": 1010
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

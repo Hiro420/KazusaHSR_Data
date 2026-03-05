@@ -1,0 +1,92 @@
+﻿{
+  "AnimatorStateEvents": [
+    {
+      "AnimatorStateName": "Skill03",
+      "NormalizedTime": 0.6113361,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.TriggerEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Monster/Eff_W1_Mecha01_00/Eff_Monster_W1_Mecha01_00_Skill03_Hint.prefab"
+        }
+      ]
+    },
+    {
+      "AnimatorStateName": "Skill03",
+      "NormalizedTime": 0.7460852,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.TriggerEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Monster/Eff_W1_Mecha01_00/Eff_Monster_W1_Mecha01_00_Skill03_Explode.prefab"
+        }
+      ]
+    },
+    {
+      "AnimatorStateName": "Skill01",
+      "NormalizedTime": 0.02253034,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.TriggerSound",
+          "SoundName": "Ev_sfx_avatar_skill_01_mechaspider"
+        }
+      ]
+    },
+    {
+      "AnimatorStateName": "Skill02",
+      "NormalizedTime": 0.03466204,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.TriggerSound",
+          "SoundName": "Ev_sfx_avatar_skill_02_mechaspider"
+        }
+      ]
+    },
+    {
+      "AnimatorStateName": "Skill03",
+      "NormalizedTime": 0.03177357,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.TriggerSound",
+          "SoundName": "Ev_sfx_avatar_skill_03_mechaspider"
+        }
+      ]
+    },
+    {
+      "AnimatorStateName": "Die",
+      "NormalizedTime": 0.1403814,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.TriggerSound",
+          "SoundName": "Ev_sfx_avatar_die_mechaspider"
+        }
+      ]
+    },
+    {
+      "AnimatorStateName": "Die_Hit",
+      "NormalizedTime": 0.0826112,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.TriggerSound",
+          "SoundName": "Ev_sfx_avatar_die_mechaspider"
+        }
+      ]
+    },
+    {
+      "AnimatorStateName": "Die_Limbo",
+      "NormalizedTime": 0.08318891,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.TriggerSound",
+          "SoundName": "Ev_sfx_avatar_die_mechaspider"
+        }
+      ]
+    }
+  ]
+}

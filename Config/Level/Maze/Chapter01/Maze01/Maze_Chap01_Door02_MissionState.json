@@ -1,0 +1,186 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "Order": 1,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300002,
+              "GroupID": 21,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.SelectorConfig",
+                  "TaskList": [
+                    {
+                      "$type": "RPG.GameCore.PropStateExecute",
+                      "TargetIsOwner": true,
+                      "Execute": [
+                        {
+                          "$type": "RPG.GameCore.PropEnableCollider",
+                          "ID": 300002,
+                          "GroupID": 21,
+                          "SpecifiedRelativePaths": [
+                            "Trigger"
+                          ]
+                        },
+                        {
+                          "$type": "RPG.GameCore.PropEnableCollider",
+                          "Enabled": true,
+                          "SpecifiedRelativePaths": [
+                            "Trigger"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropStateExecute",
+                      "TargetIsOwner": true,
+                      "Execute": [
+                        {
+                          "$type": "RPG.GameCore.PropEnableCollider",
+                          "ID": 300002,
+                          "GroupID": 21,
+                          "Enabled": true,
+                          "SpecifiedRelativePaths": [
+                            "Trigger"
+                          ]
+                        },
+                        {
+                          "$type": "RPG.GameCore.PropEnableCollider",
+                          "SpecifiedRelativePaths": [
+                            "Trigger"
+                          ]
+                        }
+                      ],
+                      "State": "Open"
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropStateExecute",
+                      "TargetIsOwner": true,
+                      "Execute": [
+                        {
+                          "$type": "RPG.GameCore.PropEnableCollider",
+                          "ID": 300002,
+                          "GroupID": 21,
+                          "Enabled": true,
+                          "SpecifiedRelativePaths": [
+                            "Trigger"
+                          ]
+                        },
+                        {
+                          "$type": "RPG.GameCore.PropEnableCollider",
+                          "SpecifiedRelativePaths": [
+                            "Trigger"
+                          ]
+                        }
+                      ],
+                      "State": "TriggerDisable"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300002,
+              "GroupID": 21,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.DestroyProp"
+                }
+              ],
+              "State": "Open"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "TargetIsOwner": true,
+          "ButtonText": {
+            "hash": -691591343
+          },
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "TargetIsOwner": true,
+                  "InteractID": 1010
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropStateChangeListenerConfig",
+          "ToState": "Open",
+          "OnChange": [
+            {
+              "$type": "RPG.GameCore.PlayMissionTalk",
+              "SimpleTalkList": [
+                {
+                  "VoiceID": 201118001
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.WaitMissionTalkFinish"
+            },
+            {
+              "$type": "RPG.GameCore.PropEnableCollider",
+              "ID": 300002,
+              "GroupID": 21,
+              "Enabled": true,
+              "SpecifiedRelativePaths": [
+                "Trigger"
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.PropEnableCollider",
+              "SpecifiedRelativePaths": [
+                "Trigger"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropStateChangeListenerConfig",
+          "GroupID": 21,
+          "GroupPropID": 300002,
+          "ToState": "Open",
+          "OnChange": [
+            {
+              "$type": "RPG.GameCore.PropReqInteract",
+              "TargetIsOwner": true,
+              "InteractID": 1090
+            },
+            {
+              "$type": "RPG.GameCore.PropEnableCollider",
+              "SpecifiedRelativePaths": [
+                "Trigger"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

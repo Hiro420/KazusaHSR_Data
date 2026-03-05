@@ -1,0 +1,205 @@
+﻿{
+  "GroupGUID": "4ff2d3f0-0a38-4113-ab8c-22fe1dd998ce",
+  "GroupName": "MainMission",
+  "AreaAnchorName": "LevelArea_P20123_F20123001_G12",
+  "SaveType": "Reset",
+  "AnchorList": [
+    {
+      "ID": 1,
+      "PosX": -7.23,
+      "PosY": 20.13793,
+      "PosZ": 13.34,
+      "Name": "Anchor1",
+      "RotY": 225.6702,
+      "Comment": "101070101主角"
+    },
+    {
+      "ID": 2,
+      "PosX": -7.320001,
+      "PosY": 20.18605,
+      "PosZ": 12.27,
+      "Name": "Anchor2",
+      "RotY": 281.8341,
+      "Comment": "101070101克拉拉"
+    },
+    {
+      "ID": 3,
+      "PosX": -7.23,
+      "PosY": 21.636,
+      "PosZ": 13.34,
+      "Name": "Anchor3",
+      "Comment": "101070101主角头"
+    }
+  ],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": -5.82,
+      "PosY": 21.11,
+      "PosZ": -17.87,
+      "Name": "Prop1",
+      "Comment": "101070201,101070405史瓦罗大门",
+      "PropID": 100,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 1.0,
+        "DimX": 10.0,
+        "DimY": 3.0,
+        "DimZ": 3.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300002,
+      "PosX": -10.06,
+      "PosY": 25.39902,
+      "PosZ": 81.32,
+      "Name": "Prop2",
+      "Comment": "101070401回到2-3",
+      "PropID": 100,
+      "Trigger": {
+        "Radius": 10.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300003,
+      "PosX": -8.73,
+      "PosY": 20.76,
+      "PosZ": 12.67,
+      "Name": "Prop3",
+      "Comment": "101070402解锁电梯",
+      "PropID": 100,
+      "Trigger": {
+        "Radius": 5.0,
+        "DimX": 5.0,
+        "DimY": 5.0,
+        "DimZ": 6.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300004,
+      "PosX": 5.89,
+      "PosY": 20.0,
+      "PosZ": -43.96,
+      "Name": "Prop4",
+      "Comment": "101070406史瓦罗战斗",
+      "PropID": 100,
+      "Trigger": {
+        "Radius": 10.0,
+        "DimX": 12.0,
+        "DimY": 6.0,
+        "DimZ": 4.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300005,
+      "PosX": 16.28,
+      "PosY": 19.9783,
+      "PosZ": -56.92,
+      "Name": "Prop5",
+      "Comment": "101070407旧时代遗产",
+      "PropID": 111,
+      "Trigger": {
+        "Radius": 6.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300006,
+      "PosX": -5.85,
+      "PosY": 20.10342,
+      "PosZ": 23.45,
+      "Name": "Prop6",
+      "Comment": "101070201黑",
+      "PropID": 100,
+      "Trigger": {
+        "Shape": "Box",
+        "Radius": 1.0,
+        "DimX": 10.0,
+        "DimY": 5.0,
+        "DimZ": 3.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300007,
+      "PosX": -13.32,
+      "PosY": 12.01397,
+      "PosZ": 9.53,
+      "Name": "Prop7",
+      "Comment": "101070412电梯",
+      "PropID": 100,
+      "Trigger": {
+        "Radius": 3.5,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": [
+    {
+      "ID": 400001,
+      "PosX": -77.54,
+      "PosY": 14.04948,
+      "PosZ": 18.47,
+      "Name": "NPC1",
+      "RotY": 137.5933,
+      "Comment": "克拉拉发电机01",
+      "NPCID": 101070118,
+      "CreateOnInitial": false,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 400002,
+      "PosX": 64.61,
+      "PosY": 11.95863,
+      "PosZ": 32.19,
+      "Name": "NPC2",
+      "RotY": 286.6259,
+      "Comment": "克拉拉发电机02",
+      "NPCID": 101070118,
+      "CreateOnInitial": false,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "GroupRefreshID": 1
+}

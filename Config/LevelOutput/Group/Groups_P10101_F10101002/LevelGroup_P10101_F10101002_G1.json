@@ -1,0 +1,45 @@
+﻿{
+  "GroupGUID": "8576e54e-1776-406c-8d06-7467adecdc78",
+  "GroupName": "Group0",
+  "AreaAnchorName": "LevelArea_P10101_F10101002_G1",
+  "SaveType": "Temporary",
+  "AnchorList": [
+    {
+      "ID": 1,
+      "PosY": -0.498977,
+      "PosZ": 24.03,
+      "Name": "Anchor1",
+      "RotY": 180.0
+    }
+  ],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosY": 0.51,
+      "PosZ": 27.26,
+      "Name": "Prop1",
+      "RotY": 180.0,
+      "Comment": "出口",
+      "PropID": 108,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/Town/Town_Chapter01_Office_Exit.json",
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "OverrideTriggerHint": true,
+      "HintRange": 10.0,
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": []
+}

@@ -1,0 +1,110 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.CreateLevelAreas",
+          "AssetPath": {
+            "Value": "Level/Train_Demo.prefab"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.CreateProp",
+          "PropID": 100002,
+          "UniqueName": "Warp_1",
+          "AreaName": "Train_Demo",
+          "AnchorName": "WarpPoint_1"
+        },
+        {
+          "$type": "RPG.GameCore.CreateProp",
+          "PropID": 100002,
+          "UniqueName": "Warp_2",
+          "AreaName": "Train_Demo",
+          "AnchorName": "WarpPoint_2"
+        },
+        {
+          "$type": "RPG.GameCore.CreateProp",
+          "PropID": 100002,
+          "UniqueName": "Warp_3",
+          "AreaName": "Train_Demo",
+          "AnchorName": "WarpPoint_3"
+        },
+        {
+          "$type": "RPG.GameCore.CreateProp",
+          "UniqueName": "PT2_CAM",
+          "AreaName": "Train_Demo",
+          "AnchorName": "Camera_PT2",
+          "AnchorNativeProp": "PT2_Trigger",
+          "OnCreate": [
+            {
+              "$type": "RPG.GameCore.PropSetupTrigger",
+              "UniqueName": "PT2_CAM",
+              "TargetTypes": [],
+              "OnTriggerEnter": [
+                {
+                  "$type": "RPG.GameCore.ActiveVirtualCamera",
+                  "AreaName": "Train_Demo",
+                  "AnchorName": "PT2_V1",
+                  "BlendConfig": {
+                    "BlendType": "Linear"
+                  }
+                }
+              ],
+              "OnTriggerExit": [
+                {
+                  "$type": "RPG.GameCore.ActiveVirtualCamera",
+                  "AreaName": "Train_Demo",
+                  "AnchorName": "PT2_V1",
+                  "IsActive": false,
+                  "BlendConfig": {
+                    "BlendType": "Linear"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.CreateProp",
+          "UniqueName": "PT2_2_CAM",
+          "AreaName": "Train_Demo",
+          "AnchorName": "Camera_PT2_2",
+          "AnchorNativeProp": "PT2_2_Trigger",
+          "OnCreate": [
+            {
+              "$type": "RPG.GameCore.PropSetupTrigger",
+              "UniqueName": "PT2_2_CAM",
+              "TargetTypes": [],
+              "OnTriggerEnter": [
+                {
+                  "$type": "RPG.GameCore.ActiveVirtualCamera",
+                  "AreaName": "Train_Demo",
+                  "AnchorName": "PT2_V2",
+                  "BlendConfig": {
+                    "BlendType": "Linear"
+                  }
+                }
+              ],
+              "OnTriggerExit": [
+                {
+                  "$type": "RPG.GameCore.ActiveVirtualCamera",
+                  "AreaName": "Train_Demo",
+                  "AnchorName": "PT2_V2",
+                  "IsActive": false,
+                  "BlendConfig": {
+                    "BlendType": "Linear"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": []
+    }
+  ]
+}

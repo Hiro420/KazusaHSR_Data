@@ -1,0 +1,135 @@
+﻿{
+  "GroupGUID": "e9ffe27e-fd37-42fc-9e1f-22818a1a5603",
+  "GroupName": "DefaultData",
+  "AreaAnchorName": "LevelArea_P10101_F10101001_G1",
+  "AnchorList": [
+    {
+      "ID": 1,
+      "PosX": -36.58994,
+      "PosY": -5.400732,
+      "PosZ": 70.01997,
+      "Name": "Anchor1",
+      "RotY": 137.55
+    },
+    {
+      "ID": 2,
+      "PosX": -64.22,
+      "PosY": 1.200062,
+      "PosZ": -39.93,
+      "Name": "Anchor2",
+      "RotY": 90.0,
+      "Comment": "中心广场"
+    },
+    {
+      "ID": 3,
+      "PosX": 12.76,
+      "PosY": 0.009647,
+      "PosZ": -137.31,
+      "Name": "Anchor3",
+      "RotY": 340.0,
+      "Comment": "旅店附近"
+    },
+    {
+      "ID": 4,
+      "PosX": 0.31,
+      "PosY": 0.009632,
+      "PosZ": 77.02,
+      "Name": "Anchor4",
+      "RotY": 225.0,
+      "Comment": "剧院"
+    }
+  ],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": 0.31,
+      "PosY": 0.009632,
+      "PosZ": 77.02,
+      "Name": "Prop1",
+      "RotY": 225.0,
+      "PropID": 101,
+      "Trigger": {
+        "Radius": 1.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1,
+        "Server": true
+      },
+      "ValueSource": {
+        "Values": []
+      },
+      "State": "CheckPointEnable",
+      "AnchorGroupID": 1,
+      "AnchorID": 4,
+      "MapTeleportID": 1010101,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300002,
+      "PosX": -64.22,
+      "PosY": 1.200062,
+      "PosZ": -39.93,
+      "Name": "Prop2",
+      "RotY": 90.0,
+      "PropID": 101,
+      "Trigger": {
+        "Radius": 1.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1,
+        "Server": true
+      },
+      "State": "CheckPointEnable",
+      "AnchorGroupID": 1,
+      "AnchorID": 2,
+      "MapTeleportID": 1010102,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300003,
+      "PosX": 12.76,
+      "PosY": 0.009647,
+      "PosZ": -137.31,
+      "Name": "Prop3",
+      "RotY": 340.0,
+      "PropID": 101,
+      "Trigger": {
+        "Radius": 1.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1,
+        "Server": true
+      },
+      "State": "CheckPointEnable",
+      "AnchorGroupID": 1,
+      "AnchorID": 3,
+      "MapTeleportID": 1010103,
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300004,
+      "Name": "Prop4",
+      "Comment": "触发存档",
+      "PropID": 100,
+      "InitLevelGraph": "Config/Level/Maze/Chapter01/Town/Town_Chapter01_ActivateSaveData.json",
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": [],
+  "GroupRefreshID": 1
+}

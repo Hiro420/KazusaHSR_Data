@@ -1,0 +1,119 @@
+﻿{
+  "GroupGUID": "7e6b09e9-e277-4d38-9b41-bda6c162f131",
+  "GroupName": "OrderPuzzle",
+  "ConfigPrefabPath": "Level/Maze/Chapter01/Chap01_MAZ_M202_OrderPuzzle_LevelArea.prefab",
+  "LevelGraph": "Config/Level/Maze/MazeExtra/Puzzle/M2-2/Maze_Prop_3xOrder_M22_Puzzle_Group.json",
+  "AreaAnchorName": "LevelArea_P20122_F20122001_G35",
+  "SaveType": "Temporary",
+  "AnchorList": [],
+  "ModelList": [],
+  "MonsterList": [],
+  "PropList": [
+    {
+      "ID": 300001,
+      "PosX": 0.73,
+      "PosY": 25.16564,
+      "PosZ": 59.42,
+      "Name": "Prop1",
+      "PropID": 202,
+      "State": "Locked",
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300002,
+      "PosX": -4.73,
+      "PosY": 25.16564,
+      "PosZ": 59.42,
+      "Name": "Prop2",
+      "PropID": 202,
+      "State": "Locked",
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300003,
+      "PosX": -10.08,
+      "PosY": 25.16564,
+      "PosZ": 59.42,
+      "Name": "Prop3",
+      "PropID": 202,
+      "State": "Locked",
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300004,
+      "PosX": 0.73,
+      "PosY": 25.16564,
+      "PosZ": 59.42,
+      "Name": "Prop4",
+      "Comment": "提示",
+      "PropID": 100,
+      "InitLevelGraph": "Config/Level/Maze/MazeExtra/Puzzle/M2-2/Maze_Prop_3xOrder_M22_Puzzle_HintProp.json",
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300005,
+      "PosX": -4.73,
+      "PosY": 25.16564,
+      "PosZ": 59.42,
+      "Name": "Prop5",
+      "Comment": "提示",
+      "PropID": 100,
+      "InitLevelGraph": "Config/Level/Maze/MazeExtra/Puzzle/M2-2/Maze_Prop_3xOrder_M22_Puzzle_HintProp.json",
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300006,
+      "PosX": -10.08,
+      "PosY": 25.16564,
+      "PosZ": 59.42,
+      "Name": "Prop6",
+      "Comment": "提示",
+      "PropID": 100,
+      "InitLevelGraph": "Config/Level/Maze/MazeExtra/Puzzle/M2-2/Maze_Prop_3xOrder_M22_Puzzle_HintProp.json",
+      "Trigger": {
+        "Radius": 2.0,
+        "DimX": 1.0,
+        "DimY": 1.0,
+        "DimZ": 1.0,
+        "TargetCamps": [],
+        "TriggerTimes": 1
+      },
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    },
+    {
+      "ID": 300007,
+      "Name": "OrderPuazzleChecker",
+      "PropID": 100,
+      "InitLevelGraph": "Config/Level/Maze/MazeExtra/Puzzle/M2-2/Maze_Prop_3xOrder_M22_Puzzle_Checker.json",
+      "State": "Open",
+      "DialogueGroups": [],
+      "ServerInteractVerificationIDList": []
+    }
+  ],
+  "WaypointList": [],
+  "PathwayList": [],
+  "BattleAreaList": [],
+  "NPCList": []
+}

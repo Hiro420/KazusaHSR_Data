@@ -1,0 +1,36 @@
+﻿{
+  "FloorID": 9000201,
+  "FloorName": "FloorName_9000201",
+  "StartGroupID": 2,
+  "StartAnchorID": 1,
+  "GroupList": [
+    {
+      "ID": 2,
+      "Name": "New Group",
+      "GroupGUID": "886ba2ac-1ae2-4911-9a13-4d7db508cfca",
+      "GroupPath": "Config/LevelOutput/Group/Groups_P90002_F9000201/LevelGroup_P90002_F9000201_G2.json"
+    },
+    {
+      "ID": 3,
+      "Name": "LiftGroup",
+      "GroupGUID": "93e73ada-2b6e-424b-9ce4-c8bb36d31997",
+      "GroupPath": "Config/LevelOutput/Group/Groups_P90002_F9000201/LevelGroup_P90002_F9000201_G3.json"
+    },
+    {
+      "ID": 4,
+      "Name": "Door",
+      "GroupGUID": "9d80a802-f804-439b-964e-f2d9a6898ad4",
+      "GroupPath": "Config/LevelOutput/Group/Groups_P90002_F9000201/LevelGroup_P90002_F9000201_G4.json"
+    }
+  ],
+  "DefaultGroupIDList": [
+    2,
+    3,
+    4
+  ],
+  "UnlockMainMissionGroupIDList": [],
+  "EnviroProfile": "Stages/Outputs/Chapter01/EnviroProfile/Chap01_Maze_01.enviroProfile.asset",
+  "StageData": "Stages/Outputs/Chapter01/Stages/Chap01_MAZ_M201_MainLine_01_StageData/Chap01_MAZ_M201_MainLine_01_StageData.stage",
+  "NavMesh": "Level/NavMesh/NavMesh-Floor_9000201.asset",
+  "MinimapVolumeData": {}
+}

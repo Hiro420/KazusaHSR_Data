@@ -1,0 +1,228 @@
+﻿{
+  "AnimatorStateEvents": [
+    {
+      "AnimatorStateName": "Attack_1",
+      "NormalizedTime": 0.02,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.SetAttachmentVisibility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AttachPoints": [
+            {
+              "Name": "Weapon",
+              "TriggerEffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Asta/Eff_Avatar_Asta_00_Common_WeaponStart.prefab"
+            }
+          ],
+          "Visibility": true,
+          "VisibilityApplyDelay": 1
+        }
+      ]
+    },
+    {
+      "AnimatorStateName": "Attack_1",
+      "NormalizedTime": 0.21,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.StopAim"
+        }
+      ]
+    },
+    {
+      "AnimatorStateName": "Attack_1",
+      "NormalizedTime": 0.37,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.SetAttachmentVisibility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AttachPoints": [
+            {
+              "Name": "Weapon",
+              "TriggerEffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Asta/Eff_Avatar_Asta_00_Common_WeaponEnd.prefab"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "AnimatorStateName": "MazeSkill",
+      "NormalizedTime": 0.05,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.SetAttachmentVisibility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AttachPoints": [
+            {
+              "Name": "Weapon",
+              "TriggerEffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Asta/Eff_Avatar_Asta_00_Common_WeaponStart.prefab"
+            }
+          ],
+          "Visibility": true,
+          "VisibilityApplyDelay": 1
+        }
+      ]
+    },
+    {
+      "AnimatorStateName": "MazeSkill",
+      "NormalizedTime": 0.6,
+      "EventList": [
+        {
+          "$type": "RPG.GameCore.SetAttachmentVisibility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AttachPoints": [
+            {
+              "Name": "Weapon",
+              "TriggerEffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Asta/Eff_Avatar_Asta_00_Common_WeaponEnd.prefab"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "AnimatorStateGroupEvents": [
+    {
+      "States": [
+        {
+          "Name": "Idle_Show_01"
+        },
+        {
+          "Name": "Idle_Show_02"
+        },
+        {
+          "Name": "Idle_Show_03"
+        }
+      ],
+      "OnEnter": [
+        {
+          "$type": "RPG.GameCore.EnableEmotion",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          }
+        }
+      ],
+      "OnExit": [
+        {
+          "$type": "RPG.GameCore.EnableEmotion",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "Enable": true
+        }
+      ]
+    },
+    {
+      "States": [
+        {
+          "Name": "Attack_1",
+          "NormalizedTime": 0.02,
+          "ExitInTransition": true
+        }
+      ],
+      "OnEnter": [
+        {
+          "$type": "RPG.GameCore.SetAttachmentVisibility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AttachPoints": [
+            {
+              "Name": "Weapon",
+              "TriggerEffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Asta/Eff_Avatar_Asta_00_Common_WeaponStart.prefab"
+            }
+          ],
+          "Visibility": true,
+          "VisibilityApplyDelay": 1
+        },
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByHaveSkillPointEntity"
+          },
+          "SuccessTaskList": [
+            {
+              "$type": "RPG.GameCore.StartAim",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "SkillPointEntity"
+              },
+              "TargetAttachPoint": "Root",
+              "TransitTime": 0.3
+            }
+          ]
+        }
+      ],
+      "OnExit": [
+        {
+          "$type": "RPG.GameCore.SetAttachmentVisibility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AttachPoints": [
+            {
+              "Name": "Weapon",
+              "TriggerEffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Asta/Eff_Avatar_Asta_00_Common_WeaponEnd.prefab"
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.StopAim"
+        }
+      ]
+    },
+    {
+      "States": [
+        {
+          "Name": "MazeSkill",
+          "ExitInTransition": true
+        }
+      ],
+      "OnEnter": [
+        {
+          "$type": "RPG.GameCore.SetAttachmentVisibility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AttachPoints": [
+            {
+              "Name": "Weapon",
+              "TriggerEffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Asta/Eff_Avatar_Asta_00_Common_WeaponStart.prefab"
+            }
+          ],
+          "Visibility": true,
+          "VisibilityApplyDelay": 1
+        }
+      ],
+      "OnExit": [
+        {
+          "$type": "RPG.GameCore.SetAttachmentVisibility",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "AttachPoints": [
+            {
+              "Name": "Weapon",
+              "TriggerEffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Asta/Eff_Avatar_Asta_00_Common_WeaponEnd.prefab"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
