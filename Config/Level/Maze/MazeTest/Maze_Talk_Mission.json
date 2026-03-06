@@ -1,0 +1,50 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Hold",
+          "WaitOwnerOnly": true
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300003,
+          "GroupID": 10,
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.PlayMissionTalk",
+              "SimpleTalkList": [
+                {
+                  "VoiceID": 101020888
+                },
+                {
+                  "VoiceID": 101020890
+                },
+                {
+                  "VoiceID": 101020892
+                },
+                {
+                  "VoiceID": 101020893
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.WaitMissionTalkFinish"
+            },
+            {
+              "$type": "RPG.GameCore.FinishLevelGraph"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

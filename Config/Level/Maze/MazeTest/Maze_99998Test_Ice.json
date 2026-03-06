@@ -1,0 +1,35 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "TargetIsOwner": true,
+          "ColliderRelativePath": "Trigger",
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "99998_DestroyTrialPlayer"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "99998_DestroyTrialPlayer",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.DestroyTrialPlayer",
+          "TrialPlayerId": 9046
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "ColliderRelativePath": "Trigger",
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.LockPlayerControl"
+            },
+            {
+              "$type": "RPG.GameCore.ShowTalkUI",
+              "Show": true
+            },
+            {
+              "$type": "RPG.GameCore.PlaySimpleTalk",
+              "SimpleTalkList": [
+                {}
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+            },
+            {
+              "$type": "RPG.GameCore.PlayOptionTalk",
+              "OptionList": [
+                {
+                  "TriggerCustomString": "Maze_Medic_SwitchToRoom01"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Medic_SwitchToRoom01"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.CaptureLocalPlayer",
+          "CharacterUniqueName": "Player"
+        },
+        {
+          "$type": "RPG.GameCore.SwitchCharacterAnchor",
+          "CharacterUniqueName": "Player",
+          "AreaName": "Maze_Test_1F_1R_Data",
+          "AnchorName": "Room05PlayerStartPoint"
+        },
+        {
+          "$type": "RPG.GameCore.ReleaseCharacter",
+          "CharacterUniqueName": "Player"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Medic_SwitchToRoom02"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.CaptureLocalPlayer",
+          "CharacterUniqueName": "Player"
+        },
+        {
+          "$type": "RPG.GameCore.SwitchCharacterAnchor",
+          "CharacterUniqueName": "Player",
+          "AreaName": "Maze_Medic_RoomData_02",
+          "AnchorName": "Room02PlayerStartPoint"
+        },
+        {
+          "$type": "RPG.GameCore.ReleaseCharacter",
+          "CharacterUniqueName": "Player"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Medic_SwitchToRoom03"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.CaptureLocalPlayer",
+          "CharacterUniqueName": "Player"
+        },
+        {
+          "$type": "RPG.GameCore.SwitchCharacterAnchor",
+          "CharacterUniqueName": "Player",
+          "AreaName": "Maze_Medic_RoomData_04",
+          "AnchorName": "Room04PlayerStartPoint"
+        },
+        {
+          "$type": "RPG.GameCore.ReleaseCharacter",
+          "CharacterUniqueName": "Player"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Medi_SwithNone"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        }
+      ]
+    }
+  ]
+}

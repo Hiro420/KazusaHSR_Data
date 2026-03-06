@@ -1,0 +1,377 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300002,
+              "GroupID": 7,
+              "Execute": [],
+              "State": "Locked"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300002,
+              "GroupID": 7,
+              "Execute": [],
+              "State": "Open"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300001,
+              "GroupID": 7,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "TargetIsOwner": true,
+                  "GroupPropID": 300001,
+                  "GroupID": 7,
+                  "AnimStateName": "Maze_ElementsProp_Used"
+                },
+                {
+                  "$type": "RPG.GameCore.PropEnableCollider",
+                  "ID": 300003,
+                  "GroupID": 7,
+                  "SpecifiedRelativePaths": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_90301_BuffPillar3_Unlock"
+        },
+        {
+          "$type": "RPG.GameCore.PropStateExecute",
+          "GroupPropID": 300003,
+          "GroupID": 7,
+          "Execute": [
+            {
+              "$type": "RPG.GameCore.PropTriggerAnimState",
+              "GroupPropID": 300003,
+              "GroupID": 7,
+              "AnimStateName": "Maze_ElementsProp_CanUse"
+            },
+            {
+              "$type": "RPG.GameCore.PropReqInteract",
+              "GroupPropID": 300003,
+              "GroupID": 7,
+              "InteractID": 1210
+            },
+            {
+              "$type": "RPG.GameCore.PropSetupUITrigger",
+              "TargetIsOwner": true,
+              "ButtonCallback": [
+                {
+                  "$type": "RPG.GameCore.LockPlayerControl"
+                },
+                {
+                  "$type": "RPG.GameCore.ShowTalkUI",
+                  "Show": true
+                },
+                {
+                  "$type": "RPG.GameCore.EnableNPCMonsterAI",
+                  "GroupMonsterIDs": [],
+                  "UniqueNames": []
+                },
+                {
+                  "$type": "RPG.GameCore.PlaySimpleTalk",
+                  "SimpleTalkList": [
+                    {
+                      "VoiceID": 999970107
+                    }
+                  ]
+                },
+                {
+                  "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+                },
+                {
+                  "$type": "RPG.GameCore.PlayOptionTalk",
+                  "OptionList": [
+                    {
+                      "OptionTextmapID": {
+                        "hash": -1108032408
+                      },
+                      "TriggerCustomString": "Maze_90301_BuffPillar3-1"
+                    },
+                    {
+                      "OptionTextmapID": {
+                        "hash": -1108032405
+                      },
+                      "TriggerCustomString": "Maze_90301_BuffPillar3-2"
+                    },
+                    {
+                      "OptionTextmapID": {
+                        "hash": -1108022603
+                      },
+                      "TriggerCustomString": "Maze_90301_BuffPillar3_Cancel"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "State": "Locked"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByCompareNPCMonsterCheckState",
+            "GroupID": 3,
+            "GroupMonsterID": 200002,
+            "CheckState": "Dead"
+          },
+          "SuccessTaskList": [
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "Maze_90301_BuffPillar3_Unlock"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_90301_BuffPillar3-1"
+        },
+        {
+          "$type": "RPG.GameCore.CaptureLocalPlayer",
+          "CharacterUniqueName": "BuffProp_MP_LocalPlayer"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerEffectListOnCharacter",
+          "CharacterUniqueName": "BuffProp_MP_LocalPlayer",
+          "EffectList": [
+            {
+              "EffectPath": "Effects/Eff_Prefab/Eff_Common/Eff_Buff_Common_Increased_attack_power.prefab",
+              "AttachPoint": "Body",
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.5,
+                "z": 0.0
+              }
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "Maze_90301_BuffPillar3-1_buff"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.ReleaseCharacter",
+          "CharacterUniqueName": "BuffProp_MP_LocalPlayer"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.EnableNPCMonsterAI",
+          "Enable": true,
+          "GroupMonsterIDs": [],
+          "UniqueNames": []
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "Maze_90301_BuffPillar3_close"
+          }
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_90301_BuffPillar3-1_buff",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.AddMazeBuff",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "LightTeamEntity"
+          },
+          "ID": 3999001,
+          "LifeTime": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": -1.0
+            }
+          },
+          "Count": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 1.0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_90301_BuffPillar3_close",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.PropStateExecute",
+          "GroupPropID": 300003,
+          "GroupID": 7,
+          "Execute": [
+            {
+              "$type": "RPG.GameCore.PropTriggerAnimState",
+              "GroupPropID": 300003,
+              "GroupID": 7,
+              "AnimStateName": "Maze_ElementsProp_Used"
+            },
+            {
+              "$type": "RPG.GameCore.PropReqInteract",
+              "GroupPropID": 300003,
+              "GroupID": 7,
+              "InteractID": 1100
+            },
+            {
+              "$type": "RPG.GameCore.PropEnableCollider",
+              "ID": 300003,
+              "GroupID": 7,
+              "SpecifiedRelativePaths": []
+            }
+          ],
+          "State": "Open"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_90301_BuffPillar3-2"
+        },
+        {
+          "$type": "RPG.GameCore.CaptureLocalPlayer",
+          "CharacterUniqueName": "BuffProp_MP_LocalPlayer"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerEffectListOnCharacter",
+          "CharacterUniqueName": "BuffProp_MP_LocalPlayer",
+          "EffectList": [
+            {
+              "EffectPath": "Effects/Eff_Prefab/Eff_Common/Eff_Buff_Common_Increased_attack_power.prefab",
+              "AttachPoint": "Body",
+              "PositionOffset": {
+                "x": 0.0,
+                "y": 0.5,
+                "z": 0.0
+              }
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "Maze_90301_BuffPillar3-2_buff"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.ReleaseCharacter",
+          "CharacterUniqueName": "BuffProp_MP_LocalPlayer"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.EnableNPCMonsterAI",
+          "Enable": true,
+          "GroupMonsterIDs": [],
+          "UniqueNames": []
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "Maze_90301_BuffPillar3_close"
+          }
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_90301_BuffPillar3-2_buff",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.AddMazeBuff",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "LightTeamEntity"
+          },
+          "ID": 3999006,
+          "LifeTime": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": -1.0
+            }
+          },
+          "Count": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 10.0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_90301_BuffPillar3_Cancel"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.EnableNPCMonsterAI",
+          "Enable": true,
+          "GroupMonsterIDs": [],
+          "UniqueNames": []
+        }
+      ]
+    }
+  ]
+}

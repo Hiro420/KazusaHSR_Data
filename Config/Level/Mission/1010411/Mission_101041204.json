@@ -1,0 +1,31 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300001,
+          "GroupID": 11,
+          "TargetTypes": [],
+          "DestroyAfterTriggered": true,
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.TriggerStory",
+              "StoryID": 101041208
+            },
+            {
+              "$type": "RPG.GameCore.PlayScreenTransfer",
+              "Mode": "SwitchOut",
+              "CustomTime": 0.5
+            },
+            {
+              "$type": "RPG.GameCore.FinishStoryMission",
+              "Key": "Mission_101041204"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

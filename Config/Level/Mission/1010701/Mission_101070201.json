@@ -1,0 +1,67 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_ElavatorSwicth_Locked"
+        },
+        {
+          "$type": "RPG.GameCore.PlayMissionTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201233801
+            },
+            {
+              "VoiceID": 201233802
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300001,
+          "GroupID": 12,
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "DestroyAfterTriggered": true,
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.TriggerStory",
+              "StoryID": 101070201
+            },
+            {
+              "$type": "RPG.GameCore.PlayScreenTransfer",
+              "Type": "Black",
+              "Mode": "SwitchOut"
+            },
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "Enter_101070305"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Enter_101070305",
+          "WaitOwnerOnly": true,
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.EnterMap",
+          "EntranceID": 2012101
+        }
+      ]
+    }
+  ]
+}

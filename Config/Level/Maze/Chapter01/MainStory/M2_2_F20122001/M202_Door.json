@@ -1,0 +1,137 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SyncSubPropState",
+          "MainGroupID": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 3661987000
+                }
+              ]
+            }
+          },
+          "MainGroupPropID": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 3590207363
+                }
+              ]
+            }
+          },
+          "MainState": "Open",
+          "SubGroupID": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 3202239000
+                }
+              ]
+            }
+          },
+          "SubGroupPropID": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 132981323
+                }
+              ]
+            }
+          },
+          "SubState": "Open"
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SyncAllSubPropState",
+          "GroupID": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 3661987000
+                }
+              ]
+            }
+          },
+          "GroupPropID": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 3590207363
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PlayMissionTalk",
+                  "SimpleTalkList": [
+                    {
+                      "VoiceID": 201222103
+                    },
+                    {
+                      "VoiceID": 201222104
+                    },
+                    {
+                      "VoiceID": 201222105
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "ValueSource": {
+    "Values": [
+      {
+        "$type": "RPG.GameCore.SharedInt",
+        "Key": "Maze_Prop_Chap01_IronGate06_GroupID"
+      },
+      {
+        "$type": "RPG.GameCore.SharedInt",
+        "Key": "Maze_Prop_Chap01_IronGate06_PropID"
+      },
+      {
+        "$type": "RPG.GameCore.SharedInt",
+        "Key": "Maze_Prop_Chap01_IronGate06Controller_GroupID"
+      },
+      {
+        "$type": "RPG.GameCore.SharedInt",
+        "Key": "Maze_Prop_Chap01_IronGate06Controller_PropID"
+      }
+    ]
+  }
+}

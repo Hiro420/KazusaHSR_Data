@@ -1,0 +1,25 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Mode": "SwitchOut"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerStory",
+          "StoryID": 101040204
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Mode": "SwitchOut"
+        },
+        {
+          "$type": "RPG.GameCore.FinishStoryMission",
+          "Key": "Mission_101040204"
+        }
+      ]
+    }
+  ]
+}

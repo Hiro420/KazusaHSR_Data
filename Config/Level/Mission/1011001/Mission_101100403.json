@@ -1,0 +1,23 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.EnterMap",
+          "EntranceID": 1010101
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Chap01_MainMission_101100403",
+          "WaitOwnerOnly": true,
+          "Sync": true
+        }
+      ]
+    }
+  ]
+}

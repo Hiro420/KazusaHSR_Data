@@ -1,0 +1,57 @@
+﻿{
+  "States": [
+    {
+      "State": "Locked",
+      "Behavior": "EnableTrigger",
+      "AnimName": "StandBy"
+    },
+    {
+      "Behavior": "EnableTrigger",
+      "AnimName": "StandBy"
+    },
+    {
+      "State": "Open",
+      "Behavior": "DisableTrigger",
+      "AnimName": "Used"
+    }
+  ],
+  "AnimatorStateGroupEvents": [
+    {
+      "States": [
+        {
+          "Name": "Activing"
+        }
+      ],
+      "OnEnter": [
+        {
+          "$type": "RPG.GameCore.TriggerSound",
+          "SoundName": "Ev_sfx_common_console_start",
+          "OwnerEntityEmitter": false
+        }
+      ]
+    },
+    {
+      "States": [
+        {
+          "Name": "TriggerSelectBegin"
+        }
+      ],
+      "OnEnter": [
+        {
+          "$type": "RPG.GameCore.TriggerSound",
+          "SoundName": "Ev_sfx_common_console_start",
+          "OwnerEntityEmitter": false
+        }
+      ]
+    },
+    {
+      "States": [
+        {
+          "Name": "TriggerSelectLoop"
+        }
+      ],
+      "OnEnter": [],
+      "OnExit": []
+    }
+  ]
+}

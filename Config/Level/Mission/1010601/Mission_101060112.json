@@ -1,0 +1,23 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.DestroyTrialPlayer",
+          "TrialPlayerId": 1001109
+        },
+        {
+          "$type": "RPG.GameCore.ToastPile",
+          "DescTextID": {
+            "hash": 255115042
+          }
+        },
+        {
+          "$type": "RPG.GameCore.FinishStoryMission",
+          "Key": "Mission_101060112"
+        }
+      ]
+    }
+  ]
+}

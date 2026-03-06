@@ -1,0 +1,37 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.TriggerStory",
+          "StoryID": 201050203
+        },
+        {
+          "$type": "RPG.GameCore.PlayMissionTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201213558,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201213559,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201213560,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201213561,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    }
+  ]
+}

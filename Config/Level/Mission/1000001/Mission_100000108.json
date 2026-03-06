@@ -1,0 +1,45 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "CustomTime": 0.5
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300001,
+          "GroupID": 8,
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "DestroyAfterTriggered": true,
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.PlayScreenTransfer",
+              "Type": "Black",
+              "Mode": "SwitchOut"
+            },
+            {
+              "$type": "RPG.GameCore.WaitSecond",
+              "WaitTime": 1.5
+            },
+            {
+              "$type": "RPG.GameCore.TriggerStory",
+              "StoryID": 101000111
+            },
+            {
+              "$type": "RPG.GameCore.FinishStoryMission",
+              "Key": "Mission_100000108"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

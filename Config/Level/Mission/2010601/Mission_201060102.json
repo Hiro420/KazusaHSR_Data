@@ -1,0 +1,38 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "201060102_Finish"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "201060102_Unload"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.FinishStoryMission",
+          "Key": "Mission_201060102"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "201060102_Unload",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.UnloadLevelGroup",
+          "GroupIDList": [
+            10
+          ]
+        }
+      ]
+    }
+  ]
+}

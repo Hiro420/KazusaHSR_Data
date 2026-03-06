@@ -1,0 +1,72 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitFloorTimer",
+          "OnSecond": 1.0
+        },
+        {
+          "$type": "RPG.GameCore.PlayMissionTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201223816
+            },
+            {
+              "VoiceID": 201223817
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SetNpcStatus",
+          "GroupID": 8,
+          "GroupNpcID": 400001,
+          "Status": "FollowPlayer"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300001,
+          "GroupID": 7,
+          "TargetTypes": [],
+          "DestroyAfterTriggered": true,
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.TriggerStory",
+              "StoryID": 101060109
+            },
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "Mission_101060109_TriggerBattle"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Mission_101060109_TriggerBattle",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.TriggerBattle",
+          "EventID": 20122004,
+          "GroupID": 2,
+          "BattleAreaID": 1
+        }
+      ]
+    }
+  ]
+}

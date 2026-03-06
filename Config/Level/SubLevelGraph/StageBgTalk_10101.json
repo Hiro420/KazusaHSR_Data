@@ -1,0 +1,28 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Stage_PlotWave1Signal"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 10.0
+        },
+        {
+          "$type": "RPG.GameCore.PlayBackgroundTalk",
+          "BackgroundTalkList": [
+            {
+              "AutoSkipTime": 2.0
+            },
+            {
+              "AutoSkipTime": 2.0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

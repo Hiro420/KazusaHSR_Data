@@ -1,0 +1,63 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.LockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI",
+          "Show": true
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode",
+          "Enable": true
+        },
+        {
+          "$type": "RPG.GameCore.EnableNPCMonsterAI",
+          "GroupMonsterIDs": [],
+          "UniqueNames": []
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201310117
+            },
+            {
+              "VoiceID": 201310118
+            },
+            {
+              "VoiceID": 201310119
+            },
+            {
+              "VoiceID": 201310120
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode"
+        },
+        {
+          "$type": "RPG.GameCore.EnableNPCMonsterAI",
+          "Enable": true,
+          "GroupMonsterIDs": [],
+          "UniqueNames": []
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "ID": 300003,
+          "GroupID": 8,
+          "DestroyAfterTriggered": true,
+          "ButtonText": {
+            "hash": -602039059
+          },
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.LockPlayerControl"
+            },
+            {
+              "$type": "RPG.GameCore.EnableStoryMode",
+              "Enable": true
+            },
+            {
+              "$type": "RPG.GameCore.ShowTalkUI",
+              "Show": true
+            },
+            {
+              "$type": "RPG.GameCore.PlaySimpleTalk",
+              "SimpleTalkList": [
+                {
+                  "VoiceID": 201310301
+                },
+                {
+                  "VoiceID": 201310302
+                },
+                {
+                  "VoiceID": 201310303
+                },
+                {
+                  "VoiceID": 201310304
+                },
+                {
+                  "VoiceID": 201310305
+                },
+                {
+                  "VoiceID": 201310306
+                },
+                {
+                  "VoiceID": 201310307
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+            },
+            {
+              "$type": "RPG.GameCore.UnLockPlayerControl"
+            },
+            {
+              "$type": "RPG.GameCore.EnableStoryMode"
+            },
+            {
+              "$type": "RPG.GameCore.ShowTalkUI"
+            },
+            {
+              "$type": "RPG.GameCore.PlayScreenTransfer",
+              "Type": "Black",
+              "Mode": "SwitchOut",
+              "CustomTime": 1.5
+            },
+            {
+              "$type": "RPG.GameCore.WaitSecond",
+              "WaitTime": 1.5
+            },
+            {
+              "$type": "RPG.GameCore.PlayScreenTransfer",
+              "Type": "Black",
+              "CustomTime": 1.5
+            },
+            {
+              "$type": "RPG.GameCore.FinishStoryMission",
+              "Key": "Mission_101080102"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+﻿{
+  "ModifierMap": {
+    "ADV_ItemAbility_400001": {
+      "Stacking": "Replace",
+      "OnCreate": [
+        {
+          "$type": "RPG.GameCore.AdventureModifyTeamPlayerHP",
+          "AddRatio": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 0.3
+            }
+          },
+          "SpecifyTargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.RemoveSelfModifier"
+        }
+      ]
+    },
+    "ADV_ItemAbility_400002": {
+      "Stacking": "Replace",
+      "OnCreate": [
+        {
+          "$type": "RPG.GameCore.AdventureModifyTeamPlayerHP",
+          "AddRatio": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 1.0
+            }
+          },
+          "SpecifyTargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.RemoveSelfModifier"
+        }
+      ]
+    },
+    "ADV_ItemAbility_400003": {
+      "Stacking": "Replace",
+      "OnCreate": [
+        {
+          "$type": "RPG.GameCore.AdventureModifyMazeMP",
+          "ModifyFunction": "Add",
+          "ModifyValue": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 5.0
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.RemoveSelfModifier"
+        }
+      ]
+    },
+    "ADV_ItemAbility_401001": {
+      "Count": 1,
+      "Stacking": "Replace"
+    },
+    "ADV_ItemAbility_401002": {
+      "Count": 1,
+      "Stacking": "Replace"
+    },
+    "ADV_ItemAbility_401003": {
+      "Stacking": "Replace",
+      "OnCreate": [
+        {
+          "$type": "RPG.GameCore.AdventureModifyMazeMP",
+          "ModifyFunction": "Add",
+          "ModifyValue": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 5.0
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.RemoveSelfModifier"
+        }
+      ]
+    }
+  }
+}

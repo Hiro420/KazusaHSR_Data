@@ -1,0 +1,125 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.LevelStoryInitialize",
+          "EntityVisiableList": [],
+          "CreateCharacterList": [
+            {
+              "CharacterUniqueName": "Mission_1011001_Gepard",
+              "AvatarID": "Gepard_00",
+              "AreaName": "LevelArea_P20132_F20132001_G8",
+              "AnchorName": "Act_Gepard_MoveOut_01"
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Mission_1011001",
+          "AnchorName": "A12_Cam_02",
+          "BlendConfig": {
+            "BlendType": "Cut"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.PropTriggerAnimState",
+          "GroupPropID": 300020,
+          "GroupID": 3,
+          "AnimStateName": "Unlock"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 2.0
+        },
+        {
+          "$type": "RPG.GameCore.CharacterNavigateTo",
+          "CharacterUniqueName": "Mission_1011001_Gepard",
+          "AreaName": "LevelArea_P20132_F20132001_G8",
+          "AnchorName": "Act_Gepard_MoveOut_02",
+          "MotionFlag": "Walk"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 2.0
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201323003
+            },
+            {
+              "VoiceID": 201323004
+            },
+            {
+              "VoiceID": 201323005
+            },
+            {
+              "VoiceID": 201323006
+            },
+            {
+              "VoiceID": 201323007
+            },
+            {
+              "VoiceID": 201323008
+            },
+            {
+              "VoiceID": 201323009
+            },
+            {
+              "VoiceID": 201323010
+            },
+            {
+              "VoiceID": 201323011
+            },
+            {
+              "VoiceID": 201323012
+            },
+            {
+              "VoiceID": 201323013
+            },
+            {
+              "VoiceID": 201323014
+            },
+            {
+              "VoiceID": 201323015
+            },
+            {
+              "VoiceID": 201323016
+            },
+            {
+              "VoiceID": 201323017
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.EndStory"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitStoryEnd"
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Mission_1011001",
+          "AnchorName": "A12_Cam_02",
+          "IsActive": false,
+          "BlendConfig": {
+            "BlendType": "Cut"
+          }
+        }
+      ]
+    }
+  ]
+}

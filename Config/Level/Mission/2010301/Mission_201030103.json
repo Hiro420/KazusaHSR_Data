@@ -1,0 +1,57 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": []
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "201030101_LD01",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300001,
+              "GroupID": 12,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "GroupPropID": 300001,
+                  "GroupID": 12,
+                  "InteractID": 3011
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "GroupPropID": 300001,
+                  "GroupID": 12,
+                  "AnimStateName": "Activing"
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300001,
+              "GroupID": 12,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "GroupPropID": 300001,
+                  "GroupID": 12,
+                  "AnimStateName": "Activing"
+                }
+              ],
+              "State": "Open"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

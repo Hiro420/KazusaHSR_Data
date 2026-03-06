@@ -1,0 +1,471 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.BlockInputController",
+          "Enable": true,
+          "ActionNameList": []
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitTurnCount",
+          "CalcMethod": "LightTeam",
+          "TaskList": []
+        },
+        {
+          "$type": "RPG.GameCore.ShowTutorialUI",
+          "Name": "UI/Guide/TutorialDialog.prefab",
+          "ShowInDialogLayer": true
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "Dialog/TutorialDialog(Clone)/MaskRaycastTarget"
+          ],
+          "Open": true
+        },
+        {
+          "$type": "RPG.GameCore.WaitUIAnim",
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BattleSkillButtonPanelV2",
+          "AnimStateName": "BattleUI_BattleSkillButtonPanelFadeIn"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "Dialog/TutorialDialog(Clone)/Bg"
+          ],
+          "Open": true
+        },
+        {
+          "$type": "RPG.GameCore.MoveUINodeToMask",
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BattleSkillButtonPanelV2/SkillButton01/BattleSkillButtonV2"
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 1,
+          "Show": true,
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BattleSkillButtonPanelV2/SkillButton01/BattleSkillButtonV2",
+          "CopyAnchorAndSale": true,
+          "PCGuide": {}
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 3,
+          "Show": true,
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BattleSkillButtonPanelV2/SkillButton01/BattleSkillButtonV2",
+          "Text": "TutorialTextmap_20101",
+          "OffsetY": 100.0,
+          "PCGuide": {
+            "UsePCGuide": true,
+            "GuideResID": 5,
+            "Path": "Page",
+            "TextPath": "Contents/Text",
+            "Text": "TutorialTextmap_20101_pc",
+            "ActionName": "Battle_SkillRelease"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.BlockInputController",
+          "Enable": true,
+          "ActionNameList": [
+            "Battle_SkillRelease"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitTutorial",
+          "Event": "ClickAction",
+          "Param": "Dialog/TutorialDialog(Clone)/Bg/BattleSkillButtonV2(Clone)",
+          "BoolParam": false
+        },
+        {
+          "$type": "RPG.GameCore.BlockInputController",
+          "Enable": true,
+          "ActionNameList": []
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 3,
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BattleSkillButtonPanelV2/SkillButton01/BattleSkillButtonV2",
+          "Text": "TutorialTextmap_20101",
+          "PCGuide": {
+            "UsePCGuide": true,
+            "GuideResID": 5,
+            "Path": "Page",
+            "TextPath": "Contents/Text",
+            "Text": "TutorialTextmap_20101_pc",
+            "ActionName": "Battle_SkillRelease"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 1,
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BattleSkillButtonPanelV2/SkillButton01/BattleSkillButtonV2",
+          "CopyAnchorAndSale": true,
+          "PCGuide": {}
+        },
+        {
+          "$type": "RPG.GameCore.MoveUINodeToMask",
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BattleSkillButtonPanelV2/SkillButton01/BattleSkillButtonV2",
+          "Reset": true
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "Dialog/TutorialDialog(Clone)/Bg"
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitTurnCount",
+          "Count": 2,
+          "TaskList": []
+        },
+        {
+          "$type": "RPG.GameCore.WaitUIAnim",
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BattleSkillButtonPanelV2",
+          "AnimStateName": "BattleUI_BattleSkillButtonPanelFadeIn"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "Dialog/TutorialDialog(Clone)/Bg"
+          ],
+          "Open": true
+        },
+        {
+          "$type": "RPG.GameCore.MoveUINodeToMask",
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BPDetailPanel/Content/BpList",
+          "Follow": true
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 2,
+          "Show": true,
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BPDetailPanel/Content/BpList",
+          "CopyAnchorAndSale": true,
+          "PCGuide": {}
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 3,
+          "Show": true,
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BPDetailPanel/Content/BpList",
+          "Text": "TutorialTextmap_20103",
+          "OffsetY": 60.0,
+          "PCGuide": {}
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 1.5
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "Dialog/TutorialDialog(Clone)/FullScreenButton"
+          ],
+          "Open": true
+        },
+        {
+          "$type": "RPG.GameCore.WaitTutorial",
+          "Event": "ClickBtnWithPath",
+          "Param": "Dialog/TutorialDialog(Clone)/FullScreenButton",
+          "BoolParam": false
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "Dialog/TutorialDialog(Clone)/FullScreenButton"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 3,
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BPDetailPanel/Content/BpList",
+          "Text": "TutorialTextmap_20103",
+          "OffsetY": 60.0,
+          "PCGuide": {}
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 2,
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BPDetailPanel/Content/BpList",
+          "CopyAnchorAndSale": true,
+          "PCGuide": {}
+        },
+        {
+          "$type": "RPG.GameCore.MoveUINodeToMask",
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BPDetailPanel/Content/BpList",
+          "Reset": true,
+          "Follow": true
+        },
+        {
+          "$type": "RPG.GameCore.MoveUINodeToMask",
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BattleSkillButtonPanelV2/SkillButton02/BattleSkillButtonV2"
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 1,
+          "Show": true,
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BattleSkillButtonPanelV2/SkillButton02/BattleSkillButtonV2",
+          "CopyAnchorAndSale": true,
+          "PCGuide": {}
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 3,
+          "Show": true,
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BattleSkillButtonPanelV2/SkillButton02/BattleSkillButtonV2",
+          "Text": "TutorialTextmap_20102",
+          "OffsetY": 100.0,
+          "PCGuide": {
+            "UsePCGuide": true,
+            "GuideResID": 5,
+            "Path": "Page",
+            "TextPath": "Contents/Text",
+            "Text": "TutorialTextmap_20102_pc",
+            "ActionName": "Battle_BPSkill"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.BlockInputController",
+          "Enable": true,
+          "ActionNameList": [
+            "Battle_BPSkill"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitTutorial",
+          "Event": "SelectSkill02",
+          "Param": "Dialog/TutorialDialog(Clone)/Bg/BattleSkillButtonV2(Clone)",
+          "BoolParam": false
+        },
+        {
+          "$type": "RPG.GameCore.BlockInputController",
+          "Enable": true,
+          "ActionNameList": []
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 3,
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BattleSkillButtonPanelV2/SkillButton02/BattleSkillButtonV2",
+          "Text": "TutorialTextmap_20102",
+          "PCGuide": {
+            "UsePCGuide": true,
+            "GuideResID": 5,
+            "Path": "Page",
+            "TextPath": "Contents/Text",
+            "Text": "TutorialTextmap_20102_pc",
+            "ActionName": "Battle_BPSkill"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 1,
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BattleSkillButtonPanelV2/SkillButton02/BattleSkillButtonV2",
+          "CopyAnchorAndSale": true,
+          "PCGuide": {}
+        },
+        {
+          "$type": "RPG.GameCore.MoveUINodeToMask",
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BattleSkillButtonPanelV2/SkillButton02/BattleSkillButtonV2",
+          "Reset": true
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "Dialog/TutorialDialog(Clone)/Bg"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitUIAnim",
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill",
+          "AnimStateName": "BattleSkillBtnSelect02"
+        },
+        {
+          "$type": "RPG.GameCore.CheckUIMode",
+          "OnMobile": [
+            {
+              "$type": "RPG.GameCore.ShowGuideText",
+              "GuideResID": 3,
+              "Show": true,
+              "Path": "Dialog/TutorialDialog(Clone)/GuideRoot",
+              "Text": "TutorialTextmap_20105",
+              "OffsetX": 210.0,
+              "OffsetY": 240.0,
+              "PCGuide": {}
+            },
+            {
+              "$type": "RPG.GameCore.ShowUINodes",
+              "Nodes": [
+                "Dialog/TutorialDialog(Clone)/MaskLockTarget"
+              ],
+              "Open": true
+            },
+            {
+              "$type": "RPG.GameCore.ShowUINodes",
+              "Nodes": [
+                "Dialog/TutorialDialog(Clone)/MaskRaycastTarget"
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.WaitTutorial",
+              "Event": "ChangeLockTarget",
+              "Param": "LockTarget",
+              "BoolParam": false
+            },
+            {
+              "$type": "RPG.GameCore.ShowUINodes",
+              "Nodes": [
+                "Dialog/TutorialDialog(Clone)/MaskRaycastTarget"
+              ],
+              "Open": true
+            },
+            {
+              "$type": "RPG.GameCore.ShowUINodes",
+              "Nodes": [
+                "Dialog/TutorialDialog(Clone)/MaskLockTarget"
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.ShowGuideText",
+              "GuideResID": 3,
+              "Path": "Dialog/TutorialDialog(Clone)/GuideRoot",
+              "Text": "TutorialTextmap_20105",
+              "OffsetY": 0.1,
+              "PCGuide": {}
+            },
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "Tutorial_TargetSelect_201"
+              }
+            }
+          ],
+          "OnPC": [
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "Tutorial_TargetSelect_201"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Tutorial_TargetSelect_201"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "Dialog/TutorialDialog(Clone)/Bg"
+          ],
+          "Open": true
+        },
+        {
+          "$type": "RPG.GameCore.MoveUINodeToMask",
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BattleSkillButtonPanelV2/SkillButton02/BattleSkillButtonV2"
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 1,
+          "Show": true,
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BattleSkillButtonPanelV2/SkillButton02/BattleSkillButtonV2",
+          "CopyAnchorAndSale": true,
+          "PCGuide": {}
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 3,
+          "Show": true,
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BattleSkillButtonPanelV2/SkillButton02/BattleSkillButtonV2",
+          "Text": "TutorialTextmap_20104",
+          "OffsetY": 100.0,
+          "PCGuide": {
+            "UsePCGuide": true,
+            "GuideResID": 5,
+            "Path": "Page",
+            "TextPath": "Contents/Text",
+            "Text": "TutorialTextmap_20104_pc",
+            "ActionName": "Battle_SkillRelease"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.BlockInputController",
+          "Enable": true,
+          "ActionNameList": [
+            "Battle_SkillRelease"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitTutorial",
+          "Event": "ClickAction",
+          "Param": "Dialog/TutorialDialog(Clone)/Bg/BattleSkillButtonV2(Clone)",
+          "BoolParam": false
+        },
+        {
+          "$type": "RPG.GameCore.BlockInputController",
+          "Enable": true,
+          "ActionNameList": []
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 3,
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BattleSkillButtonPanelV2/SkillButton02/BattleSkillButtonV2",
+          "Text": "TutorialTextmap_20104",
+          "PCGuide": {
+            "UsePCGuide": true,
+            "GuideResID": 5,
+            "Path": "Page",
+            "TextPath": "Contents/Text",
+            "Text": "TutorialTextmap_20104_pc",
+            "ActionName": "Battle_SkillRelease"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 1,
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BattleSkillButtonPanelV2/SkillButton02/BattleSkillButtonV2",
+          "CopyAnchorAndSale": true,
+          "PCGuide": {}
+        },
+        {
+          "$type": "RPG.GameCore.MoveUINodeToMask",
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BattleSkillButtonPanelV2/SkillButton02/BattleSkillButtonV2",
+          "Reset": true
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "Dialog/TutorialDialog(Clone)/Bg"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "Dialog/TutorialDialog(Clone)/MaskRaycastTarget"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.BlockInputController",
+          "ActionNameList": []
+        },
+        {
+          "$type": "RPG.GameCore.TutorialFinish",
+          "TutorialID": 201
+        }
+      ]
+    }
+  ]
+}

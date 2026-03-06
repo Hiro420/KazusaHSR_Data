@@ -1,0 +1,80 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300004,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "TargetIsOwner": true,
+                  "AnimStateName": "Elevator_Floor0"
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300004,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "TargetIsOwner": true,
+                  "AnimStateName": "Elevator_Floor3"
+                }
+              ],
+              "State": "Open"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.SelectorConfig",
+              "TaskList": [
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "TargetIsOwner": true,
+                  "AnimStateName": "Elevator_Floor0to3"
+                },
+                {
+                  "$type": "RPG.GameCore.FinishLevelGraph"
+                }
+              ]
+            }
+          ],
+          "OnTriggerExit": [
+            {
+              "$type": "RPG.GameCore.WaitSecond",
+              "WaitTime": 8.0
+            },
+            {
+              "$type": "RPG.GameCore.PropTriggerAnimState",
+              "TargetIsOwner": true,
+              "AnimStateName": "Elevator_Floor3to0"
+            },
+            {
+              "$type": "RPG.GameCore.FinishLevelGraph"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupOptionsTrigger",
+          "TargetIsOwner": true,
+          "OptionList": [
+            {
+              "OptionTextmapID": {
+                "hash": 742737890
+              },
+              "TriggerCustomString": "Maze_Test99998_EnterMap00"
+            },
+            {
+              "OptionTextmapID": {
+                "hash": 1905537304
+              },
+              "TriggerCustomString": "Maze_Test99998_EnterMap01"
+            },
+            {
+              "OptionTextmapID": {
+                "hash": -1582860938
+              },
+              "TriggerCustomString": "Maze_Test99998_EnterMap02"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Test99998_EnterMap00",
+          "WaitOwnerOnly": true,
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.EnterMap",
+          "EntranceID": 1010101
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Test99998_EnterMap01",
+          "WaitOwnerOnly": true,
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.EnterMap",
+          "EntranceID": 2011101
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Test99998_EnterMap02",
+          "WaitOwnerOnly": true,
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.EnterMap",
+          "EntranceID": 1010101,
+          "GroupID": 1,
+          "AnchorID": 3
+        }
+      ]
+    }
+  ]
+}

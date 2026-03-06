@@ -1,0 +1,24 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": []
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "ColliderRelativePath": "Trigger",
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.PropTriggerAnimState",
+              "TransitionDuration": 2.0,
+              "AnimStateName": "Activing"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

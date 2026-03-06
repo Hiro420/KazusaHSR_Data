@@ -1,0 +1,74 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300001,
+          "GroupID": 34,
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "DestroyAfterTriggered": true,
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.TriggerStory",
+              "StoryID": 201040302
+            },
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "Mission_201040302_01"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Mission_201040302_01",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.TriggerBattle",
+          "EventID": 20123123,
+          "GroupID": 2,
+          "BattleAreaID": 1
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Act_201040302_11",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.UnloadLevelGroup",
+          "GroupIDList": [
+            33
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Act_201040302_12",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.LoadLevelGroup",
+          "GroupIDList": [
+            35
+          ]
+        }
+      ]
+    }
+  ]
+}

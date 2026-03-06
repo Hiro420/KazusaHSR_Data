@@ -1,0 +1,223 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Mode": "SwitchOut"
+        },
+        {
+          "$type": "RPG.GameCore.LevelStoryInitialize",
+          "EntityVisiableList": [
+            {}
+          ],
+          "CreateCharacterList": [
+            {
+              "CharacterUniqueName": "101050108_Natasha",
+              "AvatarID": "Natasha_00",
+              "AreaName": "1010501_temp",
+              "AnchorName": "Waypoint0208_N"
+            },
+            {
+              "CharacterUniqueName": "101050108_DanHeng",
+              "AvatarID": "DanHeng_00",
+              "AreaName": "1010501_temp",
+              "AnchorName": "Waypoint0208_D"
+            },
+            {
+              "CharacterUniqueName": "101050108_Mar_7th",
+              "AvatarID": "Mar_7th_00",
+              "AreaName": "1010501_temp",
+              "AnchorName": "Waypoint0208_3"
+            },
+            {
+              "CharacterUniqueName": "101050108_Player",
+              "AvatarID": "PlayerBoy_00",
+              "AreaName": "1010501_temp",
+              "AnchorName": "Waypoint0208_P"
+            },
+            {
+              "CharacterUniqueName": "101050108Bronya",
+              "AvatarID": "Bronya_00",
+              "AreaName": "1010501_temp",
+              "AnchorName": "Waypoint0208_B"
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "1010501_temp",
+          "AnchorName": "Camera0208_all1",
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "Cut",
+            "BlendTime": 0.1
+          }
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "CustomTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "1010501_temp",
+          "AnchorName": "Camera0208_all2",
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "EaseIn",
+            "BlendTime": 4.0
+          }
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "1010501_temp",
+          "AnchorName": "Camera0208_3",
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "Cut",
+            "BlendTime": 0.1
+          }
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201210326,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "1010501_temp",
+          "AnchorName": "Camera0208_D",
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "Cut",
+            "BlendTime": 0.1
+          }
+        },
+        {
+          "$type": "RPG.GameCore.CharacterTriggerAnimState",
+          "CharacterUniqueName": "101050108_DanHeng",
+          "UseMotionID": true,
+          "AnimStateName": "Talk01",
+          "StoryAvatarID": "DanHeng_00",
+          "StartMotion": "Think01BS",
+          "StoryMotionID": 1002023
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201210327,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "1010501_temp",
+          "AnchorName": "Camera0208_3",
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "Cut",
+            "BlendTime": 0.1
+          }
+        },
+        {
+          "$type": "RPG.GameCore.CharacterTriggerAnimState",
+          "CharacterUniqueName": "101050108_Mar_7th",
+          "UseMotionID": true,
+          "AnimStateName": "Talk01",
+          "StoryAvatarID": "Mar_7th_00",
+          "StartMotion": "Talk01",
+          "StoryMotionID": 1001016
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201210328,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "1010501_temp",
+          "AnchorName": "Camera0208_N",
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "Cut",
+            "BlendTime": 0.1
+          }
+        },
+        {
+          "$type": "RPG.GameCore.CharacterTriggerAnimState",
+          "CharacterUniqueName": "101050108_Natasha",
+          "UseMotionID": true,
+          "AnimStateName": "Talk01",
+          "StoryAvatarID": "Natasha_00",
+          "StartMotion": "HoldArm01AS",
+          "StoryMotionID": 1105045
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201210329,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Mode": "SwitchOut",
+          "CustomTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.EndStory"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitStoryEnd"
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "1010501_temp",
+          "AnchorName": "Camera0208_all1",
+          "IsActive": false,
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "Cut",
+            "BlendTime": 0.1
+          }
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "CustomTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": []
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "ColliderRelativePath": "Trigger",
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.LockPlayerControl"
+            },
+            {
+              "$type": "RPG.GameCore.CaptureLocalPlayer",
+              "CharacterUniqueName": "Player"
+            },
+            {
+              "$type": "RPG.GameCore.SwitchCharacterAnchor",
+              "CharacterUniqueName": "Player"
+            },
+            {
+              "$type": "RPG.GameCore.ReleaseCharacter",
+              "CharacterUniqueName": "Player"
+            },
+            {
+              "$type": "RPG.GameCore.UnLockPlayerControl"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

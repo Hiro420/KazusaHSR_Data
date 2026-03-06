@@ -1,0 +1,77 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "Mode": "SwitchOut"
+        },
+        {
+          "$type": "RPG.GameCore.SwitchCharacterAnchor",
+          "IsLocalPlayer": true,
+          "AreaName": "LevelArea_P10102_F10102001_G13",
+          "AnchorName": "Anchor"
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "CustomTime": 0.25
+        },
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300001,
+          "GroupID": 13,
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "DestroyAfterTriggered": true,
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.EnableStoryMode",
+              "Enable": true
+            },
+            {
+              "$type": "RPG.GameCore.LockPlayerControl"
+            },
+            {
+              "$type": "RPG.GameCore.ShowTalkUI",
+              "Show": true
+            },
+            {
+              "$type": "RPG.GameCore.PlaySimpleTalk",
+              "SimpleTalkList": [
+                {
+                  "VoiceID": 101040155,
+                  "ProtectTime": 2.0
+                },
+                {
+                  "VoiceID": 201230101
+                },
+                {
+                  "VoiceID": 201230102
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+            },
+            {
+              "$type": "RPG.GameCore.ShowTalkUI"
+            },
+            {
+              "$type": "RPG.GameCore.UnLockPlayerControl"
+            },
+            {
+              "$type": "RPG.GameCore.EnableStoryMode"
+            },
+            {
+              "$type": "RPG.GameCore.FinishStoryMission",
+              "Key": "Mission_101042101"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

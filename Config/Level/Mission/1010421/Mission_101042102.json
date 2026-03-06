@@ -1,0 +1,27 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300001,
+          "GroupID": 14,
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "DestroyAfterTriggered": true,
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.TriggerStory",
+              "StoryID": 101042102
+            },
+            {
+              "$type": "RPG.GameCore.FinishStoryMission",
+              "Key": "Mission_101042102"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

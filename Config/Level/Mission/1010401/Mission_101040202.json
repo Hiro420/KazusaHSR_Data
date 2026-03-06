@@ -1,0 +1,17 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.TriggerStory",
+          "StoryID": 101040202
+        },
+        {
+          "$type": "RPG.GameCore.FinishStoryMission",
+          "Key": "Mission_101040202"
+        }
+      ]
+    }
+  ]
+}

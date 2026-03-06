@@ -1,0 +1,126 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.LockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI",
+          "Show": true
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode",
+          "Enable": true
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Mission_9010901",
+          "AnchorName": "0241_Cam_1",
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "EaseInOut",
+            "BlendTime": 2.0
+          }
+        },
+        {
+          "$type": "RPG.GameCore.CaptureNPCToCharacter",
+          "GroupID": 15,
+          "GroupNpcID": 400001,
+          "CharacterUniqueName": "Serval"
+        },
+        {
+          "$type": "RPG.GameCore.CaptureLocalPlayer",
+          "CharacterUniqueName": "LocalPlayer"
+        },
+        {
+          "$type": "RPG.GameCore.CharacterNavigateTo",
+          "CharacterUniqueName": "LocalPlayer",
+          "AreaName": "Mission_9010901",
+          "AnchorName": "0241_Cam",
+          "MotionFlag": "Run",
+          "WaitUntilFinish": false
+        },
+        {
+          "$type": "RPG.GameCore.CharacterNavigateTo",
+          "CharacterUniqueName": "Serval",
+          "AreaName": "Mission_9010901",
+          "AnchorName": "0241_Cam_2",
+          "MotionFlag": "Run"
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201313701
+            },
+            {
+              "VoiceID": 201313702
+            },
+            {
+              "VoiceID": 201313703
+            },
+            {
+              "VoiceID": 201313704
+            },
+            {
+              "VoiceID": 201313706
+            },
+            {
+              "VoiceID": 201313707
+            },
+            {
+              "VoiceID": 201313708
+            },
+            {
+              "VoiceID": 201313709
+            },
+            {
+              "VoiceID": 201313710
+            },
+            {
+              "VoiceID": 201313711
+            },
+            {
+              "VoiceID": 201313712
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Mission_9010901",
+          "IsActive": false,
+          "FollowTargetUniqueName": "LocalPlayer",
+          "BlendConfig": {
+            "BlendType": "EaseInOut",
+            "BlendTime": 1.0
+          }
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode"
+        },
+        {
+          "$type": "RPG.GameCore.ReleaseCharacter",
+          "CharacterUniqueName": "LocalPlayer"
+        },
+        {
+          "$type": "RPG.GameCore.ReleaseCharacter",
+          "CharacterUniqueName": "Serval"
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    }
+  ]
+}

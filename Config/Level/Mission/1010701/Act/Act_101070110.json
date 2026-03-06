@@ -1,0 +1,68 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.LevelStoryInitialize",
+          "EntityVisiableList": [],
+          "CreateCharacterList": []
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201233201,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201233202,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201233203,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201233204,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201233205,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201233206,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201233207,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201233208,
+              "ProtectTime": 1.0
+            }
+          ],
+          "BlackMask": true
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.EndStory"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitStoryEnd"
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    }
+  ]
+}

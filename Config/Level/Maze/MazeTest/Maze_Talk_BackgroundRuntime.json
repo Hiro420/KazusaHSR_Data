@@ -1,0 +1,50 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Hold",
+          "WaitOwnerOnly": true
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300005,
+          "GroupID": 10,
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.PlayBackgroundTalk",
+              "BackgroundTalkList": [
+                {
+                  "VoiceID": 101020942
+                },
+                {
+                  "VoiceID": 101020944
+                },
+                {
+                  "VoiceID": 101020946
+                },
+                {
+                  "VoiceID": 101020947
+                },
+                {
+                  "VoiceID": 101020949
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.FinishLevelGraph"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

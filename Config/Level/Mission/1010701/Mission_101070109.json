@@ -1,0 +1,82 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Hold",
+          "WaitOwnerOnly": true
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Gate_101070109"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerStory",
+          "StoryID": 101070109
+        },
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300003,
+              "GroupID": 8,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "GroupPropID": 300002,
+                  "GroupID": 8,
+                  "InteractID": 1010
+                },
+                {
+                  "$type": "RPG.GameCore.TriggerCustomString",
+                  "CustomString": {
+                    "Value": "OpenGateSwitch_101070114"
+                  }
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300003,
+              "GroupID": 8,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "GroupPropID": 300002,
+                  "GroupID": 8,
+                  "InteractID": 1010
+                }
+              ],
+              "State": "Open"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropStateExecute",
+          "GroupPropID": 300003,
+          "GroupID": 8,
+          "Execute": [
+            {
+              "$type": "RPG.GameCore.PropReqInteract",
+              "GroupPropID": 300002,
+              "GroupID": 8,
+              "InteractID": 1010
+            }
+          ],
+          "State": "Open"
+        }
+      ]
+    }
+  ]
+}

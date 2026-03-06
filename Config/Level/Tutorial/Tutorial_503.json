@@ -1,0 +1,190 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.LockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.BlockInputController",
+          "Enable": true,
+          "ActionNameList": []
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitUINodeOpen",
+          "Path": "Page/MazeMainPage(Clone)/RightTopArea/MainIconItem18"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTutorialUI",
+          "Name": "UI/Guide/TutorialDialog.prefab",
+          "ShowInDialogLayer": true
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "Dialog/TutorialDialog(Clone)/MaskRaycastTarget"
+          ],
+          "Open": true
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 1,
+          "Show": true,
+          "Path": "Page/MazeMainPage(Clone)/RightTopArea/MainIconItem18",
+          "CopyAnchorAndSale": true,
+          "PCGuide": {}
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 5,
+          "Show": true,
+          "Path": "Page",
+          "TextPath": "Contents/Text",
+          "Text": "TutorialTextmap_50302",
+          "PCGuide": {}
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 2.5
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "Dialog/TutorialDialog(Clone)/FullScreenButton"
+          ],
+          "Open": true
+        },
+        {
+          "$type": "RPG.GameCore.WaitTutorial",
+          "Event": "ClickBtnWithPath",
+          "Param": "Dialog/TutorialDialog(Clone)/FullScreenButton",
+          "BoolParam": false
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "Dialog/TutorialDialog(Clone)/FullScreenButton"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 5,
+          "Path": "Page",
+          "TextPath": "Contents/Text",
+          "Text": "TutorialTextmap_50302",
+          "CopyAnchorAndSale": true,
+          "PCGuide": {}
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 1,
+          "Path": "Page/MazeMainPage(Clone)/RightTopArea/MainIconItem18",
+          "CopyAnchorAndSale": true,
+          "PCGuide": {}
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 2,
+          "Show": true,
+          "Path": "Page/MazeMainPage(Clone)/LeftUpInfo/FunctionBtn/MissionBtn",
+          "CopyAnchorAndSale": true,
+          "PCGuide": {}
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 1,
+          "Show": true,
+          "Path": "Page/MazeMainPage(Clone)/RightTopArea/MainIconItem15",
+          "CopyAnchorAndSale": true,
+          "PCGuide": {}
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 5,
+          "Show": true,
+          "Path": "Page",
+          "TextPath": "Contents/Text",
+          "Text": "TutorialTextmap_50301",
+          "PCGuide": {}
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 2.5
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "Dialog/TutorialDialog(Clone)/FullScreenButton"
+          ],
+          "Open": true
+        },
+        {
+          "$type": "RPG.GameCore.WaitTutorial",
+          "Event": "ClickBtnWithPath",
+          "Param": "Dialog/TutorialDialog(Clone)/FullScreenButton",
+          "BoolParam": false
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "Dialog/TutorialDialog(Clone)/FullScreenButton"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 5,
+          "Path": "Page",
+          "TextPath": "Contents/Text",
+          "Text": "TutorialTextmap_50301",
+          "CopyAnchorAndSale": true,
+          "PCGuide": {}
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 1,
+          "Path": "Page/MazeMainPage(Clone)/RightTopArea/MainIconItem15",
+          "CopyAnchorAndSale": true,
+          "PCGuide": {}
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 2,
+          "Path": "Page/MazeMainPage(Clone)/LeftUpInfo/FunctionBtn/MissionBtn",
+          "CopyAnchorAndSale": true,
+          "PCGuide": {}
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "Dialog/TutorialDialog(Clone)/MaskRaycastTarget"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.ShowTutorialUI",
+          "Name": "UI/Guide/TutorialDialog.prefab",
+          "IsHide": true,
+          "ShowInDialogLayer": true
+        },
+        {
+          "$type": "RPG.GameCore.BlockInputController",
+          "ActionNameList": []
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.TutorialFinish",
+          "TutorialID": 503
+        }
+      ]
+    },
+    {
+      "TaskList": []
+    }
+  ]
+}

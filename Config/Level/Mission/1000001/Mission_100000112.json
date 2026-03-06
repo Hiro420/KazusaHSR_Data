@@ -1,0 +1,40 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "1010001151_End",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.EnterMap",
+          "EntranceID": 2010101
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "Mode": "SwitchOut"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 1.5
+        },
+        {
+          "$type": "RPG.GameCore.TriggerStory",
+          "StoryID": 101000115
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "Mode": "SwitchOut"
+        }
+      ]
+    }
+  ]
+}

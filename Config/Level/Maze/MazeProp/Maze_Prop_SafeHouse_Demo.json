@@ -1,0 +1,148 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300001,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropSetupTrigger",
+                  "TargetTypes": [],
+                  "ColliderRelativePath": "Trigger",
+                  "OnTriggerEnter": [
+                    {
+                      "$type": "RPG.GameCore.PropReqInteract",
+                      "TargetIsOwner": true,
+                      "InteractID": 1010
+                    },
+                    {
+                      "$type": "RPG.GameCore.ShowUIPage",
+                      "AssetPath": "UI/Mission/MissionStartHintDialog.prefab",
+                      "UIImageNodes": [],
+                      "UITextNodes": [
+                        {
+                          "TextPath": "Dialog/MissionTitle/Text",
+                          "TextContent": {
+                            "hash": 558984476
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300001,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropSetupTrigger",
+                  "TargetTypes": [],
+                  "ColliderRelativePath": "Trigger",
+                  "OnTriggerEnter": [
+                    {
+                      "$type": "RPG.GameCore.PropReqInteract",
+                      "TargetIsOwner": true,
+                      "InteractID": 1010
+                    }
+                  ]
+                },
+                {
+                  "$type": "RPG.GameCore.PropSetupUITrigger",
+                  "TargetIsOwner": true,
+                  "ButtonCallback": [
+                    {
+                      "$type": "RPG.GameCore.SwitchCharacterAnchor"
+                    }
+                  ]
+                }
+              ],
+              "State": "Open"
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.SaveCheckPoint",
+          "GroupID": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 597599670
+                }
+              ]
+            }
+          },
+          "GroupAnchorID": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 387315114
+                }
+              ]
+            }
+          },
+          "HPRatio": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 2731668045
+                }
+              ]
+            }
+          },
+          "SPRatio": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 2729971063
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [],
+  "ValueSource": {
+    "Values": [
+      {
+        "$type": "RPG.GameCore.SharedInt",
+        "Key": "Maze_CheckPoint_GroupID_Value",
+        "Value": 1
+      },
+      {
+        "$type": "RPG.GameCore.SharedInt",
+        "Key": "Maze_CheckPoint_AnchorID_Value",
+        "Value": 1
+      },
+      {
+        "$type": "RPG.GameCore.SharedFloat",
+        "Key": "Maze_CheckPoint_HP_Value",
+        "Value": 0.3
+      },
+      {
+        "$type": "RPG.GameCore.SharedFloat",
+        "Key": "Maze_CheckPoint_SP_Value",
+        "Value": 0.3
+      }
+    ]
+  }
+}

@@ -1,0 +1,137 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.ShowTalkUI",
+          "Show": true
+        },
+        {
+          "$type": "RPG.GameCore.LockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.EnableNPCMonsterAI",
+          "GroupMonsterIDs": [],
+          "UniqueNames": []
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode",
+          "Enable": true
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Mission_9010901",
+          "AnchorName": "0104_Cam",
+          "BlendConfig": {
+            "BlendType": "EaseInOut",
+            "BlendTime": 1.0
+          }
+        },
+        {
+          "$type": "RPG.GameCore.CaptureLocalPlayer",
+          "CharacterUniqueName": "LocalPlayer"
+        },
+        {
+          "$type": "RPG.GameCore.CharacterNavigateTo",
+          "CharacterUniqueName": "LocalPlayer",
+          "AreaName": "Mission_9010901",
+          "AnchorName": "0104_Nav",
+          "MotionFlag": "Run"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Mode": "SwitchOut",
+          "CustomTime": 0.25
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.25
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Mission_9010901",
+          "AnchorName": "0104_Cam_2",
+          "BlendConfig": {
+            "BlendType": "Cut",
+            "BlendTime": 1.5
+          }
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "CustomTime": 0.25
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Mission_9010901",
+          "AnchorName": "0104_Cam_3",
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "EaseInOut",
+            "BlendTime": 2.0
+          }
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201310187
+            },
+            {
+              "VoiceID": 201310188
+            },
+            {
+              "VoiceID": 201310189
+            },
+            {
+              "VoiceID": 201310190
+            },
+            {
+              "VoiceID": 201310191
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.EnableNPCMonsterAI",
+          "Enable": true,
+          "GroupMonsterIDs": [],
+          "UniqueNames": []
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode"
+        },
+        {
+          "$type": "RPG.GameCore.ReleaseCharacter",
+          "CharacterUniqueName": "LocalPlayer"
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Mission_9010901",
+          "AnchorName": "0104_Cam_3",
+          "IsActive": false,
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "EaseInOut",
+            "BlendTime": 2.0
+          }
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    }
+  ]
+}

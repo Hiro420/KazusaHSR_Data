@@ -1,0 +1,94 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.LevelStoryInitialize",
+          "EntityVisiableList": [],
+          "CreateCharacterList": []
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode",
+          "Enable": true
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Mission_1010601",
+          "AnchorName": "101060109_Cam_1",
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "EaseInOut",
+            "BlendTime": 1.0
+          }
+        },
+        {
+          "$type": "RPG.GameCore.CaptureNPCToCharacter",
+          "GroupID": 7,
+          "GroupNpcID": 400001,
+          "CharacterUniqueName": "101060109_NPC_1"
+        },
+        {
+          "$type": "RPG.GameCore.CaptureNPCToCharacter",
+          "GroupID": 7,
+          "GroupNpcID": 400002,
+          "CharacterUniqueName": "101060109_NPC_2"
+        },
+        {
+          "$type": "RPG.GameCore.CharacterSteerTo",
+          "CharacterUniqueName": "101060109_NPC_1",
+          "AnchorName": "101060109_Hook",
+          "AreaName": "Mission_1010601"
+        },
+        {
+          "$type": "RPG.GameCore.CharacterSteerTo",
+          "CharacterUniqueName": "101060109_NPC_2",
+          "AnchorName": "101060109_Hook",
+          "AreaName": "Mission_1010601"
+        },
+        {
+          "$type": "RPG.GameCore.ReleaseCharacter",
+          "CharacterUniqueName": "101060109_NPC_1"
+        },
+        {
+          "$type": "RPG.GameCore.ReleaseCharacter",
+          "CharacterUniqueName": "101060109_NPC_2"
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201220801
+            },
+            {
+              "VoiceID": 201220802
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.EndStory"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitStoryEnd"
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Mode": "SwitchOut"
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode"
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    }
+  ]
+}

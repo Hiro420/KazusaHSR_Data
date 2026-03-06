@@ -1,0 +1,17 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitSubMission",
+          "SubMissionID": 301020602
+        },
+        {
+          "$type": "RPG.GameCore.FinishStoryMission",
+          "Key": "Mission_301022001"
+        }
+      ]
+    }
+  ]
+}

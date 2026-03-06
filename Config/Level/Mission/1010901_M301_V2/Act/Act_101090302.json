@@ -1,0 +1,287 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.LockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI",
+          "Show": true
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode",
+          "Enable": true
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "Mode": "SwitchOut",
+          "CustomTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Mission_9010901",
+          "AnchorName": "0302_Cam",
+          "BlendConfig": {
+            "BlendType": "Cut",
+            "BlendTime": 0.2
+          }
+        },
+        {
+          "$type": "RPG.GameCore.CaptureLocalPlayer",
+          "CharacterUniqueName": "LocalPlayer"
+        },
+        {
+          "$type": "RPG.GameCore.CaptureNPCToCharacter",
+          "GroupID": 15,
+          "GroupNpcID": 400001,
+          "CharacterUniqueName": "Serval"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.1
+        },
+        {
+          "$type": "RPG.GameCore.SwitchCharacterAnchor",
+          "CharacterUniqueName": "LocalPlayer",
+          "AreaName": "Mission_9010901",
+          "AnchorName": "0302_SwitchAnchor2"
+        },
+        {
+          "$type": "RPG.GameCore.SwitchCharacterAnchor",
+          "CharacterUniqueName": "Serval",
+          "AreaName": "Mission_9010901",
+          "AnchorName": "0302_SwitchAnchor"
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "CustomTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201315201
+            },
+            {
+              "VoiceID": 201315202
+            },
+            {
+              "VoiceID": 201315203
+            },
+            {
+              "VoiceID": 201315204
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.PlayOptionTalk",
+          "OptionList": [
+            {
+              "OptionTextmapID": {
+                "hash": -602038936
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "101080302_StorySelect_1"
+            },
+            {
+              "OptionTextmapID": {
+                "hash": -602038923
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "101080302_StorySelect_2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Order": 1,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "101080302_StorySelect_1"
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201315206
+            },
+            {
+              "VoiceID": 201315207
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "101080302_StorySelect_3"
+          }
+        }
+      ]
+    },
+    {
+      "Order": 2,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "101080302_StorySelect_2"
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201315209
+            },
+            {
+              "VoiceID": 201315212
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "Mode": "SwitchOut",
+          "CustomTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.SwitchCharacterAnchor",
+          "CharacterUniqueName": "LocalPlayer",
+          "AreaName": "Mission_9010901",
+          "AnchorName": "0302_SwitchAnchor3"
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Mission_9010901",
+          "AnchorName": "0302_Cam_1",
+          "IsActive": false,
+          "BlendConfig": {
+            "BlendType": "EaseIn"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "CustomTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.ReleaseCharacter",
+          "CharacterUniqueName": "LocalPlayer"
+        },
+        {
+          "$type": "RPG.GameCore.ReleaseCharacter",
+          "CharacterUniqueName": "Serval"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode"
+        },
+        {
+          "$type": "RPG.GameCore.EnableNPCMonsterAI",
+          "Enable": true,
+          "GroupMonsterIDs": [],
+          "UniqueNames": []
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    },
+    {
+      "Order": 3,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "101080302_StorySelect_3"
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201315211
+            },
+            {
+              "VoiceID": 201315212
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.CaptureNPCToCharacter",
+          "GroupID": 14,
+          "GroupNpcID": 400001,
+          "CharacterUniqueName": "Boss02"
+        },
+        {
+          "$type": "RPG.GameCore.CharacterTriggerAnimState",
+          "CharacterUniqueName": "Boss02",
+          "AnimStateName": "BossShow"
+        },
+        {
+          "$type": "RPG.GameCore.CharacterNavigateTo",
+          "CharacterUniqueName": "LocalPlayer",
+          "AreaName": "Mission_9010901",
+          "AnchorName": "0302_SwitchAnchor1",
+          "MotionFlag": "Run",
+          "WaitUntilFinish": false
+        },
+        {
+          "$type": "RPG.GameCore.CharacterNavigateTo",
+          "CharacterUniqueName": "Serval",
+          "AreaName": "Mission_9010901",
+          "AnchorName": "0302_SwitchAnchor1",
+          "MotionFlag": "Run",
+          "WaitUntilFinish": false
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Mission_9010901",
+          "AnchorName": "0302_Cam_1",
+          "BlendConfig": {
+            "BlendType": "EaseIn",
+            "BlendTime": 3.0
+          }
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 1.5
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "Wait_101090302"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode"
+        }
+      ]
+    }
+  ]
+}

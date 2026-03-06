@@ -1,0 +1,80 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropStateExecute",
+          "GroupPropID": 300001,
+          "GroupID": 30,
+          "Execute": [
+            {
+              "$type": "RPG.GameCore.LevelStoryInitialize",
+              "EntityVisiableList": [],
+              "CreateCharacterList": []
+            },
+            {
+              "$type": "RPG.GameCore.PlaySimpleTalk",
+              "SimpleTalkList": [
+                {
+                  "VoiceID": 201231808
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+            },
+            {
+              "$type": "RPG.GameCore.PlayOptionTalk",
+              "OptionList": [
+                {
+                  "OptionTextmapID": {
+                    "hash": -562926491
+                  },
+                  "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+                  "TriggerCustomString": "VoiceTalk_201231809"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "VoiceTalk_201231809",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201231810
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.EndStory"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitStoryEnd"
+        },
+        {
+          "$type": "RPG.GameCore.PropReqInteract",
+          "GroupPropID": 300001,
+          "GroupID": 30,
+          "InteractID": 1010
+        }
+      ]
+    }
+  ]
+}

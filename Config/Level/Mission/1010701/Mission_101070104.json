@@ -1,0 +1,151 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Hold",
+          "WaitOwnerOnly": true
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "PropTalk_101070104_01"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerStory",
+          "StoryID": 101070105
+        },
+        {
+          "$type": "RPG.GameCore.TriggerStory",
+          "StoryID": 101070106
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "PropTalk_101070104_02"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerStory",
+          "StoryID": 101070110
+        },
+        {
+          "$type": "RPG.GameCore.TriggerStory",
+          "StoryID": 101070106
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "NPCTalk_101070104"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerStory",
+          "StoryID": 101070106
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "ChangeState_101070104"
+        },
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300003,
+              "GroupID": 4,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.WaitSecond",
+                  "WaitTime": 0.1
+                },
+                {
+                  "$type": "RPG.GameCore.TriggerCustomString",
+                  "CustomString": {
+                    "Value": "Trigger_101070104_1st"
+                  }
+                },
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "GroupPropID": 300003,
+                  "GroupID": 4,
+                  "InteractID": 1200
+                }
+              ],
+              "State": "Locked"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300003,
+              "GroupID": 4,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.WaitSecond",
+                  "WaitTime": 0.1
+                },
+                {
+                  "$type": "RPG.GameCore.TriggerCustomString",
+                  "CustomString": {
+                    "Value": "Trigger_101070104_2nd"
+                  }
+                },
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "GroupPropID": 300003,
+                  "GroupID": 4,
+                  "InteractID": 1100
+                }
+              ],
+              "State": "Open"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByCompareSubMissionState",
+            "SubMissionID": 101070111,
+            "SubMissionState": "Started"
+          },
+          "SuccessTaskList": [],
+          "FailedTaskList": [
+            {
+              "$type": "RPG.GameCore.WaitSecond",
+              "WaitTime": 0.1
+            },
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "BattleWin_101070104"
+              }
+            },
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "ChangeState_101070104"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

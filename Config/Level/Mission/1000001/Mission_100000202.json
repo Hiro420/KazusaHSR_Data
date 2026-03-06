@@ -1,0 +1,64 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.CreateNPC",
+          "GroupID": 4,
+          "GroupNpcID": 400002
+        },
+        {
+          "$type": "RPG.GameCore.SetBillboardInfo",
+          "TargetCharacterType": "NPC",
+          "ID": 400002,
+          "GroupID": 4,
+          "MapIconType": 12
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "100000202_End",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.DestroyNPC",
+          "GroupID": 4,
+          "GroupNpcID": 400002
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 1.0
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "CustomTime": 1.0
+        },
+        {
+          "$type": "RPG.GameCore.FinishStoryMission",
+          "Key": "Mission_100000202"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitSubMission",
+          "SubMissionID": 100000104
+        },
+        {
+          "$type": "RPG.GameCore.DestroyNPC",
+          "GroupID": 4,
+          "GroupNpcID": 400002
+        },
+        {
+          "$type": "RPG.GameCore.FinishStoryMission",
+          "Key": "Mission_100000202"
+        }
+      ]
+    }
+  ]
+}

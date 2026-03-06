@@ -1,0 +1,65 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Talk_1010404_06",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Mode": "SwitchOut"
+        },
+        {
+          "$type": "RPG.GameCore.FinishStoryMission",
+          "Key": "Mission_101040214"
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Talk_1010402_24",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.TriggerStory",
+          "StoryID": 101040226
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Talk_1010402_25",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.TriggerStory",
+          "StoryID": 101040227
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Talk_1010402_26",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.TriggerStory",
+          "StoryID": 101040228
+        }
+      ]
+    }
+  ]
+}

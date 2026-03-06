@@ -1,0 +1,200 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "TargetIsOwner": true,
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.LockPlayerControl"
+            },
+            {
+              "$type": "RPG.GameCore.ShowTalkUI",
+              "Show": true
+            },
+            {
+              "$type": "RPG.GameCore.EnableNPCMonsterAI",
+              "GroupMonsterIDs": [],
+              "UniqueNames": []
+            },
+            {
+              "$type": "RPG.GameCore.PlaySimpleTalk",
+              "SimpleTalkList": [
+                {
+                  "VoiceID": 999980101
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+            },
+            {
+              "$type": "RPG.GameCore.PlayOptionTalk",
+              "OptionList": [
+                {
+                  "OptionTextmapID": {
+                    "hash": -1108022604
+                  },
+                  "TriggerCustomString": "Story_999980102"
+                },
+                {
+                  "OptionTextmapID": {
+                    "hash": -1108022603
+                  },
+                  "TriggerCustomString": "Story_999980103"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Story_999980103"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.EnableNPCMonsterAI",
+          "Enable": true,
+          "GroupMonsterIDs": [],
+          "UniqueNames": []
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Story_999980102"
+        },
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.AdventureByCompareMP",
+            "CompareType": "Greater"
+          },
+          "SuccessTaskList": [
+            {
+              "$type": "RPG.GameCore.AdventureModifyMazeMP",
+              "ModifyFunction": "Add",
+              "ModifyValue": {
+                "FixedValue": {
+                  "IsDynamic": false,
+                  "FixedValue": -1.0
+                }
+              },
+              "ClientUseGMCommand": true
+            },
+            {
+              "$type": "RPG.GameCore.CaptureLocalPlayer",
+              "CharacterUniqueName": "BuffProp_MP_LocalPlayer"
+            },
+            {
+              "$type": "RPG.GameCore.TriggerEffectListOnCharacter",
+              "CharacterUniqueName": "BuffProp_MP_LocalPlayer",
+              "EffectList": [
+                {
+                  "EffectPath": "Effects/Eff_Prefab/Eff_Common/Eff_Buff_Common_Increased_attack_power.prefab",
+                  "AttachPoint": "Body",
+                  "PositionOffset": {
+                    "x": 0.0,
+                    "y": 0.5,
+                    "z": 0.0
+                  }
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "BuffProp_AddMazeBuff"
+              }
+            },
+            {
+              "$type": "RPG.GameCore.ReleaseCharacter",
+              "CharacterUniqueName": "BuffProp_MP_LocalPlayer"
+            },
+            {
+              "$type": "RPG.GameCore.UnLockPlayerControl"
+            },
+            {
+              "$type": "RPG.GameCore.ShowTalkUI"
+            },
+            {
+              "$type": "RPG.GameCore.EnableNPCMonsterAI",
+              "Enable": true,
+              "GroupMonsterIDs": [],
+              "UniqueNames": []
+            }
+          ],
+          "FailedTaskList": [
+            {
+              "$type": "RPG.GameCore.PlaySimpleTalk",
+              "SimpleTalkList": [
+                {
+                  "VoiceID": 999980104
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+            },
+            {
+              "$type": "RPG.GameCore.UnLockPlayerControl"
+            },
+            {
+              "$type": "RPG.GameCore.ShowTalkUI"
+            },
+            {
+              "$type": "RPG.GameCore.EnableNPCMonsterAI",
+              "Enable": true,
+              "GroupMonsterIDs": [],
+              "UniqueNames": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "BuffProp_AddMazeBuff",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.AddMazeBuff",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "LightTeamEntity"
+          },
+          "ID": 3001213,
+          "LifeTime": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": -1.0
+            }
+          },
+          "Count": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 1.0
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

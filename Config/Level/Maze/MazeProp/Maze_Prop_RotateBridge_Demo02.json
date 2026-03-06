@@ -1,0 +1,262 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupOptionsTrigger",
+          "TargetIsOwner": true,
+          "OptionList": [
+            {
+              "OptionTextmapID": {
+                "hash": 876425567
+              },
+              "TriggerCustomString": "Maze_Bridge_Rotate_01"
+            },
+            {
+              "OptionTextmapID": {
+                "hash": -455717622
+              },
+              "TriggerCustomString": "Maze_Bridge_Rotate_02"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Bridge_Rotate_01",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300001,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "GroupPropID": 300001,
+                  "GroupID": 3,
+                  "InteractID": 1340
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "GroupPropID": 300001,
+                  "GroupID": 3,
+                  "AnimStateName": "SouthToWest"
+                },
+                {
+                  "$type": "RPG.GameCore.WaitSecond",
+                  "WaitTime": 2.0
+                }
+              ],
+              "State": "BridgeState1"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300001,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "GroupPropID": 300001,
+                  "GroupID": 3,
+                  "InteractID": 1450
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "GroupPropID": 300001,
+                  "GroupID": 3,
+                  "AnimStateName": "WestToNorth"
+                },
+                {
+                  "$type": "RPG.GameCore.WaitSecond",
+                  "WaitTime": 2.0
+                }
+              ],
+              "State": "BridgeState2"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300001,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "GroupPropID": 300001,
+                  "GroupID": 3,
+                  "InteractID": 1560
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "GroupPropID": 300001,
+                  "GroupID": 3,
+                  "AnimStateName": "NorthToEast"
+                },
+                {
+                  "$type": "RPG.GameCore.WaitSecond",
+                  "WaitTime": 2.0
+                }
+              ],
+              "State": "BridgeState3"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300001,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "GroupPropID": 300001,
+                  "GroupID": 3,
+                  "InteractID": 1630
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "GroupPropID": 300001,
+                  "GroupID": 3,
+                  "AnimStateName": "EastToSouth"
+                },
+                {
+                  "$type": "RPG.GameCore.WaitSecond",
+                  "WaitTime": 2.0
+                }
+              ],
+              "State": "BridgeState4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Bridge_Rotate_02",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300001,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "GroupPropID": 300001,
+                  "GroupID": 3,
+                  "InteractID": 1360
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "GroupPropID": 300001,
+                  "GroupID": 3,
+                  "AnimStateName": "SouthToEast"
+                },
+                {
+                  "$type": "RPG.GameCore.WaitSecond",
+                  "WaitTime": 2.0
+                }
+              ],
+              "State": "BridgeState1"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300001,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "GroupPropID": 300001,
+                  "GroupID": 3,
+                  "InteractID": 1430
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "GroupPropID": 300001,
+                  "GroupID": 3,
+                  "AnimStateName": "WestToSouth"
+                },
+                {
+                  "$type": "RPG.GameCore.WaitSecond",
+                  "WaitTime": 2.0
+                }
+              ],
+              "State": "BridgeState2"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300001,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "GroupPropID": 300001,
+                  "GroupID": 3,
+                  "InteractID": 1540
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "GroupPropID": 300001,
+                  "GroupID": 3,
+                  "AnimStateName": "NorthToWest"
+                },
+                {
+                  "$type": "RPG.GameCore.WaitSecond",
+                  "WaitTime": 2.0
+                }
+              ],
+              "State": "BridgeState3"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300001,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "GroupPropID": 300001,
+                  "GroupID": 3,
+                  "InteractID": 1650
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "GroupPropID": 300001,
+                  "GroupID": 3,
+                  "AnimStateName": "EastToNorth"
+                },
+                {
+                  "$type": "RPG.GameCore.WaitSecond",
+                  "WaitTime": 2.0
+                }
+              ],
+              "State": "BridgeState4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Bridge_DoNothing",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        }
+      ]
+    }
+  ]
+}

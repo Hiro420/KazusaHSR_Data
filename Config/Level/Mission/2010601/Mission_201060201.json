@@ -1,0 +1,50 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SetNpcStatus",
+          "GroupID": 8,
+          "GroupNpcID": 400001,
+          "Status": "FollowPlayer"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "201060201_Finish"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 2.0
+        },
+        {
+          "$type": "RPG.GameCore.PlayMissionTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201222001
+            },
+            {
+              "VoiceID": 201222002
+            },
+            {
+              "VoiceID": 201222003
+            },
+            {
+              "VoiceID": 201222004
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.FinishStoryMission",
+          "Key": "Mission_201060201"
+        }
+      ]
+    }
+  ]
+}

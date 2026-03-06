@@ -1,0 +1,32 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByMainMissionFinish",
+            "MainMissionID": 1010503
+          },
+          "SuccessTaskList": [
+            {
+              "$type": "RPG.GameCore.PropSetupTrigger",
+              "ID": 300002,
+              "GroupID": 14,
+              "TargetTypes": [],
+              "DestroyAfterTriggered": true,
+              "OnTriggerEnter": [
+                {
+                  "$type": "RPG.GameCore.TutorialTaskUnlock",
+                  "TriggerParam": "505"
+                }
+              ]
+            }
+          ],
+          "FailedTaskList": []
+        }
+      ]
+    }
+  ]
+}

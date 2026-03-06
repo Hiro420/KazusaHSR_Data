@@ -1,0 +1,525 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "FunctionArea/SpeedUpBtn",
+            "FunctionArea/AutoBtn"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "PlotWave1Signal"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUI",
+          "Name": "TutorialDialog"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "AboveDialog/TutorialDialog(Clone)/MaskRaycastTarget"
+          ],
+          "Open": true
+        },
+        {
+          "$type": "RPG.GameCore.RoundCountCheck",
+          "TargetRoundCount": 1
+        },
+        {
+          "$type": "RPG.GameCore.WaitUIAnim",
+          "Path": "AboveDialog/TurnStartLightTeam(Clone)",
+          "AnimStateName": "UIPage_Change"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "AboveDialog/TutorialDialog(Clone)/Bg"
+          ],
+          "Open": true
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.2
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 2,
+          "Show": true,
+          "Path": "Message01",
+          "Text": "TutorialTextmap10000101"
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 3,
+          "Show": true,
+          "Path": "GuideCircleTips04"
+        },
+        {
+          "$type": "RPG.GameCore.MoveUINodeToMask",
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BattleSkillButtonPanel/SkillButton01"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.2
+        },
+        {
+          "$type": "RPG.GameCore.WaitTutorial",
+          "Event": "DisplaySkillDetail"
+        },
+        {
+          "$type": "RPG.GameCore.WaitTutorial",
+          "Event": "DisplaySkillDetail",
+          "BoolParam": false
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 2
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 3
+        },
+        {
+          "$type": "RPG.GameCore.MoveUINodeToMask",
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BattleSkillButtonPanel/SkillButton01",
+          "Reset": true
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.2
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 2,
+          "Show": true,
+          "Path": "Message01",
+          "Text": "TutorialTextmap10000102"
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 3,
+          "Show": true,
+          "Path": "GuideCircleTips01"
+        },
+        {
+          "$type": "RPG.GameCore.MoveUINodeToMask",
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BattleSkillButtonPanel/ActionButton"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "Mask/ActionButton(Clone)/ClockPointer"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "FullScreenButton"
+          ],
+          "Open": true
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.2
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "FullScreenButton"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitTutorial",
+          "Event": "ClickAction"
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 2
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 3
+        },
+        {
+          "$type": "RPG.GameCore.MoveUINodeToMask",
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BattleSkillButtonPanel/ActionButton",
+          "Reset": true
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "AboveDialog/TutorialDialog(Clone)/Bg"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.RoundCountCheck",
+          "TargetRoundCount": 2,
+          "TargetTurnCount": 1
+        },
+        {
+          "$type": "RPG.GameCore.WaitUIAnim",
+          "Path": "AboveDialog/TurnStartLightTeam(Clone)",
+          "AnimStateName": "UIPage_Change"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "AboveDialog/TutorialDialog(Clone)/Bg"
+          ],
+          "Open": true
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.2
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 2,
+          "Show": true,
+          "Path": "Message02",
+          "Text": "TutorialTextmap10000103"
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 3,
+          "Show": true,
+          "Path": "GuideCircleTips02"
+        },
+        {
+          "$type": "RPG.GameCore.MoveUINodeToMask",
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BattleSkillButtonPanel/SkillButton02"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "FullScreenButton"
+          ],
+          "Open": true
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.2
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "FullScreenButton"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitTutorial",
+          "Event": "SelectSkill02"
+        },
+        {
+          "$type": "RPG.GameCore.WaitTutorial",
+          "Event": "ActionButtonTick"
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 2
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 3
+        },
+        {
+          "$type": "RPG.GameCore.MoveUINodeToMask",
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BattleSkillButtonPanel/SkillButton02",
+          "Reset": true
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.2
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 2,
+          "Show": true,
+          "Path": "Message02",
+          "Text": "TutorialTextmap10000104"
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 3,
+          "Show": true,
+          "Path": "GuideCircleTips01"
+        },
+        {
+          "$type": "RPG.GameCore.MoveUINodeToMask",
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BattleSkillButtonPanel/ActionButton"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "Mask/ActionButton(Clone)/ClockPointer"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "FullScreenButton"
+          ],
+          "Open": true
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.2
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "FullScreenButton"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitTutorial",
+          "Event": "ClickAction"
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 2
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 3
+        },
+        {
+          "$type": "RPG.GameCore.MoveUINodeToMask",
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BattleSkillButtonPanel/ActionButton",
+          "Reset": true
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "AboveDialog/TutorialDialog(Clone)/Bg"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.RoundCountCheck",
+          "TargetRoundCount": 3,
+          "TargetTurnCount": 1
+        },
+        {
+          "$type": "RPG.GameCore.WaitUIAnim",
+          "Path": "AboveDialog/TurnStartLightTeam(Clone)",
+          "AnimStateName": "UIPage_Change"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "AboveDialog/TutorialDialog(Clone)/Bg"
+          ],
+          "Open": true
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.2
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 2,
+          "Show": true,
+          "Path": "Message10",
+          "Text": "TutorialTextmap10000105"
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 4,
+          "Show": true,
+          "Path": "GuideArrowTips01"
+        },
+        {
+          "$type": "RPG.GameCore.MoveUINodeToMask",
+          "Path": "Page/BattleGamePhaseUI(Clone)/TeamInfo"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "FullScreenButton"
+          ],
+          "Open": true
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.2
+        },
+        {
+          "$type": "RPG.GameCore.WaitTutorial",
+          "Event": "ClickFullScreen"
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 2
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 4
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "FullScreenButton"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.MoveUINodeToMask",
+          "Path": "Page/BattleGamePhaseUI(Clone)/TeamInfo",
+          "Reset": true
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "AboveDialog/TutorialDialog(Clone)/Bg",
+            "AboveDialog/TutorialDialog(Clone)/MaskRaycastTarget"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.RoundCountCheck",
+          "TargetRoundCount": 4,
+          "TargetTurnCount": 1
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "AboveDialog/TutorialDialog(Clone)/MaskRaycastTarget"
+          ],
+          "Open": true
+        },
+        {
+          "$type": "RPG.GameCore.WaitUIAnim",
+          "Path": "AboveDialog/TurnStartLightTeam(Clone)",
+          "AnimStateName": "UIPage_Change"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "AboveDialog/TutorialDialog(Clone)/Bg"
+          ],
+          "Open": true
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.1
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 2,
+          "Show": true,
+          "Path": "Message11",
+          "Text": "TutorialTextmap10000106"
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 3,
+          "Show": true,
+          "Path": "GuideCircleTips03"
+        },
+        {
+          "$type": "RPG.GameCore.MoveUINodeToMask",
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BattleSkillButtonPanel/SkillButtonUltra"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "FullScreenButton"
+          ],
+          "Open": true
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.2
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "FullScreenButton"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitTutorial",
+          "Event": "SelectUltra"
+        },
+        {
+          "$type": "RPG.GameCore.WaitTutorial",
+          "Event": "ActionButtonTick"
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 2
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.2
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 2,
+          "Show": true,
+          "Path": "Message11",
+          "Text": "TutorialTextmap10000107"
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 3,
+          "Show": true,
+          "Path": "GuideCircleTips01"
+        },
+        {
+          "$type": "RPG.GameCore.MoveUINodeToMask",
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BattleSkillButtonPanel/ActionButton"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "Mask/ActionButton(Clone)/ClockPointer"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "FullScreenButton"
+          ],
+          "Open": true
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.2
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "FullScreenButton"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitTutorial",
+          "Event": "ClickAction"
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 2
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 3
+        },
+        {
+          "$type": "RPG.GameCore.MoveUINodeToMask",
+          "Path": "Page/BattleGamePhaseUI(Clone)/ActiveCharacterSkill/BattleSkillButtonPanel/ActionButton",
+          "Reset": true
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "AboveDialog/TutorialDialog(Clone)/Bg",
+            "AboveDialog/TutorialDialog(Clone)/MaskRaycastTarget"
+          ]
+        }
+      ]
+    }
+  ]
+}

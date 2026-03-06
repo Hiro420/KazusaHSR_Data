@@ -1,0 +1,20 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "TargetIsOwner": true,
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.PropTriggerAnimState",
+              "TargetIsOwner": true,
+              "AnimStateName": "Activing"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": []
+}

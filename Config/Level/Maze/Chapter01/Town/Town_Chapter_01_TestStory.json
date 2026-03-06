@@ -1,0 +1,144 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.LockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI",
+          "Show": true
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 100000101
+            },
+            {
+              "VoiceID": 100000102
+            },
+            {
+              "VoiceID": 100000103
+            },
+            {
+              "VoiceID": 100000104
+            },
+            {
+              "VoiceID": 100000105
+            },
+            {
+              "VoiceID": 100000201
+            },
+            {
+              "VoiceID": 100000202
+            },
+            {
+              "VoiceID": 100000203
+            },
+            {
+              "VoiceID": 100000204
+            },
+            {
+              "VoiceID": 100000205
+            },
+            {
+              "VoiceID": 100000206
+            },
+            {
+              "VoiceID": 100000207
+            },
+            {
+              "VoiceID": 100000208
+            },
+            {
+              "VoiceID": 100000209
+            },
+            {
+              "VoiceID": 100000210
+            },
+            {
+              "VoiceID": 201111716
+            },
+            {
+              "VoiceID": 201111717
+            },
+            {
+              "VoiceID": 201111718
+            },
+            {
+              "VoiceID": 201111719
+            },
+            {
+              "VoiceID": 201111720
+            },
+            {
+              "VoiceID": 201111721
+            },
+            {
+              "VoiceID": 201111722
+            },
+            {
+              "VoiceID": 201111723
+            },
+            {
+              "VoiceID": 201111724
+            },
+            {
+              "VoiceID": 201111725
+            },
+            {
+              "VoiceID": 201111726
+            },
+            {
+              "VoiceID": 201111727
+            },
+            {
+              "VoiceID": 201111728
+            },
+            {
+              "VoiceID": 201111729
+            },
+            {
+              "VoiceID": 201111730
+            },
+            {
+              "VoiceID": 201111731
+            },
+            {
+              "VoiceID": 201111732
+            },
+            {
+              "VoiceID": 201111733
+            },
+            {
+              "VoiceID": 201111734
+            },
+            {
+              "VoiceID": 201111735
+            },
+            {
+              "VoiceID": 201111736
+            },
+            {
+              "VoiceID": 201111737
+            },
+            {
+              "VoiceID": 201111738
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        }
+      ]
+    }
+  ]
+}

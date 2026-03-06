@@ -1,0 +1,31 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Hold",
+          "WaitOwnerOnly": true
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PlayBackgroundTalk",
+          "BackgroundTalkList": [
+            {
+              "AutoSkipTime": 5.0,
+              "VoiceID": 901310134
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.FinishStoryMission",
+          "Key": "Mission_101090258"
+        }
+      ]
+    }
+  ]
+}

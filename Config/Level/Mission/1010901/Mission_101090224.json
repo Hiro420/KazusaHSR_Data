@@ -1,0 +1,30 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Hold",
+          "WaitOwnerOnly": true
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300016,
+          "GroupID": 3,
+          "TargetTypes": [],
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.FinishStoryMission",
+              "Key": "Mission_101090224"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

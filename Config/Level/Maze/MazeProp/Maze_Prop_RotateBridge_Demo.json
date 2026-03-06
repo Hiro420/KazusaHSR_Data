@@ -1,0 +1,100 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "ColliderRelativePath": "Trigger",
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.SelectorConfig",
+              "TaskList": [
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "GroupPropID": 300004,
+                  "GroupID": 3,
+                  "Execute": [
+                    {
+                      "$type": "RPG.GameCore.PropReqInteract",
+                      "GroupPropID": 300004,
+                      "GroupID": 3,
+                      "InteractID": 1340
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropTriggerAnimState",
+                      "GroupPropID": 300004,
+                      "GroupID": 3,
+                      "AnimStateName": "SouthToWest"
+                    }
+                  ],
+                  "State": "BridgeState1"
+                },
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "GroupPropID": 300004,
+                  "GroupID": 3,
+                  "Execute": [
+                    {
+                      "$type": "RPG.GameCore.PropReqInteract",
+                      "GroupPropID": 300004,
+                      "GroupID": 3,
+                      "InteractID": 1450
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropTriggerAnimState",
+                      "GroupPropID": 300004,
+                      "GroupID": 3,
+                      "AnimStateName": "WestToNorth"
+                    }
+                  ],
+                  "State": "BridgeState2"
+                },
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "GroupPropID": 300004,
+                  "GroupID": 3,
+                  "Execute": [
+                    {
+                      "$type": "RPG.GameCore.PropReqInteract",
+                      "GroupPropID": 300004,
+                      "GroupID": 3,
+                      "InteractID": 1560
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropTriggerAnimState",
+                      "GroupPropID": 300004,
+                      "GroupID": 3,
+                      "AnimStateName": "NorthToEast"
+                    }
+                  ],
+                  "State": "BridgeState3"
+                },
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "GroupPropID": 300004,
+                  "GroupID": 3,
+                  "Execute": [
+                    {
+                      "$type": "RPG.GameCore.PropReqInteract",
+                      "GroupPropID": 300004,
+                      "GroupID": 3,
+                      "InteractID": 1630
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropTriggerAnimState",
+                      "GroupPropID": 300004,
+                      "GroupID": 3,
+                      "AnimStateName": "EastToSouth"
+                    }
+                  ],
+                  "State": "BridgeState4"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

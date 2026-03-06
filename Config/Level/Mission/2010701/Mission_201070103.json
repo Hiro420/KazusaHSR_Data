@@ -1,0 +1,52 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Talk_20107010301",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.TriggerStory",
+          "StoryID": 201070103
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Act_20107010306",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.ResetBillboardInfo",
+          "TargetCharacterType": "NPC",
+          "ID": 400001,
+          "GroupID": 27
+        },
+        {
+          "$type": "RPG.GameCore.FinishStoryMission",
+          "Key": "Mission_201070103"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SetBillboardInfo",
+          "TargetCharacterType": "NPC",
+          "ID": 400001,
+          "GroupID": 27,
+          "Name": {
+            "hash": 99927553
+          },
+          "MapIconType": 24
+        }
+      ]
+    }
+  ]
+}

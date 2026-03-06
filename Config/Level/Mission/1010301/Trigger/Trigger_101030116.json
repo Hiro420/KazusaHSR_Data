@@ -1,0 +1,48 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": []
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300012,
+          "GroupID": 4,
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "Mission_101030116"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Mission_101030116",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.TriggerBattle",
+          "EventID": 20111202,
+          "GroupID": 2,
+          "BattleAreaID": 1
+        },
+        {
+          "$type": "RPG.GameCore.DestroyProp",
+          "ID": 300012,
+          "GroupID": 4
+        }
+      ]
+    }
+  ]
+}

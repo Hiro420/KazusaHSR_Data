@@ -1,0 +1,97 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SyncSubPropState",
+          "MainGroupID": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 12.0
+            }
+          },
+          "MainGroupPropID": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 300012.0
+            }
+          },
+          "MainState": "Open",
+          "SubGroupID": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 12.0
+            }
+          },
+          "SubGroupPropID": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 300018.0
+            }
+          },
+          "SubState": "Open"
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SyncAllSubPropState",
+          "GroupID": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 12.0
+            }
+          },
+          "GroupPropID": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 300012.0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "101060119_Rock"
+        },
+        {
+          "$type": "RPG.GameCore.PropReqInteract",
+          "TargetIsOwner": true,
+          "InteractID": 1100
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PlayMissionTalk",
+                  "SimpleTalkList": [
+                    {
+                      "VoiceID": 201222106
+                    },
+                    {
+                      "VoiceID": 201222107
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

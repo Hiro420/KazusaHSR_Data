@@ -1,0 +1,31 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "hold",
+          "WaitOwnerOnly": true
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "ColliderRelativePath": "Trigger",
+          "ButtonText": {
+            "hash": 339453363
+          },
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.EnterFloor",
+              "FloorID": 10101002
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

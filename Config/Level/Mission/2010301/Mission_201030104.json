@@ -1,0 +1,42 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": []
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "201030104_Battle",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.TriggerStory",
+          "StoryID": 201030105
+        },
+        {
+          "$type": "RPG.GameCore.TriggerBattle",
+          "EventID": 20111121,
+          "GroupID": 2,
+          "BattleAreaID": 1
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PlayMissionTalk",
+          "SimpleTalkList": [
+            {
+              "TextSpeed": 30.0,
+              "VoiceID": 201110922,
+              "ForceToNextTime": 3.0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

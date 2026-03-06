@@ -1,0 +1,22 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "TargetIsOwner": true,
+          "ColliderRelativePath": "Trigger",
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.TriggerBattle",
+              "EventID": 20111001,
+              "GroupID": 2,
+              "BattleAreaID": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": []
+}

@@ -1,0 +1,54 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Talk_1010403_11",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.LockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI",
+          "Show": true
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201212735,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SwitchCharacterAnchor",
+          "IsLocalPlayer": true,
+          "AreaName": "LevelArea_P10102_F10102003_G5",
+          "AnchorName": "Anchor1"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerStory",
+          "StoryID": 101040307
+        }
+      ]
+    }
+  ]
+}

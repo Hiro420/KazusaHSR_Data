@@ -1,0 +1,59 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": []
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "ColliderRelativePath": "Trigger",
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.LockPlayerControl"
+            },
+            {
+              "$type": "RPG.GameCore.CaptureLocalPlayer",
+              "CharacterUniqueName": "Player"
+            },
+            {
+              "$type": "RPG.GameCore.RogueSwitchCharacterAnchor",
+              "CharacterUniqueName": "Player",
+              "TeleportIdx": {
+                "Value": {
+                  "IsDynamic": true,
+                  "PostfixExpr": [
+                    {
+                      "Type": "DynamicNumber",
+                      "Int": 1926736678
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "$type": "RPG.GameCore.ReleaseCharacter",
+              "CharacterUniqueName": "Player"
+            },
+            {
+              "$type": "RPG.GameCore.UnLockPlayerControl"
+            },
+            {
+              "$type": "RPG.GameCore.RogueShowRoomSelections"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "ValueSource": {
+    "Values": [
+      {
+        "$type": "RPG.GameCore.SharedFloat",
+        "Key": "TeleportIndex"
+      }
+    ]
+  }
+}

@@ -1,0 +1,141 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitUINodeOpen",
+          "Path": "Page/MazeMainPage(Clone)/LeftUpInfo/FunctionBtn/PhoneBtn"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTutorialUI",
+          "Name": "UI/Guide/TutorialDialog.prefab"
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 3,
+          "Show": true,
+          "Path": "Page/MazeMainPage(Clone)/LeftUpInfo/FunctionBtn/PhoneBtn"
+        },
+        {
+          "$type": "RPG.GameCore.WaitTutorial",
+          "Event": "ClickBtnWithPath",
+          "Param": "Page/MazeMainPage(Clone)/LeftUpInfo/FunctionBtn/PhoneBtn",
+          "BoolParam": false
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 3,
+          "Path": "Page/MazeMainPage(Clone)/LeftUpInfo/FunctionBtn/PhoneBtn"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTutorialUI",
+          "Name": "UI/Guide/TutorialDialog.prefab",
+          "IsHide": true
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitUINodeOpen",
+          "Path": "Page/MobilePhonePageNew(Clone)/PhonePage/Content/AppList/ScrollView/Content/4"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTutorialUI",
+          "Name": "UI/Guide/TutorialDialog.prefab"
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 3,
+          "Show": true,
+          "Path": "Page/MobilePhonePageNew(Clone)/PhonePage/Content/AppList/ScrollView/Content/4"
+        },
+        {
+          "$type": "RPG.GameCore.WaitTutorial",
+          "Event": "ClickBtnWithPath",
+          "Param": "Page/MobilePhonePageNew(Clone)/PhonePage/Content/AppList/ScrollView/Content/4",
+          "BoolParam": false
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 3,
+          "Path": "Page/MobilePhonePageNew(Clone)/PhonePage/Content/AppList/ScrollView/Content/4"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTutorialUI",
+          "Name": "UI/Guide/TutorialDialog.prefab",
+          "IsHide": true
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitUINodeOpen",
+          "Path": "Page/AvatarMainPage(Clone)/AvatarSubMenuPanel_Vertical/AvatarSubMenuPanel_Vertical(Clone)/FunctionBtnPanel/BtnLightCone/TabButton_3"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTutorialUI",
+          "Name": "UI/Guide/TutorialDialog.prefab"
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 3,
+          "Show": true,
+          "Path": "Page/AvatarMainPage(Clone)/AvatarSubMenuPanel_Vertical/AvatarSubMenuPanel_Vertical(Clone)/FunctionBtnPanel/BtnLightCone/TabButton_3"
+        },
+        {
+          "$type": "RPG.GameCore.WaitTutorial",
+          "Event": "ClickBtnWithPath",
+          "Param": "Page/AvatarMainPage(Clone)/AvatarSubMenuPanel_Vertical/AvatarSubMenuPanel_Vertical(Clone)/FunctionBtnPanel/BtnLightCone/TabButton_3",
+          "BoolParam": false
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 3,
+          "Path": "Page/AvatarMainPage(Clone)/AvatarSubMenuPanel_Vertical/AvatarSubMenuPanel_Vertical(Clone)/FunctionBtnPanel/BtnLightCone/TabButton_3"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTutorialUI",
+          "Name": "UI/Guide/TutorialDialog.prefab",
+          "IsHide": true
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitUINodeOpen",
+          "Path": "Page/AvatarMainPage(Clone)/AvatarLightConePanel/AvatarLightConePanel(Clone)/AvatarLightConeDetailPanel/LightConeInfoPanel/FunctionPanel/BtnEquip"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTutorialUI",
+          "Name": "UI/Guide/TutorialDialog.prefab"
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 3,
+          "Show": true,
+          "Path": "Page/AvatarMainPage(Clone)/AvatarLightConePanel/AvatarLightConePanel(Clone)/AvatarLightConeDetailPanel/LightConeInfoPanel/FunctionPanel/BtnEquip"
+        },
+        {
+          "$type": "RPG.GameCore.WaitTutorial",
+          "Event": "ClickBtnWithPath",
+          "Param": "Page/AvatarMainPage(Clone)/AvatarLightConePanel/AvatarLightConePanel(Clone)/AvatarLightConeDetailPanel/LightConeInfoPanel/FunctionPanel/BtnEquip",
+          "BoolParam": false
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 3,
+          "Path": "Page/AvatarMainPage(Clone)/AvatarLightConePanel/AvatarLightConePanel(Clone)/AvatarLightConeDetailPanel/LightConeInfoPanel/FunctionPanel/BtnEquip"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTutorialUI",
+          "Name": "UI/Guide/TutorialDialog.prefab",
+          "IsHide": true
+        }
+      ]
+    }
+  ]
+}

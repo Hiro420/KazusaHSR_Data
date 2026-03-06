@@ -1,0 +1,45 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": []
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "DoorOpen_101050111"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerStory",
+          "StoryID": 101050104
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "101050111_PropCreate"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.FinishStoryMission",
+          "Key": "Mission_101050111"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "101050111_PropCreate",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.CreateProp",
+          "GroupID": 3,
+          "GroupPropID": 300014
+        }
+      ]
+    }
+  ]
+}

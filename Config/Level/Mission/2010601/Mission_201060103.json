@@ -1,0 +1,47 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 2.0
+        },
+        {
+          "$type": "RPG.GameCore.PlayBackgroundTalk",
+          "BackgroundTalkList": [
+            {
+              "AutoSkipTime": 3.0,
+              "VoiceID": 201221601
+            },
+            {
+              "AutoSkipTime": 3.0,
+              "VoiceID": 201221602
+            },
+            {
+              "AutoSkipTime": 3.0,
+              "VoiceID": 201221603
+            },
+            {
+              "AutoSkipTime": 3.0,
+              "VoiceID": 201221604
+            },
+            {
+              "AutoSkipTime": 3.0,
+              "VoiceID": 201221605
+            },
+            {
+              "AutoSkipTime": 3.0,
+              "VoiceID": 201221606
+            }
+          ],
+          "InstantFinish": false
+        },
+        {
+          "$type": "RPG.GameCore.FinishStoryMission",
+          "Key": "Mission_201060103"
+        }
+      ]
+    }
+  ]
+}

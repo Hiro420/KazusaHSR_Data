@@ -1,0 +1,321 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": []
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.LockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI",
+          "Show": true
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 101020410
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.PlayOptionTalk",
+          "OptionList": [
+            {
+              "OptionTextmapID": {
+                "hash": -1266840436
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "Story_10102041_1"
+            },
+            {
+              "OptionTextmapID": {
+                "hash": -1266840433
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "Story_10102041_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Story_10102041_2"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "1010204_04over"
+          }
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Story_10102041_3"
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 101020416
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Story_10102041_1"
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 101020415
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.PlayUIPrefabInTalk",
+          "AssetPath": "UI/TempUI/TutorialPage.prefab",
+          "UIImageNodes": [
+            {
+              "Path": "ImageArea/Image",
+              "AssetPath": "UI/DeletedUI/Dialogue/3DRes/Team_Test01.png"
+            }
+          ],
+          "UITextNodes": []
+        },
+        {
+          "$type": "RPG.GameCore.PlayUIPrefabInTalk",
+          "AssetPath": "UI/TempUI/TutorialPage.prefab",
+          "UIImageNodes": [
+            {
+              "Path": "ImageArea/Image",
+              "AssetPath": "UI/DeletedUI/Dialogue/3DRes/Team_Test02.png"
+            }
+          ],
+          "UITextNodes": []
+        },
+        {
+          "$type": "RPG.GameCore.PlayUIPrefabInTalk",
+          "AssetPath": "UI/TempUI/TutorialPage.prefab",
+          "UIImageNodes": [
+            {
+              "Path": "ImageArea/Image",
+              "AssetPath": "UI/DeletedUI/Dialogue/3DRes/Team_Test03.png"
+            }
+          ],
+          "UITextNodes": []
+        },
+        {
+          "$type": "RPG.GameCore.PlayOptionTalk",
+          "OptionList": [
+            {
+              "OptionTextmapID": {
+                "hash": -1266840433
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "Story_10102041_5"
+            },
+            {
+              "OptionTextmapID": {
+                "hash": -1266840437
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "Story_10102041_2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Story_10102041_4"
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 101020415
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.PlayUIPrefabInTalk",
+          "AssetPath": "UI/TempUI/TutorialPage.prefab",
+          "UIImageNodes": [
+            {
+              "Path": "ImageArea/Image",
+              "AssetPath": "UI/DeletedUI/Dialogue/3DRes/LevelUp_Test01.png"
+            }
+          ],
+          "UITextNodes": []
+        },
+        {
+          "$type": "RPG.GameCore.PlayOptionTalk",
+          "OptionList": [
+            {
+              "OptionTextmapID": {
+                "hash": -1266840436
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "Story_10102041_6"
+            },
+            {
+              "OptionTextmapID": {
+                "hash": -1266840437
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "Story_10102041_2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Story_10102041_5"
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 101020415
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.PlayUIPrefabInTalk",
+          "AssetPath": "UI/TempUI/TutorialPage.prefab",
+          "UIImageNodes": [
+            {
+              "Path": "ImageArea/Image",
+              "AssetPath": "UI/DeletedUI/Dialogue/3DRes/LevelUp_Test01.png"
+            }
+          ],
+          "UITextNodes": []
+        },
+        {
+          "$type": "RPG.GameCore.PlayOptionTalk",
+          "OptionList": [
+            {
+              "OptionTextmapID": {
+                "hash": -1266840437
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "Story_10102041_2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Story_10102041_6"
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 101020415
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.PlayUIPrefabInTalk",
+          "AssetPath": "UI/TempUI/TutorialPage.prefab",
+          "UIImageNodes": [
+            {
+              "Path": "ImageArea/Image",
+              "AssetPath": "UI/DeletedUI/Dialogue/3DRes/Team_Test01.png"
+            }
+          ],
+          "UITextNodes": []
+        },
+        {
+          "$type": "RPG.GameCore.PlayUIPrefabInTalk",
+          "AssetPath": "UI/TempUI/TutorialPage.prefab",
+          "UIImageNodes": [
+            {
+              "Path": "ImageArea/Image",
+              "AssetPath": "UI/DeletedUI/Dialogue/3DRes/Team_Test02.png"
+            }
+          ],
+          "UITextNodes": []
+        },
+        {
+          "$type": "RPG.GameCore.PlayUIPrefabInTalk",
+          "AssetPath": "UI/TempUI/TutorialPage.prefab",
+          "UIImageNodes": [
+            {
+              "Path": "ImageArea/Image",
+              "AssetPath": "UI/DeletedUI/Dialogue/3DRes/Team_Test03.png"
+            }
+          ],
+          "UITextNodes": []
+        },
+        {
+          "$type": "RPG.GameCore.PlayOptionTalk",
+          "OptionList": [
+            {
+              "OptionTextmapID": {
+                "hash": -1266840437
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "Story_10102041_2"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

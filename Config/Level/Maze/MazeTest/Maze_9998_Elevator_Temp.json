@@ -1,0 +1,111 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300004,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropMoveTo",
+                  "ID": 300018,
+                  "GroupID": 3,
+                  "AreaName": "LevelArea_P99998_F99998_G3",
+                  "AnchorName": "Elevator_01"
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300004,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropMoveTo",
+                  "ID": 300018,
+                  "GroupID": 3,
+                  "AreaName": "LevelArea_P99998_F99998_G3",
+                  "AnchorName": "Elevator_02"
+                }
+              ],
+              "State": "Open"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.SelectorConfig",
+              "TaskList": [
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "TargetIsOwner": true,
+                  "GroupPropID": 300004,
+                  "GroupID": 3,
+                  "Execute": [
+                    {
+                      "$type": "RPG.GameCore.PropReqInteract",
+                      "TargetIsOwner": true,
+                      "InteractID": 1010
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropMoveTo",
+                      "ID": 300018,
+                      "GroupID": 3,
+                      "Duration": 3.0,
+                      "AreaName": "LevelArea_P99998_F99998_G3",
+                      "AnchorName": "Elevator_02"
+                    },
+                    {
+                      "$type": "RPG.GameCore.FinishLevelGraph"
+                    }
+                  ]
+                },
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "TargetIsOwner": true,
+                  "GroupPropID": 300004,
+                  "GroupID": 3,
+                  "Execute": [
+                    {
+                      "$type": "RPG.GameCore.PropReqInteract",
+                      "InteractID": 1100
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropMoveTo",
+                      "ID": 300018,
+                      "GroupID": 3,
+                      "Duration": 3.0,
+                      "AreaName": "LevelArea_P99998_F99998_G3",
+                      "AnchorName": "Elevator_01"
+                    },
+                    {
+                      "$type": "RPG.GameCore.FinishLevelGraph"
+                    }
+                  ],
+                  "State": "Open"
+                }
+              ]
+            }
+          ],
+          "OnTriggerExit": []
+        }
+      ]
+    }
+  ]
+}

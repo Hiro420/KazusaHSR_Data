@@ -1,0 +1,94 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Hold",
+          "WaitOwnerOnly": true
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.CreateNPC",
+          "GroupID": 11,
+          "GroupNpcID": 400005,
+          "NPCUniqueName": "1010801_Natasha"
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC",
+          "GroupID": 11,
+          "GroupNpcID": 400006,
+          "NPCUniqueName": "1010801_Seele"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI",
+          "Show": true
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode",
+          "Enable": true
+        },
+        {
+          "$type": "RPG.GameCore.LockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 101015201,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 101015202,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Mode": "SwitchOut",
+          "CustomTime": 0.25
+        },
+        {
+          "$type": "RPG.GameCore.SwitchCharacterAnchor",
+          "CharacterUniqueName": "Player_1010804",
+          "AreaName": "LevelArea_P10101_F10101001_G11",
+          "AnchorName": "Anchor8"
+        },
+        {
+          "$type": "RPG.GameCore.DestroyNPC",
+          "GroupID": 11,
+          "GroupNpcID": 400005
+        },
+        {
+          "$type": "RPG.GameCore.DestroyNPC",
+          "GroupID": 11,
+          "GroupNpcID": 400006
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode"
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "CustomTime": 0.25
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    }
+  ]
+}

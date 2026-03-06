@@ -1,0 +1,50 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitPredicateSucc",
+          "Condition": {
+            "$type": "RPG.GameCore.ByAny",
+            "PredicateList": [
+              {
+                "$type": "RPG.GameCore.ByCompareNPCMonsterCheckState",
+                "GroupID": 7,
+                "GroupMonsterID": 200001,
+                "CheckState": "Dead"
+              },
+              {
+                "$type": "RPG.GameCore.ByCompareNPCMonsterCheckState",
+                "GroupID": 7,
+                "GroupMonsterID": 200002,
+                "CheckState": "Dead"
+              },
+              {
+                "$type": "RPG.GameCore.ByCompareNPCMonsterCheckState",
+                "GroupID": 7,
+                "GroupMonsterID": 200003,
+                "CheckState": "Dead"
+              }
+            ]
+          }
+        },
+        {
+          "$type": "RPG.GameCore.ChangePropState",
+          "DynamicGroupPropID": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 300001.0
+            }
+          },
+          "DynamicGroupID": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 7.0
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.LevelStoryInitialize",
+          "EntityVisiableList": [],
+          "CreateCharacterList": []
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Chap01_MAZ_M302_LevelArea",
+          "AnchorName": "LookBridge_Cam_01",
+          "BlendConfig": {
+            "BlendType": "Cut"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.CaptureLocalPlayer",
+          "CharacterUniqueName": "Player_101100101"
+        },
+        {
+          "$type": "RPG.GameCore.CharacterNavigateTo",
+          "CharacterUniqueName": "Player_101100101",
+          "AreaName": "LevelArea_P20132_F20132001_G8",
+          "AnchorName": "Act_07_Player_01",
+          "MotionFlag": "Run",
+          "WaitUntilFinish": false
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Chap01_MAZ_M302_LevelArea",
+          "AnchorName": "LookBridge_Cam_02",
+          "BlendConfig": {
+            "BlendType": "EaseInOut",
+            "BlendTime": 1.0
+          }
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 1.0
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201321900
+            },
+            {
+              "VoiceID": 201321901
+            },
+            {
+              "VoiceID": 201321902
+            },
+            {
+              "VoiceID": 201321903
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Chap01_MAZ_M302_LevelArea",
+          "AnchorName": "LookBridge_Cam_02",
+          "IsActive": false,
+          "BlendConfig": {
+            "BlendType": "EaseInOut",
+            "BlendTime": 1.0
+          }
+        },
+        {
+          "$type": "RPG.GameCore.EndStory"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitStoryEnd"
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    }
+  ]
+}

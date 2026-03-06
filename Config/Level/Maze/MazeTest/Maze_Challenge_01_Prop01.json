@@ -1,0 +1,79 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300001,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropEnableCollider",
+                  "SpecifiedRelativePaths": [
+                    "Trigger"
+                  ]
+                }
+              ],
+              "State": "Open"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300001,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropSetupUITrigger",
+                  "ColliderRelativePath": "Trigger",
+                  "ButtonCallback": [
+                    {
+                      "$type": "RPG.GameCore.PropReqInteract",
+                      "GroupPropID": 300001,
+                      "GroupID": 3,
+                      "InteractID": 1010
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropMove",
+                      "ID": 300001,
+                      "GroupID": 3,
+                      "Duration": -1.0,
+                      "DeltaPosition": {
+                        "x": 0.0,
+                        "y": 3.0,
+                        "z": 0.0
+                      }
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropEnableCollider",
+                      "SpecifiedRelativePaths": [
+                        "Trigger"
+                      ]
+                    },
+                    {
+                      "$type": "RPG.GameCore.PlayBackgroundTalk",
+                      "BackgroundTalkList": [
+                        {
+                          "AutoSkipTime": 2.0,
+                          "VoiceID": 901019901
+                        }
+                      ]
+                    },
+                    {
+                      "$type": "RPG.GameCore.TriggerCustomString",
+                      "CustomString": {
+                        "Value": "90101001_DoorIsOpened_1"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

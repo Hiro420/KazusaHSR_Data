@@ -1,0 +1,103 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PlayMissionTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201233901
+            },
+            {
+              "VoiceID": 201233902
+            },
+            {
+              "VoiceID": 201233903
+            },
+            {
+              "VoiceID": 201233904
+            },
+            {
+              "VoiceID": 201233905
+            },
+            {
+              "VoiceID": 201233906
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300002,
+          "GroupID": 12,
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "DestroyAfterTriggered": true,
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.PlayMissionTalk",
+              "SimpleTalkList": [
+                {
+                  "VoiceID": 201234001
+                },
+                {
+                  "VoiceID": 201234002
+                },
+                {
+                  "VoiceID": 201234003
+                },
+                {
+                  "VoiceID": 201234004
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300003,
+          "GroupID": 12,
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "DestroyAfterTriggered": true,
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.TriggerStory",
+              "StoryID": 101070301
+            },
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "Battle_101070301"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Battle_101070301",
+          "WaitOwnerOnly": true,
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.TriggerBattle",
+          "EventID": 20123114,
+          "GroupID": 2,
+          "BattleAreaID": 1
+        }
+      ]
+    }
+  ]
+}

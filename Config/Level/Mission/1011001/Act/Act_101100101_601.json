@@ -1,0 +1,72 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.LevelStoryInitialize",
+          "EntityVisiableList": [
+            {
+              "MuteColliderWhenInvisiable": false
+            }
+          ],
+          "CreateCharacterList": [
+            {
+              "CharacterUniqueName": "Player",
+              "AvatarID": "Player",
+              "AreaName": "LevelArea_P20132_F20132001_G5",
+              "AnchorName": "Act05_Player_01"
+            },
+            {
+              "CharacterUniqueName": "7thMarch",
+              "Catgory": "Default",
+              "AvatarID": "7thMarch",
+              "AreaName": "LevelArea_P20132_F20132001_G5",
+              "AnchorName": "Act05_7thMarch_01"
+            },
+            {
+              "CharacterUniqueName": "Seele",
+              "Catgory": "Default",
+              "AvatarID": "Seele",
+              "AreaName": "LevelArea_P20132_F20132001_G5",
+              "AnchorName": "Act05_Seele_01"
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 2013221
+            },
+            {
+              "VoiceID": 2013222
+            },
+            {
+              "VoiceID": 2013223
+            },
+            {
+              "VoiceID": 2013224
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.EndStory"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitStoryEnd"
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    }
+  ]
+}

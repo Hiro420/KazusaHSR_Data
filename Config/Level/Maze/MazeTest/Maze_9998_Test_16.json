@@ -1,0 +1,54 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "TargetIsOwner": true,
+          "ColliderRelativePath": "Trigger",
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByCompareSubMissionState",
+                "SubMissionID": 901001,
+                "SubMissionState": "Started"
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.ShowUIPage",
+                  "AssetPath": "UI/Mission/MissionStartHintDialog.prefab",
+                  "UIImageNodes": [],
+                  "UITextNodes": [
+                    {
+                      "TextPath": "Dialog/MissionTitle/Text",
+                      "TextContent": {
+                        "hash": 1298515141
+                      }
+                    }
+                  ]
+                }
+              ],
+              "FailedTaskList": [
+                {
+                  "$type": "RPG.GameCore.ShowUIPage",
+                  "AssetPath": "UI/Mission/MissionStartHintDialog.prefab",
+                  "UIImageNodes": [],
+                  "UITextNodes": [
+                    {
+                      "TextPath": "Dialog/MissionTitle/Text",
+                      "TextContent": {
+                        "hash": -267568800
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

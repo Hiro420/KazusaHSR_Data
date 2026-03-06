@@ -1,0 +1,41 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByAnd",
+            "PredicateList": [
+              {
+                "$type": "RPG.GameCore.ByCompareNPCMonsterCheckState",
+                "GroupID": 17,
+                "GroupMonsterID": 200001,
+                "CheckState": "Dead"
+              },
+              {
+                "$type": "RPG.GameCore.ByCompareNPCMonsterCheckState",
+                "GroupID": 17,
+                "GroupMonsterID": 200002,
+                "CheckState": "Dead"
+              },
+              {
+                "$type": "RPG.GameCore.ByCompareNPCMonsterCheckState",
+                "GroupID": 17,
+                "GroupMonsterID": 200003,
+                "CheckState": "Dead"
+              }
+            ]
+          },
+          "SuccessTaskList": [
+            {
+              "$type": "RPG.GameCore.FinishStoryMission",
+              "Key": "Mission_301060102"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

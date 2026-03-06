@@ -1,0 +1,35 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.TriggerStory",
+          "StoryID": 101050106
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "101050116_End",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.PropStateExecute",
+          "GroupPropID": 300008,
+          "GroupID": 3,
+          "Execute": [
+            {
+              "$type": "RPG.GameCore.PropReqInteract",
+              "GroupPropID": 300008,
+              "GroupID": 3,
+              "InteractID": 1010
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

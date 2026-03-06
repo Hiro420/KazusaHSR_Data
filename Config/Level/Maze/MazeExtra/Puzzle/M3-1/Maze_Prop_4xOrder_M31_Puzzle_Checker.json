@@ -1,0 +1,341 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropStateChangeListenerConfig",
+          "GroupID": 33,
+          "GroupPropID": 300009,
+          "FromState": "Open",
+          "OnChange": [
+            {
+              "$type": "RPG.GameCore.ToastPile",
+              "DescTextID": {
+                "hash": -635062267
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropStateExecute",
+          "GroupPropID": 300001,
+          "GroupID": 5,
+          "Execute": [
+            {
+              "$type": "RPG.GameCore.ShowWaypointByProp",
+              "UseOwnerEntity": false,
+              "GroupID": 5,
+              "InstanceID": 300001,
+              "MaxRange": 20,
+              "IconPath": "SpriteOutput/MapPics/Billboard/IconBillboardBox.png",
+              "Offset": {
+                "x": 0.0,
+                "y": 1.6,
+                "z": 0.0
+              }
+            }
+          ],
+          "State": "ChestClosed"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropStateChangeListenerConfig",
+          "GroupID": 5,
+          "GroupPropID": 300001,
+          "FromState": "ChestClosed",
+          "ToState": "ChestUsed",
+          "OnChange": [
+            {
+              "$type": "RPG.GameCore.HideWaypointByProp",
+              "UseOwnerEntity": false,
+              "GroupID": 5,
+              "InstanceID": 300001
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "M301_OrderPuzzle_Start"
+        },
+        {
+          "$type": "RPG.GameCore.LockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI",
+          "Show": true
+        },
+        {
+          "$type": "RPG.GameCore.PropReqInteract",
+          "GroupPropID": 300009,
+          "GroupID": 33,
+          "InteractID": 1010
+        },
+        {
+          "$type": "RPG.GameCore.PropReqInteract",
+          "GroupPropID": 300001,
+          "GroupID": 33,
+          "InteractID": 1200
+        },
+        {
+          "$type": "RPG.GameCore.PropReqInteract",
+          "GroupPropID": 300002,
+          "GroupID": 33,
+          "InteractID": 1200
+        },
+        {
+          "$type": "RPG.GameCore.PropReqInteract",
+          "GroupPropID": 300003,
+          "GroupID": 33,
+          "InteractID": 1200
+        },
+        {
+          "$type": "RPG.GameCore.PropReqInteract",
+          "GroupPropID": 300004,
+          "GroupID": 33,
+          "InteractID": 1200
+        },
+        {
+          "$type": "RPG.GameCore.PropReqInteract",
+          "GroupPropID": 300005,
+          "GroupID": 33,
+          "InteractID": 1010
+        },
+        {
+          "$type": "RPG.GameCore.PropReqInteract",
+          "GroupPropID": 300006,
+          "GroupID": 33,
+          "InteractID": 1010
+        },
+        {
+          "$type": "RPG.GameCore.PropReqInteract",
+          "GroupPropID": 300007,
+          "GroupID": 33,
+          "InteractID": 1010
+        },
+        {
+          "$type": "RPG.GameCore.PropReqInteract",
+          "GroupPropID": 300008,
+          "GroupID": 33,
+          "InteractID": 1010
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Mode": "SwitchOut",
+          "CustomTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Chap01_MAZ_M301_OrderPuzzle_LevelArea",
+          "AnchorName": "OrderPuzzle_Cam",
+          "BlendConfig": {}
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "CustomTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.PropTriggerAnimState",
+          "GroupPropID": 300001,
+          "GroupID": 33,
+          "AnimStateName": "Maze_ElementsProp_Hint"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 1.5
+        },
+        {
+          "$type": "RPG.GameCore.PropTriggerAnimState",
+          "GroupPropID": 300003,
+          "GroupID": 33,
+          "AnimStateName": "Maze_ElementsProp_Hint"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 1.5
+        },
+        {
+          "$type": "RPG.GameCore.PropTriggerAnimState",
+          "GroupPropID": 300004,
+          "GroupID": 33,
+          "AnimStateName": "Maze_ElementsProp_Hint"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 1.5
+        },
+        {
+          "$type": "RPG.GameCore.PropTriggerAnimState",
+          "GroupPropID": 300002,
+          "GroupID": 33,
+          "AnimStateName": "Maze_ElementsProp_Hint"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 1.5
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Mode": "SwitchOut",
+          "CustomTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Chap01_MAZ_M301_OrderPuzzle_LevelArea",
+          "AnchorName": "OrderPuzzle_Cam",
+          "IsActive": false,
+          "BlendConfig": {}
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "CustomTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropStateChangeListenerConfig",
+          "GroupID": 5,
+          "GroupPropID": 300001,
+          "FromState": "ChestLocked",
+          "ToState": "ChestClosed",
+          "OnChange": [
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "M301_OrderPuzzle_Chest_Open"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "M301_OrderPuzzle_Chest_Open",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Mode": "SwitchOut",
+          "CustomTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.PropTriggerAnimState",
+          "GroupPropID": 300001,
+          "GroupID": 5,
+          "AnimStateName": "Locked"
+        },
+        {
+          "$type": "RPG.GameCore.LockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.EnableNPCMonsterAI",
+          "GroupMonsterIDs": [],
+          "UniqueNames": []
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode",
+          "Enable": true
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Chap01_MAZ_M301_OrderPuzzle_LevelArea",
+          "AnchorName": "OrderPuzzle_Chest_Cam",
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "Cut"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "CustomTime": 0.8
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 1.0
+        },
+        {
+          "$type": "RPG.GameCore.PropTriggerAnimState",
+          "GroupPropID": 300001,
+          "GroupID": 5,
+          "AnimStateName": "LockedToStandBy"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 1.0
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Mode": "SwitchOut",
+          "CustomTime": 0.8
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Chap01_MAZ_M301_OrderPuzzle_LevelArea",
+          "AnchorName": "OrderPuzzle_Chest_Cam",
+          "IsActive": false,
+          "BlendConfig": {
+            "BlendType": "Cut",
+            "BlendTime": 4.0
+          },
+          "VCameraDitherMaxDistance": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "CustomTime": 0.8
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode"
+        },
+        {
+          "$type": "RPG.GameCore.EnableNPCMonsterAI",
+          "Enable": true,
+          "GroupMonsterIDs": [],
+          "UniqueNames": []
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowWaypointByProp",
+          "UseOwnerEntity": false,
+          "GroupID": 5,
+          "InstanceID": 300001,
+          "MaxRange": 20,
+          "IconPath": "SpriteOutput/MapPics/Billboard/IconBillboardBox.png",
+          "Offset": {
+            "x": 0.0,
+            "y": 1.6,
+            "z": 0.0
+          }
+        }
+      ]
+    }
+  ]
+}

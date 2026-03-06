@@ -1,0 +1,264 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "101030108_ScreenMove"
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "Mode": "SwitchOut"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.2
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "CustomTime": 0.2
+        },
+        {
+          "$type": "RPG.GameCore.CreateCharacter",
+          "CharacterUniqueName": "101030108_7thMarch",
+          "Catgory": "Default",
+          "AvatarID": "7thMarch",
+          "AreaName": "Mission_1010301_temp",
+          "AnchorName": "101030107_37"
+        },
+        {
+          "$type": "RPG.GameCore.CreateCharacter",
+          "CharacterUniqueName": "101030108_DanHeng",
+          "Catgory": "Default",
+          "AvatarID": "DanHeng",
+          "AreaName": "Mission_1010301_temp",
+          "AnchorName": "101030107_Dan"
+        },
+        {
+          "$type": "RPG.GameCore.CreateCharacter",
+          "CharacterUniqueName": "101030108_Player",
+          "Catgory": "Default",
+          "AvatarID": "Player",
+          "AreaName": "Mission_1010301_temp",
+          "AnchorName": "101030107_Zhu"
+        },
+        {
+          "$type": "RPG.GameCore.CharacterChangeAnimatorCatgory",
+          "CharacterUniqueName": "101030108_DanHeng",
+          "Catgory": "Performance"
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Mission_1010301_temp",
+          "AnchorName": "Camera_101030107_0",
+          "BlendConfig": {
+            "BlendType": "Cut"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.1
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "101030108_Walk"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 1.5
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Mission_1010301_temp",
+          "AnchorName": "Camera_101030107_1",
+          "BlendConfig": {
+            "BlendType": "EaseInOut",
+            "BlendTime": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "101030108_Walk"
+        },
+        {
+          "$type": "RPG.GameCore.CharacterNavigateTo",
+          "CharacterUniqueName": "101030108_7thMarch",
+          "AreaName": "LevelArea_P20111_F20111001_G3",
+          "AnchorName": "Anchor23",
+          "MotionFlag": "Run"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.5
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "101030108_Walk"
+        },
+        {
+          "$type": "RPG.GameCore.CharacterNavigateTo",
+          "CharacterUniqueName": "101030108_DanHeng",
+          "AreaName": "LevelArea_P20111_F20111001_G3",
+          "AnchorName": "Anchor24",
+          "MotionFlag": "Run"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.CharacterTriggerAnimState",
+          "CharacterUniqueName": "101030108_DanHeng",
+          "AnimStateName": "Alert01BS",
+          "NormalizedTransitionDuration": 0.1
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "101030108_Walk"
+        },
+        {
+          "$type": "RPG.GameCore.CharacterNavigateTo",
+          "CharacterUniqueName": "101030108_Player",
+          "AreaName": "LevelArea_P20111_F20111001_G3",
+          "AnchorName": "Anchor25",
+          "MotionFlag": "Run"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.5
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "101030108_ScreenMove"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 1.0
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC",
+          "GroupID": 3,
+          "GroupNpcID": 400003,
+          "NPCUniqueName": "101030108_Enemy_1"
+        },
+        {
+          "$type": "RPG.GameCore.CaptureNPCToCharacter",
+          "GroupID": 3,
+          "GroupNpcID": 400003,
+          "CharacterUniqueName": "101030108_Enemy"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.2
+        },
+        {
+          "$type": "RPG.GameCore.CharacterNavigateTo",
+          "CharacterUniqueName": "101030108_Enemy",
+          "AreaName": "LevelArea_P20111_F20111001_G3",
+          "AnchorName": "Anchor26",
+          "MotionFlag": "Walk"
+        },
+        {
+          "$type": "RPG.GameCore.CharacterTriggerAnimState",
+          "CharacterUniqueName": "101030108_Enemy",
+          "AnimStateName": "Attack",
+          "NormalizedTransitionDuration": 0.1
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.8
+        },
+        {
+          "$type": "RPG.GameCore.DestroyNPC",
+          "GroupID": 3,
+          "GroupNpcID": 400003
+        },
+        {
+          "$type": "RPG.GameCore.CharacterChangeAnimatorCatgory",
+          "CharacterUniqueName": "101030108_DanHeng"
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitSecond"
+        },
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300008,
+          "GroupID": 4,
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "DestroyAfterTriggered": true,
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.EnableStoryMode",
+              "Enable": true
+            },
+            {
+              "$type": "RPG.GameCore.CaptureLocalPlayer",
+              "CharacterUniqueName": "Character_101030108"
+            },
+            {
+              "$type": "RPG.GameCore.ShowTalkUI",
+              "Show": true
+            },
+            {
+              "$type": "RPG.GameCore.LockPlayerControl"
+            },
+            {
+              "$type": "RPG.GameCore.SetCharacterVisiable",
+              "CharType": "LocalPlayer",
+              "CharacterUniqueName": "Character_101030108"
+            },
+            {
+              "$type": "RPG.GameCore.PlayScreenTransfer",
+              "Type": "Black",
+              "Mode": "SwitchOut"
+            },
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "101030108_ScreenMove"
+              }
+            },
+            {
+              "$type": "RPG.GameCore.WaitSecond",
+              "WaitTime": 0.5
+            },
+            {
+              "$type": "RPG.GameCore.PlayScreenTransfer",
+              "Type": "Black",
+              "CustomTime": 0.5
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

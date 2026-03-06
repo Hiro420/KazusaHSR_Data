@@ -1,0 +1,43 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PlayMissionTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 801220251,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 801220252,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 801220253,
+              "ProtectTime": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "201060804_End",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.ConsumeMissionItem",
+          "SubMissionID": 201060804,
+          "Desc": {
+            "hash": 278713946
+          }
+        }
+      ]
+    }
+  ]
+}

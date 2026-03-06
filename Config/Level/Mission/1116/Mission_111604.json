@@ -1,0 +1,44 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": []
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.CreateProp",
+          "PropID": 100001,
+          "UniqueName": "Mission_111604_Goal",
+          "AreaName": "Adv_CH1_Area_Square",
+          "AnchorName": "Anchor_NPC_101039d",
+          "OnCreate": [
+            {
+              "$type": "RPG.GameCore.PropSetupTrigger",
+              "UniqueName": "Mission_111604_Goal",
+              "TargetTypes": [],
+              "ColliderRelativePath": "Trigger",
+              "DestroyAfterTriggered": true,
+              "OnTriggerEnter": [
+                {
+                  "$type": "RPG.GameCore.FinishMission",
+                  "MissionID": 111604
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Hold",
+          "WaitOwnerOnly": true
+        }
+      ]
+    }
+  ]
+}

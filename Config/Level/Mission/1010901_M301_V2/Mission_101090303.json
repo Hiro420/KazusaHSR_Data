@@ -1,0 +1,39 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300030,
+          "GroupID": 6,
+          "TargetCharacterType": "LocalPlayer",
+          "TargetTypes": [],
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "101090303_TriggerBoss"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "101090303_TriggerBoss",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.TriggerBattle",
+          "EventID": 20131202,
+          "GroupID": 2,
+          "BattleAreaID": 1
+        }
+      ]
+    }
+  ]
+}

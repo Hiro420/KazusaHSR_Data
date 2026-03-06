@@ -1,0 +1,35 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "ColliderRelativePath": "Trigger",
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "101050114_Exit"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "101050114_Exit",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.EnterMap",
+          "EntranceID": 1010101
+        }
+      ]
+    }
+  ]
+}

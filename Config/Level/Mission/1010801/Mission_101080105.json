@@ -1,0 +1,85 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.CreateNPC",
+          "GroupID": 17,
+          "GroupNpcID": 400004
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC",
+          "GroupID": 17,
+          "GroupNpcID": 400005
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300003,
+          "GroupID": 17,
+          "TargetCharacterType": "LocalPlayer",
+          "TargetTypes": [],
+          "DestroyAfterTriggered": true,
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.PlayScreenTransfer",
+              "Mode": "SwitchOut",
+              "CustomTime": 0.5
+            },
+            {
+              "$type": "RPG.GameCore.DestroyNPC",
+              "GroupID": 17,
+              "GroupNpcID": 400006
+            },
+            {
+              "$type": "RPG.GameCore.DestroyNPC",
+              "GroupID": 17,
+              "GroupNpcID": 400007
+            },
+            {
+              "$type": "RPG.GameCore.PlayScreenTransfer",
+              "TaskEnabled": false
+            },
+            {
+              "$type": "RPG.GameCore.TriggerStory",
+              "StoryID": 1010801061
+            },
+            {
+              "$type": "RPG.GameCore.PlayScreenTransfer",
+              "Type": "Black",
+              "CustomTime": 0.5
+            },
+            {
+              "$type": "RPG.GameCore.FinishStoryMission",
+              "Key": "Mission_101080105"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PlayMissionTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201310601,
+              "ProtectTime": 2.0
+            },
+            {
+              "VoiceID": 201310602,
+              "ProtectTime": 2.0
+            },
+            {
+              "VoiceID": 201310603
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

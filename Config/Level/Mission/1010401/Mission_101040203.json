@@ -1,0 +1,53 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300004,
+          "GroupID": 4,
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "DestroyAfterTriggered": true,
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.FinishStoryMission",
+              "Key": "Mission_101040203"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PlayMissionTalk",
+          "SimpleTalkList": [
+            {
+              "TextSpeed": 30.0,
+              "VoiceID": 201211101
+            },
+            {
+              "VoiceID": 201211102
+            },
+            {
+              "VoiceID": 201211103
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.ToastPage",
+          "Type": "AreaChange",
+          "MessageOne": {
+            "hash": -1234672261
+          }
+        }
+      ]
+    }
+  ]
+}

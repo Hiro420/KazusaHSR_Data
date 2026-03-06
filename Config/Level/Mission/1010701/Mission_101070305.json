@@ -1,0 +1,107 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PlayMissionTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201234801
+            },
+            {
+              "VoiceID": 201234802
+            },
+            {
+              "VoiceID": 201234803
+            },
+            {
+              "VoiceID": 201234804
+            },
+            {
+              "VoiceID": 201234805
+            },
+            {
+              "VoiceID": 201234806
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SetNpcWaypath",
+          "UsageType": "TaskFollow",
+          "GroupID": 32,
+          "GroupNpcID": 400001
+        },
+        {
+          "$type": "RPG.GameCore.SetNpcStatus",
+          "GroupID": 32,
+          "GroupNpcID": 400001,
+          "Status": "FollowByPlayer"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300006,
+          "GroupID": 12,
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "DestroyAfterTriggered": true,
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "Ai_101070305"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Ai_101070305",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "Mode": "SwitchOut",
+          "CustomTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.TriggerStory",
+          "StoryID": 101070305
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "MapEntrance_101070305"
+          }
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "MapEntrance_101070305",
+          "WaitOwnerOnly": true,
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.EnterMap",
+          "EntranceID": 2012301
+        }
+      ]
+    }
+  ]
+}

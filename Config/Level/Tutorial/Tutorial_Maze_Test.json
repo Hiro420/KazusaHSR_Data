@@ -1,0 +1,55 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.ShowTutorialUI",
+          "Name": "UI/Guide/TutorialDialog.prefab"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "AboveDialog/TutorialDialog(Clone)/MaskRaycastTarget",
+            "Mask/Mask_BG"
+          ],
+          "Open": true
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 3,
+          "Show": true,
+          "Path": "Page/MazePhasePage(Clone)/RightButtomArea/MazeActionBtn/IconSkill"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 2.0
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 5,
+          "Show": true,
+          "Path": "Page/MazePhasePage(Clone)/RightButtomArea/MazeActionBtn/IconSkill",
+          "Text": "TutorialTextmap_1010101"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 2.0
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 3
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 2.0
+        },
+        {
+          "$type": "RPG.GameCore.ShowTutorialUI",
+          "Name": "UI/Guide/TutorialDialog.prefab",
+          "IsHide": true
+        }
+      ]
+    }
+  ]
+}

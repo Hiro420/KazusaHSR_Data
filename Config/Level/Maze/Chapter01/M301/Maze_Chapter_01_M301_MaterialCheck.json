@@ -4,13 +4,16 @@
     {
       "TaskList": [
         {
-          "$type": "RPG.GameCore.WaitPredicateSucc"
+          "$type": "RPG.GameCore.WaitPredicateSucc",
+          "Condition": {
+            "$type": "RPG.GameCore.ByCompareGroupMonsterNum",
+            "GroupID": 14
+          }
         },
         {
-          "$type": "RPG.GameCore.ActiveVirtualCamera",
-          "AreaName": "\u000e",
-          "AnchorName": "�\f",
-          "IsActive": true
+          "$type": "RPG.GameCore.CreateProp",
+          "GroupID": 14,
+          "GroupPropID": 300003
         }
       ]
     }

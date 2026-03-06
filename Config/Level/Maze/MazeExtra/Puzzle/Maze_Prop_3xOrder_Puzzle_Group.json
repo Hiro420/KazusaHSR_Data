@@ -1,0 +1,195 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SyncSubPropState",
+          "MainState": "ChestLocked"
+        },
+        {
+          "$type": "RPG.GameCore.SyncSubPropState",
+          "MainState": "ChestLocked"
+        },
+        {
+          "$type": "RPG.GameCore.SyncSubPropState",
+          "MainState": "ChestLocked"
+        },
+        {
+          "$type": "RPG.GameCore.SyncAllSubPropState"
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.LockPlayerControl"
+            },
+            {
+              "$type": "RPG.GameCore.PropTriggerAnimState",
+              "AnimStateName": "Maze_ElementsProp_Show"
+            },
+            {
+              "$type": "RPG.GameCore.WaitSecond",
+              "WaitTime": 1.0
+            },
+            {
+              "$type": "RPG.GameCore.PropTriggerAnimState",
+              "AnimStateName": "Maze_ElementsProp_Show"
+            },
+            {
+              "$type": "RPG.GameCore.WaitSecond",
+              "WaitTime": 1.0
+            },
+            {
+              "$type": "RPG.GameCore.PropTriggerAnimState",
+              "AnimStateName": "Maze_ElementsProp_Show"
+            },
+            {
+              "$type": "RPG.GameCore.WaitSecond",
+              "WaitTime": 1.0
+            },
+            {
+              "$type": "RPG.GameCore.LockPlayerControl"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.LoopWaitBeHit",
+          "GroupPropID": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 300001.0
+            }
+          },
+          "OnBeHit": [
+            {
+              "$type": "RPG.GameCore.ComparePropState",
+              "OnEqual": [
+                {
+                  "$type": "RPG.GameCore.ReversePropState"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.LoopWaitBeHit",
+          "GroupPropID": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 300002.0
+            }
+          },
+          "OnBeHit": [
+            {
+              "$type": "RPG.GameCore.ComparePropState",
+              "OnEqual": [
+                {
+                  "$type": "RPG.GameCore.ComparePropState",
+                  "OnEqual": [
+                    {
+                      "$type": "RPG.GameCore.ReversePropState"
+                    }
+                  ],
+                  "OnNotEqual": [
+                    {
+                      "$type": "RPG.GameCore.SyncAllSubPropState"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.LoopWaitBeHit",
+          "GroupPropID": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 300003.0
+            }
+          },
+          "OnBeHit": [
+            {
+              "$type": "RPG.GameCore.ComparePropState",
+              "OnEqual": [
+                {
+                  "$type": "RPG.GameCore.ComparePropState",
+                  "OnEqual": [
+                    {
+                      "$type": "RPG.GameCore.ReversePropState"
+                    }
+                  ],
+                  "OnNotEqual": [
+                    {
+                      "$type": "RPG.GameCore.SyncAllSubPropState"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitPredicateSucc",
+          "Condition": {
+            "$type": "RPG.GameCore.ByAnd",
+            "PredicateList": [
+              {
+                "$type": "RPG.GameCore.ByComparePropState",
+                "GroupPropID": 300004,
+                "GroupID": 20,
+                "State": "ChestLocked"
+              },
+              {
+                "$type": "RPG.GameCore.ByComparePropState",
+                "GroupPropID": 300001,
+                "GroupID": 20,
+                "State": "Open"
+              },
+              {
+                "$type": "RPG.GameCore.ByComparePropState",
+                "GroupPropID": 300002,
+                "GroupID": 20,
+                "State": "Open"
+              },
+              {
+                "$type": "RPG.GameCore.ByComparePropState",
+                "GroupPropID": 300003,
+                "GroupID": 20,
+                "State": "Open"
+              }
+            ]
+          }
+        },
+        {
+          "$type": "RPG.GameCore.PropReqInteract",
+          "GroupPropID": 300004,
+          "GroupID": 20,
+          "InteractID": 1200
+        }
+      ]
+    }
+  ]
+}

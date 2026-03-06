@@ -1,0 +1,48 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupHitBox",
+          "OnBeHit": [
+            {
+              "$type": "RPG.GameCore.PropReqInteract",
+              "TargetIsOwner": true,
+              "InteractID": 1011
+            },
+            {
+              "$type": "RPG.GameCore.PropDestruct"
+            },
+            {
+              "$type": "RPG.GameCore.DestroyProp"
+            },
+            {
+              "$type": "RPG.GameCore.CaptureLocalPlayer",
+              "CharacterUniqueName": "Char_Item"
+            },
+            {
+              "$type": "RPG.GameCore.TriggerEffectListOnCharacter",
+              "CharacterUniqueName": "Char_Item",
+              "EffectList": [
+                {
+                  "EffectPath": "Effects/Eff_Prefab/Eff_Common/Eff_Common_MAZ_RecoverHP.prefab",
+                  "AttachPoint": "Body",
+                  "PositionOffset": {
+                    "x": 0.0,
+                    "y": 0.5,
+                    "z": 0.0
+                  }
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.ReleaseCharacter",
+              "CharacterUniqueName": "Char_Item"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

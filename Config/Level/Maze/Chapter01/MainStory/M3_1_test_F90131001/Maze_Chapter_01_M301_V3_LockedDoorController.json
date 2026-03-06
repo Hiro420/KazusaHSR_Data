@@ -1,0 +1,201 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300004,
+              "GroupID": 3,
+              "Execute": [],
+              "State": "BridgeState1"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300004,
+              "GroupID": 3,
+              "Execute": [],
+              "State": "BridgeState2"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300004,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropSetVisibility",
+                  "ID": 300014,
+                  "GroupID": 3,
+                  "SpecifiedRelativePaths": []
+                }
+              ],
+              "State": "BridgeState3"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300004,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.WaitSecond",
+                  "WaitTime": 0.5
+                },
+                {
+                  "$type": "RPG.GameCore.PropSetVisibility",
+                  "ID": 300014,
+                  "GroupID": 3,
+                  "SpecifiedRelativePaths": []
+                },
+                {
+                  "$type": "RPG.GameCore.PropEnableCollider",
+                  "SpecifiedRelativePaths": [
+                    "Trigger"
+                  ]
+                }
+              ],
+              "State": "BridgeState4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "TargetIsOwner": true,
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.SelectorConfig",
+              "TaskList": [
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "TargetIsOwner": true,
+                  "GroupPropID": 300004,
+                  "GroupID": 3,
+                  "Execute": [
+                    {
+                      "$type": "RPG.GameCore.TriggerStory",
+                      "StoryID": 101090204
+                    }
+                  ],
+                  "State": "BridgeState1"
+                },
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "TargetIsOwner": true,
+                  "GroupPropID": 300004,
+                  "GroupID": 3,
+                  "Execute": [
+                    {
+                      "$type": "RPG.GameCore.PropReqInteract",
+                      "TargetIsOwner": true,
+                      "InteractID": 2013108
+                    },
+                    {
+                      "$type": "RPG.GameCore.TriggerStory",
+                      "StoryID": 101090210
+                    }
+                  ],
+                  "State": "BridgeState2"
+                },
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "TargetIsOwner": true,
+                  "GroupPropID": 300004,
+                  "GroupID": 3,
+                  "Execute": [
+                    {
+                      "$type": "RPG.GameCore.TriggerCustomString",
+                      "CustomString": {
+                        "Value": "M301_OpenDoor1"
+                      }
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropReqInteract",
+                      "TargetIsOwner": true,
+                      "InteractID": 1560
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropEnableCollider",
+                      "SpecifiedRelativePaths": [
+                        "Trigger"
+                      ]
+                    }
+                  ],
+                  "State": "BridgeState3"
+                },
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "TargetIsOwner": true,
+                  "GroupPropID": 300004,
+                  "GroupID": 3,
+                  "Execute": [],
+                  "State": "BridgeState4"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "M301_GetFireItem2"
+        },
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300004,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "TargetIsOwner": true,
+                  "InteractID": 1340
+                }
+              ],
+              "State": "BridgeState1"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300004,
+              "GroupID": 3,
+              "Execute": [],
+              "State": "BridgeState2"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300004,
+              "GroupID": 3,
+              "Execute": [],
+              "State": "BridgeState3"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300004,
+              "GroupID": 3,
+              "Execute": [],
+              "State": "BridgeState4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

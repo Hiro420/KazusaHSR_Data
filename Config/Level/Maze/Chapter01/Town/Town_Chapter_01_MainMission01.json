@@ -1,0 +1,181 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.ByTriggeredInfo",
+          "OnSuccess": [
+            {
+              "$type": "RPG.GameCore.ByTriggeredInfo",
+              "OnSuccess": [
+                {
+                  "$type": "RPG.GameCore.ByTriggeredInfo",
+                  "OnSuccess": [
+                    {
+                      "$type": "RPG.GameCore.ByTriggeredInfo",
+                      "OnSuccess": [
+                        {
+                          "$type": "RPG.GameCore.ByTriggeredInfo",
+                          "OnSuccess": [
+                            {
+                              "$type": "RPG.GameCore.ByTriggeredInfo",
+                              "OnSuccess": [
+                                {
+                                  "$type": "RPG.GameCore.ByTriggeredInfo",
+                                  "OnSuccess": [
+                                    {
+                                      "$type": "RPG.GameCore.ByTriggeredInfo",
+                                      "OnSuccess": [],
+                                      "OnFailed": [
+                                        {
+                                          "$type": "RPG.GameCore.PredicateTaskList",
+                                          "Predicate": {
+                                            "$type": "RPG.GameCore.ByCompareSubMissionState",
+                                            "SubMissionID": 101020301,
+                                            "SubMissionState": "Started"
+                                          },
+                                          "SuccessTaskList": [],
+                                          "FailedTaskList": [
+                                            {
+                                              "$type": "RPG.GameCore.TakeMission",
+                                              "MissionID": 101020301
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "Key": "MazeSave_CompleteMission_101020301"
+                                    }
+                                  ],
+                                  "OnFailed": [
+                                    {
+                                      "$type": "RPG.GameCore.PredicateTaskList",
+                                      "Predicate": {
+                                        "$type": "RPG.GameCore.ByCompareSubMissionState",
+                                        "SubMissionID": 101020204,
+                                        "SubMissionState": "Started"
+                                      },
+                                      "SuccessTaskList": [],
+                                      "FailedTaskList": [
+                                        {
+                                          "$type": "RPG.GameCore.TakeMission",
+                                          "MissionID": 101020204
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "Key": "MazeSave_CompleteMission_101020204"
+                                }
+                              ],
+                              "OnFailed": [
+                                {
+                                  "$type": "RPG.GameCore.PredicateTaskList",
+                                  "Predicate": {
+                                    "$type": "RPG.GameCore.ByCompareSubMissionState",
+                                    "SubMissionID": 101020203,
+                                    "SubMissionState": "Started"
+                                  },
+                                  "SuccessTaskList": [],
+                                  "FailedTaskList": [
+                                    {
+                                      "$type": "RPG.GameCore.TakeMission",
+                                      "MissionID": 101020203
+                                    }
+                                  ]
+                                }
+                              ],
+                              "Key": "MazeSave_CompleteMission_101020203"
+                            }
+                          ],
+                          "OnFailed": [
+                            {
+                              "$type": "RPG.GameCore.PredicateTaskList",
+                              "Predicate": {
+                                "$type": "RPG.GameCore.ByCompareSubMissionState",
+                                "SubMissionID": 101020202,
+                                "SubMissionState": "Started"
+                              },
+                              "SuccessTaskList": [],
+                              "FailedTaskList": [
+                                {
+                                  "$type": "RPG.GameCore.TakeMission",
+                                  "MissionID": 101020202
+                                }
+                              ]
+                            }
+                          ],
+                          "Key": "MazeSave_CompleteMission_101020202"
+                        }
+                      ],
+                      "OnFailed": [
+                        {
+                          "$type": "RPG.GameCore.PredicateTaskList",
+                          "Predicate": {
+                            "$type": "RPG.GameCore.ByCompareSubMissionState",
+                            "SubMissionID": 101020201,
+                            "SubMissionState": "Started"
+                          },
+                          "SuccessTaskList": [],
+                          "FailedTaskList": [
+                            {
+                              "$type": "RPG.GameCore.TakeMission",
+                              "MissionID": 101020201
+                            }
+                          ]
+                        }
+                      ],
+                      "Key": "MazeSave_CompleteMission_101020201"
+                    }
+                  ],
+                  "OnFailed": [
+                    {
+                      "$type": "RPG.GameCore.PredicateTaskList",
+                      "Predicate": {
+                        "$type": "RPG.GameCore.ByCompareSubMissionState",
+                        "SubMissionID": 101020103,
+                        "SubMissionState": "Started"
+                      },
+                      "SuccessTaskList": [],
+                      "FailedTaskList": [
+                        {
+                          "$type": "RPG.GameCore.TakeMission",
+                          "MissionID": 101020103
+                        }
+                      ]
+                    }
+                  ],
+                  "Key": "MazeSave_CompleteMission_101020103"
+                }
+              ],
+              "OnFailed": [
+                {
+                  "$type": "RPG.GameCore.PredicateTaskList",
+                  "Predicate": {
+                    "$type": "RPG.GameCore.ByCompareSubMissionState",
+                    "SubMissionID": 101020102,
+                    "SubMissionState": "Started"
+                  },
+                  "SuccessTaskList": [],
+                  "FailedTaskList": [
+                    {
+                      "$type": "RPG.GameCore.TakeMission",
+                      "MissionID": 101020102
+                    }
+                  ]
+                }
+              ],
+              "Key": "MazeSave_CompleteMission_101020102"
+            }
+          ],
+          "OnFailed": [
+            {
+              "$type": "RPG.GameCore.TakeMission",
+              "MissionID": 101020101
+            }
+          ],
+          "Key": "MazeSave_CompleteMission_101020101"
+        }
+      ]
+    }
+  ]
+}

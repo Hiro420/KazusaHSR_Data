@@ -1,0 +1,349 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "TargetIsOwner": true,
+                  "AnimStateName": "Standby"
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "TargetIsOwner": true,
+                  "AnimStateName": "Hold01Close02"
+                }
+              ],
+              "State": "BridgeState1"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "TargetIsOwner": true,
+                  "AnimStateName": "Hold02Close01"
+                }
+              ],
+              "State": "BridgeState2"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "TargetIsOwner": true,
+                  "AnimStateName": "Used"
+                }
+              ],
+              "State": "Open"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "M301_OpenDoor1"
+        },
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "GroupPropID": 300009,
+                  "GroupID": 3,
+                  "InteractID": 101
+                },
+                {
+                  "$type": "RPG.GameCore.TriggerCustomString",
+                  "CustomString": {
+                    "Value": "M301_Door_CamStart"
+                  }
+                },
+                {
+                  "$type": "RPG.GameCore.WaitSecond",
+                  "WaitTime": 1.0
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "GroupPropID": 300009,
+                  "GroupID": 3,
+                  "AnimStateName": "Open01Close02"
+                },
+                {
+                  "$type": "RPG.GameCore.TriggerCustomString",
+                  "CustomString": {
+                    "Value": "M301_Door_CamEnd"
+                  }
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [],
+              "State": "BridgeState1"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "GroupPropID": 300009,
+                  "GroupID": 3,
+                  "InteractID": 104
+                },
+                {
+                  "$type": "RPG.GameCore.TriggerCustomString",
+                  "CustomString": {
+                    "Value": "M301_Door_CamStart"
+                  }
+                },
+                {
+                  "$type": "RPG.GameCore.WaitSecond",
+                  "WaitTime": 1.0
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "GroupPropID": 300009,
+                  "GroupID": 3,
+                  "AnimStateName": "Hold02Open01"
+                },
+                {
+                  "$type": "RPG.GameCore.TriggerCustomString",
+                  "CustomString": {
+                    "Value": "M301_Door_CamEnd"
+                  }
+                }
+              ],
+              "State": "BridgeState2"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [],
+              "State": "Open"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "M301_OpenDoor2"
+        },
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "GroupPropID": 300009,
+                  "GroupID": 3,
+                  "InteractID": 102
+                },
+                {
+                  "$type": "RPG.GameCore.TriggerCustomString",
+                  "CustomString": {
+                    "Value": "M301_Door_CamStart"
+                  }
+                },
+                {
+                  "$type": "RPG.GameCore.WaitSecond",
+                  "WaitTime": 1.0
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "GroupPropID": 300009,
+                  "GroupID": 3,
+                  "AnimStateName": "Open02Close01"
+                },
+                {
+                  "$type": "RPG.GameCore.TriggerCustomString",
+                  "CustomString": {
+                    "Value": "M301_Door_CamEnd"
+                  }
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "GroupPropID": 300009,
+                  "GroupID": 3,
+                  "InteractID": 103
+                },
+                {
+                  "$type": "RPG.GameCore.TriggerCustomString",
+                  "CustomString": {
+                    "Value": "M301_Door_CamStart"
+                  }
+                },
+                {
+                  "$type": "RPG.GameCore.WaitSecond",
+                  "WaitTime": 1.0
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "GroupPropID": 300009,
+                  "GroupID": 3,
+                  "AnimStateName": "Hold01Open02"
+                },
+                {
+                  "$type": "RPG.GameCore.TriggerCustomString",
+                  "CustomString": {
+                    "Value": "M301_Door_CamEnd"
+                  }
+                }
+              ],
+              "State": "BridgeState1"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [],
+              "State": "BridgeState2"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [],
+              "State": "Open"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "M301_Door_CamStart",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.LockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI",
+          "Show": true
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode",
+          "Enable": true
+        },
+        {
+          "$type": "RPG.GameCore.EnableNPCMonsterAI",
+          "GroupMonsterIDs": [],
+          "UniqueNames": []
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Mode": "SwitchOut",
+          "CustomTime": 0.25
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.25
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Mission_9010901",
+          "AnchorName": "Door_Cam",
+          "BlendConfig": {
+            "BlendType": "Cut",
+            "BlendTime": 1.5
+          }
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "CustomTime": 0.25
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "M301_Door_CamEnd",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 1.0
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Mode": "SwitchOut",
+          "CustomTime": 0.25
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.25
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Mission_9010901",
+          "AnchorName": "Door_Cam",
+          "IsActive": false,
+          "BlendConfig": {
+            "BlendType": "Cut",
+            "BlendTime": 1.5
+          }
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "CustomTime": 0.25
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode"
+        },
+        {
+          "$type": "RPG.GameCore.EnableNPCMonsterAI",
+          "Enable": true,
+          "GroupMonsterIDs": [],
+          "UniqueNames": []
+        }
+      ]
+    }
+  ]
+}

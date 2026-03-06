@@ -1,0 +1,131 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300005,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropEnableCollider",
+                  "SpecifiedRelativePaths": [
+                    "Trigger"
+                  ]
+                }
+              ],
+              "State": "Open"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300005,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropSetupUITrigger",
+                  "ColliderRelativePath": "Trigger",
+                  "ButtonCallback": [
+                    {
+                      "$type": "RPG.GameCore.PropReqInteract",
+                      "GroupPropID": 300005,
+                      "GroupID": 3,
+                      "InteractID": 1010
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropEnableCollider",
+                      "SpecifiedRelativePaths": [
+                        "Trigger"
+                      ]
+                    },
+                    {
+                      "$type": "RPG.GameCore.TriggerCustomString",
+                      "CustomString": {
+                        "Value": "DoorOpen_101030105_3"
+                      }
+                    },
+                    {
+                      "$type": "RPG.GameCore.TriggerCustomString",
+                      "CustomString": {
+                        "Value": "101050108"
+                      }
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropMove",
+                      "ID": 300005,
+                      "GroupID": 3,
+                      "Duration": 8.0,
+                      "DeltaPosition": {
+                        "x": 0.0,
+                        "y": 3.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.EnableNPCMonsterAI",
+          "Enable": true,
+          "GroupID": 4,
+          "GroupMonsterIDs": [
+            200004,
+            200005,
+            200006
+          ],
+          "UniqueNames": []
+        },
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "DoorOpen_101030105_3"
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "1010501_temp",
+          "AnchorName": "Camera_1010501_03",
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "EaseIn",
+            "BlendTime": 4.0
+          }
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 2.5
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "1010501_temp",
+          "AnchorName": "Camera_1010501_03",
+          "IsActive": false,
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "Cut",
+            "BlendTime": 1.0
+          }
+        },
+        {
+          "$type": "RPG.GameCore.EnableNPCMonsterAI",
+          "GroupID": 4,
+          "GroupMonsterIDs": [
+            200004,
+            200005,
+            200006
+          ],
+          "UniqueNames": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.3
+        },
+        {
+          "$type": "RPG.GameCore.ToastPage",
+          "Type": "AreaChange",
+          "MessageOne": {
+            "hash": 742701823
+          }
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Hold",
+          "WaitOwnerOnly": true
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300001,
+          "GroupID": 10,
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "DestroyAfterTriggered": true,
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.PlayMissionTalk",
+              "SimpleTalkList": [
+                {
+                  "TextSpeed": 30.0,
+                  "VoiceID": 201011801
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.WaitMissionTalkFinish"
+            },
+            {
+              "$type": "RPG.GameCore.PlayMissionTalk",
+              "SimpleTalkList": [
+                {
+                  "VoiceID": 201011901,
+                  "ForceToNextTime": 1.0
+                },
+                {
+                  "VoiceID": 201011902,
+                  "ForceToNextTime": 1.0
+                },
+                {
+                  "VoiceID": 201011903,
+                  "ForceToNextTime": 1.0
+                },
+                {
+                  "VoiceID": 201011904,
+                  "ForceToNextTime": 2.0
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.FinishStoryMission",
+              "Key": "Mission_101010102"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

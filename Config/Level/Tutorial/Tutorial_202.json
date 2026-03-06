@@ -1,0 +1,31 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitUINodeOpen",
+          "Path": "Page/BattleGamePhaseUI(Clone)/FunctionArea"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "Page/BattleGamePhaseUI(Clone)/FunctionArea"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.TutorialFinish",
+          "TutorialID": 202
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Stage_WaveMonsterPerformStart1"
+        }
+      ]
+    }
+  ]
+}

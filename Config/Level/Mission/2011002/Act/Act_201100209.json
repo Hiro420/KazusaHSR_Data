@@ -1,0 +1,169 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.LevelStoryInitialize",
+          "EntityVisiableList": [],
+          "CreateCharacterList": []
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 801320289,
+              "ProtectTime": 1.0
+            }
+          ],
+          "BlackMask": true
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC",
+          "GroupID": 6,
+          "GroupNpcID": 400001
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "BlackScreenEnd"
+          }
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "BlackScreenEnd"
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 801320273,
+              "ProtectTime": 0.8
+            },
+            {
+              "VoiceID": 801320274,
+              "ProtectTime": 0.8
+            },
+            {
+              "VoiceID": 801320275,
+              "ProtectTime": 0.8
+            },
+            {
+              "VoiceID": 801320276,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 801320277,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 801320278,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 801320279,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 801320280,
+              "ProtectTime": 0.8
+            },
+            {
+              "VoiceID": 801320281,
+              "ProtectTime": 0.8
+            },
+            {
+              "VoiceID": 801320282,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 801320283,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 801320284,
+              "ProtectTime": 0.9
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.PlayOptionTalk",
+          "OptionList": [
+            {
+              "OptionTextmapID": {
+                "hash": 1912247074
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "Story_801320285"
+            },
+            {
+              "OptionTextmapID": {
+                "hash": 1912247075
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "Story_801320285"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Story_801320285"
+        },
+        {
+          "$type": "RPG.GameCore.EndStory"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitStoryEnd"
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "Mode": "SwitchOut",
+          "CustomTime": 0.25
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.25
+        },
+        {
+          "$type": "RPG.GameCore.DestroyNPC",
+          "NpcID": 201323002,
+          "GroupID": 6,
+          "GroupNpcID": 400001
+        },
+        {
+          "$type": "RPG.GameCore.DestroyNPC",
+          "NpcID": 101080304,
+          "GroupID": 6,
+          "GroupNpcID": 400002
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "CustomTime": 0.25
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    }
+  ]
+}

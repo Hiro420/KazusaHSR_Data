@@ -1,0 +1,69 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300001,
+          "GroupID": 5,
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300001,
+              "GroupID": 5,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.TriggerStory",
+                  "StoryID": 101100112
+                },
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "GroupPropID": 300001,
+                  "GroupID": 5,
+                  "InteractID": 1010
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300003,
+          "GroupID": 5,
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300003,
+              "GroupID": 5,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.TriggerStory",
+                  "StoryID": 101100113
+                },
+                {
+                  "$type": "RPG.GameCore.FinishStoryMission",
+                  "Key": "Mission_101100101"
+                },
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "GroupPropID": 300003,
+                  "GroupID": 5,
+                  "InteractID": 1010
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Hold",
+          "WaitOwnerOnly": true
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.CreateNPC",
+          "GroupID": 3,
+          "GroupNpcID": 400001
+        },
+        {
+          "$type": "RPG.GameCore.SetNpcWaypath",
+          "UsageType": "TaskFollow",
+          "GroupID": 3,
+          "GroupNpcID": 400001
+        },
+        {
+          "$type": "RPG.GameCore.SetNpcStatus",
+          "GroupID": 3,
+          "GroupNpcID": 400001,
+          "Status": "FollowByPlayer"
+        }
+      ]
+    },
+    {
+      "Order": 1,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SwitchCharacterAnchor",
+          "IsLocalPlayer": true,
+          "AreaName": "LevelArea_P20101_F20101001_G3",
+          "AnchorName": "Anchor4"
+        },
+        {
+          "$type": "RPG.GameCore.LockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "CustomTime": 0.25
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PlayMissionTalk",
+          "SimpleTalkList": [
+            {
+              "TextSpeed": 30.0,
+              "VoiceID": 201012801
+            },
+            {
+              "TextSpeed": 30.0,
+              "VoiceID": 201012802
+            },
+            {
+              "TextSpeed": 30.0,
+              "VoiceID": 201012803
+            },
+            {
+              "TextSpeed": 30.0,
+              "VoiceID": 201012804
+            },
+            {
+              "TextSpeed": 30.0,
+              "VoiceID": 201012805
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300001,
+          "GroupID": 3,
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "DestroyAfterTriggered": true,
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "Finish_101010107_01"
+              }
+            }
+          ],
+          "OnTriggerExit": []
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300011,
+          "GroupID": 3,
+          "IsSingle": true,
+          "TargetCharacterType": "NPC",
+          "TargetGroupID": 3,
+          "TargetID": 400001,
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "DestroyAfterTriggered": true,
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "Finish_101010107_01"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Finish_101010107_01",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "Mode": "SwitchOut",
+          "CustomTime": 1.0
+        },
+        {
+          "$type": "RPG.GameCore.DestroyNPC",
+          "GroupID": 3,
+          "GroupNpcID": 400001
+        },
+        {
+          "$type": "RPG.GameCore.FinishStoryMission",
+          "Key": "Mission_101010107"
+        }
+      ]
+    }
+  ]
+}

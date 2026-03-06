@@ -1,0 +1,79 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300001,
+              "GroupID": 7,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropSetupUITrigger",
+                  "ID": 300001,
+                  "GroupID": 7,
+                  "ButtonCallback": [
+                    {
+                      "$type": "RPG.GameCore.PropReqInteract",
+                      "GroupPropID": 300001,
+                      "GroupID": 7,
+                      "InteractID": 1010
+                    },
+                    {
+                      "$type": "RPG.GameCore.LoadLevelGroup",
+                      "GroupIDList": [
+                        8
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300001,
+              "GroupID": 7,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.DestroyProp",
+                  "ID": 300001,
+                  "GroupID": 7
+                },
+                {
+                  "$type": "RPG.GameCore.PlayBackgroundTalk",
+                  "BackgroundTalkList": [
+                    {
+                      "AutoSkipTime": 3.0,
+                      "VoiceID": 901019904
+                    }
+                  ]
+                },
+                {
+                  "$type": "RPG.GameCore.ByCompareNPCMonsterCheckState",
+                  "GroupID": 8,
+                  "GroupMonsterID": 200001,
+                  "CheckState": "Dead"
+                },
+                {
+                  "$type": "RPG.GameCore.ByCompareNPCMonsterCheckState",
+                  "GroupID": 8,
+                  "GroupMonsterID": 200002,
+                  "CheckState": "Dead"
+                },
+                {
+                  "$type": "RPG.GameCore.CreateProp",
+                  "GroupID": 7,
+                  "GroupPropID": 300002
+                }
+              ],
+              "State": "Open"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

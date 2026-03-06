@@ -1,0 +1,217 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300001,
+              "GroupID": 5,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropSetVisibility",
+                  "SpecifiedRelativePaths": []
+                },
+                {
+                  "$type": "RPG.GameCore.PropEnableCollider",
+                  "SpecifiedRelativePaths": []
+                }
+              ],
+              "State": "Open"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300001,
+              "GroupID": 5,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropSetupUITrigger",
+                  "TargetIsOwner": true,
+                  "ColliderRelativePath": "Trigger",
+                  "DisableAfterTriggered": true,
+                  "ButtonCallback": [
+                    {
+                      "$type": "RPG.GameCore.LockPlayerControl"
+                    },
+                    {
+                      "$type": "RPG.GameCore.ShowTalkUI",
+                      "Show": true
+                    },
+                    {
+                      "$type": "RPG.GameCore.PlayOptionTalk",
+                      "OptionList": [
+                        {
+                          "OptionTextmapID": {
+                            "hash": -2103477015
+                          },
+                          "TriggerCustomString": "Maze_Chap01_M302_TriggerChallenge_01"
+                        },
+                        {
+                          "OptionTextmapID": {
+                            "hash": 1723323179
+                          },
+                          "TriggerCustomString": "Maze_Chap01_M302_TriggerChallenge_DoNothing"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Chap01_M302_TriggerChallenge_01",
+          "WaitOwnerOnly": true,
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.PropReqInteract",
+          "TargetIsOwner": true,
+          "InteractID": 1010
+        },
+        {
+          "$type": "RPG.GameCore.PropSetVisibility",
+          "SpecifiedRelativePaths": []
+        },
+        {
+          "$type": "RPG.GameCore.PropEnableCollider",
+          "SpecifiedRelativePaths": []
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUIPage",
+          "AssetPath": "UI/Mission/MissionStartHintDialog.prefab",
+          "UIImageNodes": [],
+          "UITextNodes": [
+            {
+              "TextPath": "Dialog/MissionTitle/Text",
+              "TextContent": {
+                "hash": 114458715
+              }
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 1.0
+        },
+        {
+          "$type": "RPG.GameCore.ShowUIPage",
+          "AssetPath": "UI/Mission/MissionStartHintDialog.prefab",
+          "UIImageNodes": [],
+          "UITextNodes": [
+            {
+              "TextPath": "Dialog/MissionTitle/Text",
+              "TextContent": {
+                "hash": -2040712855
+              }
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 1.0
+        },
+        {
+          "$type": "RPG.GameCore.CreateProp",
+          "GroupID": 16,
+          "GroupPropID": 300002
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Chap01_M302_TriggerChallenge_DoNothing"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Chap01_M302_TriggerChallengeReward_01",
+          "WaitOwnerOnly": true,
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.UnloadLevelGroup",
+          "GroupIDList": [
+            16
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.LoadLevelGroup",
+          "GroupIDList": [
+            17
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByAnd",
+            "PredicateList": [
+              {
+                "$type": "RPG.GameCore.ByCompareNPCMonsterCheckState",
+                "GroupID": 16,
+                "GroupMonsterID": 200001,
+                "CheckState": "Dead"
+              },
+              {
+                "$type": "RPG.GameCore.ByCompareNPCMonsterCheckState",
+                "GroupID": 16,
+                "GroupMonsterID": 200002,
+                "CheckState": "Dead"
+              },
+              {
+                "$type": "RPG.GameCore.ByComparePropState",
+                "TargetIsOwner": true,
+                "State": "Open"
+              }
+            ]
+          },
+          "SuccessTaskList": [
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "Maze_Chap01_M302_TriggerChallengeReward_01"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

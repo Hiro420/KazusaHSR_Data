@@ -1,0 +1,52 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropStateExecute",
+          "TargetIsOwner": true,
+          "GroupPropID": 300004,
+          "GroupID": 3,
+          "Execute": [
+            {
+              "$type": "RPG.GameCore.DestroyProp"
+            }
+          ],
+          "State": "Open"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "201060113_Destroy"
+        },
+        {
+          "$type": "RPG.GameCore.PropReqInteract",
+          "TargetIsOwner": true,
+          "InteractID": 1010
+        },
+        {
+          "$type": "RPG.GameCore.DestroyProp"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupHitBox",
+          "OnBeHit": [
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "201060113_Destroy"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": []
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupHitBox",
+          "OnBeHit": [
+            {
+              "$type": "RPG.GameCore.PropDestruct"
+            },
+            {
+              "$type": "RPG.GameCore.DestroyProp"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

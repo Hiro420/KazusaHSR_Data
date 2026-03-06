@@ -1,0 +1,140 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300004,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "TargetIsOwner": true,
+                  "AnimStateName": "Maze_Chest_Locked"
+                }
+              ],
+              "State": "Locked"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300004,
+              "GroupID": 3,
+              "Execute": []
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300004,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.WaitSecond",
+                  "WaitTime": 0.1
+                },
+                {
+                  "$type": "RPG.GameCore.PropEnableCollider",
+                  "SpecifiedRelativePaths": []
+                },
+                {
+                  "$type": "RPG.GameCore.PropSetVisibility",
+                  "SpecifiedRelativePaths": []
+                }
+              ],
+              "State": "Open"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.ByCompareNPCMonsterCheckState",
+          "GroupID": 3,
+          "GroupMonsterID": 200001,
+          "CheckState": "Dead"
+        },
+        {
+          "$type": "RPG.GameCore.PropTriggerAnimState",
+          "TargetIsOwner": true,
+          "AnimStateName": "Maze_Chest_Unlocking"
+        },
+        {
+          "$type": "RPG.GameCore.PropReqInteract",
+          "TargetIsOwner": true,
+          "InteractID": 1200
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "TargetIsOwner": true,
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.SelectorConfig",
+              "TaskList": [
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "TargetIsOwner": true,
+                  "GroupPropID": 300004,
+                  "GroupID": 3,
+                  "Execute": [
+                    {
+                      "$type": "RPG.GameCore.PlayBackgroundTalk",
+                      "BackgroundTalkList": [
+                        {
+                          "AutoSkipTime": 3.0,
+                          "VoiceID": 201319001
+                        }
+                      ]
+                    }
+                  ],
+                  "State": "Locked"
+                },
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "TargetIsOwner": true,
+                  "GroupPropID": 300004,
+                  "GroupID": 3,
+                  "Execute": [
+                    {
+                      "$type": "RPG.GameCore.PropReqInteract",
+                      "TargetIsOwner": true,
+                      "InteractID": 1011
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropEnableCollider",
+                      "SpecifiedRelativePaths": []
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropSetVisibility",
+                      "SpecifiedRelativePaths": []
+                    },
+                    {
+                      "$type": "RPG.GameCore.TriggerCustomString",
+                      "CustomString": {
+                        "Value": "M301_GetFireItem1"
+                      }
+                    },
+                    {
+                      "$type": "RPG.GameCore.TriggerStory",
+                      "StoryID": 101090111
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

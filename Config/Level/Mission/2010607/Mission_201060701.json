@@ -1,0 +1,74 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Talk_201060701"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerStory",
+          "StoryID": 201060701
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Act_201060701",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.ResetBillboardInfo",
+          "TargetCharacterType": "NPC",
+          "ID": 400001,
+          "GroupID": 29
+        },
+        {
+          "$type": "RPG.GameCore.PlayMissionTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 801220247,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 801220248,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 801220249,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 801220250,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.FinishStoryMission",
+          "Key": "Mission_201060701"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SetBillboardInfo",
+          "TargetCharacterType": "NPC",
+          "ID": 400001,
+          "GroupID": 29,
+          "Name": {
+            "hash": 547948551
+          },
+          "Title": {
+            "hash": -501457182
+          },
+          "MapIconType": 24
+        }
+      ]
+    }
+  ]
+}

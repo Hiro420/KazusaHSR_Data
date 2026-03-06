@@ -1,0 +1,17 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.TutorialGuideUnlock",
+          "GuideID": 505
+        },
+        {
+          "$type": "RPG.GameCore.TutorialFinish",
+          "TutorialID": 505
+        }
+      ]
+    }
+  ]
+}

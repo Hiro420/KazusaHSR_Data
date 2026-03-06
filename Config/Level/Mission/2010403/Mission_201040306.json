@@ -1,0 +1,50 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.TriggerStory",
+          "StoryID": 201040306
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "Mission_201040306"
+          }
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.DestroyNPC",
+          "NpcID": 201213004,
+          "GroupID": 36,
+          "GroupNpcID": 400003
+        },
+        {
+          "$type": "RPG.GameCore.DestroyNPC",
+          "NpcID": 201213004,
+          "GroupID": 36,
+          "GroupNpcID": 400002
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Mission_201040306",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.EnterMap",
+          "EntranceID": 1010203,
+          "GroupID": 6,
+          "AnchorID": 1
+        }
+      ]
+    }
+  ]
+}

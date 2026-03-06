@@ -1,0 +1,55 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropStateExecute",
+          "GroupPropID": 300001,
+          "GroupID": 18,
+          "Execute": [
+            {
+              "$type": "RPG.GameCore.PropTriggerAnimState",
+              "GroupPropID": 300001,
+              "GroupID": 18,
+              "AnimStateName": "Maze_Chest_Locked"
+            }
+          ],
+          "State": "Locked"
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_90302_CheckPillar_01"
+        },
+        {
+          "$type": "RPG.GameCore.SelectorConfig"
+        },
+        {
+          "$type": "RPG.GameCore.SelectorConfig"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_90302_CheckPillar_02"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_90302_CheckPillar_03"
+        }
+      ]
+    }
+  ]
+}

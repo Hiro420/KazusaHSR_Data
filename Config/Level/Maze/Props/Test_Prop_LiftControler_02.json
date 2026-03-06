@@ -1,0 +1,79 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.SelectorConfig",
+              "TaskList": [
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "GroupPropID": 300001,
+                  "GroupID": 3,
+                  "Execute": [
+                    {
+                      "$type": "RPG.GameCore.PropReqInteract",
+                      "GroupPropID": 300001,
+                      "GroupID": 3,
+                      "InteractID": 1340
+                    },
+                    {
+                      "$type": "RPG.GameCore.ChangePropState",
+                      "DynamicGroupPropID": {
+                        "FixedValue": {
+                          "IsDynamic": false,
+                          "FixedValue": 300005.0
+                        }
+                      },
+                      "DynamicGroupID": {
+                        "FixedValue": {
+                          "IsDynamic": false,
+                          "FixedValue": 3.0
+                        }
+                      }
+                    },
+                    {
+                      "$type": "RPG.GameCore.ChangePropState",
+                      "DynamicGroupPropID": {
+                        "FixedValue": {
+                          "IsDynamic": false,
+                          "FixedValue": 300004.0
+                        }
+                      },
+                      "DynamicGroupID": {
+                        "FixedValue": {
+                          "IsDynamic": false,
+                          "FixedValue": 3.0
+                        }
+                      }
+                    }
+                  ],
+                  "State": "BridgeState1"
+                },
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "GroupPropID": 300001,
+                  "GroupID": 3,
+                  "Execute": [
+                    {
+                      "$type": "RPG.GameCore.PlayMissionTalk",
+                      "SimpleTalkList": [
+                        {
+                          "VoiceID": 201323300
+                        }
+                      ]
+                    }
+                  ],
+                  "State": "BridgeState2"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

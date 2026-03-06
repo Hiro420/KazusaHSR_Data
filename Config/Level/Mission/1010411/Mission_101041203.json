@@ -1,0 +1,83 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.DestroyProp",
+          "ID": 300001,
+          "GroupID": 2
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "ID": 300001,
+          "GroupID": 10,
+          "ButtonText": {
+            "hash": 339453200
+          },
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.LockPlayerControl"
+            },
+            {
+              "$type": "RPG.GameCore.ShowTalkUI",
+              "Show": true
+            },
+            {
+              "$type": "RPG.GameCore.PlayOptionTalk",
+              "OptionList": [
+                {
+                  "OptionTextmapID": {
+                    "hash": 1622049961
+                  },
+                  "OptionIconPath": "SpriteOutput/TalkIcon/SpecialChatIcon.png",
+                  "TriggerCustomString": "Mission_101041203_1"
+                },
+                {
+                  "OptionTextmapID": {
+                    "hash": 55966020
+                  },
+                  "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+                  "TriggerCustomString": "Mission_101041203_2"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Mission_101041203_1",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.EnterMap",
+          "EntranceID": 1010202,
+          "GroupID": 2,
+          "AnchorID": 1
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Mission_101041203_2"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,248 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "Mode": "SwitchOut",
+          "CustomTime": 0.25
+        },
+        {
+          "$type": "RPG.GameCore.LevelStoryInitialize",
+          "EntityVisiableList": [
+            {
+              "MuteColliderWhenInvisiable": false
+            }
+          ],
+          "CreateCharacterList": [
+            {
+              "CharacterUniqueName": "Gepard_00",
+              "AvatarID": "Gepard_00",
+              "AreaName": "1010101_Temp",
+              "AnchorName": "MapPointJP01"
+            },
+            {
+              "CharacterUniqueName": "Player",
+              "AvatarID": "Player",
+              "AreaName": "1010101_Temp",
+              "AnchorName": "MapPointZJJ01"
+            },
+            {
+              "CharacterUniqueName": "Mar_7th_00",
+              "AvatarID": "Mar_7th_00",
+              "AreaName": "1010101_Temp",
+              "AnchorName": "MapPointSYY01"
+            },
+            {
+              "CharacterUniqueName": "DanHeng_00",
+              "AvatarID": "DanHeng_00",
+              "AreaName": "1010101_Temp",
+              "AnchorName": "MapPointDHH01"
+            },
+            {
+              "CharacterUniqueName": "CWSoldier_001",
+              "AvatarID": "CWSoldier_01",
+              "AreaName": "1010101_Temp",
+              "AnchorName": "MapPointSJJ01"
+            },
+            {
+              "CharacterUniqueName": "CWSoldier_002",
+              "AvatarID": "CWSoldier_01",
+              "AreaName": "1010101_Temp",
+              "AnchorName": "MapPointSJJ02"
+            },
+            {
+              "CharacterUniqueName": "CWSoldier_003",
+              "AvatarID": "CWSoldier_01",
+              "AreaName": "1010101_Temp",
+              "AnchorName": "MapPointSJJ03"
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode",
+          "Enable": true
+        },
+        {
+          "$type": "RPG.GameCore.LockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI",
+          "Show": true
+        },
+        {
+          "$type": "RPG.GameCore.CharacterNavigateTo",
+          "CharacterUniqueName": "Gepard_00",
+          "AreaName": "1010101_Temp",
+          "AnchorName": "MapPointJP02",
+          "MotionFlag": "Walk",
+          "WaitUntilFinish": false,
+          "Duration": 30.0,
+          "AvoidOthers": true
+        },
+        {
+          "$type": "RPG.GameCore.CharacterNavigateTo",
+          "CharacterUniqueName": "Player",
+          "AreaName": "1010101_Temp",
+          "AnchorName": "MapPointZJJ02",
+          "MotionFlag": "Walk",
+          "WaitUntilFinish": false,
+          "Duration": 30.0,
+          "AvoidOthers": true
+        },
+        {
+          "$type": "RPG.GameCore.CharacterNavigateTo",
+          "CharacterUniqueName": "Mar_7th_00",
+          "AreaName": "1010101_Temp",
+          "AnchorName": "MapPointSYY02",
+          "MotionFlag": "Walk",
+          "WaitUntilFinish": false,
+          "Duration": 30.0,
+          "AvoidOthers": true
+        },
+        {
+          "$type": "RPG.GameCore.CharacterNavigateTo",
+          "CharacterUniqueName": "DanHeng_00",
+          "AreaName": "1010101_Temp",
+          "AnchorName": "MapPointDHH02",
+          "MotionFlag": "Walk",
+          "WaitUntilFinish": false,
+          "Duration": 30.0,
+          "AvoidOthers": true
+        },
+        {
+          "$type": "RPG.GameCore.CharacterNavigateTo",
+          "CharacterUniqueName": "CWSoldier_001",
+          "AreaName": "1010101_Temp",
+          "AnchorName": "MapPointSJJ04",
+          "MotionFlag": "Walk",
+          "WaitUntilFinish": false,
+          "Duration": 30.0,
+          "AvoidOthers": true
+        },
+        {
+          "$type": "RPG.GameCore.CharacterNavigateTo",
+          "CharacterUniqueName": "CWSoldier_002",
+          "AreaName": "1010101_Temp",
+          "AnchorName": "MapPointSJJ05",
+          "MotionFlag": "Walk",
+          "WaitUntilFinish": false,
+          "Duration": 30.0,
+          "AvoidOthers": true
+        },
+        {
+          "$type": "RPG.GameCore.CharacterNavigateTo",
+          "CharacterUniqueName": "CWSoldier_003",
+          "AreaName": "1010101_Temp",
+          "AnchorName": "MapPointSJJ06",
+          "MotionFlag": "Walk",
+          "WaitUntilFinish": false,
+          "Duration": 30.0,
+          "AvoidOthers": true
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "1010101_Temp",
+          "AnchorName": "Camera_101010602_01",
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "Cut"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "CustomTime": 0.25
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 901019991,
+              "ProtectTime": 2.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "1010101_Temp",
+          "AnchorName": "Camera_101010602_02",
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "EaseInOut",
+            "BlendTime": 8.0
+          }
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "1010101_Temp",
+          "AnchorName": "Camera_101010602_02",
+          "IsActive": false,
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "EaseInOut"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "1010101_Temp",
+          "AnchorName": "Camera_101010602_03",
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "Cut"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "1010101_Temp",
+          "AnchorName": "Camera_101010602_04",
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "EaseInOut",
+            "BlendTime": 4.0
+          }
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "1010101_Temp",
+          "AnchorName": "Camera_101010602_04",
+          "IsActive": false,
+          "BlendConfig": {
+            "BlendType": "Cut"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "Mode": "SwitchOut",
+          "CustomTime": 0.25
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode"
+        },
+        {
+          "$type": "RPG.GameCore.EndStory"
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "CustomTime": 0.25
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    }
+  ]
+}

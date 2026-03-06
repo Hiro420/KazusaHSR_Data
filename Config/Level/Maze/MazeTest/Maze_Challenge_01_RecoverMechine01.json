@@ -1,0 +1,83 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.ByTriggeredInfo",
+          "OnSuccess": [
+            {
+              "$type": "RPG.GameCore.PropMove",
+              "Duration": -1.0,
+              "DeltaPosition": {
+                "x": 0.0,
+                "y": -3.0,
+                "z": 0.0
+              }
+            }
+          ],
+          "OnFailed": [
+            {
+              "$type": "RPG.GameCore.PropSetupUITrigger",
+              "ColliderRelativePath": "Trigger",
+              "DestroyAfterTriggered": true,
+              "ButtonCallback": [
+                {
+                  "$type": "RPG.GameCore.AdventureRevivePlayer",
+                  "RevivedHPRatio": {
+                    "FixedValue": {
+                      "IsDynamic": false,
+                      "FixedValue": 1.0
+                    }
+                  },
+                  "RevivedSPRatio": {
+                    "FixedValue": {
+                      "IsDynamic": false,
+                      "FixedValue": 0.0
+                    }
+                  },
+                  "SpecifyTargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "AllLightTeam"
+                  }
+                },
+                {
+                  "$type": "RPG.GameCore.AdventureModifyTeamPlayerHP",
+                  "AddRatio": {
+                    "FixedValue": {
+                      "IsDynamic": false,
+                      "FixedValue": 1.0
+                    }
+                  },
+                  "ModifyValue": {
+                    "FixedValue": {
+                      "IsDynamic": false,
+                      "FixedValue": 0.0
+                    }
+                  },
+                  "SpecifyTargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "AdvTeamMembers"
+                  }
+                },
+                {
+                  "$type": "RPG.GameCore.TriggerEffect",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "LightTeamEntity"
+                  },
+                  "EffectPath": "Effects/Eff_Prefab/Eff_Common/Eff_Common_MAZ_RecoverHP.prefab"
+                },
+                {
+                  "$type": "RPG.GameCore.SaveTriggeredInfo",
+                  "Key": "MazeSave_Challenge_01_RecoverMechine01"
+                }
+              ]
+            }
+          ],
+          "Key": "MazeSave_Challenge_01_RecoverMechine01"
+        }
+      ]
+    }
+  ]
+}

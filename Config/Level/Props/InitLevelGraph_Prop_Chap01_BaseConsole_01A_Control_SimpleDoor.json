@@ -1,0 +1,47 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "TargetIsOwner": true,
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "TargetIsOwner": true,
+                  "AnimStateName": "Activing"
+                },
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "InteractID": 1010,
+                  "PropKey": {
+                    "Custom": true,
+                    "Key": "Maze_Prop_Chap01_BaseControllSimpleDoor"
+                  }
+                },
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "TargetIsOwner": true,
+                  "InteractID": 1010
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "ValueSource": {
+    "Values": [
+      {
+        "$type": "RPG.GameCore.SharedString",
+        "Key": "Maze_Prop_Chap01_BaseControllSimpleDoor"
+      }
+    ]
+  }
+}

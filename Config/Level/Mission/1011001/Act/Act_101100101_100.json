@@ -1,0 +1,178 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.LevelStoryInitialize",
+          "EntityVisiableList": [
+            {
+              "MuteColliderWhenInvisiable": false
+            }
+          ],
+          "CreateCharacterList": [
+            {
+              "CharacterUniqueName": "Player",
+              "AvatarID": "Player",
+              "AreaName": "LevelArea_P20132_F20132001_G5",
+              "AnchorName": "Act01_Player_01"
+            },
+            {
+              "CharacterUniqueName": "7thMarch",
+              "Catgory": "Default",
+              "AvatarID": "7thMarch",
+              "AreaName": "LevelArea_P20132_F20132001_G5",
+              "AnchorName": "Act01_7thMarch_01"
+            },
+            {
+              "CharacterUniqueName": "Seele",
+              "Catgory": "Default",
+              "AvatarID": "Seele",
+              "AreaName": "LevelArea_P20132_F20132001_G5",
+              "AnchorName": "Act01_Seele_01"
+            },
+            {
+              "CharacterUniqueName": "Natasha",
+              "AvatarID": "Natasha",
+              "AreaName": "LevelArea_P20132_F20132001_G5",
+              "AnchorName": "Act01_Natasha_01"
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201320101
+            },
+            {
+              "VoiceID": 201320102
+            },
+            {
+              "VoiceID": 201320103
+            },
+            {
+              "VoiceID": 201320104
+            },
+            {
+              "VoiceID": 201320105
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.PlayOptionTalk",
+          "OptionList": [
+            {
+              "OptionTextmapID": {
+                "hash": 1548896996
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "MissionStory_201320106"
+            },
+            {
+              "OptionTextmapID": {
+                "hash": 1548897006
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "MissionStory_201320108"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "MissionStory_201320106",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201320107
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "MissionStory_201320110"
+          }
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "MissionStory_201320108",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201320109
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "MissionStory_201320110"
+          }
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "MissionStory_201320110",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201320110
+            },
+            {
+              "VoiceID": 201320111
+            },
+            {
+              "VoiceID": 201320112
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.EndStory"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitStoryEnd"
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    }
+  ]
+}

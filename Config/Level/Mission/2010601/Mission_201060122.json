@@ -1,0 +1,73 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "201060122_Finish"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "201060122_Unload"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.FinishStoryMission",
+          "Key": "Mission_201060122"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "201060122_Unload",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.UnloadLevelGroup",
+          "GroupIDList": [
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByCompareSubMissionState",
+            "SubMissionID": 101060120,
+            "SubMissionState": "Finish"
+          },
+          "SuccessTaskList": [],
+          "FailedTaskList": [
+            {
+              "$type": "RPG.GameCore.PropSetupTrigger",
+              "ID": 300001,
+              "GroupID": 11,
+              "TargetTypes": [],
+              "DestroyAfterTriggered": true,
+              "OnTriggerEnter": [
+                {
+                  "$type": "RPG.GameCore.PlayMissionTalk",
+                  "SimpleTalkList": [
+                    {
+                      "VoiceID": 201222303
+                    },
+                    {
+                      "VoiceID": 201222304
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

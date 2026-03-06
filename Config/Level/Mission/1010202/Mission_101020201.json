@@ -1,0 +1,214 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.CreateLevelAreas",
+          "AssetPath": {
+            "Value": "Level/Mission/1010202/Mission_1010202.prefab"
+          }
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.ToastPage",
+          "Type": "AreaChange",
+          "MessageOne": {
+            "hash": 853983691
+          }
+        }
+      ]
+    },
+    {
+      "Order": 1,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.CreateNPC",
+          "GroupID": 6,
+          "GroupNpcID": 400001
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 1.0
+        },
+        {
+          "$type": "RPG.GameCore.SetNpcWaypath",
+          "UsageType": "TaskFollow",
+          "GroupID": 6,
+          "GroupNpcID": 400001
+        },
+        {
+          "$type": "RPG.GameCore.SetNpcStatus",
+          "GroupID": 6,
+          "GroupNpcID": 400001,
+          "Status": "FollowByPlayer"
+        }
+      ]
+    },
+    {
+      "Order": 2,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.CaptureLocalPlayer",
+          "CharacterUniqueName": "Character_101020201"
+        },
+        {
+          "$type": "RPG.GameCore.SwitchCharacterAnchor",
+          "CharacterUniqueName": "Character_101020201",
+          "AreaName": "LevelArea_P10101_F10101001_G6",
+          "AnchorName": "Anchor1"
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "CustomTime": 0.1
+        }
+      ]
+    },
+    {
+      "Order": 3,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300001,
+          "GroupID": 7,
+          "IsSingle": true,
+          "TargetCharacterType": "NPC",
+          "TargetGroupID": 6,
+          "TargetID": 400001,
+          "TargetTypes": [],
+          "DestroyAfterTriggered": true,
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.DestroyNPC",
+              "GroupID": 6,
+              "GroupNpcID": 400001
+            },
+            {
+              "$type": "RPG.GameCore.TriggerStory",
+              "StoryID": 101020201
+            },
+            {
+              "$type": "RPG.GameCore.PlayScreenTransfer",
+              "Type": "Black",
+              "Mode": "SwitchOut"
+            },
+            {
+              "$type": "RPG.GameCore.LockPlayerControl"
+            },
+            {
+              "$type": "RPG.GameCore.RemoveLevelAreas",
+              "AreaName": "Mission_1010202"
+            },
+            {
+              "$type": "RPG.GameCore.WaitSecond",
+              "WaitTime": 0.5
+            },
+            {
+              "$type": "RPG.GameCore.UnLockPlayerControl"
+            },
+            {
+              "$type": "RPG.GameCore.FinishStoryMission",
+              "Key": "Mission_101020201"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300022,
+          "GroupID": 3,
+          "TargetGroupID": 6,
+          "TargetID": 400001,
+          "TargetTypes": [],
+          "OnTriggerEnter": [],
+          "OnTriggerExit": [
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "Story_101020201_1"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Story_101020201_1",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.LockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI",
+          "Show": true
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 101010901,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 101010902
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Mode": "SwitchOut",
+          "CustomTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.CaptureLocalPlayer",
+          "CharacterUniqueName": "Character_101020201_1"
+        },
+        {
+          "$type": "RPG.GameCore.SwitchCharacterAnchor",
+          "CharacterUniqueName": "Character_101020201_1",
+          "AreaName": "LevelArea_P10101_F10101001_G6",
+          "AnchorName": "Anchor1"
+        },
+        {
+          "$type": "RPG.GameCore.ReleaseCharacter",
+          "CharacterUniqueName": "Character_101020201_1"
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "CustomTime": 0.5
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Hold",
+          "WaitOwnerOnly": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.LockPlayerControl"
+                },
+                {
+                  "$type": "RPG.GameCore.EnableNPCMonsterAI",
+                  "GroupMonsterIDs": [],
+                  "UniqueNames": []
+                },
+                {
+                  "$type": "RPG.GameCore.TriggerMazeBuffSelect",
+                  "BuffList": [
+                    {
+                      "BuffID": 5001151
+                    },
+                    {
+                      "BuffID": 5001152
+                    }
+                  ],
+                  "CustomStringList": [
+                    "Maze_Prop_ChallengeBuffSelect_5001151",
+                    "Maze_Prop_ChallengeBuffSelect_5001152"
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.FinishLevelGraph"
+                }
+              ],
+              "State": "Open"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Prop_ChallengeBuffSelect_5001151",
+          "WaitOwnerOnly": true,
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.AddMazeBuff",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "LightTeamEntity"
+          },
+          "ID": 5001151
+        },
+        {
+          "$type": "RPG.GameCore.ChangeChallengeBuff",
+          "BuffID": [
+            5001151
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "Maze_Prop_ChallengeBuffSelectFinish_5001150"
+          }
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Prop_ChallengeBuffSelect_5001152",
+          "WaitOwnerOnly": true,
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.AddMazeBuff",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "LightTeamEntity"
+          },
+          "ID": 5001152
+        },
+        {
+          "$type": "RPG.GameCore.ChangeChallengeBuff",
+          "BuffID": [
+            5001152
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "Maze_Prop_ChallengeBuffSelectFinish_5001150"
+          }
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Prop_ChallengeBuffSelectFinish_5001150"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.EnableNPCMonsterAI",
+          "Enable": true,
+          "GroupMonsterIDs": [],
+          "UniqueNames": []
+        },
+        {
+          "$type": "RPG.GameCore.PropReqInteract",
+          "TargetIsOwner": true,
+          "InteractID": 1010
+        },
+        {
+          "$type": "RPG.GameCore.ToastPage",
+          "MessageOne": {
+            "hash": -638479962
+          },
+          "MessageTwo": {
+            "hash": 1750546642
+          }
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    }
+  ]
+}

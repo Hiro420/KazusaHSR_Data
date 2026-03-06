@@ -1,0 +1,102 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "TargetIsOwner": true,
+          "ColliderRelativePath": "Trigger",
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.LockPlayerControl"
+            },
+            {
+              "$type": "RPG.GameCore.ShowTalkUI",
+              "Show": true
+            },
+            {
+              "$type": "RPG.GameCore.PlayOptionTalk",
+              "OptionList": [
+                {
+                  "OptionTextmapID": {
+                    "hash": 895230615
+                  },
+                  "TriggerCustomString": "Maze_9998_TaskTest_13"
+                },
+                {
+                  "OptionTextmapID": {
+                    "hash": -670853326
+                  },
+                  "TriggerCustomString": "Maze_9998_TaskTest_14"
+                },
+                {
+                  "OptionTextmapID": {
+                    "hash": 1723323179
+                  },
+                  "TriggerCustomString": "Maze_9998_Test_DoNothing"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_9998_TaskTest_13"
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC",
+          "GroupID": 6,
+          "GroupNpcID": 400001
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_9998_TaskTest_14"
+        },
+        {
+          "$type": "RPG.GameCore.DestroyNPC",
+          "GroupID": 6,
+          "GroupNpcID": 400001
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_9998_Test_DoNothing"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        }
+      ]
+    }
+  ]
+}

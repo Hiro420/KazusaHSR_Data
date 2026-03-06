@@ -1,0 +1,41 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 1.0
+        },
+        {
+          "$type": "RPG.GameCore.PlayMissionTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 801020117,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 801020118,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 801020119,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 801020120,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.FinishStoryMission",
+          "Key": "Mission_201040102"
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    }
+  ]
+}

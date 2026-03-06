@@ -1,0 +1,48 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropTriggerEffectList",
+          "EffectList": [
+            {
+              "EffectPath": "Effects/Eff_Prefab/Eff_Common/Eff_WeltArea 1.prefab",
+              "AttachPoint": "Root"
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "TargetTypes": [
+            "NPCMonster"
+          ],
+          "ColliderRelativePath": "Trigger",
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.AddMazeBuff",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "TaskActionTarget"
+              },
+              "ID": 3001002,
+              "LifeTime": {
+                "FixedValue": {
+                  "IsDynamic": false,
+                  "FixedValue": -1.0
+                }
+              },
+              "Count": {
+                "FixedValue": {
+                  "IsDynamic": false,
+                  "FixedValue": -1.0
+                }
+              }
+            }
+          ],
+          "OnTriggerExit": []
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": []
+}

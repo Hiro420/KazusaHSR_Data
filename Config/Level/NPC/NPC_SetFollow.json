@@ -1,0 +1,25 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": []
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SetNpcWaypath",
+          "UsageType": "TaskFollow",
+          "GroupID": 15,
+          "GroupNpcID": 400001
+        },
+        {
+          "$type": "RPG.GameCore.SetNpcStatus",
+          "GroupID": 15,
+          "GroupNpcID": 400001,
+          "Status": "FollowPlayer"
+        }
+      ]
+    }
+  ]
+}

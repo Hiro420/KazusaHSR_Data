@@ -1,0 +1,317 @@
+﻿{
+  "StanceLock": {
+    "Value": 0.0
+  },
+  "TurnAddBoostPoint": {
+    "Value": 0.0
+  },
+  "RoundAddBoostPoint": {
+    "Value": 2.0
+  },
+  "DamageTakenRatioMax": {
+    "Value": 2.0
+  },
+  "DamageRandomMin": {
+    "Value": 1.0
+  },
+  "DamageRandomMax": {
+    "Value": 1.0
+  },
+  "DefenceAdd": {
+    "Value": 200.0
+  },
+  "DefenceMultipe": {
+    "Value": 10.0
+  },
+  "AllDamageReduceMax": {
+    "Value": 0.99
+  },
+  "SPMultipleRatio": {
+    "Value": 0.0
+  },
+  "OverallResistanceMin": {
+    "Value": -1.0
+  },
+  "OverallResistanceMax": {
+    "Value": 0.9
+  },
+  "TeamBPFloatStart": {
+    "Value": 2.0
+  },
+  "TeamBPFloatMax": {
+    "Value": 4.0
+  },
+  "TeamBPFloatToIntegerRatio": {
+    "Value": 1.0
+  },
+  "LightTeamFightFormation": {
+    "IntervalMin": 0.9,
+    "IntervalMax": 3.0,
+    "TeamWidthRatioFactor": 0.8,
+    "WidthRatioForEnemy": 0.2,
+    "LeftAngle": 2.0,
+    "LeftOffsetMax": 0.48,
+    "RightAngle": 8.5,
+    "RightAngleOffsetRatio": 0.8,
+    "RightDirAdditiveDisRatioForEnemy": 0.25
+  },
+  "DarkTeamFightFormation": {
+    "Interval": 1.0,
+    "MaxLocationCount": 5
+  },
+  "SkillParameterColor": "#FF9900FF",
+  "DefaultLevelPerformConfig": {
+    "LevelBeginCloseupShotPath": "Camera/LevelBeginShot",
+    "ActiveEntityCloseupShotPath": "Camera/SingleAttackAccountShot",
+    "LinkCloseupShotPath": "Camera/LinkAttackAccountShot"
+  },
+  "AllCharacterDynamicValues": {
+    "Floats": {
+      "-1030509054": {
+        "Min": 0.0,
+        "Max": 3.0
+      },
+      "-179683352": {
+        "Min": 0.0,
+        "Max": 99.0
+      },
+      "2073292217": {
+        "Min": 0.0,
+        "Max": 99.0
+      }
+    }
+  },
+  "ModifierPhaseEndingPerformAdded": 0.5,
+  "ModifierPhaseEndingPerformMax": 1.5,
+  "ModifierPhasePerformTimeMin": 1.4,
+  "ModifierPhasePerformTimeAdded": 0.5,
+  "ModifierPhasePerformTimeMax": 2.1,
+  "LowHPFlagRatio": {
+    "Value": 0.3
+  },
+  "StanceTargetSkipRound": true,
+  "DamageToLowHPRatio": {
+    "Value": 0.1
+  },
+  "ConstKeys": {
+    "MonsterBossTag": {
+      "EKFBPMCLPMD": -1315392744
+    },
+    "AutoFightCustomize_BP": {
+      "EKFBPMCLPMD": -1733834649
+    },
+    "AutoFightCustomize_UltraSkill": {
+      "EKFBPMCLPMD": 1694195222
+    },
+    "PlayerTeamReviveStartEvent": "Stage_PlayerTeamReviveStart",
+    "PlayerTeamReviveFailedEvent": "Stage_PlayerTeamReviveFailed",
+    "LastKillStartEvent": "Stage_LastKillStart",
+    "LevelLoseEvent": "Stage_LocalLose",
+    "LevelWinEvent": "Stage_LocalWin"
+  },
+  "ShieldConstKeys": {
+    "KeyHashShield": {
+      "EKFBPMCLPMD": 2126266902
+    },
+    "KeyHashCurrentShield": {
+      "EKFBPMCLPMD": -527113652
+    },
+    "KeyHashCommonResistanced": {
+      "EKFBPMCLPMD": -1616352847
+    },
+    "KeyHashPhysicalResistanced": {
+      "EKFBPMCLPMD": 1011383664
+    },
+    "KeyHashFireDamageResistance": {
+      "EKFBPMCLPMD": 132466803
+    },
+    "KeyHashIceDamageResistance": {
+      "EKFBPMCLPMD": -1668138380
+    },
+    "KeyHashThunderDamageResistance": {
+      "EKFBPMCLPMD": -456045141
+    },
+    "KeyHashWindDamageResistance": {
+      "EKFBPMCLPMD": 375175611
+    },
+    "KeyHashImaginaryDamageResistance": {
+      "EKFBPMCLPMD": -741675534
+    },
+    "KeyHashQuantumDamageResistance": {
+      "EKFBPMCLPMD": -9465014
+    }
+  },
+  "ResilienceHitAdditiveWeights": [
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "MonsterHitAdditiveWeightBase": 0.7,
+  "SpeedToDelayDistance": {
+    "Value": 1000.0
+  },
+  "ModifierBehaviorVisualList": [
+    {
+      "Flag": "STAT_CTRL_Stun",
+      "Priority": 3.4,
+      "AnimOccur": "Stun_Occur",
+      "AnimLoop": "Stun_Loop",
+      "AnimRecover": "Stun_Recover",
+      "AnimOccurTransition": 0.1,
+      "ForecHitH": true,
+      "ReactionAnims": {
+        "$type": "RPG.GameCore.CharacterReactionAnimConfig",
+        "HitH": "Hit_H_Stun",
+        "HitFlyRecover": "Hit_Fly_Recover_Stun"
+      }
+    },
+    {
+      "Flag": "Break",
+      "Priority": 1.1,
+      "AnimOccur": "Stagger",
+      "AnimLoop": "Stagger_Loop",
+      "AnimRecover": "Stagger_Recover",
+      "AnimOccurTransition": 0.0,
+      "ForecHitH": true,
+      "ReactionAnims": {
+        "$type": "RPG.GameCore.CharacterReactionAnimConfig",
+        "HitH": "Hit_H_Break",
+        "HitFlyRecover": "Hit_Fly_Recover_Break"
+      }
+    },
+    {
+      "Flag": "STAT_CTRL_Frozen",
+      "Priority": 4.5,
+      "AnimSpeedFactor": 0.0,
+      "AnimSpeedTransitTime": 0.8,
+      "AnimSpeedTransitTimeRange": 0.4,
+      "MaterialEffect": "Frozen",
+      "MaterialTransitTime": 1.0
+    },
+    {
+      "Flag": "STAT_Confine",
+      "Priority": 3.5,
+      "AnimOccur": "Confine",
+      "AnimLoop": "Confine_Loop",
+      "AnimRecover": "Hit_Fly_Recover",
+      "AnimOccurTransition": 0.0,
+      "AnimSpeedFactor": 0.25,
+      "AnimSpeedTransitTimeRange": 1.0,
+      "ForecHitH": true,
+      "ReactionAnims": {
+        "$type": "RPG.GameCore.CharacterReactionAnimConfig",
+        "HitH": "Hit_H_Break"
+      },
+      "FloatingHeight": 1.5,
+      "FloatingRiseDuration": 0.5,
+      "FloatingFallDuration": 0.1,
+      "DisableLookAtIK": true
+    }
+  ],
+  "SnapshotEntityInheritBlackList": [
+    "Defence",
+    "Attack",
+    "CriticalResistance",
+    "StanceBreakResistance",
+    "StanceBreakTakenRatio",
+    "Shield",
+    "MaxShield",
+    "MaxStance",
+    "SPRatio",
+    "Count"
+  ],
+  "HitForce": 550.0,
+  "HitForce_H": 1000.0,
+  "AttackTypeForbidCriticalList": [
+    "DOT"
+  ],
+  "MaxTurnCount": 999,
+  "HitTimeSlowConfigs": [
+    {
+      "Type": "Puncture",
+      "CurveName": "HitPunctureTimeSlow",
+      "Duration": 0.05
+    },
+    {
+      "Type": "Puncture",
+      "Intensity": "Middle",
+      "CurveName": "HitPunctureTimeSlow",
+      "Duration": 0.1
+    },
+    {
+      "Type": "Puncture",
+      "Intensity": "Heavy",
+      "CurveName": "HitPunctureTimeSlow",
+      "Duration": 0.2
+    },
+    {
+      "Type": "Slash",
+      "CurveName": "HitSlashTimeSlow",
+      "Duration": 0.1
+    },
+    {
+      "Type": "Slash",
+      "Intensity": "Middle",
+      "CurveName": "HitSlashTimeSlow",
+      "Duration": 0.15
+    },
+    {
+      "Type": "Slash",
+      "Intensity": "Heavy",
+      "CurveName": "HitSlashTimeSlow",
+      "Duration": 0.2
+    },
+    {
+      "Type": "Impact",
+      "CurveName": "HitImpactTimeSlow",
+      "Duration": 0.08
+    },
+    {
+      "Type": "Impact",
+      "Intensity": "Middle",
+      "CurveName": "HitImpactTimeSlow",
+      "Duration": 0.16
+    },
+    {
+      "Type": "Impact",
+      "Intensity": "Heavy",
+      "CurveName": "HitImpactTimeSlow",
+      "Duration": 0.25
+    }
+  ],
+  "ModifierCustomEvents": [
+    {
+      "BehaviorFlags": [
+        "STAT_DOT_Burn",
+        "STAT_DOT_Bleed",
+        "STAT_DOT_Poison",
+        "STAT_DOT_Electric"
+      ]
+    },
+    {
+      "BehaviorFlags": [
+        "STAT_DOT_Burn"
+      ],
+      "EventType": "DOT_Burn"
+    },
+    {
+      "BehaviorFlags": [
+        "STAT_DOT_Electric"
+      ],
+      "EventType": "DOT_Electric"
+    }
+  ],
+  "DieAnimTransitDuration": 0.02,
+  "AddBuffPerformTimeInterval": 0.1,
+  "AddBuffPerformTimeMax": 1.5,
+  "SkillTargetBeyondTargetIntensity": 0.1,
+  "SkillTargetBeyondTargetFadeTime": 0.2,
+  "ModifierBehaviorFlagImmuneMap": {
+    "Endurance": {
+      "BehaviorFlags": [
+        "STAT_CTRL"
+      ]
+    }
+  }
+}

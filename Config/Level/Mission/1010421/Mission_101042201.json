@@ -1,0 +1,76 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PlayMissionTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201231301
+            },
+            {
+              "VoiceID": 201231302
+            },
+            {
+              "VoiceID": 201231303
+            },
+            {
+              "VoiceID": 201231304
+            },
+            {
+              "VoiceID": 201231305
+            },
+            {
+              "VoiceID": 201231306
+            },
+            {
+              "VoiceID": 201231307
+            },
+            {
+              "VoiceID": 201231308
+            },
+            {
+              "VoiceID": 201231309
+            },
+            {
+              "VoiceID": 201231310
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300003,
+          "GroupID": 15,
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "DestroyAfterTriggered": true,
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.TriggerStory",
+              "StoryID": 101042201
+            },
+            {
+              "$type": "RPG.GameCore.DestroyNPC",
+              "GroupID": 29,
+              "GroupNpcID": 400001
+            },
+            {
+              "$type": "RPG.GameCore.PlayScreenTransfer",
+              "Type": "Black",
+              "CustomTime": 0.25
+            },
+            {
+              "$type": "RPG.GameCore.FinishStoryMission",
+              "Key": "Mission_101042201"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

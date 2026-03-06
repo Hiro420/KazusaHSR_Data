@@ -1,0 +1,22 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": []
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.AdvNpcFaceToPlayer",
+          "Duration": 1.0
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 5.0
+        }
+      ]
+    }
+  ]
+}

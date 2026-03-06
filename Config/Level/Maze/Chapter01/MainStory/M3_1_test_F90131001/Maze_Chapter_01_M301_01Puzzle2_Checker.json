@@ -1,0 +1,86 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "F20131001_01Puzzle2_CheckAllProps"
+        },
+        {
+          "$type": "RPG.GameCore.PropStateExecute",
+          "GroupPropID": 300011,
+          "GroupID": 17,
+          "Execute": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300012,
+              "GroupID": 17,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "GroupPropID": 300013,
+                  "GroupID": 17,
+                  "Execute": [
+                    {
+                      "$type": "RPG.GameCore.PropStateExecute",
+                      "GroupPropID": 300014,
+                      "GroupID": 17,
+                      "Execute": [
+                        {
+                          "$type": "RPG.GameCore.PropStateExecute",
+                          "GroupPropID": 300015,
+                          "GroupID": 17,
+                          "Execute": [
+                            {
+                              "$type": "RPG.GameCore.PropStateExecute",
+                              "GroupPropID": 300016,
+                              "GroupID": 17,
+                              "Execute": [
+                                {
+                                  "$type": "RPG.GameCore.PropReqInteract",
+                                  "GroupPropID": 300007,
+                                  "GroupID": 5,
+                                  "InteractID": 1200
+                                },
+                                {
+                                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                                  "GroupPropID": 300007,
+                                  "GroupID": 5,
+                                  "AnimStateName": "Maze_Chest_Unlocking"
+                                },
+                                {
+                                  "$type": "RPG.GameCore.PropEnableCollider",
+                                  "ID": 300007,
+                                  "GroupID": 5,
+                                  "Enabled": true,
+                                  "SpecifiedRelativePaths": []
+                                },
+                                {
+                                  "$type": "RPG.GameCore.PropReqInteract",
+                                  "TargetIsOwner": true,
+                                  "InteractID": 1010
+                                }
+                              ],
+                              "State": "Open"
+                            }
+                          ],
+                          "State": "Open"
+                        }
+                      ],
+                      "State": "Open"
+                    }
+                  ],
+                  "State": "Open"
+                }
+              ],
+              "State": "Open"
+            }
+          ],
+          "State": "Open"
+        }
+      ]
+    }
+  ]
+}

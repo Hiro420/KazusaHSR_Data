@@ -1,0 +1,83 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300004,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropSetupUITrigger",
+                  "TargetIsOwner": true,
+                  "ButtonCallback": [
+                    {
+                      "$type": "RPG.GameCore.PropReqInteract",
+                      "TargetIsOwner": true,
+                      "InteractID": 1011
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropEnableCollider",
+                      "SpecifiedRelativePaths": []
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropTriggerAnimState",
+                      "TargetIsOwner": true,
+                      "AnimStateName": "Activing"
+                    },
+                    {
+                      "$type": "RPG.GameCore.CaptureLocalPlayer",
+                      "CharacterUniqueName": "Char_Item"
+                    },
+                    {
+                      "$type": "RPG.GameCore.TriggerEffectListOnCharacter",
+                      "CharacterUniqueName": "Char_Item",
+                      "EffectList": [
+                        {
+                          "EffectPath": "Effects/Eff_Prefab/Eff_Common/Eff_Common_MAZ_RecoverHP.prefab",
+                          "AttachPoint": "Body",
+                          "PositionOffset": {
+                            "x": 0.0,
+                            "y": 0.5,
+                            "z": 0.0
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "$type": "RPG.GameCore.ReleaseCharacter",
+                      "CharacterUniqueName": "Char_Item"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300004,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "TargetIsOwner": true,
+                  "AnimStateName": "Used"
+                }
+              ],
+              "State": "Open"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": []
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+﻿{
+  "ModifierMap": {
+    "ADV_StageAbility_3002001": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002002": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002003": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002021": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002022": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002023": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002024": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002025": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002026": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002027": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002028": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002029": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002101": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002102": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002103": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002121": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002122": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002123": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002124": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002125": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002126": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002127": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002128": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002129": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002201": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002202": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002203": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002221": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002222": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002223": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002224": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002225": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002226": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002227": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002228": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002229": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002301": {
+      "Stacking": "Replace",
+      "OnCreate": [
+        {
+          "$type": "RPG.GameCore.AdventureRevivePlayer",
+          "RevivedHPRatio": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 0.5
+            }
+          },
+          "RevivedSPRatio": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 0.0
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.RemoveSelfModifier"
+        }
+      ]
+    },
+    "ADV_StageAbility_3002302": {
+      "Stacking": "Replace",
+      "OnCreate": [
+        {
+          "$type": "RPG.GameCore.AdventureModifyTeamPlayerSP",
+          "AddRatio": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 0.4
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.RemoveSelfModifier"
+        }
+      ]
+    },
+    "ADV_StageAbility_3002303": {
+      "Stacking": "Replace",
+      "OnCreate": [
+        {
+          "$type": "RPG.GameCore.AdventureModifyTeamPlayerHP",
+          "AddRatio": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 1.0
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.RemoveSelfModifier"
+        }
+      ]
+    },
+    "ADV_StageAbility_3002401": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002402": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002403": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002421": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002422": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002423": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002424": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002425": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002426": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002427": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002428": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002429": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002501": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002502": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002503": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002521": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002522": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002523": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002524": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002525": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002526": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002527": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002528": {
+      "Stacking": "Replace"
+    },
+    "ADV_StageAbility_3002529": {
+      "Stacking": "Replace"
+    }
+  }
+}

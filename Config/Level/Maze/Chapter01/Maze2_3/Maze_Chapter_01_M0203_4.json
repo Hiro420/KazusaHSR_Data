@@ -1,0 +1,130 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300004,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropMoveTo",
+                  "ID": 300004,
+                  "GroupID": 8,
+                  "AreaName": "1010701_temp",
+                  "AnchorName": "Waypoint_3"
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300004,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropMoveTo",
+                  "ID": 300004,
+                  "GroupID": 8,
+                  "AreaName": "1010701_temp",
+                  "AnchorName": "Waypoint_3"
+                }
+              ],
+              "State": "Open"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.SelectorConfig",
+              "TaskList": [
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "TargetIsOwner": true,
+                  "GroupPropID": 300004,
+                  "GroupID": 3,
+                  "Execute": [
+                    {
+                      "$type": "RPG.GameCore.PropReqInteract",
+                      "TargetIsOwner": true,
+                      "InteractID": 1010
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropMoveTo",
+                      "ID": 300004,
+                      "GroupID": 8,
+                      "Duration": 3.0,
+                      "AreaName": "1010701_temp",
+                      "AnchorName": "Waypoint_3_2"
+                    }
+                  ]
+                },
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "TargetIsOwner": true,
+                  "GroupPropID": 300004,
+                  "GroupID": 3,
+                  "Execute": [
+                    {
+                      "$type": "RPG.GameCore.PropReqInteract",
+                      "TargetIsOwner": true,
+                      "InteractID": 1100
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropMoveTo",
+                      "ID": 300004,
+                      "GroupID": 8,
+                      "Duration": 3.0,
+                      "AreaName": "1010701_temp",
+                      "AnchorName": "Waypoint_3"
+                    },
+                    {
+                      "$type": "RPG.GameCore.FinishLevelGraph"
+                    }
+                  ],
+                  "State": "Open"
+                }
+              ]
+            }
+          ],
+          "OnTriggerExit": [
+            {
+              "$type": "RPG.GameCore.WaitSecond",
+              "WaitTime": 4.0
+            },
+            {
+              "$type": "RPG.GameCore.PropReqInteract",
+              "TargetIsOwner": true,
+              "InteractID": 1100
+            },
+            {
+              "$type": "RPG.GameCore.PropMoveTo",
+              "ID": 300004,
+              "GroupID": 8,
+              "Duration": 3.0,
+              "AreaName": "1010701_temp",
+              "AnchorName": "Waypoint_3"
+            },
+            {
+              "$type": "RPG.GameCore.FinishLevelGraph"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByCompareNPCMonsterCheckState",
+            "GroupID": 3,
+            "GroupMonsterID": 200003,
+            "CheckState": "Dead"
+          },
+          "SuccessTaskList": [
+            {
+              "$type": "RPG.GameCore.DestroyProp"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

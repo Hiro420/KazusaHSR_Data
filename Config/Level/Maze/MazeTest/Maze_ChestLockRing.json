@@ -1,0 +1,45 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300002,
+              "GroupID": 7,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "TargetIsOwner": true,
+                  "GroupPropID": 300001,
+                  "GroupID": 7,
+                  "AnimStateName": "Disable"
+                }
+              ],
+              "State": "Open"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300001,
+              "GroupID": 7,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "TargetIsOwner": true,
+                  "GroupPropID": 300001,
+                  "GroupID": 7,
+                  "AnimStateName": "Lock"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "OpenGateSwitch_101070113"
+        },
+        {
+          "$type": "RPG.GameCore.PropTriggerAnimState",
+          "GroupPropID": 300003,
+          "GroupID": 8,
+          "AnimStateName": "Activing"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "OpenGateSwitch_101070114"
+        },
+        {
+          "$type": "RPG.GameCore.PropReqInteract",
+          "GroupPropID": 300003,
+          "GroupID": 8,
+          "InteractID": 1010
+        }
+      ]
+    }
+  ]
+}

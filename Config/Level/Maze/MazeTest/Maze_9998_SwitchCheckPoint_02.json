@@ -1,0 +1,22 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "TargetIsOwner": true,
+          "ColliderRelativePath": "Trigger",
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.SwitchCharacterAnchor",
+              "IsLocalPlayer": true,
+              "AreaName": "LevelArea_P99998_F99998_G3",
+              "AnchorName": "Anchor1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": []
+}

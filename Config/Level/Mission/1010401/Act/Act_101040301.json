@@ -1,0 +1,398 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.LevelStoryInitialize",
+          "LockCamera": false,
+          "EntityVisiableList": [],
+          "CreateCharacterList": []
+        },
+        {
+          "$type": "RPG.GameCore.AdvNpcFaceToPlayer",
+          "GroupID": 6,
+          "GroupNpcID": 400001
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201212301,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212302,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212303,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.PlayOptionTalk",
+          "OptionList": [
+            {
+              "OptionTextmapID": {
+                "hash": 1023362310
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "VoiceTalk_201212304"
+            },
+            {
+              "OptionTextmapID": {
+                "hash": 1023362312
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "VoiceTalk_201212306"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "VoiceTalk_201212304"
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201212305,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212309,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212310,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212311,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212312,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212313,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212314,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212315,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212316,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212317,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212318,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212319,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212320,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212321,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212322,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212323,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212324,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212325,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212326,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212327,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.PlayOptionTalk",
+          "OptionList": [
+            {
+              "OptionTextmapID": {
+                "hash": -2108805560
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "VoiceTalk_201212328"
+            },
+            {
+              "OptionTextmapID": {
+                "hash": -542721627
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "VoiceTalk_201212330"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "VoiceTalk_201212306"
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201212307,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212308,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212309,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212310,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212311,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212312,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212313,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212314,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212315,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212316,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212317,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212318,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212319,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212320,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212321,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212322,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212323,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212324,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212325,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212326,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212327,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.PlayOptionTalk",
+          "OptionList": [
+            {
+              "OptionTextmapID": {
+                "hash": -2108805560
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "VoiceTalk_201212328"
+            },
+            {
+              "OptionTextmapID": {
+                "hash": -542721627
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "VoiceTalk_201212330"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "VoiceTalk_201212328"
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201212329,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212332,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212333,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212334,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "VoiceTalk_201212334"
+          }
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "VoiceTalk_201212330"
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201212329,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212332,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212333,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201212334,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "VoiceTalk_201212334"
+          }
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "VoiceTalk_201212334"
+        },
+        {
+          "$type": "RPG.GameCore.EndStory"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitStoryEnd"
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Mode": "SwitchOut"
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    }
+  ]
+}

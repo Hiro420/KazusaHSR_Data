@@ -1,0 +1,240 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.LevelStoryInitialize",
+          "EntityVisiableList": [
+            {
+              "MuteColliderWhenInvisiable": false
+            }
+          ],
+          "CreateCharacterList": [
+            {
+              "CharacterUniqueName": "Player",
+              "AvatarID": "Player",
+              "AreaName": "LevelArea_P20132_F20132001_G5",
+              "AnchorName": "Act04_Player_01"
+            },
+            {
+              "CharacterUniqueName": "7thMarch",
+              "Catgory": "Default",
+              "AvatarID": "7thMarch",
+              "AreaName": "LevelArea_P20132_F20132001_G5",
+              "AnchorName": "Act04_7thMarch_01"
+            },
+            {
+              "CharacterUniqueName": "Seele",
+              "Catgory": "Default",
+              "AvatarID": "Seele",
+              "AreaName": "LevelArea_P20132_F20132001_G5",
+              "AnchorName": "Act04_Seele_01"
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Mission_1011001",
+          "AnchorName": "A05_Cam_01",
+          "BlendConfig": {
+            "BlendType": "Cut"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201320136
+            },
+            {
+              "VoiceID": 201320137
+            },
+            {
+              "VoiceID": 201320138
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.PlayOptionTalk",
+          "OptionList": [
+            {
+              "OptionTextmapID": {
+                "hash": -1179986350
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "Story_201320139"
+            },
+            {
+              "OptionTextmapID": {
+                "hash": -420471471
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "Story_201320141"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Story_201320139",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Mission_1011001",
+          "AnchorName": "A05_Cam_02",
+          "BlendConfig": {
+            "BlendType": "EaseInOut",
+            "BlendTime": 3.0
+          }
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 3.0
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Mission_1011001",
+          "AnchorName": "A05_Cam_03",
+          "BlendConfig": {
+            "BlendType": "EaseInOut",
+            "BlendTime": 2.0
+          }
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201320140
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "Story_201320143"
+          }
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Story_201320141",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Mission_1011001",
+          "AnchorName": "A05_Cam_02",
+          "BlendConfig": {
+            "BlendType": "EaseInOut",
+            "BlendTime": 3.0
+          }
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 3.0
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Mission_1011001",
+          "AnchorName": "A05_Cam_03",
+          "BlendConfig": {
+            "BlendType": "EaseInOut",
+            "BlendTime": 2.0
+          }
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201320142
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "Story_201320143"
+          }
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Story_201320143"
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Mission_1011001",
+          "AnchorName": "A05_Cam_01",
+          "BlendConfig": {
+            "BlendType": "Cut"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201320143
+            },
+            {
+              "VoiceID": 201320144
+            },
+            {
+              "VoiceID": 201320145
+            },
+            {
+              "VoiceID": 201320146
+            },
+            {
+              "VoiceID": 201320147
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Mission_1011001",
+          "AnchorName": "A05_Cam_01",
+          "IsActive": false,
+          "BlendConfig": {
+            "BlendType": "Cut"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.EndStory"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitStoryEnd"
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    }
+  ]
+}

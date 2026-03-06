@@ -1,0 +1,37 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 2.0
+        },
+        {
+          "$type": "RPG.GameCore.PlayMissionTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201221801
+            },
+            {
+              "VoiceID": 201221802
+            },
+            {
+              "VoiceID": 201221803
+            },
+            {
+              "VoiceID": 201221804
+            },
+            {
+              "VoiceID": 201221805
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.FinishStoryMission",
+          "Key": "Mission_201060113"
+        }
+      ]
+    }
+  ]
+}

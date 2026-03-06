@@ -1,0 +1,169 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": []
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropEnableCollider",
+                  "SpecifiedRelativePaths": [
+                    "Trigger"
+                  ]
+                }
+              ],
+              "State": "Open"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByCompareNPCMonsterCheckState",
+            "GroupID": 5,
+            "GroupMonsterID": 200003,
+            "CheckState": "Dead"
+          },
+          "SuccessTaskList": [
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "Maze_M3A_BattleBarrierOpen2"
+              }
+            }
+          ],
+          "FailedTaskList": [
+            {
+              "$type": "RPG.GameCore.PropSetupTrigger",
+              "TargetTypes": [],
+              "ColliderRelativePath": "Trigger",
+              "OnTriggerEnter": [
+                {
+                  "$type": "RPG.GameCore.CaptureLocalPlayer",
+                  "CharacterUniqueName": "Maze_M3A_Player"
+                },
+                {
+                  "$type": "RPG.GameCore.LockPlayerControl"
+                },
+                {
+                  "$type": "RPG.GameCore.ShowTalkUI",
+                  "Show": true
+                },
+                {
+                  "$type": "RPG.GameCore.EnableNPCMonsterAI",
+                  "GroupMonsterIDs": [],
+                  "UniqueNames": []
+                },
+                {
+                  "$type": "RPG.GameCore.PlaySimpleTalk",
+                  "SimpleTalkList": [
+                    {
+                      "VoiceID": 201111401
+                    }
+                  ]
+                },
+                {
+                  "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+                },
+                {
+                  "$type": "RPG.GameCore.PlayScreenTransfer",
+                  "Mode": "SwitchOut",
+                  "CustomTime": 0.5
+                },
+                {
+                  "$type": "RPG.GameCore.ShowTalkUI"
+                },
+                {
+                  "$type": "RPG.GameCore.SwitchCharacterAnchor",
+                  "CharacterUniqueName": "Maze_M3A_Player",
+                  "AreaName": "LevelArea_P90134_F90134001_G8",
+                  "AnchorName": "Anchor2"
+                },
+                {
+                  "$type": "RPG.GameCore.WaitSecond",
+                  "WaitTime": 0.25
+                },
+                {
+                  "$type": "RPG.GameCore.ReleaseCharacter",
+                  "CharacterUniqueName": "Maze_M3A_Player"
+                },
+                {
+                  "$type": "RPG.GameCore.UnLockPlayerControl"
+                },
+                {
+                  "$type": "RPG.GameCore.PlayScreenTransfer",
+                  "CustomTime": 0.5
+                },
+                {
+                  "$type": "RPG.GameCore.EnableNPCMonsterAI",
+                  "Enable": true,
+                  "GroupMonsterIDs": [],
+                  "UniqueNames": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_M3A_BattleBarrierOpen2",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropEnableCollider",
+                  "SpecifiedRelativePaths": [
+                    "Trigger"
+                  ]
+                }
+              ],
+              "State": "Open"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "TargetIsOwner": true,
+                  "InteractID": 1010
+                },
+                {
+                  "$type": "RPG.GameCore.PropEnableCollider",
+                  "SpecifiedRelativePaths": [
+                    "Trigger"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

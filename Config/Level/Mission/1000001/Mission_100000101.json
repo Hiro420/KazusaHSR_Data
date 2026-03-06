@@ -1,0 +1,22 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.ShowUI",
+          "Name": "Ui.Story.CreateNameDialog",
+          "WaitForExit": true
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Mode": "SwitchOut"
+        },
+        {
+          "$type": "RPG.GameCore.FinishStoryMission",
+          "Key": "Mission_100000101"
+        }
+      ]
+    }
+  ]
+}

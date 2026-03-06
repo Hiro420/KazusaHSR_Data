@@ -1,0 +1,39 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": []
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SetBillboardInfo",
+          "TargetCharacterType": "NPC",
+          "ID": 400024,
+          "GroupID": 15,
+          "Name": {
+            "hash": -1204037784
+          },
+          "Title": {
+            "hash": -1204037782
+          },
+          "MapIconType": 25
+        },
+        {
+          "$type": "RPG.GameCore.SetBillboardInfo",
+          "TargetCharacterType": "NPC",
+          "ID": 400025,
+          "GroupID": 15,
+          "Name": {
+            "hash": -1204037784
+          },
+          "Title": {
+            "hash": -1204037782
+          },
+          "MapIconType": 25
+        }
+      ]
+    }
+  ]
+}

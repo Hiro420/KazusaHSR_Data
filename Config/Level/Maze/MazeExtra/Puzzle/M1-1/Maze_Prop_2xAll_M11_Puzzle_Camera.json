@@ -1,0 +1,263 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropStateExecute",
+          "GroupPropID": 300007,
+          "GroupID": 5,
+          "Execute": [
+            {
+              "$type": "RPG.GameCore.ShowWaypointByProp",
+              "UseOwnerEntity": false,
+              "GroupID": 5,
+              "InstanceID": 300007,
+              "MaxRange": 20,
+              "IconPath": "SpriteOutput/MapPics/Billboard/IconBillboardBox.png",
+              "Offset": {
+                "x": 0.0,
+                "y": 1.6,
+                "z": 0.0
+              }
+            }
+          ],
+          "State": "ChestClosed"
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "M11_Pillar_BeHit"
+        },
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByComparePropStateNumber",
+            "GroupID": 20,
+            "PropIDList": [
+              300001,
+              300002
+            ],
+            "State": "Open",
+            "CompareType": "Equal",
+            "CompareValue": 2
+          },
+          "SuccessTaskList": [
+            {
+              "$type": "RPG.GameCore.ToastPile",
+              "DescTextID": {
+                "hash": -183944092
+              }
+            }
+          ],
+          "FailedTaskList": []
+        },
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByComparePropStateNumber",
+            "GroupID": 20,
+            "PropIDList": [
+              300001,
+              300002
+            ],
+            "State": "Open",
+            "CompareType": "Equal",
+            "CompareValue": 1
+          },
+          "SuccessTaskList": [
+            {
+              "$type": "RPG.GameCore.ToastPile",
+              "DescTextID": {
+                "hash": 2032955804
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropStateChangeListenerConfig",
+          "GroupID": 20,
+          "GroupPropID": 300001,
+          "ToState": "Open",
+          "OnChange": [
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "M11_Pillar_BeHit"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropStateChangeListenerConfig",
+          "GroupID": 20,
+          "GroupPropID": 300002,
+          "ToState": "Open",
+          "OnChange": [
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "M11_Pillar_BeHit"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropStateChangeListenerConfig",
+          "GroupID": 5,
+          "GroupPropID": 300007,
+          "FromState": "ChestLocked",
+          "ToState": "ChestClosed",
+          "OnChange": [
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "Puzzle_Chest_Open"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Puzzle_Chest_Open",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.LockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.EnableNPCMonsterAI",
+          "GroupMonsterIDs": [],
+          "UniqueNames": []
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode",
+          "Enable": true
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Mode": "SwitchOut",
+          "CustomTime": 0.8
+        },
+        {
+          "$type": "RPG.GameCore.PropTriggerAnimState",
+          "GroupPropID": 300007,
+          "GroupID": 5,
+          "AnimStateName": "Locked"
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Mission_1010301_temp",
+          "AnchorName": "Cam_Chest_01",
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "Cut"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "CustomTime": 0.8
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 1.0
+        },
+        {
+          "$type": "RPG.GameCore.PropTriggerAnimState",
+          "GroupPropID": 300007,
+          "GroupID": 5,
+          "AnimStateName": "LockedToStandBy"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 1.0
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Mode": "SwitchOut",
+          "CustomTime": 0.8
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Mission_1010301_temp",
+          "AnchorName": "Cam_Chest_01",
+          "IsActive": false,
+          "BlendConfig": {
+            "BlendType": "Cut",
+            "BlendTime": 4.0
+          },
+          "VCameraDitherMaxDistance": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "CustomTime": 0.8
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode"
+        },
+        {
+          "$type": "RPG.GameCore.EnableNPCMonsterAI",
+          "Enable": true,
+          "GroupMonsterIDs": [],
+          "UniqueNames": []
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowWaypointByProp",
+          "UseOwnerEntity": false,
+          "GroupID": 5,
+          "InstanceID": 300007,
+          "MaxRange": 20,
+          "IconPath": "SpriteOutput/MapPics/Billboard/IconBillboardBox.png",
+          "Offset": {
+            "x": 0.0,
+            "y": 1.6,
+            "z": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropStateChangeListenerConfig",
+          "GroupID": 5,
+          "GroupPropID": 300007,
+          "FromState": "ChestClosed",
+          "ToState": "ChestUsed",
+          "OnChange": [
+            {
+              "$type": "RPG.GameCore.HideWaypointByProp",
+              "UseOwnerEntity": false,
+              "GroupID": 5,
+              "InstanceID": 300007
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

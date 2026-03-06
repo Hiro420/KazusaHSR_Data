@@ -1,0 +1,69 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300004,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.DestroyProp"
+                }
+              ],
+              "State": "Open"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300004,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropSetupHitBox",
+                  "OnBeHit": [
+                    {
+                      "$type": "RPG.GameCore.AdventureModifyMazeMP",
+                      "ModifyFunction": "Add",
+                      "ModifyValue": {
+                        "FixedValue": {
+                          "IsDynamic": false,
+                          "FixedValue": 2.0
+                        }
+                      },
+                      "ClientUseGMCommand": true
+                    },
+                    {
+                      "$type": "RPG.GameCore.TriggerEffect",
+                      "TargetType": {
+                        "$type": "RPG.GameCore.TargetAlias",
+                        "Alias": "AdvLocalPlayer"
+                      },
+                      "EffectPath": "Effects/Eff_Prefab/Eff_Common/Eff_Common_MAZ_RecoverHP.prefab"
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropReqInteract",
+                      "TargetIsOwner": true,
+                      "InteractID": 1010
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropDestruct"
+                    },
+                    {
+                      "$type": "RPG.GameCore.DestroyProp"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

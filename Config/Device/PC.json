@@ -1,0 +1,66 @@
+﻿{
+  "deviceSettings": {
+    "Default": {
+      "defaultVolatileGrade": 3
+    },
+    "PC VeryHigh": {
+      "requirements": [
+        {
+          "Info": "GraphicsMemorySize",
+          "Values": [
+            "6500"
+          ]
+        }
+      ],
+      "defaultVolatileGrade": 4
+    },
+    "PC High": {
+      "requirements": [
+        {
+          "Info": "GraphicsMemorySize",
+          "Values": [
+            "5500",
+            "6500"
+          ]
+        }
+      ],
+      "defaultVolatileGrade": 4
+    },
+    "PC Medium": {
+      "requirements": [
+        {
+          "Info": "GraphicsMemorySize",
+          "Values": [
+            "3500",
+            "5500"
+          ]
+        }
+      ],
+      "defaultVolatileGrade": 3
+    },
+    "PC Low": {
+      "requirements": [
+        {
+          "Info": "GraphicsMemorySize",
+          "Values": [
+            "1500",
+            "3500"
+          ]
+        }
+      ],
+      "defaultVolatileGrade": 2
+    },
+    "PC VeryLow": {
+      "requirements": [
+        {
+          "Info": "GraphicsMemorySize",
+          "Values": [
+            "0",
+            "1500"
+          ]
+        }
+      ],
+      "defaultVolatileGrade": 1
+    }
+  }
+}

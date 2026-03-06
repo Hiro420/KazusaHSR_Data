@@ -1,0 +1,19 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Elev_101070412"
+        },
+        {
+          "$type": "RPG.GameCore.PropReqInteract",
+          "GroupPropID": 300001,
+          "GroupID": 8,
+          "InteractID": 114150
+        }
+      ]
+    }
+  ]
+}

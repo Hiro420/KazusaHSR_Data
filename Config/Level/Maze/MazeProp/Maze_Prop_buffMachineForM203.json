@@ -1,0 +1,45 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropTriggerEffectList",
+          "EffectList": [
+            {
+              "EffectPath": "Effects/Eff_Prefab/Eff_Scene/Eff_WeltArea.prefab",
+              "AttachPoint": "Root"
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "TargetTypes": [
+            "LocalPlayer"
+          ],
+          "ColliderRelativePath": "Trigger",
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.AddMazeBuff",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "TaskActionTarget"
+              },
+              "ID": 2000101
+            }
+          ],
+          "OnTriggerExit": [
+            {
+              "$type": "RPG.GameCore.RemoveMazeBuff",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "TaskActionTarget"
+              },
+              "ID": 2000101
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": []
+}

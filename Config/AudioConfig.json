@@ -1,0 +1,151 @@
+﻿{
+  "GlobalSoundBank": [
+    "BK_Audio_Event_Control_Global",
+    "BK_Audio_Stream_Global",
+    "BK_Audio_Menu_UI_Global",
+    "BK_Audio_External_Global"
+  ],
+  "EventBGMMute": "Ev_global_set_bgm_bus_mute",
+  "EventBGMUnmute": "Ev_global_set_bgm_bus_unmute",
+  "EventSFXMute": "Ev_global_set_sfx_bus_mute",
+  "EventSFXUnmute": "Ev_global_set_sfx_bus_unmute",
+  "EventVOMute": "Ev_global_set_vo_bus_mute",
+  "EventVOUnmute": "Ev_global_set_vo_bus_unmute",
+  "DefaultBGMEvent": "Ev_global_set_bgm_state",
+  "GameStateGroupName": "StateGroup_GameState",
+  "MenuGroupName": "StateGroup_Menu",
+  "MenuStateGameStart": "State_Login",
+  "CombatStateGroupName": "StateGroup_Combat",
+  "CombatStateMainState": "State_main_combat",
+  "CombatStateEndState": "State_Combat_end",
+  "MazeStateGroupName": "StateGroup_Maze",
+  "MazeStateBusy": "State_Maze_Busy",
+  "CutSceneStateGroupName": "StateGroup_Adventure_Noncombat",
+  "NoneState": "None",
+  "BattleSpeedStateGroupName": "State_Battle_Speed",
+  "BattleSpeedDoubleState": "Double_Speed",
+  "BattleSpeedNormalState": "Normal_Speed",
+  "LightHitVODelayTime": 0.1,
+  "FootStepSurfaceSwitchGroup": "SwitchGroup_GroundMaterials",
+  "ShoesTypeSwitchGroup": "SwitchGroup_ShoesType",
+  "MazeAlertRTPCRangeMin": 5.0,
+  "MazeAlertRTPCRangeMax": 9.99,
+  "MazeAlertRTPCSmoothSpeed": 3.0,
+  "EventBGMStop": "Ev_global_set_bgm_alll_stop",
+  "EventVOStop": "Ev_story_set_dialogue_all_stop",
+  "SoundHitEvent": "DR_Impact",
+  "CriticalHitEvent": "Ev_sfx_common_combat_criticalimpact",
+  "BattleStingerEvent": "Ev_global_set_bgm_trigger",
+  "ExternalSourceName": "VO_Story",
+  "CharacterVOEventMap": {
+    "EnterBattle": {
+      "PlayEventName": "Ev_vo_avatar_enter_battle_"
+    },
+    "TurnBeginNormal": {
+      "SetEventName": "Ev_set_tag_turn_begin_vo_normal",
+      "PlayEventName": "Ev_vo_avatar_turn_begin_"
+    },
+    "TurnBeginHealthLow": {
+      "SetEventName": "Ev_set_tag_turn_begin_vo_healthlow",
+      "PlayEventName": "Ev_vo_avatar_turn_begin_"
+    },
+    "ActionBegin": {
+      "PlayEventName": "Ev_vo_avatar_turn_begin_"
+    },
+    "TurnBeginSkillReady": {
+      "SetEventName": "Ev_set_tag_turn_begin_vo_skillready",
+      "PlayEventName": "Ev_vo_avatar_turn_begin_"
+    },
+    "ReceiveHealing": {
+      "PlayEventName": "Ev_vo_avatar_healing_"
+    },
+    "ReceiveBuff": {
+      "PlayEventName": "Ev_vo_avatar_receive_buff_"
+    },
+    "LinkLead": {
+      "SetEventName": "Ev_set_tag_link_lead_vo_normal",
+      "PlayEventName": "Ev_vo_avatar_link_lead_"
+    },
+    "LinkLeadSpecial": {
+      "SetEventName": "Ev_set_tag_link_lead_vo_",
+      "PlayEventName": "Ev_vo_avatar_link_lead_"
+    },
+    "LinkSupport": {
+      "SetEventName": "Ev_set_tag_link_support_vo_normal",
+      "PlayEventName": "Ev_vo_avatar_link_lead_"
+    },
+    "LinkSupportSpecial": {
+      "SetEventName": "Ev_set_tag_link_support_vo_",
+      "PlayEventName": "Ev_vo_avatar_link_lead_"
+    },
+    "SkillSelect1": {
+      "PlayEventName": "Ev_vo_avatar_skill_01_select_"
+    },
+    "SkillSelect2": {
+      "PlayEventName": "Ev_vo_avatar_skill_02_select_"
+    },
+    "SkillSelectUlt": {
+      "PlayEventName": "Ev_vo_avatar_skill_ult_select_"
+    },
+    "ResultLeadKillEnemy": {
+      "SetEventName": "Ev_set_tag_attack_result_vo_killenemy",
+      "PlayEventName": "Ev_vo_avatar_atk_result_lead_"
+    },
+    "ResultLeadTriggerEffect": {
+      "SetEventName": "Ev_set_tag_attack_result_vo_triggereffect",
+      "PlayEventName": "Ev_vo_avatar_atk_result_lead_"
+    },
+    "ResultLeadSkill1": {
+      "SetEventName": "Ev_set_tag_attack_result_vo_skill01",
+      "PlayEventName": "Ev_vo_avatar_atk_result_lead_"
+    },
+    "ResultLeadSkill2": {
+      "SetEventName": "Ev_set_tag_attack_result_vo_skill02",
+      "PlayEventName": "Ev_vo_avatar_atk_result_lead_"
+    },
+    "ResultLeadSkillUlt": {
+      "SetEventName": "Ev_set_tag_attack_result_vo_ultskill",
+      "PlayEventName": "Ev_vo_avatar_atk_result_lead_"
+    },
+    "ResultLeadEnemyHealthLow": {
+      "SetEventName": "Ev_set_tag_attack_result_vo_enemyhealthlow",
+      "PlayEventName": "Ev_vo_avatar_atk_result_lead_"
+    },
+    "ResultSupport": {
+      "PlayEventName": "Ev_vo_avatar_atk_result_support_"
+    },
+    "Victory": {
+      "PlayEventName": "Ev_vo_avatar_victory_"
+    },
+    "Defeat": {
+      "PlayEventName": "Ev_vo_avatar_defeat_"
+    },
+    "Revived": {
+      "PlayEventName": "Ev_vo_avatar_revive_"
+    },
+    "EncounterLowRisk": {
+      "PlayEventName": "Ev_vo_avatar_encounter_low_risk_"
+    },
+    "EncounterHighRisk": {
+      "PlayEventName": "Ev_vo_avatar_encounter_high_risk_"
+    },
+    "UltraReady": {
+      "PlayEventName": "Ev_vo_avatar_ultra_skill_select_"
+    },
+    "LightHit": {
+      "PlayEventName": "Ev_vo_avatar_hit_light_"
+    }
+  },
+  "UIButtonSoundEventMap": {
+    "CommonClick": "Ev_sfx_ui_global_click",
+    "CommonAcceptObsolete": "Ev_sfx_ui_global_click",
+    "CommonCancel": "Ev_sfx_ui_global_cancel",
+    "BattleClickObsolete": "Ev_sfx_ui_global_click"
+  },
+  "AudioGameStateMap": {
+    "Adventure": "State_Adventure_Noncombat",
+    "Battle": "State_Combat",
+    "CutScene": "State_CutScene",
+    "Menu": "State_Menu"
+  }
+}

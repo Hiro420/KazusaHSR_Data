@@ -1,0 +1,48 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "IsSingle": true,
+          "TargetCharacterType": "NPCMonster",
+          "TargetGroupID": 4,
+          "TargetID": 400001,
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.ShowUIPage",
+              "AssetPath": "UI/Mission/MissionStartHintDialog.prefab",
+              "UIImageNodes": [],
+              "UITextNodes": [
+                {
+                  "TextPath": "Dialog/MissionTitle/Text",
+                  "TextContent": {
+                    "hash": 558984476
+                  }
+                }
+              ]
+            }
+          ],
+          "OnTriggerExit": [
+            {
+              "$type": "RPG.GameCore.ShowUIPage",
+              "AssetPath": "UI/Mission/MissionStartHintDialog.prefab",
+              "UIImageNodes": [],
+              "UITextNodes": [
+                {
+                  "TextPath": "Dialog/MissionTitle/Text",
+                  "TextContent": {
+                    "hash": 558984476
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

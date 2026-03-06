@@ -1,0 +1,300 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.ShowTutorialUI",
+          "Name": "UI/Guide/TutorialDialog.prefab"
+        },
+        {
+          "$type": "RPG.GameCore.LockPlayerControl"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitUINodeOpen",
+          "Path": "Page/MazeMainPage(Clone)/RightTopArea/MainIconItem6"
+        },
+        {
+          "$type": "RPG.GameCore.BlockInputController",
+          "Enable": true,
+          "ActionNameList": []
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "AboveDialog/TutorialDialog(Clone)/MaskRaycastTarget",
+            "AboveDialog/TutorialDialog(Clone)/Bg"
+          ],
+          "Open": true
+        },
+        {
+          "$type": "RPG.GameCore.MoveUINodeToMask",
+          "Path": "Page/MazeMainPage(Clone)/RightTopArea/MainIconItem6",
+          "Follow": true
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 1,
+          "Show": true,
+          "Path": "Page/MazeMainPage(Clone)/RightTopArea/MainIconItem6",
+          "CopyAnchorAndSale": true,
+          "PCGuide": {}
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 4,
+          "Show": true,
+          "Path": "Page/MazeMainPage(Clone)/RightTopArea/MainIconItem6",
+          "Text": "TutorialTextmap_40101",
+          "CopyAnchorAndSale": true,
+          "OffsetY": -85.0,
+          "PCGuide": {
+            "UsePCGuide": true,
+            "GuideResID": 5,
+            "Path": "Page",
+            "TextPath": "Contents/Text",
+            "Text": "TutorialTextmap_40101_pc",
+            "ActionName": "Maze_Shop"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.BlockInputController",
+          "Enable": true,
+          "ActionNameList": [
+            "Maze_Shop"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitTutorial",
+          "Event": "Goto",
+          "Param": "600"
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 4,
+          "Path": "Page/MazeMainPage(Clone)/RightTopArea/MainIconItem6",
+          "Text": "TutorialTextmap_40101",
+          "OffsetY": -85.0,
+          "PCGuide": {
+            "UsePCGuide": true,
+            "GuideResID": 5,
+            "Path": "Page",
+            "TextPath": "Contents/Text",
+            "Text": "TutorialTextmap_40101_pc",
+            "ActionName": "Maze_Shop"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 1,
+          "Path": "Page/MazeMainPage(Clone)/RightTopArea/MainIconItem6",
+          "CopyAnchorAndSale": true,
+          "PCGuide": {}
+        },
+        {
+          "$type": "RPG.GameCore.MoveUINodeToMask",
+          "Path": "Page/MazeMainPage(Clone)/RightTopArea/MainIconItem6",
+          "Reset": true
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "AboveDialog/TutorialDialog(Clone)/Bg"
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitTutorial",
+          "Event": "Goto",
+          "Param": "600"
+        },
+        {
+          "$type": "RPG.GameCore.BlockInputController",
+          "Enable": true,
+          "ActionNameList": []
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "AboveDialog/TutorialDialog(Clone)/MaskRaycastTarget"
+          ],
+          "Open": true
+        }
+      ]
+    },
+    {
+      "TaskList": []
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitUINodeOpen",
+          "Path": "Page/ShopPage(Clone)/Content/ScrollView/ViewPoint/Content/ShopItem1009/Icon/Img"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "AboveDialog/TutorialDialog(Clone)/Bg"
+          ],
+          "Open": true
+        },
+        {
+          "$type": "RPG.GameCore.MoveUINodeToMask",
+          "Path": "Page/ShopPage(Clone)/Content/ScrollView/ViewPoint/Content/ShopItem1009",
+          "Follow": true
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 2,
+          "Show": true,
+          "Path": "Page/ShopPage(Clone)/Content/ScrollView/ViewPoint/Content/ShopItem1009",
+          "CopyAnchorAndSale": true,
+          "PCGuide": {}
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 4,
+          "Show": true,
+          "Path": "Page/ShopPage(Clone)/Content/ScrollView/ViewPoint/Content/ShopItem1009",
+          "Text": "TutorialTextmap_40103",
+          "CopyAnchorAndSale": true,
+          "OffsetX": 20.5,
+          "OffsetY": -215.5,
+          "PCGuide": {
+            "UsePCGuide": true,
+            "GuideResID": 4,
+            "Path": "Page/ShopPage(Clone)/Content/ScrollView/ViewPoint/Content/ShopItem1009",
+            "Text": "TutorialTextmap_40103",
+            "CopyAnchorAndSale": true,
+            "OffsetX": 20.5,
+            "OffsetY": -215.5
+          }
+        },
+        {
+          "$type": "RPG.GameCore.WaitTutorial",
+          "Event": "ClickBtnWithPath",
+          "Param": "AboveDialog/TutorialDialog(Clone)/Bg/ShopItem1009(Clone)"
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 4,
+          "Path": "Page/ShopPage(Clone)/Content/ScrollView/ViewPoint/Content/ShopItem1009",
+          "Text": "TutorialTextmap_40103",
+          "OffsetX": 115.0,
+          "OffsetY": -280.0,
+          "PCGuide": {
+            "UsePCGuide": true,
+            "GuideResID": 4,
+            "Path": "Page/ShopPage(Clone)/Content/ScrollView/ViewPoint/Content/ShopItem1009",
+            "Text": "TutorialTextmap_40103",
+            "OffsetX": 90.0,
+            "OffsetY": -240.0
+          }
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 2,
+          "Path": "Page/ShopPage(Clone)/Content/ScrollView/ViewPoint/Content/ShopItem1009",
+          "CopyAnchorAndSale": true,
+          "PCGuide": {}
+        },
+        {
+          "$type": "RPG.GameCore.MoveUINodeToMask",
+          "Path": "Page/ShopPage(Clone)/Content/ScrollView/ViewPoint/Content/ShopItem1009",
+          "Reset": true
+        },
+        {
+          "$type": "RPG.GameCore.WaitUINodeOpen",
+          "Path": "Dialog/ItemDetailSelectDialog(Clone)/Contents/DialogBtnPanel/BtnCommonWhite"
+        },
+        {
+          "$type": "RPG.GameCore.WaitUIAnim",
+          "Path": "Dialog/ItemDetailSelectDialog(Clone)/Contents/DialogBtnPanel/BtnCommonWhite",
+          "AnimStateName": "Normal"
+        },
+        {
+          "$type": "RPG.GameCore.MoveUINodeToMask",
+          "Path": "Dialog/ItemDetailSelectDialog(Clone)/Contents/DialogBtnPanel/BtnCommonWhite",
+          "Follow": true
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 2,
+          "Show": true,
+          "Path": "Dialog/ItemDetailSelectDialog(Clone)/Contents/DialogBtnPanel/BtnCommonWhite",
+          "CopyAnchorAndSale": true,
+          "PCGuide": {}
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 3,
+          "Show": true,
+          "Path": "Dialog/ItemDetailSelectDialog(Clone)/Contents/DialogBtnPanel/BtnCommonWhite",
+          "Text": "TutorialTextmap_40104",
+          "OffsetY": 60.0,
+          "PCGuide": {}
+        },
+        {
+          "$type": "RPG.GameCore.WaitTutorial",
+          "Event": "ClickBtnWithPath",
+          "Param": "AboveDialog/TutorialDialog(Clone)/Bg/BtnCommonWhite(Clone)",
+          "BoolParam": false
+        },
+        {
+          "$type": "RPG.GameCore.TutorialSave",
+          "TutorialID": 401
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 3,
+          "Path": "Dialog/ItemDetailSelectDialog(Clone)/Contents/DialogBtnPanel/BtnCommonWhite",
+          "Text": "TutorialTextmap_40104",
+          "OffsetY": 60.0,
+          "PCGuide": {}
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 2,
+          "Path": "Dialog/ItemDetailSelectDialog(Clone)/Contents/DialogBtnPanel/BtnCommonWhite",
+          "CopyAnchorAndSale": true,
+          "PCGuide": {}
+        },
+        {
+          "$type": "RPG.GameCore.MoveUINodeToMask",
+          "Path": "Dialog/ItemDetailSelectDialog(Clone)/Contents/DialogBtnPanel/BtnCommonWhite",
+          "Reset": true
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "AboveDialog/TutorialDialog(Clone)/MaskRaycastTarget",
+            "AboveDialog/TutorialDialog(Clone)/Bg"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.ShowTutorialUI",
+          "Name": "UI/Guide/TutorialDialog.prefab",
+          "IsHide": true
+        },
+        {
+          "$type": "RPG.GameCore.BlockInputController",
+          "ActionNameList": []
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.TutorialFinish",
+          "TutorialID": 401
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Hold",
+          "WaitOwnerOnly": true
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "ID": 300021,
+          "GroupID": 3,
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.TriggerStory",
+              "StoryID": 101090209
+            },
+            {
+              "$type": "RPG.GameCore.PropEnableCollider",
+              "ID": 300021,
+              "GroupID": 3,
+              "SpecifiedRelativePaths": [
+                "Trigger"
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.FinishStoryMission",
+              "Key": "Mission_101090233"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

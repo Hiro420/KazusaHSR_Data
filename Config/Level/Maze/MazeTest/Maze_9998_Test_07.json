@@ -1,0 +1,56 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300001,
+              "GroupID": 3,
+              "Execute": []
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300001,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.DestroyProp"
+                }
+              ],
+              "State": "Open"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "TargetIsOwner": true,
+          "ColliderRelativePath": "Trigger",
+          "DestroyAfterTriggered": true,
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.PropReqInteract",
+              "TargetIsOwner": true,
+              "InteractID": 1010
+            },
+            {
+              "$type": "RPG.GameCore.CreateNPCMonster",
+              "GroupID": 4,
+              "GroupNpcMonsterID": 200006
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

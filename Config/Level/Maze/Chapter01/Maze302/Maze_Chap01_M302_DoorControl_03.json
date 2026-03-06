@@ -1,0 +1,68 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "TargetIsOwner": true,
+          "ColliderRelativePath": "Trigger",
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300006,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "TargetIsOwner": true,
+                  "InteractID": 3010
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Order": 1,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropStateChangeListenerConfig",
+          "GroupID": 3,
+          "GroupPropID": 300019,
+          "ToState": "Open",
+          "OnChange": [
+            {
+              "$type": "RPG.GameCore.PropTriggerAnimState",
+              "TargetIsOwner": true,
+              "AnimStateName": "Activing"
+            },
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "Maze_Chap01_M302_Door03"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Chap01_M302_Door03",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.PropReqInteract",
+          "GroupPropID": 300014,
+          "GroupID": 3,
+          "InteractID": 1010
+        }
+      ]
+    }
+  ]
+}

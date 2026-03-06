@@ -1,0 +1,65 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "ColliderRelativePath": "Trigger",
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.LockPlayerControl"
+            },
+            {
+              "$type": "RPG.GameCore.TriggerMazeBuffSelect",
+              "BuffList": [
+                {
+                  "BuffID": 101,
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "LightTeamEntity"
+                  }
+                },
+                {
+                  "BuffID": 3002001,
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "LightTeamEntity"
+                  }
+                },
+                {
+                  "BuffID": 3002002,
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "LightTeamEntity"
+                  }
+                },
+                {
+                  "BuffID": 3002003,
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "AdvTeamMembers"
+                  }
+                },
+                {
+                  "BuffID": 3002021,
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "LightTeamEntity"
+                  }
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.ReleaseCharacter",
+              "CharacterUniqueName": "player01"
+            },
+            {
+              "$type": "RPG.GameCore.UnLockPlayerControl"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": []
+}

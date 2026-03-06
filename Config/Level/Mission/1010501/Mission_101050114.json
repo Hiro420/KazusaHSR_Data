@@ -1,0 +1,35 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.TriggerStory",
+          "StoryID": 101050122
+        },
+        {
+          "$type": "RPG.GameCore.DestroyProp",
+          "UniqueName": "0",
+          "ID": 300014,
+          "GroupID": 4
+        },
+        {
+          "$type": "RPG.GameCore.FinishStoryMission",
+          "Key": "Mission_101050114"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.DestroyNPCMonster",
+          "GroupID": 10,
+          "GroupMonsterIDs": [
+            200004
+          ],
+          "UniqueNames": []
+        }
+      ]
+    }
+  ]
+}

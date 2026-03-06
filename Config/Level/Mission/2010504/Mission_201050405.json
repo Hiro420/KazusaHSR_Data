@@ -1,0 +1,93 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Act_201050405_03"
+        },
+        {
+          "$type": "RPG.GameCore.FinishStoryMission",
+          "Key": "Mission_201050405"
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Talk_201050405"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerStory",
+          "StoryID": 201050405
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Act_201050405_01"
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC",
+          "GroupID": 27,
+          "GroupNpcID": 400001
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC",
+          "GroupID": 27,
+          "GroupNpcID": 400002
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC",
+          "GroupID": 27,
+          "GroupNpcID": 400003
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC",
+          "GroupID": 27,
+          "GroupNpcID": 400004
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Act_201050405_02"
+        },
+        {
+          "$type": "RPG.GameCore.DestroyNPC",
+          "NpcID": 101021003,
+          "GroupID": 27,
+          "GroupNpcID": 400001
+        },
+        {
+          "$type": "RPG.GameCore.DestroyNPC",
+          "NpcID": 101023017,
+          "GroupID": 27,
+          "GroupNpcID": 400002
+        },
+        {
+          "$type": "RPG.GameCore.DestroyNPC",
+          "NpcID": 101021014,
+          "GroupID": 27,
+          "GroupNpcID": 400003
+        },
+        {
+          "$type": "RPG.GameCore.DestroyNPC",
+          "NpcID": 101021008,
+          "GroupID": 27,
+          "GroupNpcID": 400004
+        }
+      ]
+    }
+  ]
+}

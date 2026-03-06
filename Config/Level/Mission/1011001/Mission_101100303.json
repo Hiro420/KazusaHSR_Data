@@ -1,0 +1,54 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300005,
+          "GroupID": 8,
+          "TargetTypes": [],
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300005,
+              "GroupID": 8,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.TriggerStory",
+                  "StoryID": 101100132
+                },
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "GroupPropID": 300005,
+                  "GroupID": 8,
+                  "InteractID": 1010
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.ChangePropState",
+          "DynamicGroupPropID": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 300020.0
+            }
+          },
+          "DynamicGroupID": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 3.0
+            }
+          },
+          "State": "Open"
+        }
+      ]
+    }
+  ]
+}

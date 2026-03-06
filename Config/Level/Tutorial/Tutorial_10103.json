@@ -1,0 +1,149 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "FunctionArea/SpeedUpBtn",
+            "FunctionArea/AutoBtn"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "PlotWave1Signal"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUI",
+          "Name": "TutorialDialog"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "AboveDialog/TutorialDialog(Clone)/MaskRaycastTarget"
+          ],
+          "Open": true
+        },
+        {
+          "$type": "RPG.GameCore.RoundCountCheck",
+          "TargetRoundCount": 1,
+          "TargetTurnCount": 1
+        },
+        {
+          "$type": "RPG.GameCore.WaitUIAnim",
+          "Path": "AboveDialog/TurnStartLightTeam(Clone)",
+          "AnimStateName": "UIPage_Change"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "AboveDialog/TutorialDialog(Clone)/Bg"
+          ],
+          "Open": true
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.2
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 2,
+          "Show": true,
+          "Path": "Message05",
+          "Text": "TutorialTextmap10000204"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "FullScreenButton"
+          ],
+          "Open": true
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.2
+        },
+        {
+          "$type": "RPG.GameCore.WaitTutorial",
+          "Event": "ClickFullScreen"
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 2
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "FullScreenButton"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "AboveDialog/TutorialDialog(Clone)/Bg",
+            "AboveDialog/TutorialDialog(Clone)/MaskRaycastTarget"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.CheckMonsterStance",
+          "MonsterTag": "StanceCheck"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.1
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "AboveDialog/TutorialDialog(Clone)/Bg",
+            "AboveDialog/TutorialDialog(Clone)/MaskRaycastTarget"
+          ],
+          "Open": true
+        },
+        {
+          "$type": "RPG.GameCore.PauseGame",
+          "Pause": true
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 2,
+          "Show": true,
+          "Path": "Message05",
+          "Text": "TutorialTextmap10000205"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "FullScreenButton"
+          ],
+          "Open": true
+        },
+        {
+          "$type": "RPG.GameCore.WaitTutorial",
+          "Event": "ClickFullScreen"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "FullScreenButton"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 2
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "AboveDialog/TutorialDialog(Clone)/Bg",
+            "AboveDialog/TutorialDialog(Clone)/MaskRaycastTarget"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.PauseGame"
+        }
+      ]
+    }
+  ]
+}

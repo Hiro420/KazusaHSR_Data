@@ -1,0 +1,27 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "ID": 300001,
+          "GroupID": 15,
+          "ButtonText": {
+            "hash": -1307791735
+          },
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.TriggerStory",
+              "StoryID": 301030101
+            },
+            {
+              "$type": "RPG.GameCore.FinishStoryMission",
+              "Key": "Mission_301050101"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

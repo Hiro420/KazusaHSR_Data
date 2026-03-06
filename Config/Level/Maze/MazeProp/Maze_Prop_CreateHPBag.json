@@ -1,0 +1,31 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": []
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SetupPropAnchorInRadius",
+          "AnchorName": "Prop_01_HP",
+          "CentreAnchorArea": "Maze_Medic_RoomData_Center",
+          "CentreAnchorName": "PropHP",
+          "RadiusMin": 0.8,
+          "RadiusMax": 2.0,
+          "AngleMin": -80.0,
+          "AngleMax": 80.0
+        },
+        {
+          "$type": "RPG.GameCore.CreateProp",
+          "PropID": 300008,
+          "UniqueName": "Prop_01_HP",
+          "AnchorName": "Prop_01_HP",
+          "Duration": 20.0,
+          "OnCreate": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PlayMissionTalk",
+          "SimpleTalkList": [
+            {
+              "TextSpeed": 30.0,
+              "VoiceID": 201210239
+            },
+            {
+              "VoiceID": 201210240
+            },
+            {
+              "VoiceID": 201210241
+            },
+            {
+              "VoiceID": 201210242
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300029,
+          "GroupID": 4,
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "DestroyAfterTriggered": true,
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.TriggerStory",
+              "StoryID": 101050135
+            },
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "101050135_talk"
+              }
+            },
+            {
+              "$type": "RPG.GameCore.PropReqInteract",
+              "GroupPropID": 300019,
+              "GroupID": 3,
+              "InteractID": 1010
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "101050135_talk",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.PlayMissionTalk",
+          "SimpleTalkList": [
+            {
+              "TextSpeed": 30.0,
+              "VoiceID": 201210301
+            },
+            {
+              "VoiceID": 201210302
+            },
+            {
+              "VoiceID": 201210303
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

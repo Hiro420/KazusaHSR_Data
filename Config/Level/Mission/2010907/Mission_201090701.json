@@ -1,0 +1,36 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Hold"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropStateExecute",
+          "GroupPropID": 300013,
+          "GroupID": 6,
+          "Execute": [
+            {
+              "$type": "RPG.GameCore.PropReqInteract",
+              "GroupPropID": 300013,
+              "GroupID": 6,
+              "InteractID": 1010
+            },
+            {
+              "$type": "RPG.GameCore.PropTriggerAnimState",
+              "GroupPropID": 300013,
+              "GroupID": 6,
+              "AnimStateName": "Activing"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

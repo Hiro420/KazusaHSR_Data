@@ -1,0 +1,35 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropStateExecute",
+          "TargetIsOwner": true,
+          "Execute": [
+            {
+              "$type": "RPG.GameCore.PropSetupTrigger",
+              "TargetTypes": [],
+              "ColliderRelativePath": "Trigger",
+              "DestroyAfterTriggered": true,
+              "DisableAfterTriggered": true,
+              "OnTriggerEnter": [
+                {
+                  "$type": "RPG.GameCore.TriggerCustomString",
+                  "CustomString": {
+                    "Value": "PropTalk_101070105"
+                  }
+                },
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "TargetIsOwner": true,
+                  "InteractID": 1010
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

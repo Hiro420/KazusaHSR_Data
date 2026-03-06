@@ -1,0 +1,22 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "201090205_End",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.ConsumeMissionItem",
+          "SubMissionID": 201090205,
+          "Desc": {
+            "hash": 278713946
+          }
+        }
+      ]
+    }
+  ]
+}

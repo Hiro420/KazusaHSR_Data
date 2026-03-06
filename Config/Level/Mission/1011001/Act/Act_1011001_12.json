@@ -1,0 +1,93 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.LevelStoryInitialize",
+          "EntityVisiableList": [
+            {
+              "MuteColliderWhenInvisiable": false
+            }
+          ],
+          "CreateCharacterList": [
+            {
+              "CharacterUniqueName": "Player",
+              "AvatarID": "PlayerBoy_00",
+              "AreaName": "LevelArea_P20132_F20132001_G5",
+              "AnchorName": "Act01_Player_01"
+            },
+            {
+              "CharacterUniqueName": "Mar_7th_00",
+              "Catgory": "Default",
+              "AvatarID": "Mar_7th_00",
+              "AreaName": "LevelArea_P20132_F20132001_G5",
+              "AnchorName": "Act01_7thMarch_01"
+            },
+            {
+              "CharacterUniqueName": "Seele_00",
+              "Catgory": "Default",
+              "AvatarID": "Seele_00",
+              "AreaName": "LevelArea_P20132_F20132001_G5",
+              "AnchorName": "Act01_Seele_01"
+            },
+            {
+              "CharacterUniqueName": "DanHeng_00",
+              "AvatarID": "DanHeng_00",
+              "AreaName": "LevelArea_P20132_F20132001_G5",
+              "AnchorName": "Act01_Natasha_01"
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201321200
+            },
+            {
+              "VoiceID": 201321201
+            },
+            {
+              "VoiceID": 201321202
+            },
+            {
+              "VoiceID": 201321203
+            },
+            {
+              "VoiceID": 201321204
+            },
+            {
+              "VoiceID": 201321205
+            },
+            {
+              "VoiceID": 201321206
+            },
+            {
+              "VoiceID": 201321207
+            },
+            {
+              "VoiceID": 201321208
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.EndStory"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitStoryEnd"
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    }
+  ]
+}

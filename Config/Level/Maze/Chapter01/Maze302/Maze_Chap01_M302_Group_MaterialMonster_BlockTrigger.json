@@ -1,0 +1,58 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "TargetTypes": [],
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.SelectorConfig",
+              "TaskList": [
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "TargetIsOwner": true,
+                  "Execute": [],
+                  "State": "Locked"
+                },
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "TargetIsOwner": true,
+                  "Execute": [
+                    {
+                      "$type": "RPG.GameCore.PropReqInteract",
+                      "GroupPropID": 300001,
+                      "GroupID": 15,
+                      "InteractID": 1100
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropSetVisibility",
+                      "ID": 300001,
+                      "GroupID": 15,
+                      "Visible": true,
+                      "SpecifiedRelativePaths": []
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropEnableCollider",
+                      "ID": 300001,
+                      "GroupID": 15,
+                      "Enabled": true,
+                      "SpecifiedRelativePaths": []
+                    }
+                  ]
+                },
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "TargetIsOwner": true,
+                  "Execute": [],
+                  "State": "Open"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

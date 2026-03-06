@@ -1,0 +1,40 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "TargetIsOwner": true,
+          "ColliderRelativePath": "Trigger",
+          "DestroyAfterTriggered": true,
+          "DisableAfterTriggered": true,
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "Maze99998_CreateMonster"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze99998_CreateMonster",
+          "WaitOwnerOnly": true,
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPCMonster",
+          "GroupID": 4,
+          "GroupNpcMonsterID": 200006
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "TargetTypes": [
+            "NPCMonster"
+          ],
+          "ColliderRelativePath": "Trigger",
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.AddMazeBuff",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "TaskActionTarget"
+              },
+              "ID": 2000101
+            }
+          ],
+          "OnTriggerExit": [
+            {
+              "$type": "RPG.GameCore.TriggerEffect",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "TaskActionTarget"
+              },
+              "EffectPath": "Effects/Eff_Prefab/Eff_Common/Eff_Buff_Common_Increased_attack_power.prefab",
+              "AttachPoint": "Root"
+            },
+            {
+              "$type": "RPG.GameCore.RemoveMazeBuff",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "TaskActionTarget"
+              },
+              "ID": 2000101
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": []
+}

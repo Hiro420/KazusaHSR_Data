@@ -1,0 +1,21 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": []
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.FinishStoryMission",
+          "Key": "Mission_101020203"
+        }
+      ]
+    },
+    {
+      "Order": 1,
+      "TaskList": []
+    }
+  ]
+}

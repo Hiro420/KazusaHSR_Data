@@ -1,0 +1,48 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "TargetIsOwner": true,
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.PropTriggerAnimState",
+              "GroupPropID": 300001,
+              "GroupID": 4,
+              "AnimStateName": "LockedToStandBy"
+            },
+            {
+              "$type": "RPG.GameCore.WaitSecond",
+              "WaitTime": 2.0
+            },
+            {
+              "$type": "RPG.GameCore.PropTriggerAnimState",
+              "GroupPropID": 300001,
+              "GroupID": 4,
+              "AnimStateName": "Activing"
+            },
+            {
+              "$type": "RPG.GameCore.WaitSecond",
+              "WaitTime": 4.0
+            },
+            {
+              "$type": "RPG.GameCore.PropTriggerAnimState",
+              "GroupPropID": 300001,
+              "GroupID": 4,
+              "AnimStateName": "Locked"
+            },
+            {
+              "$type": "RPG.GameCore.PropEnableCollider",
+              "ID": 300001,
+              "GroupID": 4,
+              "Enabled": true,
+              "SpecifiedRelativePaths": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

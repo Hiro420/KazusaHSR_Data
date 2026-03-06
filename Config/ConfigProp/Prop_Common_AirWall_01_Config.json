@@ -1,0 +1,79 @@
+﻿{
+  "States": [
+    {
+      "AnimName": "StandBy"
+    },
+    {
+      "State": "Open",
+      "Behavior": "Invisible",
+      "AnimName": "Used"
+    }
+  ],
+  "AnimatorStateGroupEvents": [
+    {
+      "States": [
+        {
+          "Name": "StandBy"
+        }
+      ],
+      "OnEnter": [
+        {
+          "$type": "RPG.GameCore.PropSetVisibility",
+          "Visible": true
+        },
+        {
+          "$type": "RPG.GameCore.PropTriggerEffectList",
+          "EffectList": [
+            {
+              "EffectPath": "Effects/Eff_Prefab/Eff_Scene/Interactive Object/Eff_Common_MAZ_Prop_AirWall_Idle.prefab",
+              "AttachPoint": "Root"
+            }
+          ]
+        }
+      ],
+      "OnExit": [
+        {
+          "$type": "RPG.GameCore.PropRemoveEffect",
+          "EffectPath": "Effects/Eff_Prefab/Eff_Scene/Interactive Object/Eff_Common_MAZ_Prop_AirWall_Idle.prefab"
+        }
+      ]
+    },
+    {
+      "States": [
+        {
+          "Name": "Activing"
+        }
+      ],
+      "OnEnter": [
+        {
+          "$type": "RPG.GameCore.PropSetVisibility",
+          "Visible": true
+        },
+        {
+          "$type": "RPG.GameCore.PropTriggerEffectList",
+          "EffectList": [
+            {
+              "EffectPath": "Effects/Eff_Prefab/Eff_Scene/Interactive Object/Eff_Common_MAZ_Prop_AirWall_Disappear.prefab",
+              "AttachPoint": "Root"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "States": [
+        {
+          "Name": "Used"
+        }
+      ],
+      "OnEnter": [
+        {
+          "$type": "RPG.GameCore.PropEnableCollider"
+        },
+        {
+          "$type": "RPG.GameCore.PropSetVisibility"
+        }
+      ]
+    }
+  ]
+}

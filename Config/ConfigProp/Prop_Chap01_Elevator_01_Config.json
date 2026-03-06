@@ -1,0 +1,47 @@
+﻿{
+  "States": [],
+  "AnimatorStateGroupEvents": [
+    {
+      "States": [
+        {
+          "Name": "Activing"
+        }
+      ],
+      "OnEnter": [
+        {
+          "$type": "RPG.GameCore.TriggerSound",
+          "SoundName": "Ev_sfx_common_elevator_loop",
+          "OwnerEntityEmitter": false
+        },
+        {
+          "$type": "RPG.GameCore.PropEnableCollider",
+          "Enabled": true,
+          "SpecifiedRelativePaths": [
+            "Collider_AirWall"
+          ]
+        }
+      ],
+      "OnExit": [
+        {
+          "$type": "RPG.GameCore.PropEnableCollider",
+          "SpecifiedRelativePaths": [
+            "Collider_AirWall"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.TriggerSound",
+          "SoundName": "Ev_loop_effect_all_stop",
+          "OwnerEntityEmitter": false
+        }
+      ]
+    },
+    {
+      "States": [
+        {
+          "Name": "Standby"
+        }
+      ],
+      "OnEnter": []
+    }
+  ]
+}

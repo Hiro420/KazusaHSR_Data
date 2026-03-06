@@ -1,0 +1,122 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "Mode": "SwitchOut",
+          "CustomTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Mission_1010601",
+          "AnchorName": "201060123_Cam",
+          "BlendConfig": {
+            "BlendType": "Cut"
+          },
+          "VCameraDitherMaxDistance": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.LevelStoryInitialize",
+          "EntityVisiableList": [
+            {}
+          ],
+          "CreateCharacterList": []
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode",
+          "Enable": true
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "CustomTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.CaptureNPCToCharacter",
+          "GroupID": 8,
+          "GroupNpcID": 400001,
+          "CharacterUniqueName": "201060123_Hook"
+        },
+        {
+          "$type": "RPG.GameCore.CharacterNavigateTo",
+          "CharacterUniqueName": "201060123_Hook",
+          "AreaName": "Mission_1010601",
+          "AnchorName": "201060123_Hook",
+          "MotionFlag": "Run"
+        },
+        {
+          "$type": "RPG.GameCore.CharacterTriggerAnimState",
+          "CharacterUniqueName": "201060123_Hook",
+          "AnimStateName": "MazeSkill",
+          "StoryAvatarID": "Seele_00",
+          "StartMotion": "Nod01",
+          "NormalizedTimeWait": 0.148,
+          "StoryMotionID": 1102001
+        },
+        {
+          "$type": "RPG.GameCore.TriggerEffectListOnCharacter",
+          "CharacterUniqueName": "201060123_Hook",
+          "EffectList": [
+            {
+              "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Hook/Eff_Avatar_Hook_00_MazeSkill_Start01.prefab"
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 1.0
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "201060123_Destroy"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.ReleaseCharacter",
+          "CharacterUniqueName": "201060123_Hook"
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "Mode": "SwitchOut",
+          "CustomTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Mission_1010601",
+          "AnchorName": "201060123_Cam",
+          "IsActive": false,
+          "BlendConfig": {
+            "BlendType": "Cut"
+          },
+          "VCameraDitherMaxDistance": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.EndStory"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitStoryEnd"
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode"
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "CustomTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    }
+  ]
+}

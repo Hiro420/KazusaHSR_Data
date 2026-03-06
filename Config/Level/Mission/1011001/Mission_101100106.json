@@ -1,0 +1,53 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300001,
+          "GroupID": 8,
+          "TargetTypes": [],
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.TriggerStory",
+              "StoryID": 101100119
+            },
+            {
+              "$type": "RPG.GameCore.PropReqInteract",
+              "GroupPropID": 300001,
+              "GroupID": 8,
+              "InteractID": 1010
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300002,
+          "GroupID": 8,
+          "TargetTypes": [],
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.TriggerStory",
+              "StoryID": 101100120
+            },
+            {
+              "$type": "RPG.GameCore.PropReqInteract",
+              "GroupPropID": 300002,
+              "GroupID": 8,
+              "InteractID": 1010
+            },
+            {
+              "$type": "RPG.GameCore.FinishStoryMission",
+              "Key": "Mission_101100106"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.AdventureModifyTeamPlayerSP",
+                  "AddRatio": {
+                    "FixedValue": {
+                      "IsDynamic": false,
+                      "FixedValue": 1.0
+                    }
+                  },
+                  "ModifyValue": {
+                    "FixedValue": {
+                      "IsDynamic": false,
+                      "FixedValue": 0.0
+                    }
+                  },
+                  "SpecifyTargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "AdvTeamMembers"
+                  }
+                },
+                {
+                  "$type": "RPG.GameCore.AdventureModifyMazeMP",
+                  "ModifyFunction": "Add",
+                  "ModifyValue": {
+                    "FixedValue": {
+                      "IsDynamic": false,
+                      "FixedValue": 5.0
+                    }
+                  }
+                },
+                {
+                  "$type": "RPG.GameCore.AddMazeBuff",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "LightTeamEntity"
+                  },
+                  "ID": 5001007,
+                  "LifeTime": {
+                    "FixedValue": {
+                      "IsDynamic": false,
+                      "FixedValue": -1.0
+                    }
+                  },
+                  "Count": {
+                    "FixedValue": {
+                      "IsDynamic": false,
+                      "FixedValue": 2.0
+                    }
+                  }
+                },
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "TargetIsOwner": true,
+                  "InteractID": 1010
+                },
+                {
+                  "$type": "RPG.GameCore.ShowUIPage",
+                  "AssetPath": "UI/Mission/MissionStartHintDialog.prefab",
+                  "UIImageNodes": [],
+                  "UITextNodes": [
+                    {
+                      "TextPath": "Dialog/MissionTitle/Text",
+                      "TextContent": {
+                        "hash": 193957666
+                      }
+                    }
+                  ]
+                },
+                {
+                  "$type": "RPG.GameCore.FinishLevelGraph"
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.FinishLevelGraph"
+                }
+              ],
+              "State": "Open"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

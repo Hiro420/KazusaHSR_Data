@@ -1,0 +1,85 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropStateExecute",
+          "GroupPropID": 300004,
+          "GroupID": 18,
+          "Execute": [
+            {
+              "$type": "RPG.GameCore.PropTriggerAnimState",
+              "GroupPropID": 300004,
+              "GroupID": 18,
+              "AnimStateName": "Maze_Chest_Locked"
+            }
+          ],
+          "State": "Locked"
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_90302_CheckPillar_L"
+        },
+        {
+          "$type": "RPG.GameCore.PropStateExecute",
+          "GroupPropID": 300001,
+          "GroupID": 21,
+          "Execute": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300002,
+              "GroupID": 21,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "GroupPropID": 300003,
+                  "GroupID": 21,
+                  "Execute": [
+                    {
+                      "$type": "RPG.GameCore.PropStateExecute",
+                      "GroupPropID": 300004,
+                      "GroupID": 21,
+                      "Execute": [
+                        {
+                          "$type": "RPG.GameCore.PropStateExecute",
+                          "GroupPropID": 300005,
+                          "GroupID": 21,
+                          "Execute": [
+                            {
+                              "$type": "RPG.GameCore.PropReqInteract",
+                              "GroupPropID": 300004,
+                              "GroupID": 18,
+                              "InteractID": 1200
+                            },
+                            {
+                              "$type": "RPG.GameCore.PropTriggerAnimState",
+                              "GroupPropID": 300004,
+                              "GroupID": 18,
+                              "AnimStateName": "Maze_Chest_Unlocking"
+                            }
+                          ],
+                          "State": "Open"
+                        }
+                      ],
+                      "State": "Open"
+                    }
+                  ],
+                  "State": "Open"
+                }
+              ],
+              "State": "Open"
+            }
+          ],
+          "State": "Open"
+        }
+      ]
+    }
+  ]
+}

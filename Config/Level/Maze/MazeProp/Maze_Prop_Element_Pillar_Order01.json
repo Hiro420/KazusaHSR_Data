@@ -1,0 +1,87 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "TargetIsOwner": true,
+                  "AnimStateName": "Maze_ElementsProp_CanUse"
+                }
+              ],
+              "State": "Open"
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.PropStateExecute",
+          "TargetIsOwner": true,
+          "Execute": [
+            {
+              "$type": "RPG.GameCore.PropTriggerAnimState",
+              "TargetIsOwner": true,
+              "AnimStateName": "Maze_ElementsProp_Used"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByComparePropState",
+            "GroupPropID": 300004,
+            "GroupID": 20,
+            "State": "Open"
+          },
+          "SuccessTaskList": [
+            {
+              "$type": "RPG.GameCore.PropSetupHitBox",
+              "OnBeHit": [
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "GroupPropID": 300001,
+                  "GroupID": 18,
+                  "Execute": [
+                    {
+                      "$type": "RPG.GameCore.PropStateExecute",
+                      "TargetIsOwner": true,
+                      "Execute": [
+                        {
+                          "$type": "RPG.GameCore.PropReqInteract",
+                          "TargetIsOwner": true,
+                          "InteractID": 1010
+                        },
+                        {
+                          "$type": "RPG.GameCore.PropTriggerAnimState",
+                          "TargetIsOwner": true,
+                          "AnimStateName": "Maze_ElementsProp_CanUse"
+                        },
+                        {
+                          "$type": "RPG.GameCore.TriggerCustomString",
+                          "CustomString": {
+                            "Value": "Maze_90302_CheckPillar_01"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "State": "Locked"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+﻿{
+  "States": [
+    {
+      "State": "Locked",
+      "AnimName": "StandBy"
+    },
+    {
+      "AnimName": "StandBy"
+    },
+    {
+      "State": "Open",
+      "Behavior": "DisableTrigger",
+      "AnimName": "Used"
+    }
+  ],
+  "AnimatorStateGroupEvents": [
+    {
+      "States": [
+        {
+          "Name": "Unlock"
+        }
+      ],
+      "OnEnter": [
+        {
+          "$type": "RPG.GameCore.TriggerSound",
+          "SoundName": "Ev_sfx_common_unlock",
+          "OwnerEntityEmitter": false
+        }
+      ]
+    },
+    {
+      "States": [
+        {
+          "Name": "Lock"
+        }
+      ],
+      "OnEnter": [
+        {
+          "$type": "RPG.GameCore.TriggerSound",
+          "SoundName": "Ev_sfx_common_unlock",
+          "OwnerEntityEmitter": false
+        }
+      ]
+    },
+    {
+      "States": [
+        {
+          "Name": "Activing"
+        }
+      ],
+      "OnEnter": [
+        {
+          "$type": "RPG.GameCore.TriggerSound",
+          "SoundName": "Ev_sfx_common_door_open_02",
+          "OwnerEntityEmitter": false
+        }
+      ]
+    },
+    {
+      "States": [
+        {
+          "Name": "Close"
+        }
+      ],
+      "OnEnter": [
+        {
+          "$type": "RPG.GameCore.TriggerSound",
+          "SoundName": "Ev_sfx_common_door_open_02",
+          "OwnerEntityEmitter": false
+        }
+      ]
+    }
+  ]
+}

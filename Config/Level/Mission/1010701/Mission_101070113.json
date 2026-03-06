@@ -1,0 +1,23 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropStateExecute",
+          "GroupPropID": 300003,
+          "GroupID": 8,
+          "Execute": [
+            {
+              "$type": "RPG.GameCore.PropReqInteract",
+              "GroupPropID": 300003,
+              "GroupID": 8,
+              "InteractID": 1200
+            }
+          ],
+          "State": "Locked"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.PropMove",
+              "RelativePath": "Door_A",
+              "Duration": 0.7,
+              "DeltaPosition": {
+                "x": -6.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            {
+              "$type": "RPG.GameCore.PropMove",
+              "RelativePath": "Door_B",
+              "Duration": 0.7,
+              "DeltaPosition": {
+                "x": 6.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            {
+              "$type": "RPG.GameCore.LevelAudioTrigger",
+              "Event": "Ev_sfx_common_inlevel_door_open"
+            }
+          ],
+          "OnTriggerExit": [
+            {
+              "$type": "RPG.GameCore.PropMove",
+              "RelativePath": "Door_A",
+              "Duration": 0.7,
+              "DeltaPosition": {
+                "x": 6.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            {
+              "$type": "RPG.GameCore.PropMove",
+              "RelativePath": "Door_B",
+              "Duration": 0.7,
+              "DeltaPosition": {
+                "x": -6.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            },
+            {
+              "$type": "RPG.GameCore.LevelAudioTrigger",
+              "Event": "Ev_sfx_common_inlevel_door_open"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": []
+}

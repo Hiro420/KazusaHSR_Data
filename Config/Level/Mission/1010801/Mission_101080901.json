@@ -1,0 +1,33 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.DestroyNPC",
+          "GroupID": 11,
+          "GroupNpcID": 400008
+        },
+        {
+          "$type": "RPG.GameCore.DestroyNPC",
+          "GroupID": 11,
+          "GroupNpcID": 400007
+        },
+        {
+          "$type": "RPG.GameCore.DestroyNPC",
+          "GroupID": 11,
+          "GroupNpcID": 400009
+        },
+        {
+          "$type": "RPG.GameCore.DestroyNPC",
+          "GroupID": 11,
+          "GroupNpcID": 400010
+        },
+        {
+          "$type": "RPG.GameCore.FinishStoryMission",
+          "Key": "Mission_101080901"
+        }
+      ]
+    }
+  ]
+}

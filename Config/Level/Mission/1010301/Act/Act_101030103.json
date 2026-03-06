@@ -1,0 +1,438 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": []
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300001,
+          "GroupID": 4,
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "DestroyAfterTriggered": true,
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.EnableStoryMode",
+              "Enable": true
+            },
+            {
+              "$type": "RPG.GameCore.CaptureLocalPlayer",
+              "CharacterUniqueName": "Character_101030103"
+            },
+            {
+              "$type": "RPG.GameCore.ShowTalkUI",
+              "Show": true
+            },
+            {
+              "$type": "RPG.GameCore.LockPlayerControl"
+            },
+            {
+              "$type": "RPG.GameCore.SetCharacterVisiable",
+              "CharType": "LocalPlayer",
+              "CharacterUniqueName": "Character_101030103"
+            },
+            {
+              "$type": "RPG.GameCore.PlayScreenTransfer",
+              "Type": "Black",
+              "Mode": "SwitchOut"
+            },
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "101030103_ScreenMove"
+              }
+            },
+            {
+              "$type": "RPG.GameCore.WaitSecond",
+              "WaitTime": 0.5
+            },
+            {
+              "$type": "RPG.GameCore.PlayScreenTransfer",
+              "Type": "Black",
+              "CustomTime": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Hold",
+          "WaitOwnerOnly": true
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Monster_walk_101030102"
+        },
+        {
+          "$type": "RPG.GameCore.CreateCharacter",
+          "CharacterUniqueName": "NPC_101030102_01",
+          "Catgory": "Default",
+          "AvatarID": "W1_XP_Minion_Ice",
+          "AreaName": "Mission_1010301_temp",
+          "AnchorName": "101030103_NPC"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 6.5
+        },
+        {
+          "$type": "RPG.GameCore.CharacterNavigateTo",
+          "CharacterUniqueName": "NPC_101030102_01",
+          "AreaName": "LevelArea_P20111_F20111001_G3",
+          "AnchorName": "Anchor11",
+          "MotionFlag": "Run"
+        },
+        {
+          "$type": "RPG.GameCore.CharacterNavigateTo",
+          "CharacterUniqueName": "NPC_101030102_01",
+          "AreaName": "LevelArea_P20111_F20111001_G3",
+          "AnchorName": "Anchor37",
+          "MotionFlag": "Run"
+        },
+        {
+          "$type": "RPG.GameCore.CharacterNavigateTo",
+          "CharacterUniqueName": "NPC_101030102_01",
+          "AreaName": "LevelArea_P20111_F20111001_G3",
+          "AnchorName": "Anchor12",
+          "MotionFlag": "Run"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "101030103_ScreenMove"
+        },
+        {
+          "$type": "RPG.GameCore.CreateCharacter",
+          "CharacterUniqueName": "101030103_7thMarch",
+          "Catgory": "Default",
+          "AvatarID": "7thMarch",
+          "AreaName": "Mission_1010301_temp",
+          "AnchorName": "101030103_37"
+        },
+        {
+          "$type": "RPG.GameCore.CreateCharacter",
+          "CharacterUniqueName": "101030103_DanHeng",
+          "Catgory": "Default",
+          "AvatarID": "DanHeng",
+          "AreaName": "Mission_1010301_temp",
+          "AnchorName": "101030103_Dan"
+        },
+        {
+          "$type": "RPG.GameCore.CreateCharacter",
+          "CharacterUniqueName": "101030103_Player",
+          "Catgory": "Default",
+          "AvatarID": "Player",
+          "AreaName": "Mission_1010301_temp",
+          "AnchorName": "101030103_Zhu"
+        },
+        {
+          "$type": "RPG.GameCore.CharacterChangeAnimatorCatgory",
+          "CharacterUniqueName": "101030103_DanHeng",
+          "Catgory": "Performance"
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Mission_1010301_temp",
+          "AnchorName": "Camera_101030103_1",
+          "BlendConfig": {
+            "BlendType": "Cut",
+            "BlendTime": 2.0
+          }
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "101030103_Dialog_1"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 1.0
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "Monster_walk_101030102"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Mission_1010301_temp",
+          "AnchorName": "Camera_101030103_2",
+          "BlendConfig": {
+            "BlendType": "EaseOut",
+            "BlendTime": 3.0
+          }
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 5.0
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "101030103_Player_Faceto"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 2.0
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Mission_1010301_temp",
+          "AnchorName": "Camera_101030103_3",
+          "BlendConfig": {
+            "BlendType": "Cut",
+            "BlendTime": 2.0,
+            "FrameBlendWeightStart": -2.61,
+            "FrameBlendDuration": -7.82
+          }
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 1.0
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "101030103_Dialog_2"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Mission_1010301_temp",
+          "AnchorName": "Camera_101030103_4",
+          "BlendConfig": {
+            "BlendType": "EaseInOut",
+            "BlendTime": 2.0,
+            "FrameBlendWeightStart": -2.61,
+            "FrameBlendDuration": -7.82
+          }
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 2.0
+        },
+        {
+          "$type": "RPG.GameCore.CharacterChangeAnimatorCatgory",
+          "CharacterUniqueName": "101030103_DanHeng"
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "101030103_Dialog_1"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 6.0
+        },
+        {
+          "$type": "RPG.GameCore.PlayBackgroundTalk",
+          "BackgroundTalkList": [
+            {
+              "AutoSkipTime": 2.0,
+              "VoiceID": 201110301
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "101030103_Dialog_2"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 2.0
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "101030103_White"
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "White",
+          "Mode": "SwitchOut"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "101030103_Dialog_1"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 2.0
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "101030103_Dialog_1"
+        },
+        {
+          "$type": "RPG.GameCore.CharacterNavigateTo",
+          "CharacterUniqueName": "101030103_DanHeng",
+          "AreaName": "LevelArea_P20111_F20111001_G3",
+          "AnchorName": "Anchor27",
+          "MotionFlag": "Walk"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "101030103_Dialog_1"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 1.0
+        },
+        {
+          "$type": "RPG.GameCore.PlayBackgroundTalk",
+          "BackgroundTalkList": [
+            {
+              "AutoSkipTime": 2.0,
+              "VoiceID": 201110204
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.CharacterNavigateTo",
+          "CharacterUniqueName": "101030103_7thMarch",
+          "AreaName": "LevelArea_P20111_F20111001_G3",
+          "AnchorName": "Anchor28",
+          "MotionFlag": "Walk"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "101030103_Dialog_1"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 2.0
+        },
+        {
+          "$type": "RPG.GameCore.CharacterNavigateTo",
+          "CharacterUniqueName": "101030103_Player",
+          "AreaName": "LevelArea_P20111_F20111001_G3",
+          "AnchorName": "Anchor29",
+          "MotionFlag": "Walk"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "101030103_Player_Faceto"
+        },
+        {
+          "$type": "RPG.GameCore.CharacterHeadLookAt",
+          "CharacterUniqueName": "101030103_DanHeng",
+          "TargetAreaName": "Mission_1010301_temp",
+          "TargetAnchorName": "MissionMonster_2_3",
+          "Constraint": {}
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.CharacterTriggerAnimState",
+          "CharacterUniqueName": "101030103_DanHeng",
+          "AnimStateName": "Alert01BS",
+          "NormalizedTransitionDuration": 0.1
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "101030103_Player_Faceto"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "101030103_Player_Faceto"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "101030103_Dialog_2"
+        },
+        {
+          "$type": "RPG.GameCore.SwitchCharacterAnchor",
+          "CharacterUniqueName": "101030103_DanHeng",
+          "AreaName": "Mission_1010301_temp",
+          "AnchorName": "101030103_Dan_1"
+        },
+        {
+          "$type": "RPG.GameCore.SwitchCharacterAnchor",
+          "CharacterUniqueName": "101030103_7thMarch",
+          "AreaName": "Mission_1010301_temp",
+          "AnchorName": "101030103_37_1"
+        },
+        {
+          "$type": "RPG.GameCore.SwitchCharacterAnchor",
+          "CharacterUniqueName": "101030103_Player",
+          "AreaName": "Mission_1010301_temp",
+          "AnchorName": "101030103_Zhu_1"
+        },
+        {
+          "$type": "RPG.GameCore.CharacterTriggerAnimState",
+          "CharacterUniqueName": "101030103_DanHeng",
+          "AnimStateName": "Alert01BS",
+          "NormalizedTransitionDuration": 0.1
+        }
+      ]
+    }
+  ]
+}

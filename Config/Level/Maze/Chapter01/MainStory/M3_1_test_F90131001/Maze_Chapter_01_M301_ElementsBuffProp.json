@@ -1,0 +1,131 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300004,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "TargetIsOwner": true,
+                  "GroupPropID": 300004,
+                  "GroupID": 3,
+                  "AnimStateName": "Maze_ElementsProp_Used"
+                }
+              ],
+              "State": "Open"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300004,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "TargetIsOwner": true,
+                  "GroupPropID": 300004,
+                  "GroupID": 3,
+                  "AnimStateName": "Maze_ElementsProp_CanUse"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupHitBox",
+          "OnBeHit": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300004,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "TargetIsOwner": true,
+                  "InteractID": 201311102
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "TargetIsOwner": true,
+                  "GroupPropID": 300004,
+                  "GroupID": 3,
+                  "AnimStateName": "Maze_ElementsProp_Used"
+                },
+                {
+                  "$type": "RPG.GameCore.TriggerCustomString",
+                  "CustomString": {
+                    "Value": "ElementsBuff_Get"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "ElementsBuff_Get",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.AddMazeBuff",
+          "TaskEnabled": false,
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetFetchAdvTeamMembers"
+          },
+          "ID": 2000101,
+          "LifeTime": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 1000.0
+            }
+          },
+          "Count": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 100.0
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.TriggerEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetFetchAdvTeamMembers"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Scene/Eff_PoisonMark.prefab",
+          "AttachPoint": "Origin"
+        },
+        {
+          "$type": "RPG.GameCore.PropTriggerEffectList",
+          "EffectList": [
+            {
+              "EffectPath": "Effects/Eff_Prefab/Eff_Scene/Eff_Avatar_Getbuff.prefab",
+              "AttachPoint": "EffectPoint",
+              "PositionOffset": {
+                "x": 0.0,
+                "y": -0.7,
+                "z": 0.0
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

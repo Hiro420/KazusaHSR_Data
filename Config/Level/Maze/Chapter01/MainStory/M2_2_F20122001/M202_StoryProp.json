@@ -1,0 +1,70 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropStateExecute",
+          "TargetIsOwner": true,
+          "Execute": [
+            {
+              "$type": "RPG.GameCore.WaitSecond",
+              "WaitTime": 1.0
+            },
+            {
+              "$type": "RPG.GameCore.PropEnableCollider",
+              "SpecifiedRelativePaths": []
+            }
+          ],
+          "State": "Open"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "TargetIsOwner": true,
+          "ButtonText": {
+            "hash": 1239593898
+          },
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.PropReqInteract",
+              "TargetIsOwner": true,
+              "InteractID": 1010
+            },
+            {
+              "$type": "RPG.GameCore.PropEnableCollider",
+              "SpecifiedRelativePaths": []
+            },
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "Mission_101060111_TriggerStory"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Mission_101060111_TriggerStory"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerStory",
+          "StoryID": 101060123
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "Mission_101060111_FinishMission"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.TransitEnvProfile",
+              "Path": {
+                "Value": "Stages/Outputs/Chapter01/EnviroProfile/Chap01_ChallengeMode_03.enviroProfile.asset.enviroProfile.asset"
+              },
+              "Duration": 3.0
+            }
+          ],
+          "OnTriggerExit": [
+            {
+              "$type": "RPG.GameCore.TransitEnvProfile",
+              "Path": {
+                "Value": "Stages/Outputs/Chapter01/EnviroProfile/Chap01_Maze_01.enviroProfile.asset"
+              },
+              "Duration": 3.0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": []
+}

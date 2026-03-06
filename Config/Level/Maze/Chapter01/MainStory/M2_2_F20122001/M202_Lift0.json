@@ -1,0 +1,40 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropTriggerAnimState",
+          "TargetIsOwner": true,
+          "AnimStateName": "Temp_M202_Lift0_position1"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "TargetTypes": [],
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.PropTriggerAnimState",
+              "TargetIsOwner": true,
+              "AnimStateName": "Temp_M202_Lift0_MoveBack_position1"
+            }
+          ],
+          "OnTriggerExit": [
+            {
+              "$type": "RPG.GameCore.WaitSecond",
+              "WaitTime": 10.0
+            },
+            {
+              "$type": "RPG.GameCore.PropTriggerAnimState",
+              "TargetIsOwner": true,
+              "AnimStateName": "Temp_M202_Lift0_MoveTo_position1"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

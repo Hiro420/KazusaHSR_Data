@@ -1,0 +1,27 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "TargetTypes": [],
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.TriggerSound",
+              "SoundName": "Ev_sfx_common_mechan_loop_03",
+              "OwnerEntityEmitter": false
+            }
+          ],
+          "OnTriggerExit": [
+            {
+              "$type": "RPG.GameCore.TriggerSound",
+              "SoundName": "Ev_loop_effect_all_stop",
+              "OwnerEntityEmitter": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

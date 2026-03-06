@@ -1,0 +1,166 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PlayMissionTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 801320235,
+              "ProtectTime": 0.8
+            },
+            {
+              "VoiceID": 801320236,
+              "ProtectTime": 0.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300001,
+          "GroupID": 34,
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "DestroyAfterTriggered": true,
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.LevelStoryInitialize",
+              "EntityVisiableList": [
+                {}
+              ],
+              "CreateCharacterList": [
+                {
+                  "CharacterUniqueName": "PlayerBoy_201100207",
+                  "AvatarID": "PlayerBoy_00",
+                  "AreaName": "LevelArea_P20131_F20131001_G34",
+                  "AnchorName": "Anchor1"
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.PlaySimpleTalk",
+              "SimpleTalkList": [
+                {
+                  "VoiceID": 801320288,
+                  "ProtectTime": 1.0
+                }
+              ],
+              "BlackMask": true
+            },
+            {
+              "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+            },
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "BlackScreenTalk"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "BlackScreenTalk"
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC",
+          "GroupID": 34,
+          "GroupNpcID": 400001
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC",
+          "GroupID": 34,
+          "GroupNpcID": 400002
+        },
+        {
+          "$type": "RPG.GameCore.DestroyProp",
+          "ID": 300002,
+          "GroupID": 34
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "BlackScreenEnd1"
+          }
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "BlackScreenEnd1"
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 801320237,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 801320239,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 801320240,
+              "ProtectTime": 0.8
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "Mode": "SwitchOut",
+          "CustomTime": 0.25
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.25
+        },
+        {
+          "$type": "RPG.GameCore.EndStory"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitStoryEnd"
+        },
+        {
+          "$type": "RPG.GameCore.DestroyNPC",
+          "NpcID": 101080108,
+          "GroupID": 34,
+          "GroupNpcID": 400001
+        },
+        {
+          "$type": "RPG.GameCore.DestroyNPC",
+          "NpcID": 101080108,
+          "GroupID": 34,
+          "GroupNpcID": 400002
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "CustomTime": 0.25
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    }
+  ]
+}

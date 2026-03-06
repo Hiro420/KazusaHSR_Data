@@ -1,0 +1,68 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropStateExecute",
+          "GroupPropID": 300003,
+          "GroupID": 18,
+          "Execute": [
+            {
+              "$type": "RPG.GameCore.PropTriggerAnimState",
+              "GroupPropID": 300003,
+              "GroupID": 18,
+              "AnimStateName": "Maze_Chest_Locked"
+            }
+          ],
+          "State": "Locked"
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_90302_CheckPillar_Linear"
+        },
+        {
+          "$type": "RPG.GameCore.PropStateExecute",
+          "GroupPropID": 300001,
+          "GroupID": 20,
+          "Execute": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300002,
+              "GroupID": 20,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "GroupPropID": 300003,
+                  "GroupID": 20,
+                  "Execute": [
+                    {
+                      "$type": "RPG.GameCore.PropReqInteract",
+                      "GroupPropID": 300003,
+                      "GroupID": 18,
+                      "InteractID": 1200
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropTriggerAnimState",
+                      "GroupPropID": 300003,
+                      "GroupID": 18,
+                      "AnimStateName": "Maze_Chest_Unlocking"
+                    }
+                  ],
+                  "State": "Open"
+                }
+              ],
+              "State": "Open"
+            }
+          ],
+          "State": "Open"
+        }
+      ]
+    }
+  ]
+}

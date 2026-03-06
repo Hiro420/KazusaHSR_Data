@@ -1,0 +1,205 @@
+﻿{
+  "PostureConfigList": [
+    {
+      "PostureType": "Excellent",
+      "FadeInAnimClipName": "MazeUI_EncounterHint_Adventage_FadeIn",
+      "FadeOutAnimClipName": "MazeUI_EncounterHint_FadeOut"
+    },
+    {
+      "FadeInAnimClipName": "MazeUI_EncounterHint_Balance_FadeIn",
+      "FadeOutAnimClipName": "MazeUI_EncounterHint_FadeOut"
+    },
+    {
+      "PostureType": "Bad",
+      "FadeInAnimClipName": "MazeUI_EncounterHint_DisAdventage_FadeIn",
+      "FadeOutAnimClipName": "MazeUI_EncounterHint_FadeOut"
+    }
+  ],
+  "PlayerLockRange": {
+    "AttackFanAngle": 360.0,
+    "CameraOriginWeight": 0.0,
+    "MonsterWeight": 0.9
+  },
+  "BattleAffectRange": {
+    "MaxWaveCount": 3,
+    "Radius": 10.0,
+    "MaxDiffY": 1.0
+  },
+  "MazeBattleTransition": {
+    "OnBeforeTriggerBattle": [
+      {
+        "$type": "RPG.GameCore.LockPlayerControl"
+      },
+      {
+        "$type": "RPG.GameCore.GlobalTimeSlow",
+        "TimeScale": {
+          "FixedValue": {
+            "IsDynamic": false,
+            "FixedValue": 0.1
+          }
+        },
+        "UnscaledDuration": {
+          "FixedValue": {
+            "IsDynamic": false,
+            "FixedValue": 10.0
+          }
+        }
+      },
+      {
+        "$type": "RPG.GameCore.EnableFreelookCameraBattleTransitionMode",
+        "Enable": true,
+        "IgnoreAttackerDistance": 2.0
+      },
+      {
+        "$type": "RPG.GameCore.RadialBlurCurveEffect",
+        "BlurRadius": 1.0,
+        "Iteration": 4,
+        "BlurStart": 0.002,
+        "BlurFeather": 0.001,
+        "Duration": 1.5,
+        "CurveName": "BattleTransitionBlurCurve"
+      },
+      {
+        "$type": "RPG.GameCore.LensDistortionCurveEffect",
+        "XMultiplier": 2.0,
+        "YMultiplier": 2.0,
+        "Intensity": 2.0,
+        "Scale": 4.0,
+        "XCurvePath": "Camera/BlendCurve/Blend_SlowToFast.asset",
+        "YCurvePath": "Camera/BlendCurve/Blend_SlowToFast.asset",
+        "IntensityCurvePath": "Camera/BlendCurve/Blend_SlowToFast.asset",
+        "ScaleCurvePath": "Camera/BlendCurve/Blend_SlowToFast.asset",
+        "Duration": 1.5
+      },
+      {
+        "$type": "RPG.GameCore.WaitSecond",
+        "WaitTime": 0.85
+      },
+      {
+        "$type": "RPG.GameCore.TriggerEffect",
+        "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Common/Eff_Common_MazzCameraTransition.prefab"
+      }
+    ],
+    "OnBattleStart": [],
+    "OnBattleFinish": [
+      {
+        "$type": "RPG.GameCore.EnableFreelookCameraBattleTransitionMode",
+        "IsBattleToMaze": true,
+        "Enable": true
+      }
+    ],
+    "OnBeforeCocoonBattle": [
+      {
+        "$type": "RPG.GameCore.LockPlayerControl"
+      },
+      {
+        "$type": "RPG.GameCore.GlobalTimeSlow",
+        "TimeScale": {
+          "FixedValue": {
+            "IsDynamic": false,
+            "FixedValue": 0.1
+          }
+        },
+        "UnscaledDuration": {
+          "FixedValue": {
+            "IsDynamic": false,
+            "FixedValue": 10.0
+          }
+        }
+      },
+      {
+        "$type": "RPG.GameCore.RadialBlurCurveEffect",
+        "BlurRadius": 1.0,
+        "Iteration": 4,
+        "BlurStart": 0.002,
+        "BlurFeather": 0.001,
+        "Duration": 1.5,
+        "CurveName": "BattleTransitionBlurCurve"
+      },
+      {
+        "$type": "RPG.GameCore.LensDistortionCurveEffect",
+        "XMultiplier": 2.0,
+        "YMultiplier": 2.0,
+        "Intensity": 2.0,
+        "Scale": 2.0,
+        "XCurvePath": "Camera/BlendCurve/Blend_SlowToFast.asset",
+        "YCurvePath": "Camera/BlendCurve/Blend_SlowToFast.asset",
+        "IntensityCurvePath": "Camera/BlendCurve/Blend_SlowToFast.asset",
+        "ScaleCurvePath": "Camera/BlendCurve/Blend_SlowToFast.asset",
+        "Duration": 1.2
+      },
+      {
+        "$type": "RPG.GameCore.WaitSecond",
+        "WaitTime": 0.85
+      },
+      {
+        "$type": "RPG.GameCore.TriggerEffect",
+        "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Common/Eff_Common_MazzCameraTransition.prefab"
+      }
+    ]
+  },
+  "MazeBattleTransitionClient": {
+    "MazeToBattleTransitFadeInDuration": 2.0,
+    "MazeToBattleTransitFadeOutDelayFrameCount": 3,
+    "MazeToBattleTransitFadeOutDuration": 0.5,
+    "BattleToMazeTransitFadeInDuration": 0.2,
+    "BattleToMazeTransitFadeOutDuration": 1.0,
+    "ScreenCrackEffectPath": "Effects/Eff_Prefab/Eff_Common/Eff_ScreenCrack_01.prefab"
+  },
+  "MazeCharacterMove": {
+    "OnStartRushMove": [
+      {
+        "$type": "RPG.GameCore.TriggerEffect",
+        "TargetType": {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "Caster"
+        },
+        "EffectPath": "Effects/Eff_Prefab/Eff_Common/Eff_Common_SpeedLine_01.prefab"
+      },
+      {
+        "$type": "RPG.GameCore.RadialBlurCurveEffect",
+        "Iteration": 2,
+        "BlurStart": 0.02,
+        "BlurFeather": 0.124,
+        "Duration": 0.7,
+        "CurveName": "DashBlurCurve"
+      }
+    ],
+    "OnEndRushMove": [
+      {
+        "$type": "RPG.GameCore.RemoveEffect",
+        "TargetType": {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "Caster"
+        },
+        "EffectPath": "Effects/Eff_Prefab/Eff_Common/Eff_Common_SpeedLine_01.prefab"
+      }
+    ]
+  },
+  "IsOpenPlayerRush": true,
+  "RogueConfig": {
+    "RogueFloorID": 90001,
+    "RogueStartGroupID": 1,
+    "RogueStartPlayerAnchorID": 1,
+    "RogueRoomGenerate": [
+      1,
+      3,
+      4
+    ]
+  },
+  "BuffUICountDown": 4.0,
+  "UnstableToStepOnPropTypes": [
+    "PROP_PLATFORM"
+  ],
+  "UnableToInteractPropTypesInDanger": [
+    "PROP_ORDINARY",
+    "PROP_SUMMON",
+    "PROP_DESTRUCT",
+    "PROP_TREASURE_CHEST",
+    "PROP_MATERIAL_ZONE",
+    "PROP_COCOON",
+    "PROP_MAPPINGINFO",
+    "PROP_PUZZLES"
+  ],
+  "IsShowSKillPanelInTown": true
+}

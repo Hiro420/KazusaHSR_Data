@@ -1,0 +1,43 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": []
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitUINodeOpen",
+          "TaskEnabled": false,
+          "Path": "Page/MazeMainPage(Clone)/RightButtomArea/MazeSkillPanel"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "TaskEnabled": false,
+          "Nodes": [
+            "Page/MazeMainPage(Clone)/RightButtomArea/MazeSkillPanel/MazeSkillBtn",
+            "Page/MazeMainPage(Clone)/RightButtomArea/MazeSkillPanel/MpDetailPanel"
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitUINodeOpen",
+          "TaskEnabled": false,
+          "Path": "Page/MazeMainPage(Clone)/RightButtomArea/PcMazeSkillPanel"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "TaskEnabled": false,
+          "Nodes": [
+            "Page/MazeMainPage(Clone)/RightButtomArea/PcMazeSkillPanel/MazeSkillBtn",
+            "Page/MazeMainPage(Clone)/RightButtomArea/PcMazeSkillPanel/MpDetailPanel"
+          ]
+        }
+      ]
+    }
+  ]
+}

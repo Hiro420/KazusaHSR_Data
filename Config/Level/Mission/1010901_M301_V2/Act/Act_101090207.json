@@ -1,0 +1,139 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.LockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI",
+          "Show": true
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode",
+          "Enable": true
+        },
+        {
+          "$type": "RPG.GameCore.LevelStoryInitialize",
+          "EntityVisiableList": [],
+          "CreateCharacterList": [
+            {
+              "CharacterUniqueName": "Soldier01",
+              "AvatarID": "NPC_W1_Soldier01_00",
+              "AreaName": "Mission_9010901",
+              "AnchorName": "0207_NPCAnchor1"
+            },
+            {
+              "CharacterUniqueName": "Soldier02",
+              "AvatarID": "NPC_W1_Soldier01_00",
+              "AreaName": "Mission_9010901",
+              "AnchorName": "0207_NPCAnchor2"
+            },
+            {
+              "CharacterUniqueName": "Soldier03",
+              "AvatarID": "NPC_W1_Soldier01_00",
+              "AreaName": "Mission_9010901",
+              "AnchorName": "0207_NPCAnchor3"
+            },
+            {
+              "CharacterUniqueName": "Soldier04",
+              "AvatarID": "NPC_W1_Soldier01_00",
+              "AreaName": "Mission_9010901",
+              "AnchorName": "0207_NPCAnchor4"
+            }
+          ],
+          "HideEffect": false,
+          "HideProp": true
+        },
+        {
+          "$type": "RPG.GameCore.CaptureLocalPlayer",
+          "CharacterUniqueName": "LocalPlayer"
+        },
+        {
+          "$type": "RPG.GameCore.CaptureNPCToCharacter",
+          "GroupID": 15,
+          "GroupNpcID": 400001,
+          "CharacterUniqueName": "Several"
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "Mode": "SwitchOut",
+          "CustomTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.SwitchCharacterAnchor",
+          "CharacterUniqueName": "Several",
+          "AreaName": "Mission_9010901",
+          "AnchorName": "0207_NPCAnchor5"
+        },
+        {
+          "$type": "RPG.GameCore.SwitchCharacterAnchor",
+          "CharacterUniqueName": "LocalPlayer",
+          "AreaName": "Mission_9010901",
+          "AnchorName": "0207_NPCAnchor6"
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Mission_9010901",
+          "AnchorName": "0207_Cam",
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "EaseInOut"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.CharacterTriggerAnimState",
+          "CharacterUniqueName": "Soldier01",
+          "AnimStateName": "Monster_W1_Soldier01_Ani_Maze_DetectStandBy",
+          "NormalizedTransitionDuration": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.CharacterTriggerAnimState",
+          "CharacterUniqueName": "Soldier02",
+          "AnimStateName": "Monster_W1_Soldier01_Ani_Maze_DetectStandBy",
+          "NormalizedTransitionDuration": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.CharacterTriggerAnimState",
+          "CharacterUniqueName": "Soldier03",
+          "AnimStateName": "Monster_W1_Soldier01_Ani_Maze_DetectStandBy",
+          "NormalizedTransitionDuration": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.CharacterTriggerAnimState",
+          "CharacterUniqueName": "Soldier04",
+          "AnimStateName": "Monster_W1_Soldier01_Ani_Maze_DetectStandBy",
+          "NormalizedTransitionDuration": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "CustomTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201314701,
+              "ProtectTime": 2.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "101090207_Battle"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    }
+  ]
+}

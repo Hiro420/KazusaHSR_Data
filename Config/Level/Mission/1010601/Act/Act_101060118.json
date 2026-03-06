@@ -1,0 +1,78 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.LevelStoryInitialize"
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode",
+          "Enable": true
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201221101
+            },
+            {
+              "VoiceID": 201221102
+            },
+            {
+              "VoiceID": 201221103
+            },
+            {
+              "VoiceID": 201221104
+            },
+            {
+              "VoiceID": 201221105
+            },
+            {
+              "VoiceID": 201221106
+            },
+            {
+              "VoiceID": 201221107
+            },
+            {
+              "VoiceID": 201221108
+            },
+            {
+              "VoiceID": 201221109
+            },
+            {
+              "VoiceID": 201221110
+            },
+            {
+              "VoiceID": 201221111
+            }
+          ],
+          "BlackMask": true
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.EndStory"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitStoryEnd"
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Mode": "SwitchOut"
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode"
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300016,
+          "GroupID": 4,
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.ByTriggeredInfo",
+              "OnSuccess": [],
+              "OnFailed": [
+                {
+                  "$type": "RPG.GameCore.CaptureLocalPlayer",
+                  "CharacterUniqueName": "Character_101030106"
+                },
+                {
+                  "$type": "RPG.GameCore.ShowTalkUI",
+                  "Show": true
+                },
+                {
+                  "$type": "RPG.GameCore.LockPlayerControl"
+                },
+                {
+                  "$type": "RPG.GameCore.PlayScreenTransfer",
+                  "Type": "Black",
+                  "Mode": "SwitchOut",
+                  "CustomTime": 1.0
+                },
+                {
+                  "$type": "RPG.GameCore.SwitchCharacterAnchor",
+                  "CharacterUniqueName": "Character_101030106",
+                  "AreaName": "Mission_1010301_temp",
+                  "AnchorName": "101030106_PlayerPoint"
+                },
+                {
+                  "$type": "RPG.GameCore.WaitSecond",
+                  "WaitTime": 0.5
+                },
+                {
+                  "$type": "RPG.GameCore.ReleaseCharacter",
+                  "CharacterUniqueName": "Character_101030106"
+                },
+                {
+                  "$type": "RPG.GameCore.UnLockPlayerControl"
+                },
+                {
+                  "$type": "RPG.GameCore.PlayScreenTransfer",
+                  "Type": "Black",
+                  "CustomTime": 1.0
+                },
+                {
+                  "$type": "RPG.GameCore.LockPlayerControl"
+                },
+                {
+                  "$type": "RPG.GameCore.PlaySimpleTalk",
+                  "SimpleTalkList": [
+                    {
+                      "VoiceID": 201110601
+                    }
+                  ]
+                },
+                {
+                  "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+                },
+                {
+                  "$type": "RPG.GameCore.UnLockPlayerControl"
+                },
+                {
+                  "$type": "RPG.GameCore.ShowTalkUI"
+                },
+                {
+                  "$type": "RPG.GameCore.FinishLevelGraph"
+                }
+              ],
+              "Key": "MazeSave_CompleteMission_101030106"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": []
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Hold",
+          "WaitOwnerOnly": true
+        }
+      ]
+    }
+  ]
+}

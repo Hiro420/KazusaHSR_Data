@@ -1,0 +1,57 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "PropTalk_101070105"
+        },
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300004,
+              "GroupID": 4,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.TriggerCustomString",
+                  "CustomString": {
+                    "Value": "PropTalk_101070105_01"
+                  }
+                },
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "GroupPropID": 300004,
+                  "GroupID": 4,
+                  "InteractID": 1210
+                }
+              ],
+              "State": "Locked"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300004,
+              "GroupID": 4,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.TriggerCustomString",
+                  "CustomString": {
+                    "Value": "PropTalk_101070105_02"
+                  }
+                },
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "GroupPropID": 300004,
+                  "GroupID": 4,
+                  "InteractID": 1010
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

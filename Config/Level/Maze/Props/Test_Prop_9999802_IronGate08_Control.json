@@ -1,0 +1,50 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "TargetIsOwner": true,
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.PropTriggerAnimState",
+              "TargetIsOwner": true,
+              "AnimStateName": "Activing"
+            },
+            {
+              "$type": "RPG.GameCore.WaitSecond",
+              "WaitTime": 1.5
+            },
+            {
+              "$type": "RPG.GameCore.PropTriggerAnimState",
+              "GroupPropID": 300012,
+              "GroupID": 3,
+              "AnimStateName": "UpUnlock_DownLocked"
+            },
+            {
+              "$type": "RPG.GameCore.WaitSecond",
+              "WaitTime": 2.0
+            },
+            {
+              "$type": "RPG.GameCore.PropTriggerAnimState",
+              "GroupPropID": 300012,
+              "GroupID": 3,
+              "AnimStateName": "UpLocked_DownUnlock"
+            },
+            {
+              "$type": "RPG.GameCore.WaitSecond",
+              "WaitTime": 2.0
+            },
+            {
+              "$type": "RPG.GameCore.PropTriggerAnimState",
+              "GroupPropID": 300012,
+              "GroupID": 3,
+              "AnimStateName": "Open"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

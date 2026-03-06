@@ -1,0 +1,34 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "TargetIsOwner": true,
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "99998_CreateTrialPlayer"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "99998_CreateTrialPlayer",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.CreateTrialPlayer",
+          "TrialPlayerId": 9046
+        }
+      ]
+    }
+  ]
+}

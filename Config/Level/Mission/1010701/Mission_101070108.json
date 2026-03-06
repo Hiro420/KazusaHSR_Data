@@ -1,0 +1,122 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "TalkWin_101070105"
+        },
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Trigger_101070105_1st"
+        },
+        {
+          "$type": "RPG.GameCore.PlayMissionTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201232901
+            },
+            {
+              "VoiceID": 201232902
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.FinishStoryMission",
+          "Key": "Mission_101070108"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "BattleWin_101070105"
+        },
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Trigger_101070105_1st"
+        },
+        {
+          "$type": "RPG.GameCore.PlayMissionTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201233001
+            },
+            {
+              "VoiceID": 201233002
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.FinishStoryMission",
+          "Key": "Mission_101070108"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "TalkWin_101070105"
+        },
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Trigger_101070105_2nd"
+        },
+        {
+          "$type": "RPG.GameCore.PlayMissionTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201233301
+            },
+            {
+              "VoiceID": 201233302
+            },
+            {
+              "VoiceID": 201233303
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.FinishStoryMission",
+          "Key": "Mission_101070108"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "BattleWin_101070105"
+        },
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Trigger_101070105_2nd"
+        },
+        {
+          "$type": "RPG.GameCore.PlayMissionTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201233401
+            },
+            {
+              "VoiceID": 201233402
+            },
+            {
+              "VoiceID": 201233403
+            },
+            {
+              "VoiceID": 201233404
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.FinishStoryMission",
+          "Key": "Mission_101070108"
+        }
+      ]
+    }
+  ]
+}

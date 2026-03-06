@@ -1,0 +1,63 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300003,
+          "GroupID": 12,
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "DestroyAfterTriggered": true,
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "Elev_101070412"
+              }
+            },
+            {
+              "$type": "RPG.GameCore.TriggerStory",
+              "StoryID": 101070401
+            },
+            {
+              "$type": "RPG.GameCore.PlayScreenTransfer",
+              "Type": "Black",
+              "CustomTime": 0.25
+            },
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "Life_101070402"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Life_101070402",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.PropStateExecute",
+          "GroupPropID": 300011,
+          "GroupID": 8,
+          "Execute": [
+            {
+              "$type": "RPG.GameCore.PropReqInteract",
+              "GroupPropID": 300011,
+              "GroupID": 8,
+              "InteractID": 1200
+            }
+          ],
+          "State": "Locked"
+        }
+      ]
+    }
+  ]
+}

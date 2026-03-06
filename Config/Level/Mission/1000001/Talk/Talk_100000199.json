@@ -1,0 +1,267 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": []
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.CaptureNPCToCharacter",
+          "GroupID": 3,
+          "GroupNpcID": 400001,
+          "CharacterUniqueName": "Pam_001"
+        },
+        {
+          "$type": "RPG.GameCore.CaptureLocalPlayer",
+          "CharacterUniqueName": "Player"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Hold"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.LockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.CharacterSteerTo",
+          "CharacterUniqueName": "Pam_001",
+          "TargetCharacterUniqueName": "Player"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI",
+          "Show": true
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 100009901,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.ReleaseCharacter",
+          "CharacterUniqueName": "Player"
+        },
+        {
+          "$type": "RPG.GameCore.VerifyInteractingEntity",
+          "GroupID": 3,
+          "ConfigID": 400001
+        },
+        {
+          "$type": "RPG.GameCore.PlayOptionTalk",
+          "OptionList": [
+            {
+              "OptionTextmapID": {
+                "hash": -971186990
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/HealHPIcon.png",
+              "TriggerCustomString": "VoiceTalk_100009902"
+            },
+            {
+              "OptionTextmapID": {
+                "hash": -971186991
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ShopIcon.png",
+              "TriggerCustomString": "VoiceTalk_100009903"
+            },
+            {
+              "OptionTextmapID": {
+                "hash": -971186996
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/LevelIcon.png",
+              "TriggerCustomString": "VoiceTalk_100009904"
+            },
+            {
+              "OptionTextmapID": {
+                "hash": -971186997
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/Synthesis.png",
+              "TriggerCustomString": "VoiceTalk_100009905"
+            },
+            {
+              "OptionTextmapID": {
+                "hash": -971186994
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatOutIcon.png",
+              "TriggerCustomString": "VoiceTalk_100009906"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "VoiceTalk_100009902"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.ReleaseCharacter",
+          "CharacterUniqueName": "Pam_001"
+        },
+        {
+          "$type": "RPG.GameCore.ConfirmCheckpointRecover",
+          "OnCancel": [
+            {
+              "$type": "RPG.GameCore.FinishLevelGraph"
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.RecoverAllCharactersHP"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetFetchAdvLocalPlayer"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Common/Eff_Common_Heal.prefab"
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "VoiceTalk_100009903"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.ReleaseCharacter",
+          "CharacterUniqueName": "Pam_001"
+        },
+        {
+          "$type": "RPG.GameCore.ShowShop",
+          "ShopType": 2
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "VoiceTalk_100009904"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "401990102_over"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.CharacterTriggerAnimState",
+          "CharacterUniqueName": "Pam_001",
+          "AnimStateName": "HandOver01BS",
+          "StoryAvatarID": "Seele_00",
+          "StartMotion": "Nod01",
+          "StoryMotionID": 1102001
+        },
+        {
+          "$type": "RPG.GameCore.ShowUI",
+          "Name": "Ui.LevelReward.LevelRewardPage",
+          "WaitForExit": true
+        },
+        {
+          "$type": "RPG.GameCore.CharacterTriggerAnimState",
+          "CharacterUniqueName": "Pam_001",
+          "AnimStateName": "HandOver01AS",
+          "StoryAvatarID": "Seele_00",
+          "StartMotion": "Nod01",
+          "StoryMotionID": 1102001
+        },
+        {
+          "$type": "RPG.GameCore.ReleaseCharacter",
+          "CharacterUniqueName": "Pam_001"
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "VoiceTalk_100009905"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.ReleaseCharacter",
+          "CharacterUniqueName": "Pam_001"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUI",
+          "Name": "Ui.ItemCompose.ItemComposePage",
+          "WaitForExit": true
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "VoiceTalk_100009906"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.ReleaseCharacter",
+          "CharacterUniqueName": "Pam_001"
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    }
+  ]
+}

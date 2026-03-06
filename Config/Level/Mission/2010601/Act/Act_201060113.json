@@ -1,0 +1,103 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "Mode": "SwitchOut",
+          "CustomTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.LevelStoryInitialize",
+          "EntityVisiableList": [
+            {},
+            {
+              "CharType": "NPC",
+              "GroupID": 8,
+              "GroupNPCID": 400001
+            }
+          ],
+          "CreateCharacterList": [
+            {
+              "CharacterUniqueName": "201060113_Hook",
+              "AvatarID": "Hook_00",
+              "AreaName": "Mission_1010601",
+              "AnchorName": "201060113_Hook_Create"
+            }
+          ],
+          "HideEffect": false,
+          "HideProp": true
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode",
+          "Enable": true
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "CustomTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.CharacterNavigateTo",
+          "CharacterUniqueName": "201060113_Hook",
+          "AreaName": "Mission_1010601",
+          "AnchorName": "201060113_Hook",
+          "MotionFlag": "Run"
+        },
+        {
+          "$type": "RPG.GameCore.CharacterTriggerAnimState",
+          "CharacterUniqueName": "201060113_Hook",
+          "AnimStateName": "Attack_1",
+          "StoryAvatarID": "Seele_00",
+          "StartMotion": "Nod01",
+          "StoryMotionID": 1102001
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 1.0
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "201060113_Destroy"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "Mode": "SwitchOut",
+          "CustomTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.EndStory"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitStoryEnd"
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "CustomTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.SetNpcStatus",
+          "GroupID": 8,
+          "GroupNpcID": 400001,
+          "Status": "FollowPlayer"
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode"
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    }
+  ]
+}

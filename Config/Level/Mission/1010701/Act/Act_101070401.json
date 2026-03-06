@@ -1,0 +1,159 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "Mode": "SwitchOut",
+          "CustomTime": 0.25
+        },
+        {
+          "$type": "RPG.GameCore.LevelStoryInitialize",
+          "AreaPrefabPath": "Level/Mission/1010701/101070401_temp.prefab",
+          "EntityVisiableList": [
+            {}
+          ],
+          "CreateCharacterList": [
+            {
+              "CharacterUniqueName": "Player_101070401",
+              "AvatarID": "PlayerBoy_00",
+              "AreaName": "LevelArea_P20123_F20123001_G12",
+              "AnchorName": "Anchor1"
+            },
+            {
+              "CharacterUniqueName": "Klara_101070401",
+              "AvatarID": "Klara_00",
+              "AreaName": "LevelArea_P20123_F20123001_G12",
+              "AnchorName": "Anchor2"
+            }
+          ],
+          "HideProp": true
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "101070401_temp",
+          "AnchorName": "Camera_101070401_01",
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "Cut"
+          },
+          "VCameraDitherMaxDistance": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "CustomTime": 0.25
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "Cam_101070401"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "Look_101070401"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201235401,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201235402,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201235403,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201235404,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201235405,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "Mode": "SwitchOut",
+          "CustomTime": 0.25
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "101070401_temp",
+          "AnchorName": "Camera_101070401_02",
+          "IsActive": false,
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "Cut"
+          },
+          "VCameraDitherMaxDistance": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.EndStory"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Look_101070401",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.CharacterHeadLookAt",
+          "CharacterUniqueName": "Klara_101070401",
+          "TargetAreaName": "LevelArea_P20123_F20123001_G12",
+          "TargetAnchorName": "Anchor3",
+          "Constraint": {},
+          "WaitUntilFinish": true
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Cam_101070401",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "101070401_temp",
+          "AnchorName": "Camera_101070401_02",
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "EaseIn",
+            "BlendTime": 20.0
+          },
+          "VCameraDitherMaxDistance": 0.0
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitStoryEnd"
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    }
+  ]
+}

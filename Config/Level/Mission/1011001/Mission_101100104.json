@@ -1,0 +1,105 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropStateChangeListenerConfig",
+          "GroupID": 6,
+          "GroupPropID": 300009,
+          "FromState": "ChestClosed",
+          "ToState": "ChestUsed",
+          "OnChange": [
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "Maze_Chap01_M302_TriggerReadBook190163"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Chap01_M302_TriggerReadBook190163",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.LockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 2.5
+        },
+        {
+          "$type": "RPG.GameCore.ShowReading",
+          "BookID": 190163
+        },
+        {
+          "$type": "RPG.GameCore.TriggerStory",
+          "StoryID": 101100116
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300006,
+          "GroupID": 5,
+          "TargetTypes": [],
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300006,
+              "GroupID": 5,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.TriggerStory",
+                  "StoryID": 101100115
+                },
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "GroupPropID": 300006,
+                  "GroupID": 5,
+                  "InteractID": 1010
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300007,
+          "GroupID": 5,
+          "TargetTypes": [],
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300007,
+              "GroupID": 5,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "GroupPropID": 300007,
+                  "GroupID": 5,
+                  "InteractID": 1010
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

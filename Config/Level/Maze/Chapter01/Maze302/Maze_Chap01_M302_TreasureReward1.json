@@ -1,0 +1,149 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300003,
+              "GroupID": 19,
+              "Execute": [],
+              "State": "ChestLocked"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300003,
+              "GroupID": 19,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropSetVisibility",
+                  "ID": 300001,
+                  "GroupID": 20,
+                  "SpecifiedRelativePaths": []
+                }
+              ],
+              "State": "ChestClosed"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300003,
+              "GroupID": 19,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropSetVisibility",
+                  "ID": 300001,
+                  "GroupID": 20,
+                  "SpecifiedRelativePaths": []
+                },
+                {
+                  "$type": "RPG.GameCore.DestroyProp"
+                },
+                {
+                  "$type": "RPG.GameCore.FinishLevelGraph"
+                }
+              ],
+              "State": "ChestUsed"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropStateChangeListenerConfig",
+          "FromState": "ChestLocked",
+          "ToState": "ChestClosed",
+          "OnChange": [
+            {
+              "$type": "RPG.GameCore.PropSetVisibility",
+              "ID": 300001,
+              "GroupID": 20,
+              "SpecifiedRelativePaths": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "TargetIsOwner": true,
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.SelectorConfig",
+              "TaskList": [
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "TargetIsOwner": true,
+                  "GroupPropID": 300003,
+                  "GroupID": 19,
+                  "Execute": [
+                    {
+                      "$type": "RPG.GameCore.ToastPile",
+                      "DescTextID": {
+                        "hash": -793379246
+                      }
+                    }
+                  ],
+                  "State": "ChestLocked"
+                },
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "TargetIsOwner": true,
+                  "GroupPropID": 300003,
+                  "GroupID": 19,
+                  "Execute": [
+                    {
+                      "$type": "RPG.GameCore.PropTriggerAnimState",
+                      "TargetIsOwner": true,
+                      "AnimStateName": "Activing"
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropTriggerEffectList",
+                      "EffectList": [
+                        {
+                          "EffectPath": "Effects/Eff_Prefab/Eff_Scene/Interactive Object/Eff_Common_TreasureBox01_Open.prefab",
+                          "AttachPoint": "Root"
+                        }
+                      ]
+                    },
+                    {
+                      "$type": "RPG.GameCore.WaitSecond",
+                      "WaitTime": 1.0
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropReqInteract",
+                      "TargetIsOwner": true,
+                      "InteractID": 112131
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropEnableCollider",
+                      "SpecifiedRelativePaths": []
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropSetVisibility",
+                      "SpecifiedRelativePaths": []
+                    },
+                    {
+                      "$type": "RPG.GameCore.FinishLevelGraph"
+                    }
+                  ],
+                  "State": "ChestClosed"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "TargetIsOwner": true,
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.SelectorConfig",
+              "TaskList": [
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "TargetIsOwner": true,
+                  "GroupPropID": 300001,
+                  "GroupID": 5,
+                  "Execute": [
+                    {
+                      "$type": "RPG.GameCore.TriggerCustomString",
+                      "CustomString": {
+                        "Value": "Maze_Chap01_M302_TriggerChallenge_01"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "TargetIsOwner": true,
+                  "GroupPropID": 300001,
+                  "GroupID": 5,
+                  "Execute": [
+                    {
+                      "$type": "RPG.GameCore.PlayBackgroundTalk",
+                      "BackgroundTalkList": [
+                        {
+                          "AutoSkipTime": 3.0,
+                          "VoiceID": 1000
+                        }
+                      ]
+                    }
+                  ],
+                  "State": "Locked"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Chap01_M302_TriggerChallenge_01",
+          "WaitOwnerOnly": true,
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.PropReqInteract",
+          "TargetIsOwner": true,
+          "InteractID": 1010
+        },
+        {
+          "$type": "RPG.GameCore.PropSetVisibility",
+          "SpecifiedRelativePaths": []
+        },
+        {
+          "$type": "RPG.GameCore.PropEnableCollider",
+          "SpecifiedRelativePaths": []
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUIPage",
+          "AssetPath": "UI/Mission/MissionStartHintDialog.prefab",
+          "UIImageNodes": [],
+          "UITextNodes": [
+            {
+              "TextPath": "Dialog/MissionTitle/Text",
+              "TextContent": {
+                "hash": 114458715
+              }
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 1.0
+        },
+        {
+          "$type": "RPG.GameCore.ShowUIPage",
+          "AssetPath": "UI/Mission/MissionStartHintDialog.prefab",
+          "UIImageNodes": [],
+          "UITextNodes": [
+            {
+              "TextPath": "Dialog/MissionTitle/Text",
+              "TextContent": {
+                "hash": -2040712855
+              }
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 1.0
+        },
+        {
+          "$type": "RPG.GameCore.CreateProp",
+          "GroupID": 16,
+          "GroupPropID": 300002
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Chap01_M302_TriggerChallenge_DoNothing"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Chap01_M302_TriggerChallengeReward_01",
+          "WaitOwnerOnly": true,
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.CreateProp",
+          "GroupID": 16,
+          "GroupPropID": 300004,
+          "OnCreate": [
+            {
+              "$type": "RPG.GameCore.FinishLevelGraph"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByAnd",
+            "PredicateList": [
+              {
+                "$type": "RPG.GameCore.ByCompareNPCMonsterCheckState",
+                "GroupID": 16,
+                "GroupMonsterID": 200001,
+                "CheckState": "Dead"
+              },
+              {
+                "$type": "RPG.GameCore.ByCompareNPCMonsterCheckState",
+                "GroupID": 16,
+                "GroupMonsterID": 200002,
+                "CheckState": "Dead"
+              },
+              {
+                "$type": "RPG.GameCore.ByComparePropState",
+                "TargetIsOwner": true,
+                "State": "Open"
+              }
+            ]
+          },
+          "SuccessTaskList": [
+            {
+              "$type": "RPG.GameCore.PropSetVisibility",
+              "ID": 300002,
+              "GroupID": 16,
+              "SpecifiedRelativePaths": []
+            },
+            {
+              "$type": "RPG.GameCore.PropEnableCollider",
+              "ID": 300002,
+              "GroupID": 16,
+              "SpecifiedRelativePaths": []
+            },
+            {
+              "$type": "RPG.GameCore.PropSetVisibility",
+              "ID": 300001,
+              "GroupID": 16,
+              "SpecifiedRelativePaths": []
+            },
+            {
+              "$type": "RPG.GameCore.PropEnableCollider",
+              "ID": 300001,
+              "GroupID": 16,
+              "SpecifiedRelativePaths": []
+            },
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "Maze_Chap01_M302_TriggerChallengeReward_01"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

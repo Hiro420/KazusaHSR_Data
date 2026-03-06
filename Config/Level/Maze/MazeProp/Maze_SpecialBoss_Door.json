@@ -1,0 +1,100 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300001,
+              "GroupID": 5,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropSetVisibility",
+                  "SpecifiedRelativePaths": []
+                },
+                {
+                  "$type": "RPG.GameCore.PropEnableCollider",
+                  "SpecifiedRelativePaths": []
+                }
+              ],
+              "State": "Open"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300001,
+              "GroupID": 5,
+              "Execute": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropStateExecute",
+          "TargetIsOwner": true,
+          "GroupPropID": 300001,
+          "GroupID": 5,
+          "Execute": [
+            {
+              "$type": "RPG.GameCore.PropSetupUITrigger",
+              "TargetIsOwner": true,
+              "ColliderRelativePath": "Trigger",
+              "ButtonCallback": [
+                {
+                  "$type": "RPG.GameCore.TriggerCustomString",
+                  "CustomString": {
+                    "Value": "Maze_SpecialBoss_TriggerChallenge"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_SpecialBoss_TriggerChallenge",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.PropReqInteract",
+          "TargetIsOwner": true,
+          "InteractID": 1010
+        },
+        {
+          "$type": "RPG.GameCore.PropSetVisibility",
+          "SpecifiedRelativePaths": []
+        },
+        {
+          "$type": "RPG.GameCore.PropEnableCollider",
+          "SpecifiedRelativePaths": []
+        },
+        {
+          "$type": "RPG.GameCore.ShowUIPage",
+          "AssetPath": "UI/Mission/MissionStartHintDialog.prefab",
+          "UIImageNodes": [],
+          "UITextNodes": [
+            {
+              "TextPath": "Dialog/MissionTitle/Text",
+              "TextContent": {
+                "hash": 114458715
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

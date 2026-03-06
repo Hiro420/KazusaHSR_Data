@@ -1,0 +1,81 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "TargetTypes": [],
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.LockPlayerControl"
+            },
+            {
+              "$type": "RPG.GameCore.ShowTalkUI",
+              "Show": true
+            },
+            {
+              "$type": "RPG.GameCore.PlayScreenTransfer",
+              "Mode": "SwitchOut",
+              "CustomTime": 0.5
+            },
+            {
+              "$type": "RPG.GameCore.ActiveVirtualCamera",
+              "AreaName": "Mission_1010601",
+              "AnchorName": "StopPlayerFromLift_Cam",
+              "BlendConfig": {
+                "BlendType": "Cut",
+                "BlendTime": 2.0
+              }
+            },
+            {
+              "$type": "RPG.GameCore.CaptureLocalPlayer",
+              "CharacterUniqueName": "M202_StopPlayerFromLift_LocalPlayer"
+            },
+            {
+              "$type": "RPG.GameCore.SwitchCharacterAnchor",
+              "CharacterUniqueName": "M202_StopPlayerFromLift_LocalPlayer",
+              "AreaName": "Mission_1010601",
+              "AnchorName": "StopPlayerFromLift_Switch"
+            },
+            {
+              "$type": "RPG.GameCore.ReleaseCharacter",
+              "CharacterUniqueName": "M202_StopPlayerFromLift_LocalPlayer"
+            },
+            {
+              "$type": "RPG.GameCore.PlayScreenTransfer",
+              "CustomTime": 0.5
+            },
+            {
+              "$type": "RPG.GameCore.PlaySimpleTalk",
+              "SimpleTalkList": [
+                {
+                  "VoiceID": 201223815
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+            },
+            {
+              "$type": "RPG.GameCore.ActiveVirtualCamera",
+              "AreaName": "Mission_1010601",
+              "AnchorName": "StopPlayerFromLift_Cam",
+              "IsActive": false,
+              "BlendConfig": {
+                "BlendType": "Cut",
+                "BlendTime": 2.0
+              }
+            },
+            {
+              "$type": "RPG.GameCore.UnLockPlayerControl"
+            },
+            {
+              "$type": "RPG.GameCore.ShowTalkUI"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

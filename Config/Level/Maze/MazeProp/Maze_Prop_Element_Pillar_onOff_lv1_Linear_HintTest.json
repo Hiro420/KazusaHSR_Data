@@ -1,0 +1,247 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.ResetCustomValue",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "LightTeamEntity"
+                  },
+                  "Key": "MazeTest_CustomValue1"
+                }
+              ],
+              "State": "TriggerDisable"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.ResetCustomValue",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "LightTeamEntity"
+                  },
+                  "Key": "MazeTest_CustomValue1",
+                  "ResetValue": {
+                    "FixedValue": {
+                      "IsDynamic": false,
+                      "FixedValue": 1.0
+                    }
+                  }
+                }
+              ],
+              "State": "TriggerEnable"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.ResetCustomValue",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "LightTeamEntity"
+                  },
+                  "Key": "MazeTest_CustomValue1",
+                  "ResetValue": {
+                    "FixedValue": {
+                      "IsDynamic": false,
+                      "FixedValue": 2.0
+                    }
+                  }
+                }
+              ],
+              "State": "Open"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.ResetCustomValue",
+                  "TargetType": {
+                    "$type": "RPG.GameCore.TargetAlias",
+                    "Alias": "LightTeamEntity"
+                  },
+                  "Key": "MazeTest_CustomValue1",
+                  "ResetValue": {
+                    "FixedValue": {
+                      "IsDynamic": false,
+                      "FixedValue": 3.0
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "MazeTest_ModifyCustomValue1"
+        },
+        {
+          "$type": "RPG.GameCore.AddCustomValue",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "LightTeamEntity"
+          },
+          "Key": "MazeTest_CustomValue1",
+          "AddValue": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 1.0
+            }
+          },
+          "Max": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 4.0
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByCompareCustomValue",
+            "TargetType": {
+              "$type": "RPG.GameCore.TargetAlias",
+              "Alias": "LightTeamEntity"
+            },
+            "Key": {
+              "EKFBPMCLPMD": -220420685
+            },
+            "CompareType": "Equal",
+            "CompareValue": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 1.0
+              }
+            }
+          },
+          "SuccessTaskList": [
+            {
+              "$type": "RPG.GameCore.ToastPile",
+              "DescTextID": {
+                "hash": 193957663
+              }
+            },
+            {
+              "$type": "RPG.GameCore.PropReqInteract",
+              "TargetIsOwner": true,
+              "InteractID": 19100
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByCompareCustomValue",
+            "TargetType": {
+              "$type": "RPG.GameCore.TargetAlias",
+              "Alias": "LightTeamEntity"
+            },
+            "Key": {
+              "EKFBPMCLPMD": -220420685
+            },
+            "CompareType": "Equal",
+            "CompareValue": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 2.0
+              }
+            }
+          },
+          "SuccessTaskList": [
+            {
+              "$type": "RPG.GameCore.ToastPile",
+              "DescTextID": {
+                "hash": 193957660
+              }
+            },
+            {
+              "$type": "RPG.GameCore.PropReqInteract",
+              "TargetIsOwner": true,
+              "InteractID": 11010
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByCompareCustomValue",
+            "TargetType": {
+              "$type": "RPG.GameCore.TargetAlias",
+              "Alias": "LightTeamEntity"
+            },
+            "Key": {
+              "EKFBPMCLPMD": -220420685
+            },
+            "CompareType": "Equal",
+            "CompareValue": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 3.0
+              }
+            }
+          },
+          "SuccessTaskList": [
+            {
+              "$type": "RPG.GameCore.ToastPile",
+              "DescTextID": {
+                "hash": 193957661
+              }
+            },
+            {
+              "$type": "RPG.GameCore.PropReqInteract",
+              "TargetIsOwner": true,
+              "InteractID": 1100
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByCompareCustomValue",
+            "TargetType": {
+              "$type": "RPG.GameCore.TargetAlias",
+              "Alias": "LightTeamEntity"
+            },
+            "Key": {
+              "EKFBPMCLPMD": -220420685
+            },
+            "CompareType": "Equal",
+            "CompareValue": {
+              "FixedValue": {
+                "IsDynamic": false,
+                "FixedValue": 4.0
+              }
+            }
+          },
+          "SuccessTaskList": [
+            {
+              "$type": "RPG.GameCore.ToastPile",
+              "DescTextID": {
+                "hash": 193957666
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.ByTriggeredInfo",
+          "OnSuccess": [
+            {
+              "$type": "RPG.GameCore.DestroyProp"
+            }
+          ],
+          "OnFailed": [
+            {
+              "$type": "RPG.GameCore.PropSetupUITrigger",
+              "ColliderRelativePath": "Trigger",
+              "DestroyAfterTriggered": true,
+              "ButtonCallback": [
+                {
+                  "$type": "RPG.GameCore.PlayBackgroundTalk",
+                  "BackgroundTalkList": [
+                    {
+                      "AutoSkipTime": 2.0,
+                      "VoiceID": 901019904
+                    }
+                  ]
+                },
+                {
+                  "$type": "RPG.GameCore.SaveTriggeredInfo",
+                  "Key": "MazeSave_Challenge_01_Treasure03"
+                },
+                {
+                  "$type": "RPG.GameCore.DestroyProp"
+                }
+              ]
+            }
+          ],
+          "Key": "MazeSave_Challenge_01_Treasure03"
+        }
+      ]
+    }
+  ]
+}

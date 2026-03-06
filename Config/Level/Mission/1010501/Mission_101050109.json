@@ -1,0 +1,47 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": []
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PlayMissionTalk",
+          "SimpleTalkList": [
+            {
+              "TextSpeed": 30.0,
+              "VoiceID": 201210324
+            },
+            {
+              "VoiceID": 201210325
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropEnableCollider",
+          "ID": 300010,
+          "GroupID": 3,
+          "SpecifiedRelativePaths": [
+            "Trigger"
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropReqInteract",
+          "GroupPropID": 300009,
+          "GroupID": 3,
+          "InteractID": 1010
+        }
+      ]
+    }
+  ]
+}

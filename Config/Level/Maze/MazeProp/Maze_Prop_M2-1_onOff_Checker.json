@@ -1,0 +1,158 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropStateExecute",
+          "GroupPropID": 300003,
+          "GroupID": 5,
+          "Execute": [
+            {
+              "$type": "RPG.GameCore.PropTriggerAnimState",
+              "GroupPropID": 300003,
+              "GroupID": 5,
+              "AnimStateName": "Locked"
+            }
+          ],
+          "State": "ChestLocked"
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_M2-1_CheckPillar_onOff"
+        },
+        {
+          "$type": "RPG.GameCore.PropStateExecute",
+          "GroupPropID": 300001,
+          "GroupID": 27,
+          "Execute": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300002,
+              "GroupID": 27,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "GroupPropID": 300003,
+                  "GroupID": 27,
+                  "Execute": [
+                    {
+                      "$type": "RPG.GameCore.PropStateExecute",
+                      "GroupPropID": 300004,
+                      "GroupID": 27,
+                      "Execute": [
+                        {
+                          "$type": "RPG.GameCore.PropReqInteract",
+                          "GroupPropID": 300003,
+                          "GroupID": 5,
+                          "InteractID": 111120
+                        },
+                        {
+                          "$type": "RPG.GameCore.PropReqInteract",
+                          "GroupPropID": 300006,
+                          "GroupID": 27,
+                          "InteractID": 1010
+                        },
+                        {
+                          "$type": "RPG.GameCore.LockPlayerControl"
+                        },
+                        {
+                          "$type": "RPG.GameCore.EnableNPCMonsterAI",
+                          "GroupMonsterIDs": [],
+                          "UniqueNames": []
+                        },
+                        {
+                          "$type": "RPG.GameCore.EnableStoryMode",
+                          "Enable": true
+                        },
+                        {
+                          "$type": "RPG.GameCore.PlayScreenTransfer",
+                          "Mode": "SwitchOut",
+                          "CustomTime": 0.5
+                        },
+                        {
+                          "$type": "RPG.GameCore.ActiveVirtualCamera",
+                          "AreaName": "1010501_temp",
+                          "AnchorName": "Camera_01Puzzle",
+                          "WaitBlendFinish": true,
+                          "BlendConfig": {
+                            "BlendType": "Cut"
+                          },
+                          "VCameraDitherMaxDistance": 0.0
+                        },
+                        {
+                          "$type": "RPG.GameCore.PlayScreenTransfer",
+                          "CustomTime": 0.5
+                        },
+                        {
+                          "$type": "RPG.GameCore.WaitSecond",
+                          "WaitTime": 1.0
+                        },
+                        {
+                          "$type": "RPG.GameCore.PropTriggerAnimState",
+                          "GroupPropID": 300003,
+                          "GroupID": 5,
+                          "AnimStateName": "LockedToStandBy"
+                        },
+                        {
+                          "$type": "RPG.GameCore.PropTriggerAnimState",
+                          "GroupPropID": 300006,
+                          "GroupID": 27,
+                          "AnimStateName": "Unlock"
+                        },
+                        {
+                          "$type": "RPG.GameCore.WaitSecond",
+                          "WaitTime": 2.0
+                        },
+                        {
+                          "$type": "RPG.GameCore.PlayScreenTransfer",
+                          "Mode": "SwitchOut",
+                          "CustomTime": 0.5
+                        },
+                        {
+                          "$type": "RPG.GameCore.ActiveVirtualCamera",
+                          "AreaName": "1010501_temp",
+                          "AnchorName": "Camera_01Puzzle",
+                          "IsActive": false,
+                          "BlendConfig": {
+                            "BlendType": "Cut"
+                          },
+                          "VCameraDitherMaxDistance": 0.0
+                        },
+                        {
+                          "$type": "RPG.GameCore.PlayScreenTransfer",
+                          "CustomTime": 0.5
+                        },
+                        {
+                          "$type": "RPG.GameCore.EnableStoryMode"
+                        },
+                        {
+                          "$type": "RPG.GameCore.EnableNPCMonsterAI",
+                          "Enable": true,
+                          "GroupMonsterIDs": [],
+                          "UniqueNames": []
+                        },
+                        {
+                          "$type": "RPG.GameCore.UnLockPlayerControl"
+                        }
+                      ],
+                      "State": "Open"
+                    }
+                  ],
+                  "State": "Open"
+                }
+              ],
+              "State": "Open"
+            }
+          ],
+          "State": "Open"
+        }
+      ]
+    }
+  ]
+}

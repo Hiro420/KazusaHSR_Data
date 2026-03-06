@@ -1,0 +1,155 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "TargetIsOwner": true,
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.LockPlayerControl"
+            },
+            {
+              "$type": "RPG.GameCore.ShowTalkUI",
+              "Show": true
+            },
+            {
+              "$type": "RPG.GameCore.PlaySimpleTalk",
+              "SimpleTalkList": [
+                {
+                  "VoiceID": 999980301
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+            },
+            {
+              "$type": "RPG.GameCore.PlayOptionTalk",
+              "OptionList": [
+                {
+                  "OptionTextmapID": {
+                    "hash": -693364579
+                  },
+                  "TriggerCustomString": "Maze_SavePoint_Teleport"
+                },
+                {
+                  "OptionTextmapID": {
+                    "hash": 1347778154
+                  },
+                  "TriggerCustomString": "Maze_SavePoint_Recover"
+                },
+                {
+                  "OptionTextmapID": {
+                    "hash": -2083051010
+                  },
+                  "TriggerCustomString": "Maze_SavePoint_Close"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_SavePoint_Recover",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.ConfirmCheckpointRecover"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCheckpointRecover",
+          "GroupID": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 1789038044
+                }
+              ]
+            }
+          },
+          "PropID": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 3414023400
+                }
+              ]
+            }
+          }
+        },
+        {
+          "$type": "RPG.GameCore.TriggerEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "AdvLocalPlayer"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Common/Eff_Common_MAZ_RecoverAll.prefab"
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_SavePoint_Teleport",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerMazeMapUI"
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_SavePoint_Close",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        }
+      ]
+    }
+  ],
+  "ValueSource": {
+    "Values": [
+      {
+        "$type": "RPG.GameCore.SharedInt",
+        "Key": "Maze_CheckPoint_RefreshGroupID"
+      },
+      {
+        "$type": "RPG.GameCore.SharedInt",
+        "Key": "Maze_CheckPoint_RefreshPropID"
+      }
+    ]
+  }
+}

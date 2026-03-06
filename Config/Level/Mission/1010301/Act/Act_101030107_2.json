@@ -1,0 +1,117 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300005,
+          "GroupID": 4,
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.AddAdventureModifier",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "AdvTeamMembers"
+              },
+              "ModifierName": "ADV_Modifier_MazeCommon_Stealth"
+            },
+            {
+              "$type": "RPG.GameCore.CaptureLocalPlayer",
+              "CharacterUniqueName": "Character_101030107_2"
+            },
+            {
+              "$type": "RPG.GameCore.ShowTalkUI",
+              "Show": true
+            },
+            {
+              "$type": "RPG.GameCore.LockPlayerControl"
+            },
+            {
+              "$type": "RPG.GameCore.SetCharacterVisiable",
+              "CharType": "LocalPlayer",
+              "CharacterUniqueName": "Character_101030107_2"
+            },
+            {
+              "$type": "RPG.GameCore.ActiveVirtualCamera",
+              "AreaName": "Mission_1010301_temp",
+              "AnchorName": "Camera_101030105",
+              "BlendConfig": {
+                "BlendType": "Cut"
+              }
+            },
+            {
+              "$type": "RPG.GameCore.WaitSecond",
+              "WaitTime": 1.0
+            },
+            {
+              "$type": "RPG.GameCore.PlayScreenTransfer",
+              "Type": "Black",
+              "Mode": "SwitchOut",
+              "CustomTime": 1.0
+            },
+            {
+              "$type": "RPG.GameCore.SwitchCharacterAnchor",
+              "CharacterUniqueName": "Character_101030107_2",
+              "AreaName": "Mission_1010301_temp",
+              "AnchorName": "MissionPlayer_101030104_3"
+            },
+            {
+              "$type": "RPG.GameCore.WaitSecond",
+              "WaitTime": 0.5
+            },
+            {
+              "$type": "RPG.GameCore.ActiveVirtualCamera",
+              "AreaName": "Mission_1010301_temp",
+              "AnchorName": "Camera_101030105",
+              "IsActive": false,
+              "BlendConfig": {
+                "BlendType": "Cut"
+              }
+            },
+            {
+              "$type": "RPG.GameCore.SetCharacterVisiable",
+              "CharType": "LocalPlayer",
+              "CharacterUniqueName": "Character_101030107_2",
+              "Visiable": true
+            },
+            {
+              "$type": "RPG.GameCore.ReleaseCharacter",
+              "CharacterUniqueName": "Character_101030107_2"
+            },
+            {
+              "$type": "RPG.GameCore.RemoveAdventureModifier",
+              "TargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "AdvTeamMembers"
+              },
+              "ModifierName": "ADV_Modifier_MazeCommon_Stealth"
+            },
+            {
+              "$type": "RPG.GameCore.UnLockPlayerControl"
+            },
+            {
+              "$type": "RPG.GameCore.PlayScreenTransfer",
+              "Type": "Black",
+              "CustomTime": 1.0
+            },
+            {
+              "$type": "RPG.GameCore.ShowTalkUI"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Hold",
+          "WaitOwnerOnly": true
+        }
+      ]
+    }
+  ]
+}

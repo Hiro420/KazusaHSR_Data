@@ -1,0 +1,41 @@
+﻿{
+  "States": [
+    {
+      "AnimName": "StandBy"
+    },
+    {
+      "State": "Open",
+      "AnimName": "Used"
+    }
+  ],
+  "AnimatorStateGroupEvents": [
+    {
+      "States": [
+        {
+          "Name": "Activing"
+        }
+      ],
+      "OnEnter": [
+        {
+          "$type": "RPG.GameCore.TriggerSound",
+          "SoundName": "Ev_sfx_common_elevator_control",
+          "OwnerEntityEmitter": false
+        }
+      ]
+    },
+    {
+      "States": [
+        {
+          "Name": "Open"
+        }
+      ],
+      "OnEnter": [
+        {
+          "$type": "RPG.GameCore.TriggerSound",
+          "SoundName": "Ev_sfx_common_elevator_control",
+          "OwnerEntityEmitter": false
+        }
+      ]
+    }
+  ]
+}

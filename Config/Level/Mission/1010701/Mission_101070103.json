@@ -1,0 +1,82 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Hold",
+          "WaitOwnerOnly": true
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "PropTalk_101070103"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerStory",
+          "StoryID": 101070103
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "NPCTalk_101070103"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerStory",
+          "StoryID": 101070104
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "ChangeState_101070103"
+        },
+        {
+          "$type": "RPG.GameCore.FinishStoryMission",
+          "Key": "Mission_101070103"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByCompareSubMissionState",
+            "SubMissionID": 101070110,
+            "SubMissionState": "Started"
+          },
+          "SuccessTaskList": [],
+          "FailedTaskList": [
+            {
+              "$type": "RPG.GameCore.WaitSecond",
+              "WaitTime": 0.1
+            },
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "BattleWin_101070103"
+              }
+            },
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "ChangeState_101070103"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

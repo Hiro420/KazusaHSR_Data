@@ -1,0 +1,31 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitPredicateSucc",
+          "Condition": {
+            "$type": "RPG.GameCore.ByCompareGroupMonsterNum",
+            "GroupID": 19
+          }
+        },
+        {
+          "$type": "RPG.GameCore.ChangePropState",
+          "DynamicGroupPropID": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 300003.0
+            }
+          },
+          "DynamicGroupID": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 19.0
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

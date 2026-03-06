@@ -1,0 +1,129 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.CreateNPC",
+          "GroupID": 11,
+          "GroupNpcID": 400011,
+          "NPCUniqueName": "1010809_Natasha"
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC",
+          "GroupID": 11,
+          "GroupNpcID": 400012,
+          "NPCUniqueName": "1010809_Danheng"
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC",
+          "GroupID": 11,
+          "GroupNpcID": 400013,
+          "NPCUniqueName": "1010809_7th"
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC",
+          "GroupID": 11,
+          "GroupNpcID": 400014,
+          "NPCUniqueName": "1010809_Seele"
+        },
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "10180109_Talk"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI",
+          "Show": true
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode",
+          "Enable": true
+        },
+        {
+          "$type": "RPG.GameCore.LockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 101015701
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 101015702
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 101015703
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.DestroyNPC",
+          "GroupID": 11,
+          "GroupNpcID": 400011
+        },
+        {
+          "$type": "RPG.GameCore.DestroyNPC",
+          "GroupID": 11,
+          "GroupNpcID": 400012
+        },
+        {
+          "$type": "RPG.GameCore.DestroyNPC",
+          "GroupID": 11,
+          "GroupNpcID": 400013
+        },
+        {
+          "$type": "RPG.GameCore.DestroyNPC",
+          "GroupID": 11,
+          "GroupNpcID": 400014
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "EnterMap_101080902"
+          }
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "EnterMap_101080902",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.EnterMap",
+          "EntranceID": 2013201
+        }
+      ]
+    }
+  ]
+}

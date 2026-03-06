@@ -1,0 +1,85 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.ByTriggeredInfo",
+          "OnSuccess": [
+            {
+              "$type": "RPG.GameCore.DestroyProp"
+            },
+            {
+              "$type": "RPG.GameCore.FinishLevelGraph"
+            }
+          ],
+          "OnFailed": [
+            {
+              "$type": "RPG.GameCore.PropSetupHitBox",
+              "OnBeHit": [
+                {
+                  "$type": "RPG.GameCore.SaveTriggeredInfo",
+                  "Key": "MazeSave_Challenge_01_Item04"
+                },
+                {
+                  "$type": "RPG.GameCore.DestroyProp"
+                },
+                {
+                  "$type": "RPG.GameCore.RandomConfig",
+                  "OddsList": [
+                    {
+                      "Value": 0.3
+                    },
+                    {
+                      "Value": 0.3
+                    },
+                    {
+                      "Value": 0.4
+                    }
+                  ],
+                  "TaskList": [
+                    {
+                      "$type": "RPG.GameCore.PlayBackgroundTalk",
+                      "BackgroundTalkList": [
+                        {
+                          "AutoSkipTime": 2.0,
+                          "VoiceID": 901019906
+                        }
+                      ]
+                    },
+                    {
+                      "$type": "RPG.GameCore.PlayBackgroundTalk",
+                      "BackgroundTalkList": [
+                        {
+                          "AutoSkipTime": 2.0,
+                          "VoiceID": 901019907
+                        }
+                      ]
+                    },
+                    {
+                      "$type": "RPG.GameCore.PlayBackgroundTalk",
+                      "BackgroundTalkList": [
+                        {
+                          "AutoSkipTime": 2.0,
+                          "VoiceID": 901019908
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "$type": "RPG.GameCore.WaitSecond",
+                  "WaitTime": 0.1
+                },
+                {
+                  "$type": "RPG.GameCore.FinishLevelGraph"
+                }
+              ]
+            }
+          ],
+          "Key": "MazeSave_Challenge_01_Item04"
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": []
+}

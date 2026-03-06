@@ -1,0 +1,28 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": []
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300002,
+          "GroupID": 1,
+          "TargetTypes": [],
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.ConsumeMissionItem",
+              "SubMissionID": 901301,
+              "Desc": {
+                "hash": -2018662726
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "Mode": "SwitchOut",
+          "CustomTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.LevelStoryInitialize",
+          "EntityVisiableList": [
+            {},
+            {
+              "CharType": "NPC",
+              "GroupID": 8,
+              "GroupNPCID": 400001
+            }
+          ],
+          "CreateCharacterList": [
+            {
+              "CharacterUniqueName": "201060103_Hook",
+              "AvatarID": "Hook_00",
+              "AreaName": "Mission_1010601",
+              "AnchorName": "201060103_Hook_Create"
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode",
+          "Enable": true
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "CustomTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.CharacterNavigateTo",
+          "CharacterUniqueName": "201060103_Hook",
+          "AreaName": "Mission_1010601",
+          "AnchorName": "201060103_Hook",
+          "MotionFlag": "Run"
+        },
+        {
+          "$type": "RPG.GameCore.CharacterTriggerAnimState",
+          "CharacterUniqueName": "201060103_Hook",
+          "AnimStateName": "MazeSkill",
+          "StoryAvatarID": "Seele_00",
+          "StartMotion": "Nod01",
+          "NormalizedTimeWait": 0.148,
+          "StoryMotionID": 1102001
+        },
+        {
+          "$type": "RPG.GameCore.TriggerEffectListOnCharacter",
+          "CharacterUniqueName": "201060103_Hook",
+          "EffectList": [
+            {
+              "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Hook/Eff_Avatar_Hook_00_MazeSkill_Start01.prefab"
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 1.0
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "201060103_Destroy"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "Mode": "SwitchOut",
+          "CustomTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.EndStory"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitStoryEnd"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "201060103_Destroy"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "CustomTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode"
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "TargetIsOwner": true,
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.ToastPile",
+              "DescTextID": {
+                "hash": -33804687
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

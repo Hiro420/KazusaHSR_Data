@@ -1,0 +1,132 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": []
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitUINodeOpen",
+          "TaskEnabled": false,
+          "Path": "Page/MazeMainPage(Clone)/RightButtomArea/MazeSkillPanel"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "TaskEnabled": false,
+          "Nodes": [
+            "Page/MazeMainPage(Clone)/RightButtomArea/MazeSkillPanel/MazeSkillBtn",
+            "Page/MazeMainPage(Clone)/RightButtomArea/MazeSkillPanel/MpDetailPanel"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "TaskEnabled": false,
+          "ID": 300001,
+          "GroupID": 17,
+          "TargetTypes": [],
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.ShowUINodes",
+              "TaskEnabled": false,
+              "Nodes": [
+                "Page/MazeMainPage(Clone)/RightButtomArea/MazeSkillPanel/MazeSkillBtn",
+                "Page/MazeMainPage(Clone)/RightButtomArea/MazeSkillPanel/MpDetailPanel"
+              ],
+              "Open": true
+            },
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "TaskEnabled": false,
+              "CustomString": {
+                "Value": "Mission_940103_01"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitUINodeOpen",
+          "TaskEnabled": false,
+          "Path": "Page/MazeMainPage(Clone)/RightButtomArea/PcMazeSkillPanel"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "TaskEnabled": false,
+          "Nodes": [
+            "Page/MazeMainPage(Clone)/RightButtomArea/PcMazeSkillPanel/MazeSkillBtn",
+            "Page/MazeMainPage(Clone)/RightButtomArea/PcMazeSkillPanel/MpDetailPanel"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "TaskEnabled": false,
+          "ID": 300001,
+          "GroupID": 17,
+          "TargetTypes": [],
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.ShowUINodes",
+              "TaskEnabled": false,
+              "Nodes": [
+                "Page/MazeMainPage(Clone)/RightButtomArea/PcMazeSkillPanel/MazeSkillBtn",
+                "Page/MazeMainPage(Clone)/RightButtomArea/PcMazeSkillPanel/MpDetailPanel"
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "TaskEnabled": false,
+              "CustomString": {
+                "Value": "Mission_940103_02"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "TaskEnabled": false,
+          "CustomString": "Mission_940103_01",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.WaitUINodeOpen",
+          "TaskEnabled": false,
+          "Path": "Page/MazeMainPage(Clone)/RightButtomArea/MazeSkillPanel/MazeSkillBtn"
+        },
+        {
+          "$type": "RPG.GameCore.FinishStoryMission",
+          "TaskEnabled": false,
+          "Key": "Mission_940103"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "TaskEnabled": false,
+          "CustomString": "Mission_940103_02",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.WaitUINodeOpen",
+          "TaskEnabled": false,
+          "Path": "Page/MazeMainPage(Clone)/RightButtomArea/PcMazeSkillPanel/MazeSkillBtn"
+        },
+        {
+          "$type": "RPG.GameCore.FinishStoryMission",
+          "TaskEnabled": false,
+          "Key": "Mission_940103"
+        }
+      ]
+    }
+  ]
+}

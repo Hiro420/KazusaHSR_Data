@@ -1,0 +1,24 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropStateChangeListenerConfig",
+          "GroupID": 8,
+          "GroupPropID": 300001,
+          "FromState": "Open",
+          "OnChange": [
+            {
+              "$type": "RPG.GameCore.TransitEnvProfile",
+              "Path": {
+                "Value": "Stages/Outputs/Chapter01/EnviroProfile/Chap01_CloseView_ADV_Area_Square_01_Day.enviroProfile.asset"
+              },
+              "Duration": 2.0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

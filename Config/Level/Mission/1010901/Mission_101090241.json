@@ -1,0 +1,97 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Hold",
+          "WaitOwnerOnly": true
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "M301_UnlockBody1"
+          }
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300022,
+          "GroupID": 3,
+          "TargetTypes": [],
+          "DestroyAfterTriggered": true,
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "FinishStoryMission"
+              }
+            },
+            {
+              "$type": "RPG.GameCore.DestroyProp",
+              "ID": 300015,
+              "GroupID": 3
+            },
+            {
+              "$type": "RPG.GameCore.TriggerStory",
+              "StoryID": 101090212
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300015,
+          "GroupID": 3,
+          "TargetTypes": [],
+          "DestroyAfterTriggered": true,
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "FinishStoryMission"
+              }
+            },
+            {
+              "$type": "RPG.GameCore.DestroyProp",
+              "ID": 300022,
+              "GroupID": 3
+            },
+            {
+              "$type": "RPG.GameCore.TriggerStory",
+              "StoryID": 101090213
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "FinishStoryMission",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.FinishStoryMission",
+          "Key": "Mission_101090241"
+        }
+      ]
+    }
+  ]
+}

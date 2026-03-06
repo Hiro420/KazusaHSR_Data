@@ -1,0 +1,141 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.ShowTutorialUI",
+          "Name": "UI/Guide/TutorialDialog.prefab"
+        },
+        {
+          "$type": "RPG.GameCore.BlockInputController",
+          "Enable": true,
+          "ActionNameList": []
+        },
+        {
+          "$type": "RPG.GameCore.LockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "AboveDialog/TutorialDialog(Clone)/MaskRaycastTarget"
+          ],
+          "Open": true
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 2.0
+        },
+        {
+          "$type": "RPG.GameCore.WaitUINodeOpen",
+          "Path": "Page/MazeMainPage(Clone)/JoystickRoot/Joystick(Clone)/Pattern",
+          "PathPC": "Page/MazeMainPage(Clone)/LeftUpInfo/FunctionBtn/PhoneBtn"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "AboveDialog/TutorialDialog(Clone)/MaskRaycastTarget"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.BlockInputController",
+          "Enable": true,
+          "ActionNameList": [
+            "Maze_MoveUp",
+            "Maze_MoveDown",
+            "Maze_MoveLeft",
+            "Maze_MoveRight",
+            "Maze_LookUp",
+            "Maze_LookDown",
+            "Maze_LookLeft",
+            "Maze_LookRight"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuide",
+          "GuideResID": 2,
+          "Show": true,
+          "Path": "Page/MazeMainPage(Clone)/JoystickRoot/Joystick(Clone)/Image",
+          "CopyAnchorAndSale": true,
+          "PCGuide": {
+            "UsePCGuide": true,
+            "Skip": true
+          }
+        },
+        {
+          "$type": "RPG.GameCore.ShowGuideText",
+          "GuideResID": 5,
+          "Show": true,
+          "Path": "Page",
+          "TextPath": "Contents/Text",
+          "Text": "TutorialTextmap_20301",
+          "PCGuide": {
+            "UsePCGuide": true,
+            "GuideResID": 5,
+            "Path": "Page",
+            "TextPath": "Contents/Text",
+            "Text": "TutorialTextmap_20301_pc"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.CheckUIMode",
+          "OnMobile": [
+            {
+              "$type": "RPG.GameCore.ShowUINodes",
+              "Nodes": [
+                "AboveDialog/TutorialDialog(Clone)/MaskMoveMobile"
+              ],
+              "Open": true
+            }
+          ],
+          "OnPC": [
+            {
+              "$type": "RPG.GameCore.ShowUINodes",
+              "Nodes": [
+                "AboveDialog/TutorialDialog(Clone)/MaskRaycastTarget"
+              ],
+              "Open": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Tutorial_203"
+        },
+        {
+          "$type": "RPG.GameCore.ShowUINodes",
+          "Nodes": [
+            "AboveDialog/TutorialDialog(Clone)/MaskMoveMobile",
+            "AboveDialog/TutorialDialog(Clone)/MaskRaycastTarget"
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.BlockInputController",
+          "ActionNameList": []
+        },
+        {
+          "$type": "RPG.GameCore.ShowTutorialUI",
+          "Name": "UI/Guide/TutorialDialog.prefab",
+          "IsHide": true
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.TutorialFinish",
+          "TutorialID": 203
+        }
+      ]
+    },
+    {
+      "TaskList": []
+    }
+  ]
+}

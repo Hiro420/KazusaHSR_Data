@@ -1,0 +1,256 @@
+﻿{
+  "ModifierMap": {
+    "ADV_StageAbility_Maze_Mar_7th": {
+      "Count": 1,
+      "Stacking": "Merge"
+    },
+    "ADV_StageAbility_Maze_DanHeng": {
+      "Count": 1,
+      "Stacking": "Merge"
+    },
+    "ADV_StageAbility_Maze_Himeko": {
+      "Count": 1,
+      "Stacking": "Merge",
+      "DynamicValues": {
+        "Floats": {
+          "909827945": {},
+          "909827942": {},
+          "909827943": {}
+        }
+      },
+      "OnCreate": [
+        {
+          "$type": "RPG.GameCore.TriggerEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Common/Eff_Buff_Common_Light.prefab"
+        }
+      ]
+    },
+    "ADV_StageAbility_Maze_Welt": {
+      "Count": 1,
+      "Stacking": "Merge",
+      "DynamicValues": {
+        "Floats": {
+          "909827945": {
+            "Value": 0.3
+          }
+        }
+      },
+      "OnStack": [
+        {
+          "$type": "RPG.GameCore.AdventureStackProperty",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "Property": "MoveSpeedAttenuationRatio",
+          "PropertyValue": {
+            "Value": {
+              "IsDynamic": true,
+              "PostfixExpr": [
+                {
+                  "Type": "DynamicNumber",
+                  "Int": 1819655890
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "ADV_StageAbility_Maze_Asta": {
+      "Count": 1,
+      "Stacking": "Merge"
+    },
+    "ADV_StageAbility_Maze_Bronya": {
+      "Count": 1,
+      "Stacking": "Merge",
+      "DynamicValues": {
+        "Floats": {
+          "909827945": {},
+          "909827942": {}
+        }
+      },
+      "OnCreate": [
+        {
+          "$type": "RPG.GameCore.ModifierAttachEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "LightTeamEntity"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Gepard/Eff_Avatar_Gepard_00_MazeSkill_Loop.prefab"
+        }
+      ]
+    },
+    "ADV_StageAbility_Maze_Seele": {
+      "Count": 1,
+      "Stacking": "Refresh"
+    },
+    "ADV_Modifier_Maze_Seele": {
+      "Count": 1,
+      "Stacking": "Refresh",
+      "LifeTime": 20.0,
+      "BehaviorFlagList": [
+        "Stealth"
+      ],
+      "OnCreate": [
+        {
+          "$type": "RPG.GameCore.TriggerEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Seele/Eff_Avatar_Seele_00_MazeSkill_Start01.prefab"
+        },
+        {
+          "$type": "RPG.GameCore.ModifierAttachEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Seele/Eff_Seele_00_MazeSkill_Body.prefab"
+        },
+        {
+          "$type": "RPG.GameCore.ModifierAttachEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Seele/Eff_Seele_00_MazeSkill_Face.prefab"
+        },
+        {
+          "$type": "RPG.GameCore.ModifierAttachEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Seele/Eff_Seele_00_MazeSkill_Hair.prefab"
+        },
+        {
+          "$type": "RPG.GameCore.SetAdvLockDistance",
+          "IsPushValue": true,
+          "LockDistance": 10.0
+        }
+      ],
+      "OnDestroy": [
+        {
+          "$type": "RPG.GameCore.TriggerEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "Caster"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Seele/Eff_Avatar_Seele_00_MazeSkill_Start01.prefab"
+        },
+        {
+          "$type": "RPG.GameCore.SetAdvLockDistance"
+        }
+      ],
+      "OnUnstage": [
+        {
+          "$type": "RPG.GameCore.RemoveSelfModifier"
+        }
+      ]
+    },
+    "ADV_StageAbility_Maze_Serval": {
+      "Count": 1,
+      "Stacking": "Merge",
+      "OnCreate": [
+        {
+          "$type": "RPG.GameCore.TriggerEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Serval/Eff_Avatar_Serval_00_Electric_buff.prefab"
+        }
+      ]
+    },
+    "ADV_StageAbility_Maze_Geppard": {
+      "Count": 1,
+      "Stacking": "Merge",
+      "DynamicValues": {
+        "Floats": {
+          "909827945": {},
+          "909827942": {}
+        }
+      },
+      "OnCreate": [
+        {
+          "$type": "RPG.GameCore.ModifierAttachEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "LightTeamEntity"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Gepard/Eff_Avatar_Gepard_00_MazeSkill_Loop.prefab"
+        }
+      ]
+    },
+    "ADV_StageAbility_Maze_Natasha": {
+      "Count": 1,
+      "Stacking": "Merge",
+      "LifeTime": 20.0,
+      "OnCreate": [
+        {
+          "$type": "RPG.GameCore.TriggerEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Common/Eff_Buff_Common_weak.prefab"
+        }
+      ]
+    },
+    "ADV_StageAbility_Maze_Pela": {
+      "Count": 1,
+      "Stacking": "Merge"
+    },
+    "ADV_StageAbility_Maze_Klara": {
+      "Count": 1,
+      "Stacking": "Merge"
+    },
+    "ADV_StageAbility_Maze_Sampo": {
+      "Count": 1,
+      "Stacking": "Merge",
+      "LifeTime": 20.0,
+      "BehaviorFlagList": [
+        "Blind"
+      ],
+      "OnCreate": [
+        {
+          "$type": "RPG.GameCore.ModifierAttachEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Avatar/Eff_Sampo/Eff_Avatar_Sampo_00_MazeSkill_HitLoop.prefab"
+        },
+        {
+          "$type": "RPG.GameCore.AdvSetTargetAlertValue",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "BehaviourType": "AlertSetTo",
+          "AlertValue": 15.0
+        }
+      ]
+    },
+    "ADV_StageAbility_Maze_Hook": {
+      "Count": 1,
+      "Stacking": "Merge",
+      "OnCreate": [
+        {
+          "$type": "RPG.GameCore.TriggerEffect",
+          "TargetType": {
+            "$type": "RPG.GameCore.TargetAlias",
+            "Alias": "ModifierOwnerEntity"
+          },
+          "EffectPath": "Effects/Eff_Prefab/Eff_Common/Eff_Buff_Common_Light.prefab"
+        }
+      ]
+    }
+  }
+}

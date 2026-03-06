@@ -1,0 +1,39 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Mission_201060401_1",
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.PlayMissionTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201223901,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201223902,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201223903,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201223904,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201223905,
+              "ProtectTime": 1.0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

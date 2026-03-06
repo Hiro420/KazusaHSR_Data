@@ -1,0 +1,143 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropTriggerEffectList",
+          "EffectList": [
+            {
+              "EffectPath": "Effects/Eff_Prefab/Eff_Common/Eff_Common_Smoke.prefab",
+              "AttachPoint": "Root"
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300004,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.ShowUIPage",
+                  "AssetPath": "UI/Mission/MissionStartHintDialog.prefab",
+                  "UIImageNodes": [],
+                  "UITextNodes": [
+                    {
+                      "TextPath": "Dialog/MissionTitle/Text",
+                      "TextContent": {
+                        "hash": 1717240506
+                      }
+                    }
+                  ]
+                },
+                {
+                  "$type": "RPG.GameCore.PropSetupUITrigger",
+                  "TargetIsOwner": true,
+                  "ButtonCallback": [
+                    {
+                      "$type": "RPG.GameCore.LockPlayerControl"
+                    },
+                    {
+                      "$type": "RPG.GameCore.ShowTalkUI",
+                      "Show": true
+                    },
+                    {
+                      "$type": "RPG.GameCore.PlayOptionTalk",
+                      "OptionList": [
+                        {
+                          "OptionTextmapID": {
+                            "hash": -2103477539
+                          },
+                          "TriggerCustomString": "Maze_Chap01_M101_TriggerChest"
+                        },
+                        {
+                          "OptionTextmapID": {
+                            "hash": 1723323179
+                          },
+                          "TriggerCustomString": "Maze_Chap01_M101_TriggerChest_nothing"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300004,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropSetVisibility",
+                  "SpecifiedRelativePaths": []
+                },
+                {
+                  "$type": "RPG.GameCore.PropEnableCollider",
+                  "SpecifiedRelativePaths": []
+                }
+              ],
+              "State": "Open"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Chap01_M101_TriggerChest",
+          "WaitOwnerOnly": true,
+          "Sync": true
+        },
+        {
+          "$type": "RPG.GameCore.PropReqInteract",
+          "TargetIsOwner": true,
+          "InteractID": 20101
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.PropSetVisibility",
+          "SpecifiedRelativePaths": []
+        },
+        {
+          "$type": "RPG.GameCore.PropEnableCollider",
+          "SpecifiedRelativePaths": []
+        },
+        {
+          "$type": "RPG.GameCore.DestroyProp"
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Chap01_M101_TriggerChest_nothing"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI",
+          "Show": true
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        }
+      ]
+    }
+  ]
+}

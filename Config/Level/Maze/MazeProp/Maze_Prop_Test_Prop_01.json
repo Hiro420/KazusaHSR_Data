@@ -1,0 +1,21 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "ColliderRelativePath": "Trigger",
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.LoadLevelGroup",
+              "GroupIDList": [
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": []
+}

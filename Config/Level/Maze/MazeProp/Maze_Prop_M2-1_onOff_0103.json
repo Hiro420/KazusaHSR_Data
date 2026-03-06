@@ -1,0 +1,168 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "TargetIsOwner": true,
+                  "AnimStateName": "Maze_ElementsProp_Used"
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "TargetIsOwner": true,
+                  "AnimStateName": "Maze_ElementsProp_CanUse"
+                }
+              ],
+              "State": "Open"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupHitBox",
+          "OnBeHit": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300003,
+              "GroupID": 5,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "TargetIsOwner": true,
+                  "Execute": [
+                    {
+                      "$type": "RPG.GameCore.PropReqInteract",
+                      "TargetIsOwner": true,
+                      "InteractID": 1010
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropTriggerAnimState",
+                      "TargetIsOwner": true,
+                      "AnimStateName": "Maze_ElementsProp_CanUse"
+                    },
+                    {
+                      "$type": "RPG.GameCore.SelectorConfig",
+                      "TaskList": [
+                        {
+                          "$type": "RPG.GameCore.PropStateExecute",
+                          "GroupPropID": 300002,
+                          "GroupID": 27,
+                          "Execute": [
+                            {
+                              "$type": "RPG.GameCore.PropReqInteract",
+                              "GroupPropID": 300002,
+                              "GroupID": 27,
+                              "InteractID": 1010
+                            },
+                            {
+                              "$type": "RPG.GameCore.PropTriggerAnimState",
+                              "GroupPropID": 300002,
+                              "GroupID": 27,
+                              "AnimStateName": "Maze_ElementsProp_CanUse"
+                            }
+                          ]
+                        },
+                        {
+                          "$type": "RPG.GameCore.PropStateExecute",
+                          "GroupPropID": 300002,
+                          "GroupID": 27,
+                          "Execute": [
+                            {
+                              "$type": "RPG.GameCore.PropReqInteract",
+                              "GroupPropID": 300002,
+                              "GroupID": 27,
+                              "InteractID": 1100
+                            },
+                            {
+                              "$type": "RPG.GameCore.PropTriggerAnimState",
+                              "GroupPropID": 300002,
+                              "GroupID": 27,
+                              "AnimStateName": "Maze_ElementsProp_Used"
+                            }
+                          ],
+                          "State": "Open"
+                        }
+                      ]
+                    },
+                    {
+                      "$type": "RPG.GameCore.SelectorConfig",
+                      "TaskList": [
+                        {
+                          "$type": "RPG.GameCore.PropStateExecute",
+                          "GroupPropID": 300004,
+                          "GroupID": 27,
+                          "Execute": [
+                            {
+                              "$type": "RPG.GameCore.PropReqInteract",
+                              "GroupPropID": 300004,
+                              "GroupID": 27,
+                              "InteractID": 1010
+                            },
+                            {
+                              "$type": "RPG.GameCore.PropTriggerAnimState",
+                              "GroupPropID": 300004,
+                              "GroupID": 27,
+                              "AnimStateName": "Maze_ElementsProp_CanUse"
+                            }
+                          ]
+                        },
+                        {
+                          "$type": "RPG.GameCore.PropStateExecute",
+                          "GroupPropID": 300004,
+                          "GroupID": 27,
+                          "Execute": [
+                            {
+                              "$type": "RPG.GameCore.PropReqInteract",
+                              "GroupPropID": 300004,
+                              "GroupID": 27,
+                              "InteractID": 1100
+                            },
+                            {
+                              "$type": "RPG.GameCore.PropTriggerAnimState",
+                              "GroupPropID": 300004,
+                              "GroupID": 27,
+                              "AnimStateName": "Maze_ElementsProp_Used"
+                            }
+                          ],
+                          "State": "Open"
+                        }
+                      ]
+                    },
+                    {
+                      "$type": "RPG.GameCore.WaitSecond",
+                      "WaitTime": 1.0
+                    },
+                    {
+                      "$type": "RPG.GameCore.TriggerCustomString",
+                      "CustomString": {
+                        "Value": "Maze_M2-1_CheckPillar_onOff"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "State": "ChestLocked"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

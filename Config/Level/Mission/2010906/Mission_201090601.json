@@ -1,0 +1,35 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300001,
+          "GroupID": 26,
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "DestroyAfterTriggered": true,
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.PlayMissionTalk",
+              "SimpleTalkList": [
+                {
+                  "VoiceID": 801310336,
+                  "ProtectTime": 1.0
+                },
+                {
+                  "VoiceID": 801310337,
+                  "ProtectTime": 1.0
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.WaitMissionTalkFinish"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

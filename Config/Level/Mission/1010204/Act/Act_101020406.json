@@ -1,0 +1,114 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Hold",
+          "WaitOwnerOnly": true
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300002,
+          "GroupID": 8,
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "DestroyAfterTriggered": true,
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.LockPlayerControl"
+            },
+            {
+              "$type": "RPG.GameCore.ShowTalkUI",
+              "Show": true
+            },
+            {
+              "$type": "RPG.GameCore.WaitSecond",
+              "WaitTime": 1.0
+            },
+            {
+              "$type": "RPG.GameCore.PlaySimpleTalk",
+              "SimpleTalkList": [
+                {
+                  "VoiceID": 101020420
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+            },
+            {
+              "$type": "RPG.GameCore.PlaySimpleTalk",
+              "SimpleTalkList": [
+                {
+                  "VoiceID": 101020404
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+            },
+            {
+              "$type": "RPG.GameCore.PlayUIPrefabInTalk",
+              "AssetPath": "UI/TempUI/TutorialPage.prefab",
+              "UIImageNodes": [
+                {
+                  "Path": "ImageArea/Image",
+                  "AssetPath": "UI/DeletedUI/Dialogue/3DRes/Maze_Test01.png"
+                }
+              ],
+              "UITextNodes": []
+            },
+            {
+              "$type": "RPG.GameCore.PlayUIPrefabInTalk",
+              "AssetPath": "UI/TempUI/TutorialPage.prefab",
+              "UIImageNodes": [
+                {
+                  "Path": "ImageArea/Image",
+                  "AssetPath": "UI/DeletedUI/Dialogue/3DRes/Maze_Test02.png"
+                }
+              ],
+              "UITextNodes": []
+            },
+            {
+              "$type": "RPG.GameCore.PlayUIPrefabInTalk",
+              "AssetPath": "UI/TempUI/TutorialPage.prefab",
+              "UIImageNodes": [
+                {
+                  "Path": "ImageArea/Image",
+                  "AssetPath": "UI/DeletedUI/Dialogue/3DRes/Maze_Test04.png"
+                }
+              ],
+              "UITextNodes": []
+            },
+            {
+              "$type": "RPG.GameCore.PlaySimpleTalk",
+              "SimpleTalkList": [
+                {
+                  "VoiceID": 101020426
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+            },
+            {
+              "$type": "RPG.GameCore.ShowTalkUI"
+            },
+            {
+              "$type": "RPG.GameCore.UnLockPlayerControl"
+            },
+            {
+              "$type": "RPG.GameCore.FinishLevelGraph"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

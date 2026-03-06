@@ -1,0 +1,111 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.LevelStoryInitialize",
+          "EntityVisiableList": [
+            {
+              "MuteColliderWhenInvisiable": false
+            }
+          ],
+          "CreateCharacterList": [
+            {
+              "CharacterUniqueName": "Player",
+              "AvatarID": "Player",
+              "AreaName": "LevelArea_P20132_F20132001_G5",
+              "AnchorName": "Act03_Player_01"
+            },
+            {
+              "CharacterUniqueName": "7thMarch",
+              "Catgory": "Default",
+              "AvatarID": "7thMarch",
+              "AreaName": "LevelArea_P20132_F20132001_G5",
+              "AnchorName": "Act03_7thMarch_01"
+            },
+            {
+              "CharacterUniqueName": "Seele",
+              "Catgory": "Default",
+              "AvatarID": "Seele",
+              "AreaName": "LevelArea_P20132_F20132001_G5",
+              "AnchorName": "Act03_Seele_01"
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "Maze_Chap01_M302_300_CheckZone01Door"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Mission_1011001",
+          "AnchorName": "A04_Cam_01",
+          "BlendConfig": {
+            "BlendType": "Cut"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201320122
+            },
+            {
+              "VoiceID": 201320123
+            },
+            {
+              "VoiceID": 201320124
+            },
+            {
+              "VoiceID": 201320125
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Mission_1011001",
+          "AnchorName": "A04_Cam_01",
+          "IsActive": false,
+          "BlendConfig": {
+            "BlendType": "Cut"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.EndStory"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Chap01_M302_300_CheckZone01Door",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.CharacterNavigateTo",
+          "CharacterUniqueName": "Player",
+          "AreaName": "LevelArea_P20132_F20132001_G5",
+          "AnchorName": "Act03_Player_02",
+          "MotionFlag": "Walk"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitStoryEnd"
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    }
+  ]
+}

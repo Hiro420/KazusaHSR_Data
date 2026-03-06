@@ -1,0 +1,37 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PlayBackgroundTalk",
+          "BackgroundTalkList": [
+            {
+              "AutoSkipTime": 3.0,
+              "VoiceID": 201320131
+            },
+            {
+              "AutoSkipTime": 3.0,
+              "VoiceID": 201320132
+            },
+            {
+              "AutoSkipTime": 3.0,
+              "VoiceID": 201320133
+            },
+            {
+              "AutoSkipTime": 3.0,
+              "VoiceID": 201320134
+            },
+            {
+              "AutoSkipTime": 3.0,
+              "VoiceID": 201320135
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    }
+  ]
+}

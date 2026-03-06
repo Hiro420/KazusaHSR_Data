@@ -1,0 +1,258 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.CreateNPC",
+          "GroupID": 11,
+          "GroupNpcID": 400008,
+          "NPCUniqueName": "1010801_7th"
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC",
+          "GroupID": 11,
+          "GroupNpcID": 400007,
+          "NPCUniqueName": "1010801_Danheng"
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC",
+          "GroupID": 11,
+          "GroupNpcID": 400009,
+          "NPCUniqueName": "1010801_Natasha"
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC",
+          "GroupID": 11,
+          "GroupNpcID": 400010,
+          "NPCUniqueName": "1010801_Seele"
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "CustomTime": 0.5
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "10180106_Talk"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI",
+          "Show": true
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode",
+          "Enable": true
+        },
+        {
+          "$type": "RPG.GameCore.LockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 101016101,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.EnableStoryMode"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "10180105_Talk"
+        },
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300006,
+              "GroupID": 11,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.ShowTalkUI",
+                  "Show": true
+                },
+                {
+                  "$type": "RPG.GameCore.EnableStoryMode",
+                  "Enable": true
+                },
+                {
+                  "$type": "RPG.GameCore.LockPlayerControl"
+                },
+                {
+                  "$type": "RPG.GameCore.PlaySimpleTalk",
+                  "SimpleTalkList": [
+                    {
+                      "VoiceID": 101016201,
+                      "ProtectTime": 1.0
+                    }
+                  ]
+                },
+                {
+                  "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+                },
+                {
+                  "$type": "RPG.GameCore.EnableStoryMode"
+                },
+                {
+                  "$type": "RPG.GameCore.UnLockPlayerControl"
+                },
+                {
+                  "$type": "RPG.GameCore.ShowTalkUI"
+                }
+              ],
+              "State": "Open"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300006,
+              "GroupID": 11,
+              "Execute": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "10180107_Talk"
+        },
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300005,
+              "GroupID": 11,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.ShowTalkUI",
+                  "Show": true
+                },
+                {
+                  "$type": "RPG.GameCore.EnableStoryMode",
+                  "Enable": true
+                },
+                {
+                  "$type": "RPG.GameCore.LockPlayerControl"
+                },
+                {
+                  "$type": "RPG.GameCore.PlaySimpleTalk",
+                  "SimpleTalkList": [
+                    {
+                      "VoiceID": 101016301,
+                      "ProtectTime": 1.0
+                    }
+                  ]
+                },
+                {
+                  "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+                },
+                {
+                  "$type": "RPG.GameCore.EnableStoryMode"
+                },
+                {
+                  "$type": "RPG.GameCore.UnLockPlayerControl"
+                },
+                {
+                  "$type": "RPG.GameCore.ShowTalkUI"
+                }
+              ],
+              "State": "Open"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300005,
+              "GroupID": 11,
+              "Execute": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "10180108_Talk"
+        },
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300004,
+              "GroupID": 11,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.ShowTalkUI",
+                  "Show": true
+                },
+                {
+                  "$type": "RPG.GameCore.EnableStoryMode",
+                  "Enable": true
+                },
+                {
+                  "$type": "RPG.GameCore.LockPlayerControl"
+                },
+                {
+                  "$type": "RPG.GameCore.PlaySimpleTalk",
+                  "SimpleTalkList": [
+                    {
+                      "VoiceID": 101016401,
+                      "ProtectTime": 1.0
+                    }
+                  ]
+                },
+                {
+                  "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+                },
+                {
+                  "$type": "RPG.GameCore.EnableStoryMode"
+                },
+                {
+                  "$type": "RPG.GameCore.UnLockPlayerControl"
+                },
+                {
+                  "$type": "RPG.GameCore.ShowTalkUI"
+                }
+              ],
+              "State": "Open"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300004,
+              "GroupID": 11,
+              "Execute": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

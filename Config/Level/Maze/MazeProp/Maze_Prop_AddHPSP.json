@@ -1,0 +1,87 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.CaptureLocalPlayer",
+              "CharacterUniqueName": "player01"
+            },
+            {
+              "$type": "RPG.GameCore.TriggerEffectListOnCharacter",
+              "CharacterUniqueName": "player01",
+              "EffectList": [
+                {
+                  "EffectPath": "Effects/Eff_Prefab/Eff_Common/Eff_Common_MAZ_RecoverHP.prefab",
+                  "AttachPoint": "Body",
+                  "PositionOffset": {
+                    "x": 0.0,
+                    "y": 0.5,
+                    "z": 0.0
+                  }
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.AdventureModifyTeamPlayerHP",
+              "AddRatio": {
+                "FixedValue": {
+                  "IsDynamic": false,
+                  "FixedValue": 0.2
+                }
+              },
+              "ModifyValue": {
+                "FixedValue": {
+                  "IsDynamic": false,
+                  "FixedValue": 0.0
+                }
+              }
+            },
+            {
+              "$type": "RPG.GameCore.AdventureModifyTeamPlayerSP",
+              "AddRatio": {
+                "FixedValue": {
+                  "IsDynamic": false,
+                  "FixedValue": 0.2
+                }
+              },
+              "ModifyValue": {
+                "FixedValue": {
+                  "IsDynamic": false,
+                  "FixedValue": 0.0
+                }
+              }
+            },
+            {
+              "$type": "RPG.GameCore.DestroyProp"
+            },
+            {
+              "$type": "RPG.GameCore.ReleaseCharacter",
+              "CharacterUniqueName": "player01"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 2.0
+        },
+        {
+          "$type": "RPG.GameCore.DestroyProp"
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    }
+  ]
+}

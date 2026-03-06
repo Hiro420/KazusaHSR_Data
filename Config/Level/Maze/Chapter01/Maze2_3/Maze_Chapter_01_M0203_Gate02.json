@@ -1,0 +1,58 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SyncSubPropState",
+          "MainGroupID": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 8.0
+            }
+          },
+          "MainGroupPropID": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 300004.0
+            }
+          },
+          "MainState": "Open",
+          "SubGroupID": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 8.0
+            }
+          },
+          "SubGroupPropID": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 300005.0
+            }
+          },
+          "SubState": "Open"
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SyncAllSubPropState",
+          "GroupID": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 8.0
+            }
+          },
+          "GroupPropID": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 300004.0
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

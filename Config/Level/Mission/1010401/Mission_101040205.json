@@ -1,0 +1,88 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.DestroyNPC",
+          "GroupID": 4,
+          "GroupNpcID": 400002
+        },
+        {
+          "$type": "RPG.GameCore.WaitSecond",
+          "WaitTime": 0.5
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "CustomTime": 0.5
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.CreateNPC",
+          "GroupID": 4,
+          "GroupNpcID": 400003
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC",
+          "GroupID": 4,
+          "GroupNpcID": 400004
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC",
+          "GroupID": 4,
+          "GroupNpcID": 400005
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPC",
+          "GroupID": 4,
+          "GroupNpcID": 400006
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "ID": 300002,
+          "GroupID": 4,
+          "TargetTypes": [],
+          "ColliderRelativePath": "Trigger",
+          "DestroyAfterTriggered": true,
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.PlayScreenTransfer",
+              "Mode": "SwitchOut"
+            },
+            {
+              "$type": "RPG.GameCore.DestroyNPC",
+              "GroupID": 4,
+              "GroupNpcID": 400003
+            },
+            {
+              "$type": "RPG.GameCore.DestroyNPC",
+              "GroupID": 4,
+              "GroupNpcID": 400004
+            },
+            {
+              "$type": "RPG.GameCore.DestroyNPC",
+              "GroupID": 4,
+              "GroupNpcID": 400005
+            },
+            {
+              "$type": "RPG.GameCore.DestroyNPC",
+              "GroupID": 4,
+              "GroupNpcID": 400006
+            },
+            {
+              "$type": "RPG.GameCore.FinishStoryMission",
+              "Key": "Mission_101040205"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

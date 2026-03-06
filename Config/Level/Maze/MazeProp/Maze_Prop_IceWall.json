@@ -1,0 +1,41 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupHitBox",
+          "OnBeHit": [
+            {
+              "$type": "RPG.GameCore.PropSetVisibility",
+              "SpecifiedRelativePaths": [
+                "DLC_City_CrystalWall_01_Destroy"
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.AdventureModifyMazeMP",
+              "ModifyFunction": "Add",
+              "ModifyValue": {
+                "FixedValue": {
+                  "IsDynamic": false,
+                  "FixedValue": 50.0
+                }
+              }
+            },
+            {
+              "$type": "RPG.GameCore.WaitSecond",
+              "WaitTime": 1.0
+            },
+            {
+              "$type": "RPG.GameCore.DestroyProp"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": []
+    }
+  ]
+}

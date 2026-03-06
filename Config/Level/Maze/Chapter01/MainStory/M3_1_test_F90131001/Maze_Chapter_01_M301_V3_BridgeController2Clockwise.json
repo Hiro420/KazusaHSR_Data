@@ -1,0 +1,59 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "TargetIsOwner": true,
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.LockPlayerControl"
+            },
+            {
+              "$type": "RPG.GameCore.ShowTalkUI",
+              "Show": true
+            },
+            {
+              "$type": "RPG.GameCore.EnableNPCMonsterAI",
+              "GroupMonsterIDs": [],
+              "UniqueNames": []
+            },
+            {
+              "$type": "RPG.GameCore.EnableStoryMode",
+              "Enable": true
+            },
+            {
+              "$type": "RPG.GameCore.PlayScreenTransfer",
+              "Mode": "SwitchOut",
+              "CustomTime": 0.25
+            },
+            {
+              "$type": "RPG.GameCore.WaitSecond",
+              "WaitTime": 0.25
+            },
+            {
+              "$type": "RPG.GameCore.ActiveVirtualCamera",
+              "AreaName": "Mission_9010901",
+              "AnchorName": "Cam_Bridge2",
+              "BlendConfig": {
+                "BlendType": "Cut",
+                "BlendTime": 2.0
+              }
+            },
+            {
+              "$type": "RPG.GameCore.PlayScreenTransfer",
+              "CustomTime": 0.25
+            },
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "Maze_Bridge_Rotate_01"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

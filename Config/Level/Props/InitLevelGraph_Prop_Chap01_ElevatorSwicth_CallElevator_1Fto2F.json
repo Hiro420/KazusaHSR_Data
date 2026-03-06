@@ -1,0 +1,105 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.SelectorConfig",
+              "TaskList": [
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "TargetIsOwner": true,
+                  "Execute": [
+                    {
+                      "$type": "RPG.GameCore.SelectorConfig",
+                      "TaskList": [
+                        {
+                          "$type": "RPG.GameCore.PropStateExecute",
+                          "PropKey": {
+                            "Custom": true,
+                            "Key": "Maze_Chap01_Elevator_01"
+                          },
+                          "Execute": [
+                            {
+                              "$type": "RPG.GameCore.PropTriggerAnimState",
+                              "TargetIsOwner": true,
+                              "AnimStateName": "Activing"
+                            },
+                            {
+                              "$type": "RPG.GameCore.PropReqInteract",
+                              "InteractID": 114150,
+                              "PropKey": {
+                                "Custom": true,
+                                "Key": "Maze_Chap01_Elevator_01"
+                              }
+                            },
+                            {
+                              "$type": "RPG.GameCore.WaitSecond",
+                              "WaitTime": 3.0
+                            },
+                            {
+                              "$type": "RPG.GameCore.PropTriggerAnimState",
+                              "TargetIsOwner": true,
+                              "AnimStateName": "Open"
+                            }
+                          ],
+                          "State": "Elevator1"
+                        },
+                        {
+                          "$type": "RPG.GameCore.PropStateExecute",
+                          "PropKey": {
+                            "Custom": true,
+                            "Key": "Maze_Chap01_Elevator_01"
+                          },
+                          "Execute": [
+                            {
+                              "$type": "RPG.GameCore.ToastPile",
+                              "DescTextID": {
+                                "hash": -1784321383
+                              }
+                            }
+                          ],
+                          "State": "Elevator2"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "TargetIsOwner": true,
+                  "Execute": [
+                    {
+                      "$type": "RPG.GameCore.ToastPile",
+                      "DescTextID": {
+                        "hash": 1427839983
+                      }
+                    },
+                    {
+                      "$type": "RPG.GameCore.TriggerCustomString",
+                      "CustomString": {
+                        "Value": "Maze_ElavatorSwicth_Locked"
+                      }
+                    }
+                  ],
+                  "State": "Locked"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "ValueSource": {
+    "Values": [
+      {
+        "$type": "RPG.GameCore.SharedString",
+        "Key": "Maze_Chap01_Elevator_01"
+      }
+    ]
+  }
+}

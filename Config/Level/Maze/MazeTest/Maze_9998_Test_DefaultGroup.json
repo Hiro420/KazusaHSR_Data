@@ -1,0 +1,90 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByCompareNPCMonsterCheckState",
+            "GroupID": 4,
+            "GroupMonsterID": 200005,
+            "CheckState": "Dead"
+          },
+          "SuccessTaskList": [
+            {
+              "$type": "RPG.GameCore.ShowUIPage",
+              "AssetPath": "UI/Mission/MissionStartHintDialog.prefab",
+              "UIImageNodes": [],
+              "UITextNodes": [
+                {
+                  "TextPath": "Dialog/MissionTitle/Text",
+                  "TextContent": {
+                    "hash": 558984476
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "TaskEnabled": false,
+          "Predicate": {
+            "$type": "RPG.GameCore.ByCompareSubMissionState",
+            "SubMissionID": 101020103,
+            "SubMissionState": "Finish"
+          },
+          "SuccessTaskList": [
+            {
+              "$type": "RPG.GameCore.ShowUIPage",
+              "AssetPath": "UI/Mission/MissionStartHintDialog.prefab",
+              "UIImageNodes": [],
+              "UITextNodes": [
+                {
+                  "TextPath": "Dialog/MissionTitle/Text",
+                  "TextContent": {
+                    "hash": 558984476
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.ByCompareTriggerInBattleWin",
+          "TaskEnabled": false,
+          "OnSuccess": [
+            {
+              "$type": "RPG.GameCore.ShowUIPage",
+              "AssetPath": "UI/Mission/MissionStartHintDialog.prefab",
+              "UIImageNodes": [],
+              "UITextNodes": [
+                {
+                  "TextPath": "Dialog/MissionTitle/Text",
+                  "TextContent": {
+                    "hash": 558984476
+                  }
+                }
+              ]
+            }
+          ],
+          "OnFailed": [
+            {
+              "$type": "RPG.GameCore.TriggerBattle",
+              "EventID": 20111001,
+              "GroupID": 2,
+              "BattleAreaID": 1
+            },
+            {
+              "$type": "RPG.GameCore.SaveTriggeredInfo",
+              "Key": "MazeSave_BattleWin_101030102"
+            }
+          ],
+          "Key": "MazeSave_BattleWin_101030102",
+          "BattleWinCount": 1
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": []
+}

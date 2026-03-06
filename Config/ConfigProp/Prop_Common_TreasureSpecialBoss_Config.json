@@ -1,0 +1,119 @@
+﻿{
+  "States": [
+    {
+      "State": "ChestLocked",
+      "AnimName": "Locked"
+    },
+    {
+      "State": "ChestClosed",
+      "Behavior": "EnableTrigger",
+      "AnimName": "StandBy"
+    },
+    {
+      "State": "ChestUsed",
+      "Behavior": "DisableTrigger",
+      "AnimName": "Used"
+    }
+  ],
+  "AnimatorStateGroupEvents": [
+    {
+      "States": [
+        {
+          "Name": "Locked"
+        }
+      ],
+      "OnEnter": [
+        {
+          "$type": "RPG.GameCore.PropSetVisibility",
+          "Visible": true
+        },
+        {
+          "$type": "RPG.GameCore.PropTriggerEffectList",
+          "EffectList": [
+            {
+              "EffectPath": "Effects/Eff_Prefab/Eff_Scene/Interactive Object/Eff_Common_PropBlockade_Idle_Locked.prefab",
+              "AttachPoint": "Root"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "States": [
+        {
+          "Name": "LockedToStandBy"
+        }
+      ],
+      "OnEnter": [
+        {
+          "$type": "RPG.GameCore.PropRemoveEffect",
+          "EffectPath": "Effects/Eff_Prefab/Eff_Scene/Interactive Object/Eff_Common_PropBlockade_Idle_Locked.prefab"
+        },
+        {
+          "$type": "RPG.GameCore.PropSetVisibility",
+          "Visible": true
+        },
+        {
+          "$type": "RPG.GameCore.PropTriggerEffectList",
+          "EffectList": [
+            {
+              "EffectPath": "Effects/Eff_Prefab/Eff_Scene/Interactive Object/Eff_Common_PropBlockade_Unlock.prefab",
+              "AttachPoint": "Root"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "States": [
+        {
+          "Name": "Activing"
+        }
+      ],
+      "OnEnter": [
+        {
+          "$type": "RPG.GameCore.PropSetVisibility",
+          "Visible": true
+        },
+        {
+          "$type": "RPG.GameCore.PropTriggerEffectList",
+          "EffectList": [
+            {
+              "EffectPath": "Effects/Eff_Prefab/Eff_Scene/Interactive Object/Eff_Common_TreasureBox_02_Open.prefab",
+              "AttachPoint": "Root"
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.TriggerSound",
+          "SoundName": "Ev_sfx_common_high_treasurebox",
+          "OwnerEntityEmitter": false
+        }
+      ],
+      "OnExit": [
+        {
+          "$type": "RPG.GameCore.PropSetVisibility"
+        },
+        {
+          "$type": "RPG.GameCore.PropEnableCollider"
+        }
+      ]
+    },
+    {
+      "States": [
+        {
+          "Name": "Used"
+        }
+      ],
+      "OnEnter": [
+        {
+          "$type": "RPG.GameCore.PropEnableCollider"
+        },
+        {
+          "$type": "RPG.GameCore.PropRemoveEffect",
+          "EffectPath": "Effects/Eff_Prefab/Eff_Scene/Interactive Object/Eff_Common_PropBlockade_Idle_Locked.prefab"
+        }
+      ]
+    }
+  ]
+}

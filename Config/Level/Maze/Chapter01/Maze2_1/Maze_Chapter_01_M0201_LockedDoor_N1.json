@@ -1,0 +1,87 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "TargetIsOwner": true,
+                  "AnimStateName": "StandBy"
+                },
+                {
+                  "$type": "RPG.GameCore.PropSetupUITrigger",
+                  "ColliderRelativePath": "Trigger",
+                  "ButtonCallback": [
+                    {
+                      "$type": "RPG.GameCore.LockPlayerControl"
+                    },
+                    {
+                      "$type": "RPG.GameCore.ShowTalkUI",
+                      "Show": true
+                    },
+                    {
+                      "$type": "RPG.GameCore.PlaySimpleTalk",
+                      "SimpleTalkList": [
+                        {
+                          "VoiceID": 201210127,
+                          "ProtectTime": 1.0
+                        }
+                      ]
+                    },
+                    {
+                      "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+                    },
+                    {
+                      "$type": "RPG.GameCore.ShowTalkUI"
+                    },
+                    {
+                      "$type": "RPG.GameCore.UnLockPlayerControl"
+                    },
+                    {
+                      "$type": "RPG.GameCore.FinishLevelGraph"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "TargetIsOwner": true,
+                  "AnimStateName": "Used"
+                },
+                {
+                  "$type": "RPG.GameCore.PropEnableCollider",
+                  "ID": 300015,
+                  "GroupID": 3,
+                  "SpecifiedRelativePaths": [
+                    "Trigger"
+                  ]
+                },
+                {
+                  "$type": "RPG.GameCore.PropEnableCollider",
+                  "ID": 300016,
+                  "GroupID": 3,
+                  "SpecifiedRelativePaths": [
+                    "Trigger"
+                  ]
+                }
+              ],
+              "State": "Open"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": []
+}

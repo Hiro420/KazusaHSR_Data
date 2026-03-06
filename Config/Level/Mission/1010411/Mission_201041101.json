@@ -1,0 +1,43 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.TriggerStory",
+          "StoryID": 101041205
+        },
+        {
+          "$type": "RPG.GameCore.TriggerStory",
+          "StoryID": 101041206
+        },
+        {
+          "$type": "RPG.GameCore.TriggerStory",
+          "StoryID": 101041207
+        },
+        {
+          "$type": "RPG.GameCore.FinishStoryMission",
+          "Key": "Mission_201041101"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.CaptureLocalPlayer",
+          "CharacterUniqueName": "Character_201041101"
+        },
+        {
+          "$type": "RPG.GameCore.SwitchCharacterAnchor",
+          "CharacterUniqueName": "Character_201041101",
+          "AreaName": "LevelArea_P10102_F10102002_G2",
+          "AnchorName": "Anchor2"
+        },
+        {
+          "$type": "RPG.GameCore.ReleaseCharacter",
+          "CharacterUniqueName": "Character_101020201_1"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Talk_501023601"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerStory",
+          "StoryID": 501023601
+        },
+        {
+          "$type": "RPG.GameCore.FinishStoryMission",
+          "Key": "Mission_501023601"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [],
+              "State": "Locked"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropTriggerEffectList",
+                  "EffectList": [
+                    {
+                      "EffectPath": "Effects/Eff_Prefab/Eff_Common/Eff_Common_Smoke.prefab",
+                      "AttachPoint": "Root"
+                    }
+                  ]
+                },
+                {
+                  "$type": "RPG.GameCore.ShowUIPage",
+                  "AssetPath": "UI/Mission/MissionStartHintDialog.prefab",
+                  "UIImageNodes": [],
+                  "UITextNodes": [
+                    {
+                      "TextPath": "Dialog/MissionTitle/Text",
+                      "TextContent": {
+                        "hash": 1717240506
+                      }
+                    }
+                  ]
+                },
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "TargetIsOwner": true,
+                  "GroupPropID": 300004,
+                  "GroupID": 16,
+                  "Execute": [
+                    {
+                      "$type": "RPG.GameCore.PropReqInteract",
+                      "TargetIsOwner": true,
+                      "GroupPropID": 300004,
+                      "GroupID": 16,
+                      "InteractID": 20101
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropSetVisibility",
+                      "ID": 300004,
+                      "GroupID": 16,
+                      "SpecifiedRelativePaths": []
+                    },
+                    {
+                      "$type": "RPG.GameCore.PropEnableCollider",
+                      "ID": 300004,
+                      "GroupID": 16,
+                      "SpecifiedRelativePaths": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [],
+              "State": "Open"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropSetupUITrigger",
+                  "ButtonCallback": [
+                    {
+                      "$type": "RPG.GameCore.PropReqInteract",
+                      "TargetIsOwner": true,
+                      "InteractID": 20101
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [],
+              "State": "Open"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

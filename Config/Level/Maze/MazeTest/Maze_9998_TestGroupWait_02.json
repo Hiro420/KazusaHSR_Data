@@ -1,0 +1,40 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitPredicateSucc",
+          "Condition": {
+            "$type": "RPG.GameCore.ByAnd",
+            "PredicateList": [
+              {
+                "$type": "RPG.GameCore.ByComparePropState",
+                "GroupPropID": 300001,
+                "GroupID": 8,
+                "State": "Open"
+              },
+              {
+                "$type": "RPG.GameCore.ByComparePropState",
+                "GroupPropID": 300002,
+                "GroupID": 8,
+                "State": "Open"
+              },
+              {
+                "$type": "RPG.GameCore.ByComparePropState",
+                "GroupPropID": 300003,
+                "GroupID": 8,
+                "State": "Open"
+              }
+            ]
+          }
+        },
+        {
+          "$type": "RPG.GameCore.CreateNPCMonster",
+          "GroupID": 8,
+          "GroupNpcMonsterID": 200001
+        }
+      ]
+    }
+  ]
+}

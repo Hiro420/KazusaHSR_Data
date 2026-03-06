@@ -1,0 +1,71 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropSetupTrigger",
+                  "TargetTypes": [],
+                  "OnTriggerEnter": [
+                    {
+                      "$type": "RPG.GameCore.PropStateExecute",
+                      "GroupPropID": 300001,
+                      "GroupID": 3,
+                      "Execute": [
+                        {
+                          "$type": "RPG.GameCore.PropReqInteract",
+                          "GroupPropID": 300001,
+                          "GroupID": 3,
+                          "InteractID": 1340
+                        },
+                        {
+                          "$type": "RPG.GameCore.PropReqInteract",
+                          "GroupPropID": 300004,
+                          "GroupID": 3,
+                          "InteractID": 1100
+                        },
+                        {
+                          "$type": "RPG.GameCore.PropReqInteract",
+                          "GroupPropID": 300005,
+                          "GroupID": 3,
+                          "InteractID": 1100
+                        },
+                        {
+                          "$type": "RPG.GameCore.PropReqInteract",
+                          "TargetIsOwner": true,
+                          "InteractID": 11090
+                        },
+                        {
+                          "$type": "RPG.GameCore.FinishLevelGraph"
+                        }
+                      ],
+                      "State": "BridgeState1"
+                    }
+                  ]
+                }
+              ],
+              "State": "TriggerEnable"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.FinishLevelGraph"
+                }
+              ],
+              "State": "TriggerDisable"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

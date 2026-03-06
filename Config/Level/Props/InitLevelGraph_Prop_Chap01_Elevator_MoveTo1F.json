@@ -1,0 +1,138 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropMoveTo",
+                  "AreaName": "LevelArea_P90002_F9000201_G3",
+                  "AnchorName": "Anchor1"
+                }
+              ],
+              "State": "Elevator1"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropMoveTo",
+                  "AreaName": "LevelArea_P90002_F9000201_G3",
+                  "AnchorName": "Anchor2"
+                }
+              ],
+              "State": "Elevator2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupTrigger",
+          "TargetTypes": [],
+          "OnTriggerEnter": [
+            {
+              "$type": "RPG.GameCore.SelectorConfig",
+              "TaskList": [
+                {
+                  "$type": "RPG.GameCore.PropStateExecute",
+                  "TargetIsOwner": true,
+                  "Execute": [
+                    {
+                      "$type": "RPG.GameCore.PropReqInteract",
+                      "TargetIsOwner": true,
+                      "InteractID": 115140
+                    }
+                  ],
+                  "State": "Elevator2"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropStateChangeListenerConfig",
+          "FromState": "Elevator1",
+          "ToState": "Elevator2",
+          "OnChange": [
+            {
+              "$type": "RPG.GameCore.PropTriggerAnimState",
+              "TargetIsOwner": true,
+              "AnimStateName": "Activing"
+            },
+            {
+              "$type": "RPG.GameCore.PropMoveTo",
+              "Duration": 3.0,
+              "AreaName": "LevelArea_P90002_F9000201_G3",
+              "AnchorName": "Anchor2",
+              "WaitFinish": true
+            },
+            {
+              "$type": "RPG.GameCore.PropTriggerAnimState",
+              "TargetIsOwner": true,
+              "AnimStateName": "Standby"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropStateChangeListenerConfig",
+          "FromState": "Elevator2",
+          "ToState": "Elevator1",
+          "OnChange": [
+            {
+              "$type": "RPG.GameCore.PropTriggerAnimState",
+              "TargetIsOwner": true,
+              "AnimStateName": "Activing"
+            },
+            {
+              "$type": "RPG.GameCore.PropMoveTo",
+              "Duration": 3.0,
+              "AreaName": "LevelArea_P90002_F9000201_G3",
+              "AnchorName": "Anchor1",
+              "WaitFinish": true
+            },
+            {
+              "$type": "RPG.GameCore.PropTriggerAnimState",
+              "TargetIsOwner": true,
+              "AnimStateName": "Standby"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "ValueSource": {
+    "Values": [
+      {
+        "$type": "RPG.GameCore.SharedFloat",
+        "Key": "Maze_Prop_Chap01_Elevator2FHeight"
+      },
+      {
+        "$type": "RPG.GameCore.SharedFloat",
+        "Key": "Maze_Prop_Chap01_ElevatorMoveBSAS"
+      },
+      {
+        "$type": "RPG.GameCore.SharedFloat",
+        "Key": "Maze_Prop_Chap01_ElevatorMoveLoop"
+      }
+    ]
+  }
+}

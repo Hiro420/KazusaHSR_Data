@@ -1,0 +1,484 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "ColliderRelativePath": "Trigger",
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.PropTriggerAnimState",
+              "TargetIsOwner": true,
+              "AnimStateName": "TriggerSelectBegin"
+            },
+            {
+              "$type": "RPG.GameCore.LockPlayerControl"
+            },
+            {
+              "$type": "RPG.GameCore.ShowTalkUI",
+              "Show": true
+            },
+            {
+              "$type": "RPG.GameCore.ActiveVirtualCamera",
+              "AreaName": "Chap01_MAZ_M302_LevelArea",
+              "AnchorName": "RotateBridge_Cam_04",
+              "BlendConfig": {
+                "BlendType": "EaseInOut",
+                "BlendTime": 1.0
+              }
+            },
+            {
+              "$type": "RPG.GameCore.WaitSecond",
+              "WaitTime": 1.0
+            },
+            {
+              "$type": "RPG.GameCore.PlayOptionTalk",
+              "OptionList": [
+                {
+                  "OptionTextmapID": {
+                    "hash": -455717622
+                  },
+                  "TriggerCustomString": "Maze_Bridge_Rotate_02"
+                },
+                {
+                  "OptionTextmapID": {
+                    "hash": 1723323179
+                  },
+                  "TriggerCustomString": "Maze_Bridge_DoNothing"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Order": 1,
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Bridge_Rotate_02",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300001,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "GroupPropID": 300001,
+                  "GroupID": 3,
+                  "InteractID": 1360
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "GroupPropID": 300021,
+                  "GroupID": 3,
+                  "AnimStateName": "CounterClockwise"
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "GroupPropID": 300022,
+                  "GroupID": 3,
+                  "AnimStateName": "CounterClockwise"
+                },
+                {
+                  "$type": "RPG.GameCore.WaitSecond",
+                  "WaitTime": 3.0
+                },
+                {
+                  "$type": "RPG.GameCore.ShowTalkUI"
+                },
+                {
+                  "$type": "RPG.GameCore.UnLockPlayerControl"
+                },
+                {
+                  "$type": "RPG.GameCore.ActiveVirtualCamera",
+                  "AreaName": "Chap01_MAZ_M302_LevelArea",
+                  "AnchorName": "RotateBridge_Cam_04",
+                  "IsActive": false,
+                  "BlendConfig": {
+                    "BlendType": "Cut"
+                  }
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "TargetIsOwner": true,
+                  "AnimStateName": "TriggerSelectEnd"
+                }
+              ],
+              "State": "BridgeState1"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300001,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "GroupPropID": 300001,
+                  "GroupID": 3,
+                  "InteractID": 1430
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "GroupPropID": 300021,
+                  "GroupID": 3,
+                  "AnimStateName": "CounterClockwise"
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "GroupPropID": 300022,
+                  "GroupID": 3,
+                  "AnimStateName": "CounterClockwise"
+                },
+                {
+                  "$type": "RPG.GameCore.WaitSecond",
+                  "WaitTime": 3.0
+                },
+                {
+                  "$type": "RPG.GameCore.ShowTalkUI"
+                },
+                {
+                  "$type": "RPG.GameCore.UnLockPlayerControl"
+                },
+                {
+                  "$type": "RPG.GameCore.ActiveVirtualCamera",
+                  "AreaName": "Chap01_MAZ_M302_LevelArea",
+                  "AnchorName": "RotateBridge_Cam_04",
+                  "IsActive": false,
+                  "BlendConfig": {
+                    "BlendType": "Cut"
+                  }
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "TargetIsOwner": true,
+                  "AnimStateName": "TriggerSelectEnd"
+                }
+              ],
+              "State": "BridgeState2"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300001,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "GroupPropID": 300001,
+                  "GroupID": 3,
+                  "InteractID": 1540
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "GroupPropID": 300021,
+                  "GroupID": 3,
+                  "AnimStateName": "CounterClockwise"
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "GroupPropID": 300022,
+                  "GroupID": 3,
+                  "AnimStateName": "CounterClockwise"
+                },
+                {
+                  "$type": "RPG.GameCore.WaitSecond",
+                  "WaitTime": 3.0
+                },
+                {
+                  "$type": "RPG.GameCore.ShowTalkUI"
+                },
+                {
+                  "$type": "RPG.GameCore.UnLockPlayerControl"
+                },
+                {
+                  "$type": "RPG.GameCore.ActiveVirtualCamera",
+                  "AreaName": "Chap01_MAZ_M302_LevelArea",
+                  "AnchorName": "RotateBridge_Cam_04",
+                  "IsActive": false,
+                  "BlendConfig": {
+                    "BlendType": "Cut"
+                  }
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "TargetIsOwner": true,
+                  "AnimStateName": "TriggerSelectEnd"
+                }
+              ],
+              "State": "BridgeState3"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300001,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "GroupPropID": 300001,
+                  "GroupID": 3,
+                  "InteractID": 1650
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "GroupPropID": 300021,
+                  "GroupID": 3,
+                  "AnimStateName": "CounterClockwise"
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "GroupPropID": 300022,
+                  "GroupID": 3,
+                  "AnimStateName": "CounterClockwise"
+                },
+                {
+                  "$type": "RPG.GameCore.WaitSecond",
+                  "WaitTime": 3.0
+                },
+                {
+                  "$type": "RPG.GameCore.ShowTalkUI"
+                },
+                {
+                  "$type": "RPG.GameCore.UnLockPlayerControl"
+                },
+                {
+                  "$type": "RPG.GameCore.ActiveVirtualCamera",
+                  "AreaName": "Chap01_MAZ_M302_LevelArea",
+                  "AnchorName": "RotateBridge_Cam_04",
+                  "IsActive": false,
+                  "BlendConfig": {
+                    "BlendType": "Cut"
+                  }
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "TargetIsOwner": true,
+                  "AnimStateName": "TriggerSelectEnd"
+                }
+              ],
+              "State": "BridgeState4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Order": 1,
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Bridge_DoNothing",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "Chap01_MAZ_M302_LevelArea",
+          "AnchorName": "RotateBridge_Cam_03",
+          "IsActive": false,
+          "BlendConfig": {
+            "BlendType": "Cut"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.ShowTalkUI"
+        },
+        {
+          "$type": "RPG.GameCore.UnLockPlayerControl"
+        },
+        {
+          "$type": "RPG.GameCore.PropTriggerAnimState",
+          "TargetIsOwner": true,
+          "AnimStateName": "TriggerSelectEnd"
+        }
+      ]
+    },
+    {
+      "Order": 1,
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Maze_Bridge_Rotate_01",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300001,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "GroupPropID": 300001,
+                  "GroupID": 3,
+                  "InteractID": 1340
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "GroupPropID": 300021,
+                  "GroupID": 3,
+                  "AnimStateName": "Clockwise"
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "GroupPropID": 300022,
+                  "GroupID": 3,
+                  "AnimStateName": "Clockwise"
+                },
+                {
+                  "$type": "RPG.GameCore.WaitSecond",
+                  "WaitTime": 2.0
+                },
+                {
+                  "$type": "RPG.GameCore.ShowTalkUI"
+                },
+                {
+                  "$type": "RPG.GameCore.UnLockPlayerControl"
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "TargetIsOwner": true,
+                  "AnimStateName": "TriggerSelectEnd"
+                }
+              ],
+              "State": "BridgeState1"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300001,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "GroupPropID": 300001,
+                  "GroupID": 3,
+                  "InteractID": 1450
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "GroupPropID": 300021,
+                  "GroupID": 3,
+                  "AnimStateName": "Clockwise"
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "GroupPropID": 300022,
+                  "GroupID": 3,
+                  "AnimStateName": "Clockwise"
+                },
+                {
+                  "$type": "RPG.GameCore.WaitSecond",
+                  "WaitTime": 2.0
+                },
+                {
+                  "$type": "RPG.GameCore.ShowTalkUI"
+                },
+                {
+                  "$type": "RPG.GameCore.UnLockPlayerControl"
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "TargetIsOwner": true,
+                  "AnimStateName": "TriggerSelectEnd"
+                }
+              ],
+              "State": "BridgeState2"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300001,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "GroupPropID": 300001,
+                  "GroupID": 3,
+                  "InteractID": 1560
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "GroupPropID": 300021,
+                  "GroupID": 3,
+                  "AnimStateName": "Clockwise"
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "GroupPropID": 300022,
+                  "GroupID": 3,
+                  "AnimStateName": "Clockwise"
+                },
+                {
+                  "$type": "RPG.GameCore.WaitSecond",
+                  "WaitTime": 2.0
+                },
+                {
+                  "$type": "RPG.GameCore.ShowTalkUI"
+                },
+                {
+                  "$type": "RPG.GameCore.UnLockPlayerControl"
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "TargetIsOwner": true,
+                  "AnimStateName": "TriggerSelectEnd"
+                }
+              ],
+              "State": "BridgeState3"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "GroupPropID": 300001,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropReqInteract",
+                  "GroupPropID": 300001,
+                  "GroupID": 3,
+                  "InteractID": 1630
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "GroupPropID": 300021,
+                  "GroupID": 3,
+                  "AnimStateName": "Clockwise"
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "GroupPropID": 300022,
+                  "GroupID": 3,
+                  "AnimStateName": "Clockwise"
+                },
+                {
+                  "$type": "RPG.GameCore.WaitSecond",
+                  "WaitTime": 2.0
+                },
+                {
+                  "$type": "RPG.GameCore.ShowTalkUI"
+                },
+                {
+                  "$type": "RPG.GameCore.UnLockPlayerControl"
+                },
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "TargetIsOwner": true,
+                  "AnimStateName": "TriggerSelectEnd"
+                }
+              ],
+              "State": "BridgeState4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

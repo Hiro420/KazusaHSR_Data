@@ -1,0 +1,55 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PropSetupUITrigger",
+          "ID": 300001,
+          "GroupID": 18,
+          "ButtonText": {
+            "hash": -1307791735
+          },
+          "ButtonCallback": [
+            {
+              "$type": "RPG.GameCore.TriggerStory",
+              "StoryID": 301030101
+            },
+            {
+              "$type": "RPG.GameCore.TriggerCustomString",
+              "CustomString": {
+                "Value": "Mission_301030101_OpenDoor"
+              }
+            },
+            {
+              "$type": "RPG.GameCore.FinishStoryMission",
+              "Key": "Mission_301030101"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Mission_301030101_OpenDoor",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.PropStateExecute",
+          "GroupPropID": 300002,
+          "GroupID": 12,
+          "Execute": [
+            {
+              "$type": "RPG.GameCore.PropReqInteract",
+              "GroupPropID": 300002,
+              "GroupID": 12,
+              "InteractID": 1010
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

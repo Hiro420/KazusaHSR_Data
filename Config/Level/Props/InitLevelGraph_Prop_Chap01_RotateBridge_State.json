@@ -1,0 +1,130 @@
+﻿{
+  "OnInitSequece": [
+    {
+      "TaskList": []
+    }
+  ],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.SelectorConfig",
+          "TaskList": [
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300004,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "TargetIsOwner": true,
+                  "GroupPropID": 300004,
+                  "GroupID": 3,
+                  "AnimStateName": "South"
+                },
+                {
+                  "$type": "RPG.GameCore.PropMoveTo",
+                  "LevelAreaKey": {
+                    "Custom": true,
+                    "Key": "Bridge_Rotate_South"
+                  }
+                }
+              ],
+              "State": "BridgeState1"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300004,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "TargetIsOwner": true,
+                  "GroupPropID": 300004,
+                  "GroupID": 3,
+                  "AnimStateName": "West"
+                },
+                {
+                  "$type": "RPG.GameCore.PropMoveTo",
+                  "LevelAreaKey": {
+                    "Custom": true,
+                    "Key": "Bridge_Rotate_West"
+                  }
+                }
+              ],
+              "State": "BridgeState2"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300004,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "TargetIsOwner": true,
+                  "GroupPropID": 300004,
+                  "GroupID": 3,
+                  "AnimStateName": "North"
+                },
+                {
+                  "$type": "RPG.GameCore.PropMoveTo",
+                  "LevelAreaKey": {
+                    "Custom": true,
+                    "Key": "Bridge_Rotate_North"
+                  }
+                }
+              ],
+              "State": "BridgeState3"
+            },
+            {
+              "$type": "RPG.GameCore.PropStateExecute",
+              "TargetIsOwner": true,
+              "GroupPropID": 300004,
+              "GroupID": 3,
+              "Execute": [
+                {
+                  "$type": "RPG.GameCore.PropTriggerAnimState",
+                  "TargetIsOwner": true,
+                  "GroupPropID": 300004,
+                  "GroupID": 3,
+                  "AnimStateName": "East"
+                },
+                {
+                  "$type": "RPG.GameCore.PropMoveTo",
+                  "LevelAreaKey": {
+                    "Custom": true,
+                    "Key": "Bridge_Rotate_East"
+                  }
+                }
+              ],
+              "State": "BridgeState4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "ValueSource": {
+    "Values": [
+      {
+        "$type": "RPG.GameCore.SharedString",
+        "Key": "Bridge_Rotate_North"
+      },
+      {
+        "$type": "RPG.GameCore.SharedString",
+        "Key": "Bridge_Rotate_East"
+      },
+      {
+        "$type": "RPG.GameCore.SharedString",
+        "Key": "Bridge_Rotate_South"
+      },
+      {
+        "$type": "RPG.GameCore.SharedString",
+        "Key": "Bridge_Rotate_West"
+      }
+    ]
+  }
+}

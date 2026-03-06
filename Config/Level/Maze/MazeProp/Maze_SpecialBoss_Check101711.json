@@ -4,14 +4,38 @@
     {
       "TaskList": [
         {
-          "$type": "RPG.GameCore.WaitPredicateSucc"
+          "$type": "RPG.GameCore.WaitPredicateSucc",
+          "Condition": {
+            "$type": "RPG.GameCore.ByAnd",
+            "PredicateList": [
+              {
+                "$type": "RPG.GameCore.ByCompareGroupMonsterNum",
+                "GroupID": 19
+              },
+              {
+                "$type": "RPG.GameCore.ByComparePropState",
+                "GroupPropID": 300003,
+                "GroupID": 19,
+                "State": "ChestLocked"
+              }
+            ]
+          }
         },
         {
-          "$type": "RPG.GameCore.ActiveVirtualCamera",
-          "AreaName": "\u0004&",
-          "LevelAreaCameraKey": {
-            "Key": "3\u001c�\u0012\u0013\u0016�\u0001\u000e\u0000�������\u0004"
-          }
+          "$type": "RPG.GameCore.ChangePropState",
+          "DynamicGroupPropID": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 300003.0
+            }
+          },
+          "DynamicGroupID": {
+            "FixedValue": {
+              "IsDynamic": false,
+              "FixedValue": 19.0
+            }
+          },
+          "State": "ChestClosed"
         }
       ]
     }

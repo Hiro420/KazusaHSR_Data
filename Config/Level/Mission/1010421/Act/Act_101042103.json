@@ -1,0 +1,1523 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.LevelStoryInitialize",
+          "AreaPrefabPath": "Level/Mission/1010401/101042103_temp.prefab",
+          "EntityVisiableList": [
+            {
+              "CharType": "NPC",
+              "GroupID": 26,
+              "GroupNPCID": 400001
+            },
+            {},
+            {
+              "CharType": "NPC",
+              "GroupID": 15,
+              "GroupNPCID": 400003
+            },
+            {
+              "CharType": "NPC",
+              "GroupID": 15,
+              "GroupNPCID": 400004
+            }
+          ],
+          "CreateCharacterList": [
+            {
+              "CharacterUniqueName": "101042103_Oleg",
+              "AvatarID": "NPC_W1_Male_Oleg",
+              "AreaName": "LevelArea_P10102_F10102001_G14",
+              "AnchorName": "Anchor8"
+            },
+            {
+              "CharacterUniqueName": "101042103_Player",
+              "AvatarID": "PlayerBoy_00",
+              "AreaName": "LevelArea_P10102_F10102001_G14",
+              "AnchorName": "Anchor4"
+            },
+            {
+              "CharacterUniqueName": "101042103_Seele",
+              "AvatarID": "Seele_00",
+              "AreaName": "LevelArea_P10102_F10102001_G14",
+              "AnchorName": "Anchor5"
+            },
+            {
+              "CharacterUniqueName": "101042103_7th",
+              "AvatarID": "Mar_7th_00",
+              "AreaName": "LevelArea_P10102_F10102001_G14",
+              "AnchorName": "Anchor6"
+            },
+            {
+              "CharacterUniqueName": "101042103_Danheng",
+              "AvatarID": "DanHeng_00",
+              "AreaName": "LevelArea_P10102_F10102001_G14",
+              "AnchorName": "Anchor7"
+            },
+            {
+              "CharacterUniqueName": "101042103_Bronya",
+              "AvatarID": "Bronya_00",
+              "AreaName": "LevelArea_P10102_F10102001_G14",
+              "AnchorName": "Anchor9"
+            },
+            {
+              "CharacterUniqueName": "101042103_Fans1",
+              "AvatarID": "NPC_W1_Male_09",
+              "AreaName": "LevelArea_P10102_F10102001_G14",
+              "AnchorName": "Anchor10"
+            },
+            {
+              "CharacterUniqueName": "101042103_Fans2",
+              "AvatarID": "NPC_W1_Lady_05",
+              "AreaName": "LevelArea_P10102_F10102001_G14",
+              "AnchorName": "Anchor11"
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "Mode": "SwitchOut"
+        },
+        {
+          "$type": "RPG.GameCore.CharacterTriggerAnimState",
+          "CharacterUniqueName": "101042103_Danheng",
+          "UseMotionID": true,
+          "StoryAvatarID": "DanHeng_00",
+          "StartMotion": "HoldArm01Loop",
+          "NormalizedTransitionDuration": 0.0,
+          "StoryMotionID": 1002044
+        },
+        {
+          "$type": "RPG.GameCore.CharacterTriggerAnimState",
+          "CharacterUniqueName": "101042103_7th",
+          "UseMotionID": true,
+          "StoryAvatarID": "Mar_7th_00",
+          "StartMotion": "Akimbo02Loop",
+          "NormalizedTransitionDuration": 0.0,
+          "StoryMotionID": 1001032
+        },
+        {
+          "$type": "RPG.GameCore.CharacterHeadLookAt",
+          "CharacterUniqueName": "101042103_Player",
+          "TargetCharacterUniqueName": "101042103_Oleg",
+          "TargetCharacterAttachPoint": "Head",
+          "Duration": 0.0,
+          "Constraint": {}
+        },
+        {
+          "$type": "RPG.GameCore.CharacterHeadLookAt",
+          "CharacterUniqueName": "101042103_Seele",
+          "TargetCharacterUniqueName": "101042103_Oleg",
+          "TargetCharacterAttachPoint": "Head",
+          "Duration": 0.0,
+          "Constraint": {}
+        },
+        {
+          "$type": "RPG.GameCore.CharacterHeadLookAt",
+          "CharacterUniqueName": "101042103_7th",
+          "TargetCharacterUniqueName": "101042103_Oleg",
+          "TargetCharacterAttachPoint": "Head",
+          "Duration": 0.0,
+          "Constraint": {}
+        },
+        {
+          "$type": "RPG.GameCore.CharacterHeadLookAt",
+          "CharacterUniqueName": "101042103_Danheng",
+          "TargetCharacterUniqueName": "101042103_Oleg",
+          "TargetCharacterAttachPoint": "Head",
+          "Duration": 0.0,
+          "Constraint": {}
+        },
+        {
+          "$type": "RPG.GameCore.CharacterHeadLookAt",
+          "CharacterUniqueName": "101042103_Bronya",
+          "TargetCharacterUniqueName": "101042103_Oleg",
+          "TargetCharacterAttachPoint": "Head",
+          "Duration": 0.0,
+          "Constraint": {}
+        },
+        {
+          "$type": "RPG.GameCore.CharacterHeadLookAt",
+          "CharacterUniqueName": "101042103_Oleg",
+          "TargetCharacterUniqueName": "101042103_Player",
+          "TargetCharacterAttachPoint": "Head",
+          "Duration": 0.0,
+          "Constraint": {}
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "101042103_temp",
+          "AnchorName": "Camera_101042103_01",
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "Cut"
+          },
+          "VCameraDitherMaxDistance": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "101042103_temp",
+          "AnchorName": "Camera_101042103_02",
+          "BlendConfig": {
+            "BlendType": "EaseIn",
+            "BlendTime": 15.0
+          },
+          "VCameraDitherMaxDistance": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "CustomTime": 0.25
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201231201,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231202,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "101042103_temp",
+          "AnchorName": "Camera_101042103_03",
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "Cut"
+          },
+          "VCameraDitherMaxDistance": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "101042103_temp",
+          "AnchorName": "Camera_101042103_04",
+          "BlendConfig": {
+            "BlendType": "EaseIn",
+            "BlendTime": 15.0
+          },
+          "VCameraDitherMaxDistance": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.CharacterHeadLookAt",
+          "CharacterUniqueName": "101042103_Oleg",
+          "TargetCharacterUniqueName": "101042103_7th",
+          "TargetCharacterAttachPoint": "Head",
+          "Duration": 0.8,
+          "CurveName": "TestCurve_B",
+          "Constraint": {}
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201231203,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231204,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231205,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.PlayOptionTalk",
+          "OptionList": [
+            {
+              "OptionTextmapID": {
+                "hash": -562926686
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "VoiceTalk_201231206"
+            },
+            {
+              "OptionTextmapID": {
+                "hash": -562926687
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "VoiceTalk_201231206"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "VoiceTalk_201231206",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "101042103_temp",
+          "AnchorName": "Camera_101042103_15",
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "Cut"
+          },
+          "VCameraDitherMaxDistance": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "101042103_temp",
+          "AnchorName": "Camera_101042103_16",
+          "BlendConfig": {
+            "BlendType": "EaseIn",
+            "BlendTime": 15.0
+          },
+          "VCameraDitherMaxDistance": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201231208,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231209,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231210,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.PlayOptionTalk",
+          "OptionList": [
+            {
+              "OptionTextmapID": {
+                "hash": -2129010622
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "VoiceTalk_201231211"
+            },
+            {
+              "OptionTextmapID": {
+                "hash": -2129010625
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "VoiceTalk_201231214"
+            },
+            {
+              "OptionTextmapID": {
+                "hash": -2129010627
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "VoiceTalk_201231216"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "VoiceTalk_201231211",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "101042103_temp",
+          "AnchorName": "Camera_101042103_05",
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "Cut"
+          },
+          "VCameraDitherMaxDistance": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "Cut_101042103_04"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201231212,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231213,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "Act_101042103_01"
+          }
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "VoiceTalk_201231214",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "101042103_temp",
+          "AnchorName": "Camera_101042103_05",
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "Cut"
+          },
+          "VCameraDitherMaxDistance": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "Cut_101042103_04"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201231215,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "Act_101042103_01"
+          }
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "VoiceTalk_201231216",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "101042103_temp",
+          "AnchorName": "Camera_101042103_05",
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "Cut"
+          },
+          "VCameraDitherMaxDistance": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "Cut_101042103_04"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201231217,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "Act_101042103_01"
+          }
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Cut_101042103_04",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "101042103_temp",
+          "AnchorName": "Camera_101042103_06",
+          "BlendConfig": {
+            "BlendType": "EaseIn",
+            "BlendTime": 15.0
+          },
+          "VCameraDitherMaxDistance": 0.0
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Act_101042103_01",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201231218,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231219,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.PlayOptionTalk",
+          "OptionList": [
+            {
+              "OptionTextmapID": {
+                "hash": -1725726094
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "VoiceTalk_201231220"
+            },
+            {
+              "OptionTextmapID": {
+                "hash": -1725726095
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "VoiceTalk_201231220"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "VoiceTalk_201231220",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201231222,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231223,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231224,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.PlayOptionTalk",
+          "OptionList": [
+            {
+              "OptionTextmapID": {
+                "hash": -1725726099
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "VoiceTalk_201231225"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "VoiceTalk_201231225",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "101042103_temp",
+          "AnchorName": "Camera_101042103_07",
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "Cut"
+          },
+          "VCameraDitherMaxDistance": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.CharacterHeadLookAt",
+          "CharacterUniqueName": "101042103_Oleg",
+          "TargetCharacterUniqueName": "101042103_Player",
+          "TargetCharacterAttachPoint": "Head",
+          "Duration": 0.8,
+          "CurveName": "TestCurve_B",
+          "Constraint": {}
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "101042103_temp",
+          "AnchorName": "Camera_101042103_08",
+          "BlendConfig": {
+            "BlendType": "EaseIn",
+            "BlendTime": 15.0
+          },
+          "VCameraDitherMaxDistance": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201231226,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231227,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231228,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231229,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "Lookat_101042103_01"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201231230,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231231,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231232,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231233,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "Act_101042103_02"
+          }
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Lookat_101042103_01",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.CharacterHeadLookAt",
+          "CharacterUniqueName": "101042103_Oleg",
+          "TargetCharacterUniqueName": "101042103_Bronya",
+          "TargetCharacterAttachPoint": "Head",
+          "Duration": 0.6,
+          "CurveName": "TestCurve_B",
+          "Constraint": {}
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Act_101042103_02",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "Mode": "SwitchOut",
+          "CustomTime": 0.15
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "101042103_temp",
+          "AnchorName": "Camera_101042103_11",
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "Cut"
+          },
+          "VCameraDitherMaxDistance": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.CharacterHeadLookAt",
+          "CharacterUniqueName": "101042103_Oleg",
+          "TargetCharacterUniqueName": "101042103_Player",
+          "TargetCharacterAttachPoint": "Head",
+          "Duration": 0.0,
+          "Constraint": {}
+        },
+        {
+          "$type": "RPG.GameCore.CharacterTriggerAnimState",
+          "CharacterUniqueName": "101042103_Danheng",
+          "UseMotionID": true,
+          "StoryAvatarID": "DanHeng_00",
+          "StartMotion": "Think01Loop",
+          "NormalizedTransitionDuration": 0.0,
+          "StoryMotionID": 1002024
+        },
+        {
+          "$type": "RPG.GameCore.CharacterTriggerAnimState",
+          "CharacterUniqueName": "101042103_7th",
+          "UseMotionID": true,
+          "StoryAvatarID": "Mar_7th_00",
+          "StartMotion": "Akimbo02AS",
+          "NormalizedTransitionDuration": 0.0,
+          "StoryMotionID": 1001033
+        },
+        {
+          "$type": "RPG.GameCore.CharacterHeadLookAt",
+          "CharacterUniqueName": "101042103_Seele",
+          "TargetCharacterUniqueName": "101042103_7th",
+          "TargetCharacterAttachPoint": "Head",
+          "Duration": 0.0,
+          "Constraint": {}
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "101042103_temp",
+          "AnchorName": "Camera_101042103_12",
+          "BlendConfig": {
+            "BlendType": "EaseIn",
+            "BlendTime": 15.0
+          },
+          "VCameraDitherMaxDistance": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "CustomTime": 0.15
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "Break_101042103"
+          }
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Break_101042103",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.PlayOptionTalk",
+          "OptionList": [
+            {
+              "OptionTextmapID": {
+                "hash": 1003157257
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "VoiceTalk_201231234"
+            },
+            {
+              "OptionTextmapID": {
+                "hash": 1762672147
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "VoiceTalk_201231241"
+            },
+            {
+              "OptionTextmapID": {
+                "hash": 1762672142
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "VoiceTalk_201231246"
+            },
+            {
+              "OptionTextmapID": {
+                "hash": 196588207
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatContinueIcon.png",
+              "TriggerCustomString": "VoiceTalk_201231250"
+            }
+          ],
+          "HideSelected": true
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "VoiceTalk_201231234",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201231235,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231236,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231237,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231238,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231239
+            },
+            {
+              "VoiceID": 201231240,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "Break_101042103"
+          }
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "VoiceTalk_201231241",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201231242,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231243,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231244,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231245,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "Break_101042103"
+          }
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "VoiceTalk_201231246",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201231247,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231248,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231249,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "Break_101042103"
+          }
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "VoiceTalk_201231250",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201231251,
+              "ProtectTime": 1.0
+            }
+          ],
+          "KeepDisplay": false
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "Mode": "SwitchOut",
+          "CustomTime": 0.25
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "101042103_temp",
+          "AnchorName": "Camera_101042103_13",
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "Cut"
+          },
+          "VCameraDitherMaxDistance": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "101042103_temp",
+          "AnchorName": "Camera_101042103_14",
+          "BlendConfig": {
+            "BlendType": "EaseIn",
+            "BlendTime": 15.0
+          },
+          "VCameraDitherMaxDistance": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "CustomTime": 0.25
+        },
+        {
+          "$type": "RPG.GameCore.PlayOptionTalk",
+          "OptionList": [
+            {
+              "OptionTextmapID": {
+                "hash": 196588205
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "VoiceTalk_201231252"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "VoiceTalk_201231252",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201231253,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231254,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "Motion_101042103_01"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201231255,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "101042103_temp",
+          "AnchorName": "Camera_101042103_17",
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "Cut"
+          },
+          "VCameraDitherMaxDistance": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "Motion_101042103_02"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "101042103_temp",
+          "AnchorName": "Camera_101042103_18",
+          "BlendConfig": {
+            "BlendType": "EaseIn",
+            "BlendTime": 15.0
+          },
+          "VCameraDitherMaxDistance": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201231256,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231257,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231258,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.CharacterTriggerAnimState",
+          "CharacterUniqueName": "101042103_7th",
+          "UseMotionID": true,
+          "StoryAvatarID": "Mar_7th_00",
+          "StartMotion": "Shrug01BS",
+          "StoryMotionID": 1001043
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "101042103_temp",
+          "AnchorName": "Camera_101042103_09",
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "Cut"
+          },
+          "VCameraDitherMaxDistance": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.CharacterHeadLookAt",
+          "CharacterUniqueName": "101042103_Oleg",
+          "TargetCharacterUniqueName": "101042103_7th",
+          "TargetCharacterAttachPoint": "Head",
+          "Duration": 0.8,
+          "CurveName": "TestCurve_B",
+          "Constraint": {}
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "101042103_temp",
+          "AnchorName": "Camera_101042103_10",
+          "BlendConfig": {
+            "BlendType": "EaseIn",
+            "BlendTime": 15.0
+          },
+          "VCameraDitherMaxDistance": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201231259,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231260,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.CharacterHeadLookAt",
+          "CharacterUniqueName": "101042103_Player",
+          "TargetCharacterUniqueName": "101042103_Bronya",
+          "TargetCharacterAttachPoint": "Head",
+          "Duration": 0.8,
+          "CurveName": "TestCurve_B",
+          "Constraint": {}
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "101042103_temp",
+          "AnchorName": "Camera_101042103_19",
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "Cut"
+          },
+          "VCameraDitherMaxDistance": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "101042103_temp",
+          "AnchorName": "Camera_101042103_20",
+          "BlendConfig": {
+            "BlendType": "EaseIn",
+            "BlendTime": 15.0
+          },
+          "VCameraDitherMaxDistance": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.CharacterTriggerAnimState",
+          "CharacterUniqueName": "101042103_7th",
+          "UseMotionID": true,
+          "StoryAvatarID": "Mar_7th_00",
+          "StartMotion": "Shrug01AS",
+          "NormalizedTransitionDuration": 0.0,
+          "StoryMotionID": 1001045
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201231261,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231262,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "101042103_temp",
+          "AnchorName": "Camera_101042103_21",
+          "WaitBlendFinish": true,
+          "BlendConfig": {
+            "BlendType": "Cut"
+          },
+          "VCameraDitherMaxDistance": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.CharacterHeadLookAt",
+          "CharacterUniqueName": "101042103_Oleg",
+          "TargetCharacterUniqueName": "101042103_Bronya",
+          "TargetCharacterAttachPoint": "Head",
+          "Duration": 0.8,
+          "CurveName": "TestCurve_B",
+          "Constraint": {}
+        },
+        {
+          "$type": "RPG.GameCore.CharacterHeadLookAt",
+          "CharacterUniqueName": "101042103_Player",
+          "TargetCharacterUniqueName": "101042103_Oleg",
+          "TargetCharacterAttachPoint": "Head",
+          "Duration": 0.8,
+          "CurveName": "TestCurve_B",
+          "Constraint": {}
+        },
+        {
+          "$type": "RPG.GameCore.CharacterHeadLookAt",
+          "CharacterUniqueName": "101042103_Seele",
+          "TargetCharacterUniqueName": "101042103_Oleg",
+          "TargetCharacterAttachPoint": "Head",
+          "Duration": 0.8,
+          "CurveName": "TestCurve_B",
+          "Constraint": {}
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "101042103_temp",
+          "AnchorName": "Camera_101042103_22",
+          "BlendConfig": {
+            "BlendType": "EaseIn",
+            "BlendTime": 15.0
+          },
+          "VCameraDitherMaxDistance": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201231263,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201231264,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231265,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231266,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.PlayOptionTalk",
+          "OptionList": [
+            {
+              "OptionTextmapID": {
+                "hash": 599872727
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "VoiceTalk_201231267"
+            },
+            {
+              "OptionTextmapID": {
+                "hash": 599872741
+              },
+              "OptionIconPath": "SpriteOutput/TalkIcon/ChatIcon.png",
+              "TriggerCustomString": "VoiceTalk_201231269"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Motion_101042103_01",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.CharacterTriggerAnimState",
+          "CharacterUniqueName": "101042103_7th",
+          "UseMotionID": true,
+          "StoryAvatarID": "Mar_7th_00",
+          "StartMotion": "Talk01",
+          "StoryMotionID": 1001016
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Motion_101042103_02",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.CharacterTriggerAnimState",
+          "CharacterUniqueName": "101042103_7th",
+          "UseMotionID": true,
+          "StoryAvatarID": "Mar_7th_00",
+          "StartMotion": "Akimbo02AS",
+          "NormalizedTransitionDuration": 0.0,
+          "StoryMotionID": 1001033
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "VoiceTalk_201231267",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.CharacterHeadLookAt",
+          "CharacterUniqueName": "101042103_Oleg",
+          "TargetCharacterUniqueName": "101042103_Player",
+          "TargetCharacterAttachPoint": "Head",
+          "Duration": 0.8,
+          "CurveName": "TestCurve_B",
+          "Constraint": {}
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201231268,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "Act_101042103_03"
+          }
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "VoiceTalk_201231269",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.CharacterHeadLookAt",
+          "CharacterUniqueName": "101042103_Oleg",
+          "TargetCharacterUniqueName": "101042103_Player",
+          "TargetCharacterAttachPoint": "Head",
+          "Duration": 0.8,
+          "CurveName": "TestCurve_B",
+          "Constraint": {}
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201231270,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "Act_101042103_03"
+          }
+        }
+      ]
+    },
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Act_101042103_03",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201231271,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.TriggerCustomString",
+          "CustomString": {
+            "Value": "Look_101042110"
+          }
+        },
+        {
+          "$type": "RPG.GameCore.PlaySimpleTalk",
+          "SimpleTalkList": [
+            {
+              "VoiceID": 201231272,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231273,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231274,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231275,
+              "ProtectTime": 1.0
+            },
+            {
+              "VoiceID": 201231276,
+              "ProtectTime": 1.0
+            }
+          ]
+        },
+        {
+          "$type": "RPG.GameCore.WaitSimpleTalkFinish"
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "Mode": "SwitchOut",
+          "CustomTime": 0.25
+        },
+        {
+          "$type": "RPG.GameCore.ActiveVirtualCamera",
+          "AreaName": "101042103_temp",
+          "AnchorName": "Camera_101042103_22",
+          "IsActive": false,
+          "BlendConfig": {
+            "BlendType": "Cut"
+          },
+          "VCameraDitherMaxDistance": 0.0
+        },
+        {
+          "$type": "RPG.GameCore.EndStory"
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Look_101042110",
+          "WaitOwnerOnly": true
+        },
+        {
+          "$type": "RPG.GameCore.CharacterHeadLookAt",
+          "CharacterUniqueName": "101042103_Oleg",
+          "TargetCharacterUniqueName": "101042103_Seele",
+          "TargetCharacterAttachPoint": "Head",
+          "Duration": 0.8,
+          "CurveName": "TestCurve_B",
+          "Constraint": {}
+        },
+        {
+          "$type": "RPG.GameCore.CharacterHeadLookAt",
+          "CharacterUniqueName": "101042103_Seele",
+          "TargetCharacterUniqueName": "101042103_Oleg",
+          "TargetCharacterAttachPoint": "Head",
+          "Duration": 0.8,
+          "CurveName": "TestCurve_B",
+          "Constraint": {}
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitStoryEnd"
+        },
+        {
+          "$type": "RPG.GameCore.PlayScreenTransfer",
+          "Type": "Black",
+          "CustomTime": 0.25
+        },
+        {
+          "$type": "RPG.GameCore.FinishLevelGraph"
+        }
+      ]
+    }
+  ]
+}

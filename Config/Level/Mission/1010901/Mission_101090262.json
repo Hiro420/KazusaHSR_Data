@@ -1,0 +1,76 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Hold",
+          "WaitOwnerOnly": true
+        }
+      ]
+    },
+    {
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.PredicateTaskList",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByCompareSubMissionState",
+            "SubMissionID": 901090271,
+            "SubMissionState": "Finish"
+          },
+          "SuccessTaskList": [
+            {
+              "$type": "RPG.GameCore.PredicateTaskList",
+              "Predicate": {
+                "$type": "RPG.GameCore.ByCompareSubMissionState",
+                "SubMissionID": 901090281,
+                "SubMissionState": "Finish"
+              },
+              "SuccessTaskList": [
+                {
+                  "$type": "RPG.GameCore.PredicateTaskList",
+                  "Predicate": {
+                    "$type": "RPG.GameCore.ByCompareSubMissionState",
+                    "SubMissionID": 901099211,
+                    "SubMissionState": "Finish"
+                  },
+                  "SuccessTaskList": [
+                    {
+                      "$type": "RPG.GameCore.TriggerCustomString",
+                      "CustomString": {
+                        "Value": "M301_GetAllBlock2Items"
+                      }
+                    },
+                    {
+                      "$type": "RPG.GameCore.FinishStoryMission",
+                      "Key": "Mission_101090262"
+                    }
+                  ],
+                  "FailedTaskList": [
+                    {
+                      "$type": "RPG.GameCore.FinishStoryMission",
+                      "Key": "Mission_101090262"
+                    }
+                  ]
+                }
+              ],
+              "FailedTaskList": [
+                {
+                  "$type": "RPG.GameCore.FinishStoryMission",
+                  "Key": "Mission_101090262"
+                }
+              ]
+            }
+          ],
+          "FailedTaskList": [
+            {
+              "$type": "RPG.GameCore.FinishStoryMission",
+              "Key": "Mission_101090262"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

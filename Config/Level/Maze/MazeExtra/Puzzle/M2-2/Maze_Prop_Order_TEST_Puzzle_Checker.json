@@ -1,0 +1,57 @@
+﻿{
+  "OnInitSequece": [],
+  "OnStartSequece": [
+    {
+      "IsLoop": true,
+      "TaskList": [
+        {
+          "$type": "RPG.GameCore.WaitCustomString",
+          "CustomString": "Order_Puzzle_Start_01"
+        },
+        {
+          "$type": "RPG.GameCore.PropStateExecute",
+          "TargetIsOwner": true,
+          "Execute": [
+            {
+              "$type": "RPG.GameCore.PropReqInteract",
+              "GroupPropID": 300001,
+              "GroupID": 35,
+              "InteractID": 1200
+            },
+            {
+              "$type": "RPG.GameCore.PropReqInteract",
+              "GroupPropID": 300002,
+              "GroupID": 35,
+              "InteractID": 1200
+            },
+            {
+              "$type": "RPG.GameCore.PropReqInteract",
+              "GroupPropID": 300003,
+              "GroupID": 35,
+              "InteractID": 1200
+            },
+            {
+              "$type": "RPG.GameCore.PropReqInteract",
+              "GroupPropID": 300004,
+              "GroupID": 35,
+              "InteractID": 1010
+            },
+            {
+              "$type": "RPG.GameCore.PropReqInteract",
+              "GroupPropID": 300005,
+              "GroupID": 35,
+              "InteractID": 1010
+            },
+            {
+              "$type": "RPG.GameCore.PropReqInteract",
+              "GroupPropID": 300006,
+              "GroupID": 35,
+              "InteractID": 1010
+            }
+          ],
+          "State": "Open"
+        }
+      ]
+    }
+  ]
+}

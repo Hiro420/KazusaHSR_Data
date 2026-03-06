@@ -1,0 +1,563 @@
+﻿{
+  "AliasDict": {
+    "None": {
+      "$type": "RPG.GameCore.TargetFetchNone"
+    },
+    "Caster": {
+      "$type": "RPG.GameCore.TargetFetchCaster"
+    },
+    "AbilityTargetEntity": {
+      "$type": "RPG.GameCore.TargetFetchAbilityTarget"
+    },
+    "AbilityTargetGroup": {
+      "$type": "RPG.GameCore.TargetFetchAbilityGroup"
+    },
+    "ModifierOwnerEntity": {
+      "$type": "RPG.GameCore.TargetFetchModifierOwner"
+    },
+    "LightTeamEntity": {
+      "$type": "RPG.GameCore.TargetFetchTeamEntity",
+      "TeamType": "TeamLight"
+    },
+    "DarkTeamEntity": {
+      "$type": "RPG.GameCore.TargetFetchTeamEntity",
+      "TeamType": "TeamDark"
+    },
+    "AllLightTeam": {
+      "$type": "RPG.GameCore.TargetSequence",
+      "Sequence": [
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "LightTeamEntity"
+        },
+        {
+          "$type": "RPG.GameCore.TargetMapAllTeamMember"
+        }
+      ]
+    },
+    "AllDarkTeam": {
+      "$type": "RPG.GameCore.TargetSequence",
+      "Sequence": [
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "DarkTeamEntity"
+        },
+        {
+          "$type": "RPG.GameCore.TargetMapAllTeamMember"
+        }
+      ]
+    },
+    "AllTeamMember": {
+      "$type": "RPG.GameCore.TargetSequence",
+      "Sequence": [
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "Caster"
+        },
+        {
+          "$type": "RPG.GameCore.TargetMapAllTeamMember"
+        }
+      ]
+    },
+    "AllTeammate": {
+      "$type": "RPG.GameCore.TargetSequence",
+      "Sequence": [
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "AllTeamMember"
+        },
+        {
+          "$type": "RPG.GameCore.TargetFilter",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByNot",
+            "Predicate": {
+              "$type": "RPG.GameCore.ByTargetListIntersects",
+              "FirstTargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "Caster"
+              },
+              "SecondTargetType": {
+                "$type": "RPG.GameCore.TargetAlias",
+                "Alias": "ParamEntity"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "AllEnemy": {
+      "$type": "RPG.GameCore.TargetSequence",
+      "Sequence": [
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "Caster"
+        },
+        {
+          "$type": "RPG.GameCore.TargetMapEnemyTeamEntity"
+        },
+        {
+          "$type": "RPG.GameCore.TargetMapAllTeamMember"
+        }
+      ]
+    },
+    "FriendTeamEntity": {
+      "$type": "RPG.GameCore.TargetSequence",
+      "Sequence": [
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "Caster"
+        },
+        {
+          "$type": "RPG.GameCore.TargetMapTeamEntity"
+        }
+      ]
+    },
+    "EnemyTeamEntity": {
+      "$type": "RPG.GameCore.TargetSequence",
+      "Sequence": [
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "Caster"
+        },
+        {
+          "$type": "RPG.GameCore.TargetMapEnemyTeamEntity"
+        }
+      ]
+    },
+    "StanceBreakTargetEntity": {
+      "$type": "RPG.GameCore.TargetFetchStanceBreakTargetEntity"
+    },
+    "AllStanceBreakEntity": {
+      "$type": "RPG.GameCore.TargetFetchAllStanceBreakEntity"
+    },
+    "CurrentTurnActionEntity": {
+      "$type": "RPG.GameCore.TargetFetchTurnActionEntity"
+    },
+    "SkillPointEntity": {
+      "$type": "RPG.GameCore.TargetSequence",
+      "Sequence": [
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "Caster"
+        },
+        {
+          "$type": "RPG.GameCore.TargetMapSkillPointEntity"
+        }
+      ]
+    },
+    "SkillTargetEntityList": {
+      "$type": "RPG.GameCore.TargetSequence",
+      "Sequence": [
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "Caster"
+        },
+        {
+          "$type": "RPG.GameCore.TargetMapSkillTarget"
+        }
+      ]
+    },
+    "SkillSubTargetEntityList": {
+      "$type": "RPG.GameCore.TargetSequence",
+      "Sequence": [
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "Caster"
+        },
+        {
+          "$type": "RPG.GameCore.TargetMapSkillSubTarget"
+        }
+      ]
+    },
+    "DamageAttackerEntity": {
+      "$type": "RPG.GameCore.TargetSequence",
+      "Sequence": [
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "Caster"
+        },
+        {
+          "$type": "RPG.GameCore.TargetMapDamageAttacker"
+        }
+      ]
+    },
+    "DamageDefenderEntity": {
+      "$type": "RPG.GameCore.TargetSequence",
+      "Sequence": [
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "Caster"
+        },
+        {
+          "$type": "RPG.GameCore.TargetMapDamageDefender"
+        }
+      ]
+    },
+    "AttackTargetList": {
+      "$type": "RPG.GameCore.TargetSequence",
+      "Sequence": [
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "Caster"
+        },
+        {
+          "$type": "RPG.GameCore.TargetMapAttackTargetList"
+        }
+      ]
+    },
+    "AbilityTargetAdjoinEntity": {
+      "$type": "RPG.GameCore.TargetSequence",
+      "Sequence": [
+        {
+          "$type": "RPG.GameCore.TargetFetchAbilityTarget"
+        },
+        {
+          "$type": "RPG.GameCore.TargetMapAdjoinEntity"
+        }
+      ]
+    },
+    "AbilityTargetAndAdjoinEntity": {
+      "$type": "RPG.GameCore.TargetConcat",
+      "Targets": [
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "AbilityTargetEntity"
+        },
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "AbilityTargetAdjoinEntity"
+        }
+      ]
+    },
+    "ParamEntity": {
+      "$type": "RPG.GameCore.TargetFetchParamEntity"
+    },
+    "ParamEntitySkillTargetEntityList": {
+      "$type": "RPG.GameCore.TargetSequence",
+      "Sequence": [
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "ParamEntity"
+        },
+        {
+          "$type": "RPG.GameCore.TargetMapSkillTarget"
+        }
+      ]
+    },
+    "ProjectileHitEntity": {
+      "$type": "RPG.GameCore.TargetFetchProjectileHitEntity"
+    },
+    "LastZombieEntity": {
+      "$type": "RPG.GameCore.TargetFetchLastZombieEntity"
+    },
+    "LastKillCaster": {
+      "$type": "RPG.GameCore.TargetFetchLastKillCaster"
+    },
+    "LastKillTarget": {
+      "$type": "RPG.GameCore.TargetFetchLastKillTarget"
+    },
+    "FightMVPEntity": {
+      "$type": "RPG.GameCore.TargetFetchFightMVPEntity"
+    },
+    "BattleEventEntityList": {
+      "$type": "RPG.GameCore.TargetFetchBattleEventEntityList"
+    },
+    "PartEntity0": {
+      "$type": "RPG.GameCore.TargetSequence",
+      "Sequence": [
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "ModifierOwnerEntity"
+        },
+        {
+          "$type": "RPG.GameCore.TargetMapPartEntity"
+        }
+      ]
+    },
+    "PartEntity1": {
+      "$type": "RPG.GameCore.TargetSequence",
+      "Sequence": [
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "ModifierOwnerEntity"
+        },
+        {
+          "$type": "RPG.GameCore.TargetMapPartEntity",
+          "PartID": 1
+        }
+      ]
+    },
+    "PartEntity2": {
+      "$type": "RPG.GameCore.TargetSequence",
+      "Sequence": [
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "ModifierOwnerEntity"
+        },
+        {
+          "$type": "RPG.GameCore.TargetMapPartEntity",
+          "PartID": 2
+        }
+      ]
+    },
+    "AdvLocalPlayer": {
+      "$type": "RPG.GameCore.TargetFetchAdvLocalPlayer"
+    },
+    "AdvTeamMembers": {
+      "$type": "RPG.GameCore.TargetFetchAdvTeamMembers"
+    },
+    "AdvAllNPCMonsters": {
+      "$type": "RPG.GameCore.TargetFetchAdvAllNPCMonsters"
+    },
+    "AdvSkillTargetEntityList": {
+      "$type": "RPG.GameCore.TargetFetchAdvSkillTargetEntityList"
+    },
+    "TaskActionTarget": {
+      "$type": "RPG.GameCore.TargetFetchTaskActionTarget"
+    },
+    "TurnActionEntitySkillTarget": {
+      "$type": "RPG.GameCore.TargetSequence",
+      "Sequence": [
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "CurrentTurnActionEntity"
+        },
+        {
+          "$type": "RPG.GameCore.TargetMapAttackTargetList"
+        }
+      ]
+    },
+    "LevelEntity": {
+      "$type": "RPG.GameCore.TargetFetchLevelEntity"
+    },
+    "LightTeamCenter": {
+      "$type": "RPG.GameCore.TargetAlias",
+      "Alias": "LightTeamEntity"
+    },
+    "DarkTeamCenter": {
+      "$type": "RPG.GameCore.TargetAlias",
+      "Alias": "DarkTeamEntity"
+    },
+    "EnemyTeamCenter": {
+      "$type": "RPG.GameCore.TargetAlias",
+      "Alias": "EnemyTeamEntity"
+    },
+    "FriendTeamCenter": {
+      "$type": "RPG.GameCore.TargetAlias",
+      "Alias": "FriendTeamEntity"
+    },
+    "AllTeamCenter": {
+      "$type": "RPG.GameCore.TargetConcat",
+      "Targets": [
+        {
+          "$type": "RPG.GameCore.TargetFetchTeamEntity",
+          "TeamType": "TeamLight"
+        },
+        {
+          "$type": "RPG.GameCore.TargetFetchTeamEntity",
+          "TeamType": "TeamDark"
+        }
+      ]
+    },
+    "TeamFormation": {
+      "$type": "RPG.GameCore.TargetAlias",
+      "Alias": "None"
+    },
+    "CurrentLinkActionEntity": {
+      "$type": "RPG.GameCore.TargetAlias",
+      "Alias": "None"
+    },
+    "UniqueNameEntity": {
+      "$type": "RPG.GameCore.TargetFetchUniqueNameEntity"
+    },
+    "EnemyWithSheChiMark": {
+      "$type": "RPG.GameCore.TargetSequence",
+      "Sequence": [
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "AllEnemy"
+        },
+        {
+          "$type": "RPG.GameCore.TargetFilter",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByIsContainModifier",
+            "TargetType": {
+              "$type": "RPG.GameCore.TargetAlias",
+              "Alias": "ParamEntity"
+            },
+            "ModifierName": "MWAvatar_SheChi_Mark"
+          }
+        }
+      ]
+    },
+    "CasterAdjoinEntity": {
+      "$type": "RPG.GameCore.TargetSequence",
+      "Sequence": [
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "Caster"
+        },
+        {
+          "$type": "RPG.GameCore.TargetMapAdjoinEntity"
+        }
+      ]
+    },
+    "CasterWithAllEnemy": {
+      "$type": "RPG.GameCore.TargetConcat",
+      "Targets": [
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "Caster"
+        },
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "AllEnemy"
+        }
+      ]
+    },
+    "CasterWithAllStanceBreakEntity": {
+      "$type": "RPG.GameCore.TargetConcat",
+      "Targets": [
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "Caster"
+        },
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "AllStanceBreakEntity"
+        }
+      ]
+    },
+    "CasterWithAbilityTargetEntity": {
+      "$type": "RPG.GameCore.TargetConcat",
+      "Targets": [
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "Caster"
+        },
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "AbilityTargetEntity"
+        }
+      ]
+    },
+    "CasterWithAbilityTargetAndAdjoinEntity": {
+      "$type": "RPG.GameCore.TargetConcat",
+      "Targets": [
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "Caster"
+        },
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "AbilityTargetAndAdjoinEntity"
+        }
+      ]
+    },
+    "AllTeamMemberWithAllEnemy": {
+      "$type": "RPG.GameCore.TargetConcat",
+      "Targets": [
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "AllTeamMember"
+        },
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "AllEnemy"
+        }
+      ]
+    },
+    "Partners": {
+      "$type": "RPG.GameCore.TargetFetchPartner"
+    },
+    "BloodLinkTargets": {
+      "$type": "RPG.GameCore.TargetFetchBloodLinkTargets"
+    },
+    "MAvatar_Klara_00_BPSkill_Revenge": {
+      "$type": "RPG.GameCore.TargetSequence",
+      "Sequence": [
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "AllEnemy"
+        },
+        {
+          "$type": "RPG.GameCore.TargetFilter",
+          "Predicate": {
+            "$type": "RPG.GameCore.ByIsContainModifier",
+            "TargetType": {
+              "$type": "RPG.GameCore.TargetAlias",
+              "Alias": "ParamEntity"
+            },
+            "ModifierName": "MAvatar_Klara_00_BPSkill_Revenge"
+          }
+        }
+      ]
+    },
+    "AidAttacker": {
+      "$type": "RPG.GameCore.TargetFetchAidAttacker"
+    },
+    "AidDefender": {
+      "$type": "RPG.GameCore.TargetFetchAidDefender"
+    },
+    "AidProtector": {
+      "$type": "RPG.GameCore.TargetFetchAidProtector"
+    },
+    "CasterSummonedMinions": {
+      "$type": "RPG.GameCore.TargetSequence",
+      "Sequence": [
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "Caster"
+        },
+        {
+          "$type": "RPG.GameCore.TargetMapSummonedMinions"
+        }
+      ]
+    },
+    "ModifierOwnerSummoner": {
+      "$type": "RPG.GameCore.TargetSequence",
+      "Sequence": [
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "ModifierOwnerEntity"
+        },
+        {
+          "$type": "RPG.GameCore.TargetMapSummoner"
+        }
+      ]
+    },
+    "CasterAndSummonedAndAbilityTargetEntity": {
+      "$type": "RPG.GameCore.TargetConcat",
+      "Targets": [
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "Caster"
+        },
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "CasterSummonedMinions"
+        },
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "AbilityTargetEntity"
+        }
+      ]
+    },
+    "AllUnselectable": {
+      "$type": "RPG.GameCore.TargetFetchAllUnselectable"
+    },
+    "AllTeamMemberWithAbilityTargetEntity": {
+      "$type": "RPG.GameCore.TargetConcat",
+      "Targets": [
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "AllTeamMember"
+        },
+        {
+          "$type": "RPG.GameCore.TargetAlias",
+          "Alias": "AbilityTargetEntity"
+        }
+      ]
+    }
+  }
+}
