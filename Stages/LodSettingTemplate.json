@@ -1,0 +1,526 @@
+﻿{
+  "LodTemplateMap": {
+    "default": {
+      "Name": "Without Lod"
+    },
+    "LandMarkL": {
+      "Name": "LandMarks_Large",
+      "Index": 1,
+      "Distance": 800.0,
+      "LodDetailList": [
+        {
+          "Percent": 15.0,
+          "Quality": 1
+        },
+        {
+          "Lod": 1,
+          "Percent": 30.0,
+          "Quality": 7
+        },
+        {
+          "Lod": 2,
+          "Percent": 100.0,
+          "Quality": 7
+        },
+        {
+          "Lod": 3,
+          "Percent": 100.0,
+          "Quality": 7
+        },
+        {
+          "Lod": 4,
+          "Percent": 100.0,
+          "Quality": 7
+        }
+      ],
+      "Layer": "Landmark"
+    },
+    "LandMarkM": {
+      "Name": "LandMarks_Middle",
+      "Index": 1,
+      "Distance": 400.0,
+      "LodDetailList": [
+        {
+          "Percent": 30.0,
+          "Quality": 1
+        },
+        {
+          "Lod": 1,
+          "Percent": 40.0,
+          "Quality": 3
+        },
+        {
+          "Lod": 2,
+          "Percent": 100.0,
+          "Quality": 7
+        },
+        {
+          "Lod": 3,
+          "Percent": 100.0,
+          "Quality": 7
+        },
+        {
+          "Lod": 4,
+          "Percent": 100.0,
+          "Quality": 7
+        }
+      ],
+      "Layer": "Landmark"
+    },
+    "LandMarkS": {
+      "Name": "LandMarks_Small",
+      "Index": 1,
+      "Distance": 200.0,
+      "LodDetailList": [
+        {
+          "Percent": 30.0,
+          "Quality": 1
+        },
+        {
+          "Lod": 1,
+          "Percent": 50.0,
+          "Quality": 7
+        },
+        {
+          "Lod": 2,
+          "Percent": 100.0,
+          "Quality": 7
+        },
+        {
+          "Lod": 3,
+          "Percent": 100.0,
+          "Quality": 7
+        },
+        {
+          "Lod": 4,
+          "Percent": 100.0,
+          "Quality": 7
+        }
+      ],
+      "Layer": "Landmark"
+    },
+    "BuildingA": {
+      "Name": "BuildingA",
+      "Index": 1,
+      "Distance": 500.0,
+      "LodDetailList": [
+        {
+          "Percent": 15.0,
+          "Quality": 1
+        },
+        {
+          "Lod": 1,
+          "Percent": 25.0,
+          "Quality": 3
+        },
+        {
+          "Lod": 2,
+          "Percent": 30.0,
+          "Quality": 7
+        },
+        {
+          "Lod": 3,
+          "Percent": 60.0,
+          "Quality": 7
+        },
+        {
+          "Lod": 4,
+          "Percent": 100.0,
+          "Quality": 7
+        }
+      ],
+      "Layer": "BuildingLarge"
+    },
+    "BuildingB": {
+      "Name": "BuildingB",
+      "Index": 1,
+      "Distance": 300.0,
+      "LodDetailList": [
+        {
+          "Percent": 15.0,
+          "Quality": 1
+        },
+        {
+          "Lod": 1,
+          "Percent": 30.0,
+          "Quality": 3
+        },
+        {
+          "Lod": 2,
+          "Percent": 50.0,
+          "Quality": 7
+        },
+        {
+          "Lod": 3,
+          "Percent": 80.0,
+          "Quality": 7
+        },
+        {
+          "Lod": 4,
+          "Percent": 100.0,
+          "Quality": 7
+        }
+      ],
+      "Layer": "BuildingLarge"
+    },
+    "BuildingC": {
+      "Name": "BuildingC",
+      "Index": 1,
+      "Distance": 150.0,
+      "LodDetailList": [
+        {
+          "Percent": 30.0,
+          "Quality": 1
+        },
+        {
+          "Lod": 1,
+          "Percent": 50.0,
+          "Quality": 3
+        },
+        {
+          "Lod": 2,
+          "Percent": 65.0,
+          "Quality": 7
+        },
+        {
+          "Lod": 3,
+          "Percent": 80.0,
+          "Quality": 7
+        },
+        {
+          "Lod": 4,
+          "Percent": 100.0,
+          "Quality": 7
+        }
+      ],
+      "Layer": "Building"
+    },
+    "StandAlone": {
+      "Name": "Stand Alone Objects",
+      "Index": 1,
+      "Distance": 100.0,
+      "LodDetailList": [
+        {
+          "Percent": 30.0,
+          "Quality": 1
+        },
+        {
+          "Lod": 1,
+          "Percent": 60.0,
+          "Quality": 3
+        },
+        {
+          "Lod": 2,
+          "Percent": 75.0,
+          "Quality": 7
+        },
+        {
+          "Lod": 3,
+          "Percent": 80.0,
+          "Quality": 7
+        },
+        {
+          "Lod": 4,
+          "Percent": 100.0,
+          "Quality": 7
+        }
+      ],
+      "Layer": "StandAloneObjects"
+    },
+    "DistantView": {
+      "Name": "Distant View",
+      "Index": 1,
+      "Distance": 1000.0,
+      "LodDetailList": [
+        {
+          "Percent": 5.0,
+          "Quality": 1
+        },
+        {
+          "Lod": 1,
+          "Percent": 10.0,
+          "Quality": 3
+        },
+        {
+          "Lod": 2,
+          "Percent": 15.0,
+          "Quality": 7
+        },
+        {
+          "Lod": 3,
+          "Percent": 50.0,
+          "Quality": 7
+        },
+        {
+          "Lod": 4,
+          "Percent": 100.0,
+          "Quality": 7
+        }
+      ],
+      "Layer": "DistantView"
+    },
+    "SmallProp": {
+      "Name": "Small Prop",
+      "Index": 1,
+      "Distance": 50.0,
+      "LodDetailList": [
+        {
+          "Percent": 100.0,
+          "Quality": 7
+        },
+        {
+          "Lod": 1
+        },
+        {
+          "Lod": 2
+        },
+        {
+          "Lod": 3
+        },
+        {
+          "Lod": 4
+        }
+      ],
+      "Layer": "Prop"
+    },
+    "GPUInstanced": {
+      "Name": "GPUInstanced",
+      "Index": 1,
+      "Distance": 300.0,
+      "LodDetailList": [
+        {
+          "Percent": 100.0,
+          "Quality": 7
+        },
+        {
+          "Lod": 1
+        },
+        {
+          "Lod": 2
+        },
+        {
+          "Lod": 3
+        },
+        {
+          "Lod": 4
+        }
+      ],
+      "Layer": "PersistentLevel"
+    },
+    "MazeProp": {
+      "Name": "MazeProp",
+      "Index": 1,
+      "Distance": 75.0,
+      "LodDetailList": [
+        {
+          "Percent": 100.0,
+          "Quality": 7
+        },
+        {
+          "Lod": 1
+        },
+        {
+          "Lod": 2
+        },
+        {
+          "Lod": 3
+        },
+        {
+          "Lod": 4
+        }
+      ],
+      "Layer": "StandAloneObjects"
+    },
+    "Ground": {
+      "Name": "Ground",
+      "Index": 1,
+      "Distance": 1000.0,
+      "LodDetailList": [
+        {
+          "Percent": 20.0,
+          "Quality": 7
+        },
+        {
+          "Lod": 1,
+          "Percent": 100.0,
+          "Quality": 7
+        },
+        {
+          "Lod": 2,
+          "Percent": 100.0
+        },
+        {
+          "Lod": 3
+        },
+        {
+          "Lod": 4
+        }
+      ],
+      "Layer": "PersistentLevel"
+    },
+    "PerformanceTest": {
+      "Name": "PerformanceTest",
+      "Index": 1,
+      "Distance": 10000.0,
+      "LodDetailList": [
+        {
+          "Percent": 100.0,
+          "Quality": 7
+        },
+        {
+          "Lod": 1
+        },
+        {
+          "Lod": 2
+        },
+        {
+          "Lod": 3
+        },
+        {
+          "Lod": 4
+        }
+      ],
+      "Layer": "PersistentLevel"
+    },
+    "BuildingFar": {
+      "Name": "BuildingFar",
+      "Index": 1,
+      "Distance": 500.0,
+      "LodDetailList": [
+        {
+          "Percent": 20.0,
+          "Quality": 3
+        },
+        {
+          "Lod": 1,
+          "Percent": 60.0,
+          "Quality": 7
+        },
+        {
+          "Lod": 2,
+          "Percent": 100.0,
+          "Quality": 7
+        },
+        {
+          "Lod": 3
+        },
+        {
+          "Lod": 4
+        }
+      ],
+      "Layer": "BuildingLarge"
+    },
+    "GroundSmall": {
+      "Name": "GroundSmall",
+      "Index": 1,
+      "Distance": 500.0,
+      "LodDetailList": [
+        {
+          "Percent": 10.0,
+          "Quality": 7
+        },
+        {
+          "Lod": 1,
+          "Percent": 100.0,
+          "Quality": 7
+        },
+        {
+          "Lod": 2
+        },
+        {
+          "Lod": 3
+        },
+        {
+          "Lod": 4
+        }
+      ],
+      "Layer": "Landmark"
+    },
+    "MazeBuilding": {
+      "Name": "MazeBuilding",
+      "Index": 1,
+      "Distance": 500.0,
+      "LodDetailList": [
+        {
+          "Percent": 8.0,
+          "Quality": 1
+        },
+        {
+          "Lod": 1,
+          "Percent": 15.0,
+          "Quality": 7
+        },
+        {
+          "Lod": 2,
+          "Percent": 25.0,
+          "Quality": 7
+        },
+        {
+          "Lod": 3,
+          "Percent": 40.0,
+          "Quality": 7
+        },
+        {
+          "Lod": 4,
+          "Percent": 100.0,
+          "Quality": 7
+        }
+      ]
+    },
+    "CutSceneControlled": {
+      "Name": "CutSceneControlled",
+      "Index": 1,
+      "Distance": 200.0,
+      "LodDetailList": [
+        {
+          "Percent": 100.0,
+          "Quality": 7
+        },
+        {
+          "Lod": 1
+        },
+        {
+          "Lod": 2
+        },
+        {
+          "Lod": 3
+        },
+        {
+          "Lod": 4
+        }
+      ],
+      "Layer": "PersistentLevel"
+    },
+    "LandMarkSpecial": {
+      "Name": "LandMarkSpecial",
+      "Index": 1,
+      "Distance": 800.0,
+      "LodDetailList": [
+        {
+          "Percent": 60.0,
+          "Quality": 1
+        },
+        {
+          "Lod": 1,
+          "Percent": 70.0,
+          "Quality": 3
+        },
+        {
+          "Lod": 2,
+          "Percent": 80.0,
+          "Quality": 7
+        },
+        {
+          "Lod": 3,
+          "Percent": 90.0,
+          "Quality": 7
+        },
+        {
+          "Lod": 4,
+          "Percent": 100.0,
+          "Quality": 7
+        }
+      ]
+    }
+  }
+}
